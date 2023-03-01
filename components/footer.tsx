@@ -31,49 +31,61 @@ const Footer = () => {
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
-        <SustainButton className="self-center text-xs lg:text-base font-medium">
+        <SustainButton className="self-center text-sm lg:text-base font-medium">
           Get started today
         </SustainButton>
       </div>
       <hr className="lg:mt-36 mt-28 lg:mb-24 mb-20" />
       <div className="lg:flex lg:justify-between text-start">
         <img src={sustain.src} className="self-start" alt="sustain logo" />
-        <div className="">
-          <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
-            Learn more
-          </h3>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="/">Blog</Link>
-          </p>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="/">Careers</Link>
-          </p>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8">Terms of use</Link>
-          </p>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37">Privacy policy</Link>
-          </p>
-        </div>
-        <div className="">
-          <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
-            Contact us
-          </h3>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="tel:+2349040559724">+2349040559724</Link>
-          </p>
-          <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="mailto:hi@privhealth.com">hi@privhealth.com</Link>
-          </p>
-        </div>
-        <div className="">
-          <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
-            Stay in touch
-          </h3>
-          <div className="flex">
-            <a href="http://facebook.com/tryprivhealth"><img src={fbook.src} className="mr-5 " alt="facebook logo" /></a>
-            <a href="http://instagram.com/tryprivhealth"><img src={insta.src} className="mr-5 " alt="instagram logo" /></a>
-            <a href="http://twitter.com/tryprivhealth"><img src={twitter.src} className="mr-5 " alt="twitter logo" /></a>
+        <div className="flex flex-wrap">
+          <div className="w-40 lg:w-72">
+            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+              Learn more
+            </h3>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="/">Blog</Link>
+            </p>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="/">Careers</Link>
+            </p>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8">
+                Terms of use
+              </Link>
+            </p>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37">
+                Privacy policy
+              </Link>
+            </p>
+          </div>
+          <div className="w-40 lg:w-72">
+            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+              Contact us
+            </h3>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="tel:+2349040559724">+2349040559724</Link>
+            </p>
+            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+              <Link href="mailto:hi@privhealth.com">hi@privhealth.com</Link>
+            </p>
+          </div>
+          <div className="w-40 lg:w-72">
+            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+              Stay in touch
+            </h3>
+            <div className="flex">
+              <a href="http://facebook.com/tryprivhealth">
+                <img src={fbook.src} className="mr-5 " alt="facebook logo" />
+              </a>
+              <a href="http://instagram.com/tryprivhealth">
+                <img src={insta.src} className="mr-5 " alt="instagram logo" />
+              </a>
+              <a href="http://twitter.com/tryprivhealth">
+                <img src={twitter.src} className="mr-5 " alt="twitter logo" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
