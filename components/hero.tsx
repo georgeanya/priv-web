@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div className="px-5 lg:px-32 pt-15 lg:pt-22 pb-20 lg:pb-40 flex flex-col">
       <div className="md:max-w-md lg:max-w-1xl lg:pb-0">
-        <p className=" leading-tight lg:leading-tight lg:pr-14  text-3xl lg:text-start lg:text-5xl font-bold text-[#002A47] ">
+        <p className=" leading-tight lg:leading-tight lg:pr-14  text-3xl lg:text-start lg:text-5xl font-bold text-[#5355AC] ">
           Private and personalized treatment plans for you
         </p>
-        <p className="mt-5 md:mt-6 text-base font-normal lg:pr-8 lg:text-start lg:text-xl text-[#476D85]">
+        <p className="mt-5 md:mt-6 text-base font-normal lg:pr-8 lg:text-start lg:text-xl text-[#111111]">
           Tell us what we can help you with
         </p>
       </div>

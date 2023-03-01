@@ -1,36 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import minus from "../public/assets/minus.png";
-import plus from "../public/assets/plus.png";
 import support from "../public/assets/support.svg";
 
 const Section4 = () => {
-  const [expand, setExpand] = useState(false);
-  const [expand1, setExpand1] = useState(false);
-  const [expand2, setExpand2] = useState(false);
-  const [expand3, setExpand3] = useState(false);
-  const [expand4, setExpand4] = useState(false);
-  const [expand5, setExpand5] = useState(false);
-
-  function toggle() {
-    setExpand((prevExpand) => !prevExpand);
-  }
-  function toggle1() {
-    setExpand1((prevExpand1) => !prevExpand1);
-  }
-  function toggle2() {
-    setExpand2((prevExpand2) => !prevExpand2);
-  }
-  function toggle3() {
-    setExpand3((prevExpand3) => !prevExpand3);
-  }
-  function toggle4() {
-    setExpand4((prevExpand4) => !prevExpand4);
-  }
-  function toggle5() {
-    setExpand((prevExpand5) => !prevExpand5);
-  }
-
   return (
     <div className="px-5 lg:px-32 lg:pt-28 pt-20 lg:pb-36 pb-24 bg-[#595A90] lg:flex justify-between">
       <div className="max-w-l">

@@ -8,7 +8,7 @@ import insta from "../public/assets/insta.svg";
 import Link from "next/link";
 
 const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
+  background: "#5355AC !important",
   fontFamily: "Circular Std",
   color: "#f8f8f8",
   padding: "20px 30px",
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="lg:mt-32 mt-16 text-sm pb-16 ">
+      <p className="lg:mt-32 mt-16 text-sm pb-16 text-center lg:text-start">
         Sustain © 2021 All Rights Reserved
       </p>
     </div>
