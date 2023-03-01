@@ -43,16 +43,16 @@ const Footer = () => {
             Learn more
           </h3>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="/pricing">Blog</Link>
+            <Link href="/">Blog</Link>
           </p>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
             <Link href="/">Careers</Link>
           </p>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="/research">Terms of use</Link>
+            <Link href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8">Terms of use</Link>
           </p>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="/">Privacy policy</Link>
+            <Link href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37">Privacy policy</Link>
           </p>
         </div>
         <div className="">
@@ -60,10 +60,10 @@ const Footer = () => {
             Contact us
           </h3>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="">+2349040559724</Link>
+            <Link href="tel:+2349040559724">+2349040559724</Link>
           </p>
           <p className="lg:mb-6 lg:text-sm text-xs mb-5 text-white">
-            <Link href="">hello@getsustain.app</Link>
+            <Link href="mailto:hi@privhealth.com">hi@privhealth.com</Link>
           </p>
         </div>
         <div className="">
@@ -71,14 +71,14 @@ const Footer = () => {
             Stay in touch
           </h3>
           <div className="flex">
-            <img src={fbook.src} className="mr-5 " alt="facebook logo" />
-            <img src={insta.src} className="mr-5 " alt="instagram logo" />
-            <img src={twitter.src} className="mr-5 " alt="twitter logo" />
+            <a href="http://facebook.com/tryprivhealth"><img src={fbook.src} className="mr-5 " alt="facebook logo" /></a>
+            <a href="http://instagram.com/tryprivhealth"><img src={insta.src} className="mr-5 " alt="instagram logo" /></a>
+            <a href="http://twitter.com/tryprivhealth"><img src={twitter.src} className="mr-5 " alt="twitter logo" /></a>
           </div>
         </div>
       </div>
       <p className="lg:mt-32 mt-16 text-sm pb-16 text-center lg:text-start">
-        Sustain © 2021 All Rights Reserved
+        Priv Health © 2023 All Rights Reserved
       </p>
     </div>
   );
