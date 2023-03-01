@@ -37,7 +37,7 @@ const Section4 = () => {
         <p className=" text-3xl lg:text-start lg:text-4xl md:max-w-xl font-bold text-white">
           How does it work?
         </p>
-        <div className="max-w-xl min-w-full mt-15">
+        <div className="max-w-xl min-w-full mt-12 lg:mt-15 ">
           <div>
             <div className="">
               <div className="flex justify-between">

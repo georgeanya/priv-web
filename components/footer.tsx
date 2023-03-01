@@ -27,7 +27,7 @@ const Footer = () => {
         <p className="text-3xl lg:text-5xl font-bold mb-6">
           Book your consultation now
         </p>
-        <p className="text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
+        <p className="text-md lg:text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
