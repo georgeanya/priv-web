@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/navbar1";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import Link from "next/link";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -29,12 +30,14 @@ const StartError = () => {
           We couldn’t book your consultation. Please make sure we’ve got your
           details right and try again.
         </p>
-        <SustainButton
-          className="self-center text-sm md:text-base font-medium"
-          type="submit"
-        >
-          Try again
-        </SustainButton>
+        <Link href=''>
+          <SustainButton
+            className="self-center text-sm md:text-base font-medium"
+            type="submit"
+          >
+            Try again
+          </SustainButton>
+        </Link>
       </div>
     </div>
   );

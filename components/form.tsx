@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { setConstantValue } from "typescript";
+import Link from "next/link";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -168,13 +169,15 @@ const Form = () => {
           </p>
         </div>
         <div className="mb-28">
-          <SustainButton
-            className="self-center text-sm md:text-base font-medium"
-            type="submit"
-            onSubmit={handleSubmit}
-          >
-            Book consultation
-          </SustainButton>
+          <Link href=''>
+            <SustainButton
+              className="self-center text-sm md:text-base font-medium"
+              type="submit"
+              onSubmit={handleSubmit}
+            >
+              Book consultation
+            </SustainButton>
+          </Link>
         </div>
       </form>
     </div>

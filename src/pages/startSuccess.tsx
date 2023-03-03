@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/navbar1";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import Link from "next/link";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -29,12 +30,14 @@ const StartSuccess = () => {
           A payment link has been sent to your phone number. Check your WhatsApp
           to complete your consultation booking!
         </p>
-        <SustainButton
-          className="self-center text-sm md:text-base font-medium"
-          type="submit"
-        >
-          Back to homepage
-        </SustainButton>
+        <Link href='/'>
+          <SustainButton
+            className="self-center text-sm md:text-base font-medium"
+            type="submit"
+          >
+            Back to homepage
+          </SustainButton>
+        </Link>
       </div>
     </div>
   );

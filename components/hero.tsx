@@ -1,5 +1,7 @@
+import Link from "next/link";
 import React from "react";
 import arrow from "../public/assets/arrow.svg";
+
 
 const Hero = () => {
   return (
@@ -18,37 +20,37 @@ const Hero = () => {
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Erectile dysfunction
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#E4F0FC] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Premature ejaculation
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F7E9EA] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Vaginal dryness
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#ECF3F1] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Hair loss
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F8F2E7] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Genital herpes
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#ECECF4] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Cold sores
             </p>
-            <img src={arrow.src} alt="arrow" className='w-8 md:w-10' />
+            <Link href='/start'><img src={arrow.src} alt="arrow" className='w-8 md:w-10' /></Link>
           </div>
         </div>
       </div>
