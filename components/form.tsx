@@ -101,7 +101,7 @@ const Form = () => {
         </label>
         <select
           name="select Priority"
-          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 select_arrow"
+          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
           id="my-country-input"
         >
           <option selected>Select condition</option>
