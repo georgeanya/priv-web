@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { setConstantValue } from "typescript";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -16,19 +17,53 @@ const SustainButton = styled(Button)({
   },
 });
 
+interface IState {
+  user: {
+    firstname: string;
+    lastname: string;
+    email: string;
+    phone_number: number;
+  };
+}
+
 const Form = () => {
+  const [state, setState] = useState<IState>({
+    user: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone_number: 0,
+    },
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setState({
+      user: {
+        ...state.user,
+        [event.target.name]: event.target.value,
+      },
+    });
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLButtonElement>): void => {
+    event.preventDefault();
+    console.log(state.user);
+  };
+
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
-      <p className=" leading-tight lg:pr-14 lg:text-3xl text-1xl lg:text-start font-bold text-[#5355AC] ">
+      <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
         Book your consultation
       </p>
-      <p className="mt-4 text-base lg:text-lg font-normal lg:pr-8 lg:text-start text-[#111111]">
+      <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
         Meet a doctor that can help you get started on your journey to better
         health
       </p>
-      <div className="bg-[#595A90] p-5 flex justify-between rounded-lg mt-8 mb-9">
-        <p className="text-[#DADDF1] text-sm mt-0.5">Consultation fee</p>
-        <p className="text-white text-base font-medium">NGN 2,000</p>
+      <div className="bg-[#595A90] md:p-5 p-4 flex justify-between rounded-lg mt-8 mb-9">
+        <p className="text-[#DADDF1] text-xs md:text-sm mt-0.5">
+          Consultation fee
+        </p>
+        <p className="text-white text-sm md:text-base font-medium">NGN 2,000</p>
       </div>
       <form>
         <div className="grid grid-cols-2 gap-5">
@@ -41,8 +76,10 @@ const Form = () => {
             </label>
             <input
               type="text"
+              value={state.user.firstname}
+              onChange={handleChange}
               id="first_name"
-              className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+              className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
               placeholder=""
               required
             />
@@ -56,8 +93,10 @@ const Form = () => {
             </label>
             <input
               type="text"
+              value={state.user.lastname}
+              onChange={handleChange}
               id="last_name"
-              className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+              className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
               placeholder=""
               required
             />
@@ -73,7 +112,9 @@ const Form = () => {
           <input
             type="email"
             id="email"
-            className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+            value={state.user.email}
+            onChange={handleChange}
+            className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
             placeholder=""
             required
           />
@@ -87,8 +128,10 @@ const Form = () => {
           </label>
           <input
             type="number"
-            id="email"
-            className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+            id="phone_number"
+            value={state.user.phone_number}
+            onChange={handleChange}
+            className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
             placeholder=""
             required
           />
@@ -101,7 +144,7 @@ const Form = () => {
         </label>
         <select
           name="select Priority"
-          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 lg:h-12"
+          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 md:h-12"
           id="my-country-input"
         >
           <option selected>Select condition</option>
@@ -113,7 +156,7 @@ const Form = () => {
           <option value="bot">Cold sores</option>
         </select>
         <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
-          <p className="text-[#73738C] text-sm">
+          <p className="text-[#73738C] text-xs md:text-sm">
             By filling out this form, you agree to Priv’s{" "}
             <a className="text-[#5355AC] underline" href="">
               Terms of Use
@@ -126,8 +169,9 @@ const Form = () => {
         </div>
         <div className="mb-28">
           <SustainButton
-            className="self-center text-sm lg:text-base font-medium"
+            className="self-center text-sm md:text-base font-medium"
             type="submit"
+            onSubmit={handleSubmit}
           >
             Book consultation
           </SustainButton>

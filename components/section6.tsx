@@ -13,24 +13,24 @@ const FAQ = ({ faq, index, toggleFAQ }: any) => {
         <div className="self-start min-w-fit">
           {faq.open ? (
             <img
-              className="mr-6 flex self-center w-4 lg:w-5 lg:mr-10 mt-3.5"
+              className="mr-6 flex self-center w-4 md:w-5 md:mr-10 mt-3.5"
               src={minus.src}
               alt=""
             />
           ) : (
             <img
-              className="mr-6 self-center w-4 lg:w-5 lg:mr-10 mt-1"
+              className="mr-6 self-center w-4 md:w-5 md:mr-10 mt-1"
               src={plus.src}
               alt=""
             />
           )}
         </div>
         <div className="self-center">
-          <p className="mt--10 text-lg lg:text-2xl text-[#111111] font-medium">
+          <p className="mt--10 text-lg md:text-2xl text-[#111111] font-medium">
             {faq.question}
           </p>
           {faq.open ? (
-            <p className="text-base lg:text-xl text-[#61616B] mt-2 lg:my-6">
+            <p className="text-base md:text-xl text-[#61616B] mt-2 md:my-6">
               {faq.answer}
             </p>
           ) : (
@@ -38,7 +38,7 @@ const FAQ = ({ faq, index, toggleFAQ }: any) => {
           )}
         </div>
       </div>
-      <hr className="my-6 lg:my-8 mb-6 lg:mb-12" />
+      <hr className="my-6 md:my-8 mb-6 md:mb-12" />
     </div>
   );
 };

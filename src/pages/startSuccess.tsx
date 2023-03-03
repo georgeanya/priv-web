@@ -22,15 +22,15 @@ const StartSuccess = () => {
     <div>
       <Navbar />
       <div className="max-w-m mx-5 sm:mx-auto mt-17">
-        <p className=" leading-tight lg:pr-14 lg:text-3xl text-1xl lg:text-start font-bold text-[#5355AC] ">
+        <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
           Payment link sent
         </p>
-        <p className="mt-4 text-base lg:text-lg font-normal lg:pr-8 lg:text-start text-[#111111] mb-7">
+        <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-7">
           A payment link has been sent to your phone number. Check your WhatsApp
           to complete your consultation booking!
         </p>
         <SustainButton
-          className="self-center text-sm lg:text-base font-medium"
+          className="self-center text-sm md:text-base font-medium"
           type="submit"
         >
           Back to homepage

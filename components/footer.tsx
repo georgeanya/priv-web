@@ -22,57 +22,57 @@ const SustainButton = styled(Button)({
 
 const Footer = () => {
   return (
-    <div className="bg-[#232B5C] lg:px-32 px-5 lg:pt-36 pt-24  text-white">
+    <div className="bg-[#232B5C] md:px-32 px-5 md:pt-36 pt-24  text-white">
       <div className="text-center">
-        <p className="text-3xl lg:text-5xl font-bold mb-6">
+        <p className="text-3xl md:text-5xl font-bold mb-6">
           Book your consultation now
         </p>
-        <p className="text-md lg:text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
+        <p className="text-md md:text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
-        <SustainButton className="self-center text-sm lg:text-base font-medium">
+        <SustainButton className="self-center text-sm md:text-base font-medium">
           Get started today
         </SustainButton>
       </div>
-      <hr className="lg:mt-36 mt-28 lg:mb-24 mb-20" />
-      <div className="lg:flex lg:justify-between text-start">
+      <hr className="md:mt-36 mt-28 md:mb-24 mb-20" />
+      <div className="md:flex md:justify-between text-start">
         <img src={sustain.src} className="self-start" alt="sustain logo" />
         <div className="flex flex-wrap">
-          <div className="w-40 lg:w-72">
-            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+          <div className="w-40 md:w-72">
+            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
               Learn more
             </h3>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="/">Blog</Link>
             </p>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="/">Careers</Link>
             </p>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8">
                 Terms of use
               </Link>
             </p>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37">
                 Privacy policy
               </Link>
             </p>
           </div>
-          <div className="w-40 lg:w-72">
-            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+          <div className="w-40 md:w-72">
+            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
               Contact us
             </h3>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="tel:+2349040559724">+2349040559724</Link>
             </p>
-            <p className="lg:mb-6 lg:text-base text-sm mb-5 text-white">
+            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="mailto:hi@privhealth.com">hi@privhealth.com</Link>
             </p>
           </div>
-          <div className="w-40 lg:w-72">
-            <h3 className="lg:mb-8 mb-6 mt-14 lg:mt-0 text-sm lg:text-base font-medium text-[#C8CCEA]">
+          <div className="w-40 md:w-72">
+            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
               Stay in touch
             </h3>
             <div className="flex">
@@ -89,7 +89,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="lg:mt-32 mt-16 text-sm pb-16 text-center lg:text-start">
+      <p className="md:mt-32 mt-16 text-sm pb-10 md:pb-16 text-center md:text-start">
         Priv Health © 2023 All Rights Reserved
       </p>
     </div>

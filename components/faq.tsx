@@ -69,15 +69,15 @@ const Faq = () => {
 
 
   return (
-    <div className="px-5 lg:px-32 lg:pt-28 pt-20 lg:pb-36 pb-24">
-      <p className=" text-3xl lg:text-start lg:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14 pr-8">
+    <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24">
+      <p className=" text-3xl md:text-start md:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14 pr-8">
         Frequently asked questions
       </p>
       <div className="max-w-3xl">
       {faqs.map((faq, index) => (
           <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
         ))}
-        {/* <hr className="my-6 lg:my-8 mb-6 lg:mb-12 " /> */}
+        {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
       </div>
     </div>
   );

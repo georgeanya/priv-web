@@ -39,3 +39,16 @@
   font-family: 'Circular Std';
 }
 
+.signupselect{
+
+
+  background: url(https://i.ibb.co/fCsFTVL/icn-dropdown-chevron.png) no-repeat right;
+ 
+  background-color: #fff;
+
+}
+
+.signupselect select {
+appearance: none;
+background: transparent;
+}
