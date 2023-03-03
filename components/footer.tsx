@@ -31,9 +31,11 @@ const Footer = () => {
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
-        <SustainButton className="self-center text-sm md:text-base font-medium">
-          Get started today
-        </SustainButton>
+        <Link href='/start'>
+          <SustainButton className="self-center text-sm md:text-base font-medium">
+            Get started today
+          </SustainButton>
+        </Link>
       </div>
       <hr className="md:mt-36 mt-28 md:mb-24 mb-20" />
       <div className="md:flex md:justify-between text-start">
