@@ -42,7 +42,7 @@ const Form = () => {
             <input
               type="text"
               id="first_name"
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+              className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
               placeholder=""
               required
             />
@@ -57,7 +57,7 @@ const Form = () => {
             <input
               type="text"
               id="last_name"
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+              className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
               placeholder=""
               required
             />
@@ -73,7 +73,7 @@ const Form = () => {
           <input
             type="email"
             id="email"
-            className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+            className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
             placeholder=""
             required
           />
@@ -88,7 +88,7 @@ const Form = () => {
           <input
             type="number"
             id="email"
-            className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+            className="border h-11 lg:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
             placeholder=""
             required
           />
@@ -101,7 +101,7 @@ const Form = () => {
         </label>
         <select
           name="select Priority"
-          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
+          className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 lg:h-12"
           id="my-country-input"
         >
           <option selected>Select condition</option>
