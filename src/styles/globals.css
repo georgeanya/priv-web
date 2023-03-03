@@ -38,3 +38,7 @@
 :root{
   font-family: 'Circular Std';
 }
+
+.select_arrow {
+  padding-right: 10px;
+}

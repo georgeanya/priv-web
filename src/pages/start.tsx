@@ -2,7 +2,7 @@ import React from 'react'
 import Form from '../../components/form'
 import Navbar from '../../components/navbar1'
 
-const Consultation = () => {
+const Start = () => {
   return (
     <div>
           <Navbar />
@@ -11,4 +11,4 @@ const Consultation = () => {
   )
 }
 
-export default Consultation
+export default Start
