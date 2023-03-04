@@ -30,7 +30,7 @@ const StartError = () => {
           We couldn’t book your consultation. Please make sure we’ve got your
           details right and try again.
         </p>
-        <Link href=''>
+        <Link href="">
           <SustainButton
             className="self-center text-sm md:text-base font-medium"
             type="submit"

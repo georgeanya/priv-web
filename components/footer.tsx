@@ -31,7 +31,7 @@ const Footer = () => {
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
-        <Link href='/start'>
+        <Link href="/start">
           <SustainButton className="self-center text-sm md:text-base font-medium">
             Get started today
           </SustainButton>
@@ -46,7 +46,7 @@ const Footer = () => {
               Learn more
             </h3>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="/">Blog</Link>
+              <Link href="https://privhealth.substack.com">Blog</Link>
             </p>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="/">Careers</Link>

@@ -23,7 +23,7 @@ interface IState {
     firstname: string;
     lastname: string;
     email: string;
-    phone_number: number;
+    phone_number: string;
   };
 }
 
@@ -33,7 +33,7 @@ const Form = () => {
       firstname: "",
       lastname: "",
       email: "",
-      phone_number: 0,
+      phone_number: "",
     },
   });
 
@@ -64,7 +64,7 @@ const Form = () => {
         <p className="text-[#DADDF1] text-xs md:text-sm mt-0.5">
           Consultation fee
         </p>
-        <p className="text-white text-sm md:text-base font-medium">NGN 2,000</p>
+        <p className="text-white text-sm md:text-base font-medium">NGN 4,000</p>
       </div>
       <form>
         <div className="grid grid-cols-2 gap-5">
@@ -108,7 +108,7 @@ const Form = () => {
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            Your email
+            Email Address
           </label>
           <input
             type="email"
@@ -125,10 +125,10 @@ const Form = () => {
             htmlFor="number"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            WhatsApp Phone Number
+            Nigerian WhatsApp phone number
           </label>
           <input
-            type="number"
+            type="text"
             id="phone_number"
             value={state.user.phone_number}
             onChange={handleChange}
@@ -159,17 +159,23 @@ const Form = () => {
         <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
           <p className="text-[#73738C] text-xs md:text-sm">
             By filling out this form, you agree to Priv’s{" "}
-            <a className="text-[#5355AC] underline" href="">
+            <a
+              className="text-[#5355AC] underline"
+              href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8"
+            >
               Terms of Use
             </a>{" "}
             and{" "}
-            <a className="text-[#5355AC] underline" href="">
+            <a
+              className="text-[#5355AC] underline"
+              href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37"
+            >
               Privacy Policy
             </a>
           </p>
         </div>
         <div className="mb-28">
-          <Link href=''>
+          <Link href="">
             <SustainButton
               className="self-center text-sm md:text-base font-medium"
               type="submit"

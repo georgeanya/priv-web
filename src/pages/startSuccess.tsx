@@ -30,7 +30,7 @@ const StartSuccess = () => {
           A payment link has been sent to your phone number. Check your WhatsApp
           to complete your consultation booking!
         </p>
-        <Link href='/'>
+        <Link href="/">
           <SustainButton
             className="self-center text-sm md:text-base font-medium"
             type="submit"

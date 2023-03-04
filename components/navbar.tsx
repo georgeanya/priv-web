@@ -3,7 +3,7 @@ import priv from "../public/assets/priv.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -19,22 +19,23 @@ const ArrowIcon = styled(ArrowForwardIcon)({
   color: "#f8f8f8",
   padding: "1.5px",
   marginTop: "-3px",
-  });
+});
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
 
   return (
     <div>
-      
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <img
-              src={priv.src}
-              className="mr-3  self-center"
-              alt="Custodia Logo"
-            />
+            <Link href="/">
+              <img
+                src={priv.src}
+                className="mr-3  self-center"
+                alt="Custodia Logo"
+              />
+            </Link>
 
             <button
               data-collapse-toggle="navbar-solid-bg"
@@ -83,7 +84,6 @@ const Navbar = () => {
               id="navbar-solid-bg"
             >
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-                
                 <li className="mt-3 mx-5 ">
                   <Link
                     href="#"
@@ -93,7 +93,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <SustainButton className="text-sm">Get started now</SustainButton>
+                  <Link href="/start">
+                    <SustainButton className="text-sm">
+                      Get started now
+                    </SustainButton>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -105,15 +109,15 @@ const Navbar = () => {
           ) : (
             <ul className="pt-5">
               <li>
-                <Link href="#about" className="block text-sm py-4">
+                <Link href="https://privhealth.substack.com" className="block text-sm py-4">
                   Blog
                 </Link>
               </li>
               <li>
-              <SustainButton className="text-sm mt-5">
-                Get started
-              </SustainButton>
-            </li>
+                <SustainButton className="text-sm mt-5">
+                  Get started
+                </SustainButton>
+              </li>
             </ul>
           )}
         </div>
