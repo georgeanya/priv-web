@@ -114,10 +114,12 @@ const Navbar = () => {
                   Blog
                 </Link>
               </li>
-              <li>
-                <SustainButton className="text-sm mt-5">
-                  Get started
-                </SustainButton>
+              <li className="mt-3">
+                <Link href="/start">
+                  <SustainButton className="text-sm ">
+                    Get started
+                  </SustainButton>
+                </Link>
               </li>
             </ul>
           )}

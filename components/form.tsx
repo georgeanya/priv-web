@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
-      <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
+      <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
         Book your consultation
       </p>
       <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
@@ -174,7 +174,7 @@ const Form = () => {
             </a>
           </p>
         </div>
-        <div className="mb-28">
+        <div className="mb-15 lg:mb-28">
           <Link href="">
             <SustainButton
               className="self-center text-sm md:text-base font-medium"
