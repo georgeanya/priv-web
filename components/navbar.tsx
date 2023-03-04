@@ -15,11 +15,6 @@ const SustainButton = styled(Button)({
   textTransform: "none",
 });
 
-const ArrowIcon = styled(ArrowForwardIcon)({
-  color: "#f8f8f8",
-  padding: "1.5px",
-  marginTop: "-3px",
-});
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
@@ -32,7 +27,7 @@ const Navbar = () => {
             <img
               src={priv.src}
               className="mr-3  self-center"
-              alt="Custodia Logo"
+              alt="Priv Logo"
             />
 
             <button

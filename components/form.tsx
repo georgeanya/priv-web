@@ -108,7 +108,7 @@ const Form = () => {
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            Email Address
+            Email address
           </label>
           <input
             type="email"

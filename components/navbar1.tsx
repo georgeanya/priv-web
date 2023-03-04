@@ -15,11 +15,7 @@ const SustainButton = styled(Button)({
   textTransform: "none",
 });
 
-const ArrowIcon = styled(ArrowForwardIcon)({
-  color: "#f8f8f8",
-  padding: "1.5px",
-  marginTop: "-3px",
-});
+
 
 const Navbar = () => {
   return (
