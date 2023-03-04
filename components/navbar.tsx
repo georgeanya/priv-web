@@ -29,13 +29,11 @@ const Navbar = () => {
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/">
-              <img
-                src={priv.src}
-                className="mr-3  self-center"
-                alt="Custodia Logo"
-              />
-            </Link>
+            <img
+              src={priv.src}
+              className="mr-3  self-center"
+              alt="Custodia Logo"
+            />
 
             <button
               data-collapse-toggle="navbar-solid-bg"
@@ -109,7 +107,10 @@ const Navbar = () => {
           ) : (
             <ul className="pt-5">
               <li>
-                <Link href="https://privhealth.substack.com" className="block text-sm py-4">
+                <Link
+                  href="https://privhealth.substack.com"
+                  className="block text-sm py-4"
+                >
                   Blog
                 </Link>
               </li>

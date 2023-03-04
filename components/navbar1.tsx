@@ -22,14 +22,18 @@ const ArrowIcon = styled(ArrowForwardIcon)({
 });
 
 const Navbar = () => {
-  const [isToggled, setIsToggled] = useState(true);
-
   return (
     <div>
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <img src={priv.src} className="mr-3  self-center" alt="Priv Logo" />
+            <Link href="/">
+              <img
+                src={priv.src}
+                className="mr-3  self-center"
+                alt="Priv Logo"
+              />
+            </Link>
           </div>
         </nav>
       </div>
