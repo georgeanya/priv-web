@@ -32,7 +32,7 @@ interface IState {
   };
 }
 
-const url = "http://priv-health.herokuapp.com/v1/consult";
+const url = "https://priv-health.herokuapp.com/v1/consult";
 
 const Form = () => {
   const [state, setState] = useState<IState>({
@@ -253,7 +253,7 @@ const Form = () => {
         <StartSuccess />
       </div>
       <div className={isError ? "block" : "hidden"}>
-        <StartError />
+        <StartError toggle={setIsErrorFunc} />
       </div>
     </div>
   );

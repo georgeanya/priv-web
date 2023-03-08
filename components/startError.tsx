@@ -17,8 +17,12 @@ const SustainButton = styled(Button)({
     padding: "15px 20px",
   },
 });
+interface props {
+  toggle: any
+}
 
-const StartError = () => {
+
+const StartError = ({toggle} : props) => {
   return (
     <div>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
@@ -32,6 +36,7 @@ const StartError = () => {
         <SustainButton
           className="self-center text-sm md:text-base font-medium"
           type="submit"
+          onClick={toggle}
         >
           Try again
         </SustainButton>
