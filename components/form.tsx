@@ -50,7 +50,7 @@ const Form = () => {
 
   const [isError, setIsError] = useState(false);
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): any => {
     setState({
       user: {
         ...state.user,
@@ -59,7 +59,7 @@ const Form = () => {
     });
   };
 
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): void => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): any => {
     setState({
       user: {
         ...state.user,
