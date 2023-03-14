@@ -284,7 +284,7 @@ const Form = () => {
         <StartSuccess />
       </div>
       <div className={isError ? "block" : "hidden"}>
-        <StartError toggle={setIsErrorFunc} />
+        <StartError toggle={setIsErrorFunc} toggleFav={setIsLoadingFunc} />
       </div>
     </div>
   );
