@@ -15,11 +15,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Priv Health</title>
         <meta name="generator" content="SEOmatic" />
-        <link
-          href={favicon.src}
-          rel="shortcut icon"
-          type="image/png"
-        />
+        <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="keywords"
           content="erectile dysfunction, premature ejaculation, hair loss, cold sores, genital herpes, vaginal dryness"
@@ -42,10 +38,7 @@ const Home: NextPage = () => {
           content="Priv provides private and personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
           property="og:description"
         />
-        <meta
-          content={metaCard.src}
-          property="og:image"
-        />
+        <meta content={metaCard.src} property="og:image" />
         <meta content="1024" property="og:image:width" />
         <meta content="512" property="og:image:height" />
         <meta content="An image of the Priv logo" property="og:image:alt" />
@@ -72,10 +65,7 @@ const Home: NextPage = () => {
           name="twitter:description"
           content="Priv provides private and personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
         />
-        <meta
-          name="twitter:image"
-          content={metaCard.src}
-        />
+        <meta name="twitter:image" content={metaCard.src} />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />

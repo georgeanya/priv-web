@@ -18,12 +18,11 @@ const SustainButton = styled(Button)({
   },
 });
 interface props {
-  toggle: any
-  toggleFav: any
+  toggle: any;
+  toggleFav: any;
 }
 
-
-const StartError = ({toggle, toggleFav} : props) => {
+const StartError = ({ toggle, toggleFav }: props) => {
   return (
     <div>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
@@ -37,7 +36,10 @@ const StartError = ({toggle, toggleFav} : props) => {
         <SustainButton
           className="self-center text-sm md:text-base font-medium"
           type="submit"
-          onClick={() => { toggle(); toggleFav();}}
+          onClick={() => {
+            toggle();
+            toggleFav();
+          }}
         >
           Try again
         </SustainButton>

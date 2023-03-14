@@ -142,7 +142,6 @@ const Form = () => {
                 name="first_name"
                 value={state.user.first_name}
                 onChange={handleChange}
-                id="first_name"
                 className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
                 placeholder=""
                 required
@@ -160,7 +159,6 @@ const Form = () => {
                 name="last_name"
                 value={state.user.last_name}
                 onChange={handleChange}
-                id="last_name"
                 className="border h-11 md:h-12 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5"
                 placeholder=""
                 required
@@ -176,7 +174,6 @@ const Form = () => {
             </label>
             <input
               type="email"
-              id="email"
               name="email"
               value={state.user.email}
               onChange={handleChange}
@@ -194,7 +191,6 @@ const Form = () => {
             </label>
             <input
               type="text"
-              id="phone_number"
               name="phone_number"
               value={state.user.phone_number}
               onChange={handleChange}
@@ -204,7 +200,7 @@ const Form = () => {
             />
           </div>
           <label
-            htmlFor="priority"
+            htmlFor="condition"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
             Condition
@@ -212,13 +208,11 @@ const Form = () => {
           <select
             name="condition"
             className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 md:h-12"
-            id="my-country-input"
             value={state.user.condition}
             onChange={handleSelect}
             required
           >
-            <option>Select condition</option>
-            <option disabled selected hidden>
+            <option hidden selected>
               Select Condition
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>

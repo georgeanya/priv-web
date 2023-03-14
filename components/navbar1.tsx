@@ -15,8 +15,6 @@ const SustainButton = styled(Button)({
   textTransform: "none",
 });
 
-
-
 const Navbar = () => {
   return (
     <div>

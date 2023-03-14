@@ -5,18 +5,13 @@ import Navbar from "../../components/navbar1";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 
-
 const Start = () => {
   return (
     <div>
       <Head>
         <title>Book a consultation - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
-        <link
-          href={favicon.src}
-          rel="shortcut icon"
-          type="image/png"
-        />
+        <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
@@ -40,10 +35,7 @@ const Start = () => {
           content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
           property="og:description"
         />
-        <meta
-          content={metaCard.src}
-          property="og:image"
-        />
+        <meta content={metaCard.src} property="og:image" />
         <meta content="1024" property="og:image:width" />
         <meta content="512" property="og:image:height" />
         <meta content="An image of the Priv logo" property="og:image:alt" />
@@ -70,10 +62,7 @@ const Start = () => {
           name="twitter:description"
           content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
         />
-        <meta
-          name="twitter:image"
-          content={metaCard.src}
-        />
+        <meta name="twitter:image" content={metaCard.src} />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />

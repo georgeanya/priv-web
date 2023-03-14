@@ -15,7 +15,6 @@ const SustainButton = styled(Button)({
   textTransform: "none",
 });
 
-
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
 
@@ -24,11 +23,7 @@ const Navbar = () => {
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <img
-              src={priv.src}
-              className="mr-3  self-center"
-              alt="Priv Logo"
-            />
+            <img src={priv.src} className="mr-3  self-center" alt="Priv Logo" />
 
             <button
               data-collapse-toggle="navbar-solid-bg"
