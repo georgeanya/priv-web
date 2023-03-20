@@ -18,11 +18,11 @@ const Home: NextPage = () => {
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="keywords"
-          content="erectile dysfunction, premature ejaculation, hair loss, cold sores, genital herpes, vaginal dryness"
+          content="erectile dysfunction, premature ejaculation, hair loss, cold sores, genital herpes, male infertility"
         />
         <meta
           name="description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -31,11 +31,11 @@ const Home: NextPage = () => {
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.com/" property="og:url" />
         <meta
-          content="Priv Health - Personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
+          content="Priv Health - Personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
           property="og:title"
         />
         <meta
-          content="Priv provides private and personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -59,11 +59,11 @@ const Home: NextPage = () => {
         <meta name="twitter:creator" content="@tryprivhealth" />
         <meta
           name="twitter:title"
-          content="Priv Health - Personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
+          content="Priv Health - Personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
         />
         <meta
           name="twitter:description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, vaginal dryness, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
         />
         <meta name="twitter:image" content={metaCard.src} />
         <meta name="twitter:image:width" content="1024" />
