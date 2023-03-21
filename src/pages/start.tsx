@@ -18,7 +18,7 @@ const Start = () => {
         />
         <meta
           name="keywords"
-          content="erectile dysfunction, premature ejaculation, hair loss, cold sores, genital herpes, vaiginal dryness"
+          content="erectile dysfunction, premature ejaculation, hair loss, cold sores, genital herpes, male infertility"
         />
         <meta
           name="description"
