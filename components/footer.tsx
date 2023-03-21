@@ -70,7 +70,7 @@ const Footer = () => {
               <Link href="tel:+2349040559724">+2349040559724</Link>
             </p>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="mailto:hi@privhealth.com">hi@privhealth.com</Link>
+              <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
             </p>
           </div>
           <div className="w-40 md:w-72">
