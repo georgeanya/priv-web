@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <meta content="107593817569600" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://privhealth.com/" property="og:url" />
+        <meta content="https://privhealth.co/" property="og:url" />
         <meta
           content="Priv Health - Personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
           property="og:title"
@@ -70,11 +70,11 @@ const Home: NextPage = () => {
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
-        <link href="https://privhealth.com/" rel="canonical" />
-        <link href="https://privhealth.com/" rel="home" />
+        <link href="https://privhealth.co/" rel="canonical" />
+        <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link
-          href="https://privhealth.com/"
+          href="https://privhealth.co/"
           hrefLang="x-default"
           rel="alternate"
         />

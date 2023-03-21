@@ -29,7 +29,7 @@ const Start = () => {
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://privhealth.com/start" property="og:url" />
+        <meta content="https://privhealth.co/start" property="og:url" />
         <meta content="Book a consultation - Priv Health" property="og:title" />
         <meta
           content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
@@ -67,11 +67,11 @@ const Start = () => {
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
-        <link href="https://privhealth.com/start" rel="canonical" />
-        <link href="https://privhealth.com/" rel="home" />
+        <link href="https://privhealth.co/start" rel="canonical" />
+        <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link
-          href="https://privhealth.com/"
+          href="https://privhealth.co/"
           hrefLang="x-default"
           rel="alternate"
         />
