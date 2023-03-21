@@ -10,7 +10,7 @@ export default function Document() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-N835SQ1X9J"
         ></Script>
-        <Script>
+        <Script id="ga-script">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
