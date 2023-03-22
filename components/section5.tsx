@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../public/assets/image.svg";
+import image from "../public/assets/avatar.png";
 
 const Section5 = () => {
   return (
@@ -13,7 +13,7 @@ const Section5 = () => {
         <img src={image.src} alt="" className="w-12 md:w-17" />
         <div className="self-center pl-3">
           <p className="font-medium text-base md:text-lg text-white">
-            Samuel Ude-Mang
+            Samuel M.
           </p>
           <p className="text-xs md:text-sm text-white">Lagos, Nigeria</p>
         </div>
