@@ -34,7 +34,7 @@ const Faq = () => {
     },
     {
       question: "How much does it cost to consult a doctor on Priv?",
-      answer: "It cost 4,000 naira to consult a doctor on Priv",
+      answer: "It cost 5,000 naira to consult a doctor on Priv",
       open: false,
     },
     {

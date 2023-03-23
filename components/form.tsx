@@ -125,7 +125,7 @@ const Form = () => {
             Consultation fee
           </p>
           <p className="text-white text-sm md:text-base font-medium">
-            NGN 4,000
+            NGN 5,000
           </p>
         </div>
         <form onSubmit={handleSubmit}>
