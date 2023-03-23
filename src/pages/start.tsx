@@ -10,17 +10,6 @@ const Start = () => {
   return (
     <div>
       <Head>
-        {/* Google tag (gtag.js) */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-N835SQ1X9J"
-        ></Script>
-        <Script id="ga-script">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-N835SQ1X9J');`}
-        </Script>
         <title>Book a consultation - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
