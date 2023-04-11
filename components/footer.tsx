@@ -67,7 +67,7 @@ const Footer = () => {
               Contact us
             </h3>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="tel:+2349040559724">+2349040559724</Link>
+              <Link href="tel:+2347064467417">+2347064467417</Link>
             </p>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
