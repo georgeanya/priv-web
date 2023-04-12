@@ -76,6 +76,10 @@ const Start = () => {
           hrefLang="x-default"
           rel="alternate"
         />
+        <meta
+          name="facebook-domain-verification"
+          content="ydhokuda2jbyn329ymapza2hdhbumm"
+        />
       </Head>
       <Navbar />
       <Form />
