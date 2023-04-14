@@ -6,6 +6,7 @@ import Link from "next/link";
 import axios from "axios";
 import StartError from "./startError";
 import StartSuccess from "./startSuccess";
+import lock from "../public/assets/lock.svg";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -120,17 +121,27 @@ const Form = () => {
           Meet a doctor that can help you get started on your journey to better
           health
         </p>
-        <div className="bg-[#595A90] md:p-5 p-4 flex justify-between rounded-lg mt-8 mb-9">
-          <p className="text-[#DADDF1] text-xs md:text-sm mt-0.5">
-            Consultation fee
-          </p>
-          <p className="text-white text-sm md:text-base font-medium">
-            NGN 5,000
-          </p>
+        <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-9">
+          <div className="flex justify-between">
+            <p className="text-white text-sm md:text-base md:leading-5">
+              Consultation fee
+            </p>
+            <p className="text-white text-sm md:text-base md:leading-5 font-medium">
+              NGN 5,000
+            </p>
+          </div>
+          <div className="flex justify-between md:mt-1.5">
+            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4">
+            50% OFF
+            </p>
+            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4  line-through">
+              NGN 10,000
+            </p>
+          </div>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-5">
-            <div className="mb-7">
+            <div className="mb-2">
               <label
                 htmlFor="first_name"
                 className="block mb-2 text-sm font-medium text-gray-900"
@@ -147,7 +158,7 @@ const Form = () => {
                 required
               />
             </div>
-            <div className="mb-7">
+            <div className="mb-2">
               <label
                 htmlFor="last_name"
                 className="block mb-2 text-sm font-medium text-gray-900"
@@ -164,6 +175,11 @@ const Form = () => {
                 required
               />
             </div>
+
+          </div>
+          <div className="flex mb-7">
+            <img src={lock.src} alt="" />
+            <p className="md:text-[13px] leading-4 text-xs text-[#73738C] ml-1">Your information will never be shared with anyone</p>
           </div>
           <div className="mb-7">
             <label
