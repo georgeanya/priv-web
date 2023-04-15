@@ -108,7 +108,7 @@ const Navbar = () => {
                   href="https://privhealth.bumpa.shop"
                   className="block text-sm py-4"
                 >
-                  SHop
+                  Shop
                 </Link>
               </li>
               <li>
