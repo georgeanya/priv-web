@@ -113,7 +113,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="https://privhealth.substack.com"
+                  href="https://medium.com/@tryprivhealth"
                   className="block text-sm py-4"
                 >
                   Blog
