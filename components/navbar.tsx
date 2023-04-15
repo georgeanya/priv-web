@@ -110,8 +110,8 @@ const Navbar = () => {
                 >
                   SHop
                 </Link>
-                </li>
-                <li>
+              </li>
+              <li>
                 <Link
                   href="https://privhealth.substack.com"
                   className="block text-sm py-4"
