@@ -4,7 +4,6 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 
-
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
   fontFamily: "Circular Std",
@@ -74,6 +73,14 @@ const Navbar = () => {
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3 mx-5 ">
                   <Link
+                    href="https://privhealth.bumpa.shop"
+                    className="text-sm pt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
+                  >
+                    Shop
+                  </Link>
+                </li>
+                <li className="mt-3 mx-5 ">
+                  <Link
                     href="https://medium.com/@tryprivhealth"
                     className="text-sm pt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -97,6 +104,14 @@ const Navbar = () => {
           ) : (
             <ul className="pt-5">
               <li>
+                <Link
+                  href="https://privhealth.bumpa.shop"
+                  className="block text-sm py-4"
+                >
+                  SHop
+                </Link>
+                </li>
+                <li>
                 <Link
                   href="https://privhealth.substack.com"
                   className="block text-sm py-4"
