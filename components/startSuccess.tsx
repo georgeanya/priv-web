@@ -24,7 +24,8 @@ const StartSuccess = () => {
     <div>
       <Head>
         <script>
-          {`gtag('event', 'conversion', {'send_to': 'AW-11147200607/WS42CIf-tJgYEN-Qs8Mp'});`}
+          {`gtag('event', 'conversion', {'send_to': 'AW-11147200607/WS42CIf-tJgYEN-Qs8Mp'});
+  alert('hi there');`}
         </script>
       </Head>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
