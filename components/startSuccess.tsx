@@ -25,9 +25,7 @@ const SustainButton = styled(Button)({
 const StartSuccess = () => {
   return (
     <div>
-      <Head>
-        
-      </Head>
+      
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
         Payment link sent
       </p>
