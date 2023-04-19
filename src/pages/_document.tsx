@@ -10,13 +10,12 @@ export default function Document() {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-N835SQ1X9J"
         ></script>
-        <script>
+        <script id="ga-script">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-N835SQ1X9J');`}
         </script>
-        
       </Head>
       <body>
         <Main />
