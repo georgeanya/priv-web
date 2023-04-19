@@ -233,7 +233,7 @@ const Form = () => {
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>
             <option value="premature ejaculation">Premature ejaculation</option>
-            <option value="male infertility">Male infertility</option>
+            <option value="warts">Warts</option>
             <option value="hair loss">Hair loss</option>
             <option value="genital herpes">Genital herpes</option>
             <option value="cold sores">Cold sores</option>
