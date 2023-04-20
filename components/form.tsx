@@ -233,10 +233,11 @@ const Form = () => {
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>
             <option value="premature ejaculation">Premature ejaculation</option>
+            <option value="low testosterone">Low testosterone</option>
             <option value="warts">Warts</option>
             <option value="hair loss">Hair loss</option>
-            <option value="genital herpes">Genital herpes</option>
-            <option value="cold sores">Cold sores</option>
+            <option value="genital herpes">Genital herpes</option>            
+            <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
             <p className="text-[#73738C] text-xs md:text-sm">
