@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme, Theme } from "@emotion/react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -79,6 +79,14 @@ const Form = () => {
     setIsError(!isError);
   };
 
+  useEffect(() => {
+    if (isSuccess) {
+      {
+        `gtag('event', 'conversion', {'send_to': 'AW-11147200607/WS42CIf-tJgYEN-Qs8Mp'});`;
+      }
+    }
+  }, [isSuccess]);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     setIsLoadingFunc();
@@ -132,7 +140,7 @@ const Form = () => {
           </div>
           <div className="flex justify-between md:mt-1.5">
             <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4">
-            50% OFF
+              50% OFF
             </p>
             <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4  line-through">
               NGN 10,000
@@ -175,11 +183,12 @@ const Form = () => {
                 required
               />
             </div>
-
           </div>
           <div className="flex mb-7">
             <img src={lock.src} alt="" />
-            <p className="md:text-[13px] leading-4 text-xs text-[#73738C] ml-1">Your information will never be shared with anyone</p>
+            <p className="md:text-[13px] leading-4 text-xs text-[#73738C] ml-1">
+              Your information will never be shared with anyone
+            </p>
           </div>
           <div className="mb-7">
             <label
@@ -236,7 +245,7 @@ const Form = () => {
             <option value="low testosterone">Low testosterone</option>
             <option value="warts">Warts</option>
             <option value="hair loss">Hair loss</option>
-            <option value="genital herpes">Genital herpes</option>            
+            <option value="genital herpes">Genital herpes</option>
             <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
