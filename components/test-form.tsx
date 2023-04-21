@@ -29,7 +29,7 @@ interface IState {
     last_name: string;
     email: string;
     phone_number: string;
-    condition: string;
+    score: number;
     country_code: string;
   };
 }
@@ -43,7 +43,7 @@ const TestForm = () => {
       last_name: "",
       email: "",
       phone_number: "",
-      condition: "",
+      score: 0,
       country_code: "234",
     },
   });
@@ -67,7 +67,7 @@ const TestForm = () => {
     setState({
       user: {
         ...state.user,
-        [event.target.name]: event.target.value,
+        score: 2,
       },
     });
   };
@@ -97,7 +97,7 @@ const TestForm = () => {
         last_name: state.user.last_name,
         email: state.user.email,
         phone_number: state.user.phone_number?.slice(1),
-        condition: state.user.condition,
+        condition: state.user.score,
         country_code: state.user.country_code,
       })
       .then((res) => {
@@ -124,33 +124,14 @@ const TestForm = () => {
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
       <div className={isSuccess || isError ? "hidden" : "block"}>
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
-          Book your consultation
+          Send my test results
         </p>
-        <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
-          Meet a doctor that can help you get started on your journey to better
-          health
+        <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-9">
+          Please enter your details to get your risk test results sent to you
         </p>
-        <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-9">
-          <div className="flex justify-between">
-            <p className="text-white text-sm md:text-base md:leading-5">
-              Consultation fee
-            </p>
-            <p className="text-white text-sm md:text-base md:leading-5 font-medium">
-              NGN 5,000
-            </p>
-          </div>
-          <div className="flex justify-between md:mt-1.5">
-            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4">
-              50% OFF
-            </p>
-            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4  line-through">
-              NGN 10,000
-            </p>
-          </div>
-        </div>
         <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="mb-2">
+          <div className="md:grid md:grid-cols-2 md:gap-5">
+            <div className="mb-7">
               <label
                 htmlFor="first_name"
                 className="block mb-2 text-sm font-medium text-gray-900"
@@ -167,7 +148,7 @@ const TestForm = () => {
                 required
               />
             </div>
-            <div className="mb-2">
+            <div className="mb-7">
               <label
                 htmlFor="last_name"
                 className="block mb-2 text-sm font-medium text-gray-900"
@@ -185,6 +166,7 @@ const TestForm = () => {
               />
             </div>
           </div>
+
           <div className="mb-7">
             <label
               htmlFor="email"
@@ -251,9 +233,11 @@ const TestForm = () => {
                 </div>
               </SustainButton>
             )}
-            <p className="md-mt-7 text-[#5355AC] text-center">
-              Click here to start again
-            </p>
+            <Link href="/ed-assessment">
+              <p className="mt-7 text-[#5355AC] text-center text-sm">
+                Click here to start again
+              </p>
+            </Link>
           </div>
         </form>
       </div>
