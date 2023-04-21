@@ -3,8 +3,8 @@ import { useTheme, Theme } from "@emotion/react";
 
 import Link from "next/link";
 import axios from "axios";
-import StartError from "./startError";
-import StartSuccess from "./startSuccess";
+import StartError from "./startTestError";
+import StartSuccess from "./startTestSuccess";
 import lock from "../public/assets/lock.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -29,21 +29,21 @@ interface IState {
     last_name: string;
     email: string;
     phone_number: string;
-    score: number;
+    score: any;
     country_code: string;
   };
 }
 
-const url = "https://priv-health.herokuapp.com/v1/consult";
+const url = "https://priv-health.herokuapp.com/v1/ed-assessment";
 
-const TestForm = () => {
+const TestForm = ({score}: any) => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
       last_name: "",
       email: "",
       phone_number: "",
-      score: 0,
+      score: {score},
       country_code: "234",
     },
   });
@@ -63,14 +63,6 @@ const TestForm = () => {
     });
   };
 
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): any => {
-    setState({
-      user: {
-        ...state.user,
-        score: 2,
-      },
-    });
-  };
 
   const setIsSuccessFunc = () => {
     setIsSuccess(!isSuccess);
@@ -97,7 +89,7 @@ const TestForm = () => {
         last_name: state.user.last_name,
         email: state.user.email,
         phone_number: state.user.phone_number?.slice(1),
-        condition: state.user.score,
+        score: state.user.score,
         country_code: state.user.country_code,
       })
       .then((res) => {

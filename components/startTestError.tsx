@@ -31,7 +31,7 @@ const StartError = ({ toggle, toggleFav }: props) => {
       <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-7">
       Please make sure we’ve got your details right and try again.
       </p>
-      <Link href="/start">
+      <Link href="">
         <SustainButton
           className="self-center text-sm md:text-base font-medium"
           type="submit"

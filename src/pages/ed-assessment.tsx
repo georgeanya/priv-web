@@ -6,7 +6,8 @@ import { useState } from "react";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/ed-metacard.png";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import TestForm from "../../components/test-form";
 
 type Question = {
   text: string;
@@ -88,12 +89,14 @@ const RiskTest = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [testStart, setTestStart] = useState(true);
+  const [testComplete, setTestComplete] = useState(true);
 
   const handleOptionClick = (optionCount: number) => {
     setTotalScore(totalScore + optionCount);
     if (currentQuestionIndex === questions.length - 1) {
       console.log(`Total score: ${totalScore}`);
-      router.push('/ed-assessment-result');
+      setTestComplete(!testComplete);
+
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
@@ -135,10 +138,7 @@ const RiskTest = () => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@tryprivhealth" />
           <meta name="twitter:creator" content="@tryprivhealth" />
-          <meta
-            name="twitter:image"
-            content={metaCard.src}
-          />
+          <meta name="twitter:image" content={metaCard.src} />
           <meta name="twitter:image:width" content="1024" />
           <meta name="twitter:image:height" content="512" />
           <meta name="twitter:image:alt" content="An image of the Priv logo" />
@@ -191,42 +191,48 @@ const RiskTest = () => {
         </div>
       </Head>
       <Navbar />
-      {testStart ? (
-        <div className="md:px-[510px] px-5 mt-[65px] md:mt-[100px] text-center">
-          <p className="md:text-[44px] text-3xl leading-[38px] md:leading-[55px] font-bold text-[#5355AC]">
-            Erectile dysfunction self-assessment
-          </p>
-          <p className="md:text-xl text-base mt-6 md:px-5 md:mb-9 mb-7 text-[#111111]">
-            This self-assessment can help determine whether you might have the
-            symptoms of erectile dysfunction.
-          </p>
-          <div className="md:px-[89px] px-[57px]">
-            <SustainButton onClick={() => startTest()}>
-              Take the assessment now
-            </SustainButton>
-          </div>
-          <p className="text-sm mt-7 md:mt-9 text-[#73738C] px-5">
-            *This is an assessment tool. Do not use for diagnostic purposes.
-          </p>
+      {testComplete ? (
+        <div>
+          {testStart ? (
+            <div className="md:px-[510px] px-5 mt-[65px] md:mt-[100px] text-center">
+              <p className="md:text-[44px] text-3xl leading-[38px] md:leading-[55px] font-bold text-[#5355AC]">
+                Erectile dysfunction self-assessment
+              </p>
+              <p className="md:text-xl text-base mt-6 md:px-5 md:mb-9 mb-7 text-[#111111]">
+                This self-assessment can help determine whether you might have
+                the symptoms of erectile dysfunction.
+              </p>
+              <div className="md:px-[89px] px-[57px]">
+                <SustainButton onClick={() => startTest()}>
+                  Take the assessment now
+                </SustainButton>
+              </div>
+              <p className="text-sm mt-7 md:mt-9 text-[#73738C] px-5">
+                *This is an assessment tool. Do not use for diagnostic purposes.
+              </p>
+            </div>
+          ) : (
+            <div className="md:mx-[520px] px-5 mt-[65px] md:mt-[100px] max-w-[450px]">
+              <h1 className="md:text-3xl text-2xl font-bold text-[#5355AC] mb-9">
+                {currentQuestion.text}
+              </h1>
+              <ul>
+                {currentQuestion.options.map((option) => (
+                  <li key={option.text}>
+                    <div
+                      className="py-[18px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base"
+                      onClick={() => handleOptionClick(option.count)}
+                    >
+                      {option.text}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       ) : (
-        <div className="md:mx-[520px] px-5 mt-[65px] md:mt-[100px] max-w-[450px]">
-          <h1 className="md:text-3xl text-2xl font-bold text-[#5355AC] mb-9">
-            {currentQuestion.text}
-          </h1>
-          <ul>
-            {currentQuestion.options.map((option) => (
-              <li key={option.text}>
-                <div
-                  className="py-[18px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base"
-                  onClick={() => handleOptionClick(option.count)}
-                >
-                  {option.text}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <TestForm tScore={totalScore} />
       )}
     </div>
   );
