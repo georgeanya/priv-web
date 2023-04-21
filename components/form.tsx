@@ -83,7 +83,6 @@ const Form = () => {
     if (isSuccess) {
       {
         `gtag('event', 'conversion', {'send_to': 'AW-11147200607/WS42CIf-tJgYEN-Qs8Mp'});`;
-        alert('works')
       }
     }
   }, [isSuccess]);
