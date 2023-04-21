@@ -36,7 +36,7 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/consult";
 
-const testForm = () => {
+const TestForm = () => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
@@ -267,4 +267,4 @@ const testForm = () => {
   );
 };
 
-export default testForm;
+export default TestForm;

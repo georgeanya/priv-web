@@ -65,7 +65,7 @@ const SustainButton = styled(Button)({
   },
 });
 
-const riskTest = () => {
+const RiskTest = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
 
@@ -114,4 +114,4 @@ const riskTest = () => {
   );
 };
 
-export default riskTest;
+export default RiskTest;
