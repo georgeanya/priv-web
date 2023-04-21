@@ -36,7 +36,7 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/consult";
 
-const Form = () => {
+const testForm = () => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
@@ -185,12 +185,6 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className="flex mb-7">
-            <img src={lock.src} alt="" />
-            <p className="md:text-[13px] leading-4 text-xs text-[#73738C] ml-1">
-              Your information will never be shared with anyone
-            </p>
-          </div>
           <div className="mb-7">
             <label
               htmlFor="email"
@@ -225,55 +219,14 @@ const Form = () => {
               required
             />
           </div>
-          <label
-            htmlFor="condition"
-            className="block mb-2 text-sm font-medium text-gray-900"
-          >
-            Condition
-          </label>
-          <select
-            name="condition"
-            className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 md:h-12"
-            value={state.user.condition}
-            onChange={handleSelect}
-            required
-          >
-            <option hidden selected>
-              Select Condition
-            </option>
-            <option value="erectile dysfunction">Erectile dysfunction</option>
-            <option value="premature ejaculation">Premature ejaculation</option>
-            <option value="low testosterone">Low testosterone</option>
-            <option value="warts">Warts</option>
-            <option value="hair loss">Hair loss</option>
-            <option value="genital herpes">Genital herpes</option>
-            <option value="others">Others</option>
-          </select>
-          <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
-            <p className="text-[#73738C] text-xs md:text-sm">
-              By filling out this form, you agree to Priv’s{" "}
-              <a
-                className="text-[#5355AC] underline"
-                href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8"
-              >
-                Terms of Use
-              </a>{" "}
-              and{" "}
-              <a
-                className="text-[#5355AC] underline"
-                href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37"
-              >
-                Privacy Policy
-              </a>
-            </p>
-          </div>
+
           <div className="mb-15 lg:mb-28">
             {isLoading ? (
               <SustainButton
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
               >
-                <p>Book consultation</p>
+                Get my result
               </SustainButton>
             ) : (
               <SustainButton
@@ -298,6 +251,9 @@ const Form = () => {
                 </div>
               </SustainButton>
             )}
+            <p className="md-mt-7 text-[#5355AC] text-center">
+              Click here to start again
+            </p>
           </div>
         </form>
       </div>
@@ -311,4 +267,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default testForm;
