@@ -87,7 +87,7 @@ const TestForm = ({tScore}: any) => {
         last_name: state.user.last_name,
         email: state.user.email,
         phone_number: state.user.phone_number?.slice(1),
-        score: state.user.score,
+        score: state.user?.score,
         country_code: state.user.country_code,
       })
       .then((res) => {
