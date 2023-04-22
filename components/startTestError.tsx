@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./navbar1";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";

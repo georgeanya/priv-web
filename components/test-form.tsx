@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useTheme, Theme } from "@emotion/react";
-
 import Link from "next/link";
 import axios from "axios";
 import StartError from "./startTestError";
@@ -36,14 +34,14 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/ed-assessment";
 
-const TestForm = ({score}: any) => {
+const TestForm = ({tScore}: any) => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
       last_name: "",
       email: "",
       phone_number: "",
-      score: {score},
+      score: {tScore},
       country_code: "234",
     },
   });
