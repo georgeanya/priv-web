@@ -6,7 +6,6 @@ import { useState } from "react";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/ed-metacard.png";
-import { useRouter } from "next/router";
 import TestForm from "../../components/test-form";
 
 type Question = {
@@ -85,7 +84,6 @@ const SustainButton = styled(Button)({
 });
 
 const RiskTest = () => {
-  const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [totalScore, setTotalScore] = useState(0);
   const [testStart, setTestStart] = useState(true);
@@ -214,16 +212,16 @@ const RiskTest = () => {
           ) : (
             <div className="md:mx-[520px] px-5 mt-[65px] md:mt-[100px] max-w-[450px]">
               <h1 className="md:text-3xl text-2xl font-bold text-[#5355AC] mb-9">
-                {currentQuestion.text}
+                {currentQuestion?.text}
               </h1>
               <ul>
                 {currentQuestion.options.map((option) => (
-                  <li key={option.text}>
+                  <li key={option?.text}>
                     <div
                       className="py-[18px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base"
-                      onClick={() => handleOptionClick(option.count)}
+                      onClick={() => handleOptionClick(option?.count)}
                     >
-                      {option.text}
+                      {option?.text}
                     </div>
                   </li>
                 ))}
@@ -232,7 +230,7 @@ const RiskTest = () => {
           )}
         </div>
       ) : (
-        <TestForm  />
+        <TestForm tScore={totalScore} />
       )}
     </div>
   );
