@@ -34,14 +34,14 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/ed-assessment";
 
-const TestForm = ({tScore}: any) => {
+const TestForm = () => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
       last_name: "",
       email: "",
       phone_number: "",
-      score: {tScore},
+      score: 5,
       country_code: "234",
     },
   });

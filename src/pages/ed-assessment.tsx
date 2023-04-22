@@ -232,7 +232,7 @@ const RiskTest = () => {
           )}
         </div>
       ) : (
-        <TestForm tScore={totalScore} />
+        <TestForm  />
       )}
     </div>
   );
