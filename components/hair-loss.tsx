@@ -22,33 +22,27 @@ const SustainButton = styled(Button)({
 const HairLoss = () => {
     const [faqs, setFaqs] = useState([
         {
-          question: "Who is Priv for?",
+          question: "What causes hair loss?",
           answer:
-            "Priv is for adults experiencing health issues or wanting to improve or support their health and prefer to do so from the comfort of their homes.",
+            "Priv is for adults who are experiencing health issues or want to improve or support their health and prefer to do so from the comfort of their homes.",
           open: true,
         },
         {
-          question: "How does Priv work?",
+          question: "Can hair loss be treated?",
           answer:
             "First, book a consultation and with one of our doctors. The doctor will review your information and recommend a personalised treatment. Priv will ship your treatment for free in discreet packaging if prescribed.",
           open: false,
         },
         {
-          question: "How much does it cost to consult a doctor on Priv?",
+          question: "How long does hair loss treatment take?",
           answer: "It cost 5,000 naira to consult a doctor on Priv",
           open: false,
         },
         {
-          question: "Are your doctors licensed?",
+          question: "How long does it take for hair loss treatment to work?",
           answer: "Our doctors are experts licensed to practice in Nigeria",
           open: false,
-        },
-        {
-          question: "Are my consultations private?",
-          answer:
-            "All consultations on Priv are carried out in the strictest respect of medical secrecy.",
-          open: false,
-        },
+        }
       ]);
     
       const toggleFAQ = (index: number) => {
@@ -68,7 +62,7 @@ const HairLoss = () => {
     
       return (
         <div className="px-5 md:px-32 md:pt-20 pt-11 md:pb-36 pb-24">
-          <p className="text-[34px] leading-[43px] md:text-start md:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14">
+          <p className="text-[34px] leading-[43px] md:text-start md:text-[50px] md:leading-[63px] md:max-w-[591px] font-bold text-[#5355AC] mb-14">
           Get private treatment for male hair loss
           </p>
           <div className="max-w-3xl">

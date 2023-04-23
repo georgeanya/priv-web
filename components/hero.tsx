@@ -19,7 +19,7 @@ const Hero = () => {
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Erectile dysfunction
             </p>
-            <Link href="/start">
+            <Link href="/ed">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
@@ -27,7 +27,7 @@ const Hero = () => {
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Premature ejaculation
             </p>
-            <Link href="/start">
+            <Link href="/premature-ejaculation">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
@@ -51,7 +51,7 @@ const Hero = () => {
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Hair loss
             </p>
-            <Link href="/start">
+            <Link href="/hair-loss">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
