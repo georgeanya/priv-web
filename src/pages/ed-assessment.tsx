@@ -215,7 +215,7 @@ const RiskTest = () => {
                 {currentQuestion?.text}
               </h1>
               <ul>
-                {currentQuestion?.options?.map((option) => (
+                {currentQuestion?.options.map((option) => (
                   <li key={option?.text}>
                     <div
                       className="py-[18px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base"

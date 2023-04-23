@@ -3,6 +3,7 @@ import priv from "../public/assets/priv.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -14,11 +15,24 @@ const SustainButton = styled(Button)({
   textTransform: "none",
 });
 
+const ArrowIcon = styled(ArrowForwardIcon)({
+  color: "#f8f8f8",
+  padding: "1.5px",
+  marginTop: "-2px",
+  width: "21px",
+});
+
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
 
   return (
     <div>
+      <div className="bg-[#232B5C] ">
+        <Link href="https://getsustain.app/risk-test"><p className="text-center text-sm md:text-base text-white py-4 px-7">
+          ✨ Take this free assessment to know if you may have erectile dysfunction
+          <ArrowIcon />
+        </p></Link>
+      </div>
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">

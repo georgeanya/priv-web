@@ -6,7 +6,7 @@ const Section4 = () => {
     <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24 bg-[#595A90] md:flex justify-between">
       <div className="max-w-l">
         <p className=" text-3xl md:text-start md:text-4xl md:max-w-xl font-bold text-white">
-          How does it work?
+          How does Priv work?
         </p>
         <div className="max-w-xl min-w-full mt-12 md:mt-15 ">
           <div>
