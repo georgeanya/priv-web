@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="bg-[#232B5C] ">
-        <Link href="https://getsustain.app/risk-test"><p className="text-center text-sm md:text-base text-white py-4 px-7">
+        <Link href="/ed-assessment"><p className="text-center text-sm md:text-base text-white py-4 px-7">
           ✨ Take this free assessment to know if you may have erectile dysfunction
           <ArrowIcon />
         </p></Link>
