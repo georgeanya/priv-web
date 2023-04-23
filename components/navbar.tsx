@@ -21,7 +21,8 @@ const ArrowIcon = styled(ArrowForwardIcon)({
   marginTop: "-2px",
   width: "21px",
   ["@media (max-width:780px)"]: {
-    width: "15px",
+    width: "16px",
+    marginTop: "0px",
   },
 });
 
