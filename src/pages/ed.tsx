@@ -4,12 +4,13 @@ import Navbar from "../../components/navbar";
 import Section4 from "../../components/section4";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
+import Ed from '../../components/ed';
 
-const Ed = () => {
+const EdPage = () => {
   return (
     <div>
       <Navbar />
-      
+      <Ed />
       <Section4 />
       <Section5 />
       <Faq />
@@ -18,4 +19,4 @@ const Ed = () => {
   )
 }
 
-export default Ed
+export default EdPage

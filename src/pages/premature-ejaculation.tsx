@@ -4,12 +4,13 @@ import Navbar from "../../components/navbar";
 import Section4 from "../../components/section4";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
+import PrematureEjaculation from '../../components/premature-ejaculation';
 
-const PrematureEjaculation = () => {
+const PrematureEjaculationPage = () => {
   return (
     <div>
       <Navbar />
-      
+      <PrematureEjaculation/>
       <Section4 />
       <Section5 />
       <Faq />
@@ -18,4 +19,4 @@ const PrematureEjaculation = () => {
   )
 }
 
-export default PrematureEjaculation
+export default PrematureEjaculationPage
