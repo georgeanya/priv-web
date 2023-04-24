@@ -40,7 +40,10 @@ const EdPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta name="twitter:image" content={metaCard.src} />
+        <meta
+          name="twitter:image:src"
+          content="https://privhealth.co/_next/static/media/priv-metacard.bfa5bd2e.png"
+        />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />

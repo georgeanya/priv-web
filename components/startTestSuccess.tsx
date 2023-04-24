@@ -14,7 +14,7 @@ const SustainButton = styled(Button)({
   borderRadius: "32px",
   textTransform: "none",
   ["@media (max-width:780px)"]: {
-    padding: "15px 20px",
+    padding: "15px 30px",
   },
 });
 
@@ -22,10 +22,11 @@ const StartTestSuccess = () => {
   return (
     <div>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
-      Your result has been sent
+        Your result has been sent
       </p>
       <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-7">
-      Your result has been sent to your phone number. Please check your WhatsApp
+        Your result has been sent to your phone number. Please check your
+        WhatsApp
       </p>
       <Link href="">
         <SustainButton

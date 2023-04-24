@@ -66,7 +66,10 @@ const Home: NextPage = () => {
           name="twitter:description"
           content="Priv provides private and personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
         />
-        <meta name="twitter:image:src" content="https://privhealth.co/_next/static/media/priv-metacard.bfa5bd2e.png" />
+        <meta
+          name="twitter:image:src"
+          content="https://privhealth.co/_next/static/media/priv-metacard.bfa5bd2e.png"
+        />
         <meta name="twitter:image:width" content="738" />
         <meta name="twitter:image:height" content="394" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />

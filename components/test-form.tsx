@@ -17,7 +17,7 @@ const SustainButton = styled(Button)({
   borderRadius: "32px",
   textTransform: "none",
   ["@media (max-width:780px)"]: {
-    padding: "15px 20px",
+    padding: "15px 30px",
   },
 });
 
@@ -34,14 +34,14 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/ed-assessment";
 
-const TestForm = ({tScore}: any) => {
+const TestForm = ({ tScore }: any) => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
       last_name: "",
       email: "",
       phone_number: "",
-      score: {tScore},
+      score: { tScore },
       country_code: "234",
     },
   });
@@ -60,7 +60,6 @@ const TestForm = ({tScore}: any) => {
       },
     });
   };
-
 
   const setIsSuccessFunc = () => {
     setIsSuccess(!isSuccess);

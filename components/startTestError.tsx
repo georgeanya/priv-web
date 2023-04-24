@@ -13,7 +13,7 @@ const SustainButton = styled(Button)({
   borderRadius: "32px",
   textTransform: "none",
   ["@media (max-width:780px)"]: {
-    padding: "15px 20px",
+    padding: "15px 30px",
   },
 });
 interface props {
@@ -28,7 +28,7 @@ const StartError = ({ toggle, toggleFav }: props) => {
         An error occurred
       </p>
       <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-7">
-      Please make sure we’ve got your details right and try again.
+        Please make sure we’ve got your details right and try again.
       </p>
       <Link href="">
         <SustainButton
