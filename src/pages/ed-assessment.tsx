@@ -92,7 +92,6 @@ const RiskTest = () => {
   const handleOptionClick = (optionCount: number) => {
     setTotalScore(totalScore + optionCount);
     if (currentQuestionIndex === questions.length - 1) {
-      console.log(`Total score: ${totalScore}`);
       setTestComplete(!testComplete);
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -104,15 +103,12 @@ const RiskTest = () => {
   };
 
   const startTest = () => {
-    setTestStart(!testStart)
-    
+    setTestStart(!testStart);
   };
 
   const formRestartTest = () => {
     setTestComplete(!testComplete);
-    restartTest()
-    console.log('sfgggdcvhvhfbhrjebfjrbj');
-    
+    restartTest();
   };
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -146,9 +142,12 @@ const RiskTest = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta name="twitter:image" content={metaCard.src} />
-        <meta name="twitter:image:width" content="785" />
-        <meta name="twitter:image:height" content="394" />
+        <meta
+          name="twitter:image:src"
+          content="https://privhealth.co/_next/static/media/ed-metacard.d34d466f.png"
+        />
+        <meta name="twitter:image:width" content="831" />
+        <meta name="twitter:image:height" content="416" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
         <link href="https://privhealth.co/" rel="home" />
