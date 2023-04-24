@@ -4,7 +4,7 @@ import arrow from "../public/assets/arrow.svg";
 
 const Hero = () => {
   return (
-    <div className="px-5 md:px-32 pt-15 md:pt-22 pb-20 md:pb-40 flex flex-col">
+    <div className="px-5 md:px-32 pt-15 md:pt-[70px] pb-20 md:pb-40 flex flex-col">
       <div className="md:max-w-md lg:max-w-1xl md:pb-0">
         <p className=" leading-tight md:leading-tight md:pr-14  text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] ">
           Private and personalized treatment plans for you
