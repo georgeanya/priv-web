@@ -117,7 +117,7 @@ const TestForm = ({ tScore, start }: any) => {
           Send my test results
         </p>
         <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-9">
-          Please enter your details to get your risk test results sent to you
+          Please enter your details to get your ed-assessment results sent to you
         </p>
         <form onSubmit={handleSubmit}>
           <div className="md:grid md:grid-cols-2 md:gap-5">
