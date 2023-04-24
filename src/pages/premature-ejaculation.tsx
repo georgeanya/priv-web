@@ -13,7 +13,6 @@ const PrematureEjaculationPage = () => {
   return (
     <div>
       <Head>
-        <div>
           <meta charSet="utf-8" />
           <title>Premature ejaculation treatment - Priv Health</title>
           <meta name="generator" content="SEOmatic" />
@@ -98,7 +97,6 @@ const PrematureEjaculationPage = () => {
             content="Get treatment for premature ejaculation privately and from the comfort of your home."
           />
           <link href="https://privhealth.co/ed" rel="canonical" />
-        </div>
       </Head>
       <Navbar />
       <PrematureEjaculation />
