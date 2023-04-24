@@ -224,7 +224,7 @@ const RiskTest = () => {
                   {currentQuestion?.options.map((option) => (
                     <li key={option?.text}>
                       <div
-                        className="py-[16px] max-w-[400px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base md:leading-5"
+                        className="py-[16px] max-w-[400px] border border-[#D7D7DB] my-2 text-center rounded-2xl text-sm md:text-base md:leading-5 leading-4"
                         onClick={() => handleOptionClick(option?.count)}
                       >
                         {option?.text}
