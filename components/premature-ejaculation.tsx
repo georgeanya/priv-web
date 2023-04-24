@@ -58,7 +58,7 @@ const PrematureEjaculation = () => {
 
   return (
     <div className="px-5 md:px-32 md:pt-20 pt-11 md:pb-36 pb-24">
-      <p className="text-[34px] leading-[43px] md:text-start md:text-[50px] md:leading-[63px] md:max-w-[591px] font-bold text-[#5355AC] mb-14">
+      <p className="leading-tight md:leading-tight text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-[591px] mb-14">
         Get private treatment for premature ejaculation
       </p>
       <div className="max-w-3xl">
