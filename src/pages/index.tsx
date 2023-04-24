@@ -67,8 +67,8 @@ const Home: NextPage = () => {
           content="Priv provides private and personalized treatments for erectile dysfunction, male infertility, premature ejaculation, hair loss, and more"
         />
         <meta name="twitter:image" content={metaCard.src} />
-        <meta name="twitter:image:width" content="1024" />
-        <meta name="twitter:image:height" content="512" />
+        <meta name="twitter:image:width" content="738" />
+        <meta name="twitter:image:height" content="394" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
         <link href="https://privhealth.co/" rel="canonical" />
