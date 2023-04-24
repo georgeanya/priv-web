@@ -26,8 +26,8 @@ const EdPage = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content={metaCard.src} property="og:image" />
-        <meta content="1024" property="og:image:width" />
-        <meta content="512" property="og:image:height" />
+        <meta content="785" property="og:image:width" />
+        <meta content="394" property="og:image:height" />
         <meta content="An image of the Priv logo" property="og:image:alt" />
         <meta
           content="https://facebook.com/tryprivhealth/"
@@ -44,8 +44,8 @@ const EdPage = () => {
           name="twitter:image:src"
           content="https://privhealth.co/_next/static/media/priv-metacard.bfa5bd2e.png"
         />
-        <meta name="twitter:image:width" content="1024" />
-        <meta name="twitter:image:height" content="512" />
+        <meta name="twitter:image:width" content="785" />
+        <meta name="twitter:image:height" content="394" />
         <meta name="twitter:image:alt" content="An image of the Priv logo" />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
         <link href="https://privhealth.co/" rel="home" />
