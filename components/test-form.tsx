@@ -6,6 +6,7 @@ import StartSuccess from "./startTestSuccess";
 import lock from "../public/assets/lock.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
+import { useRouter } from "next/router";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -34,7 +35,7 @@ interface IState {
 
 const url = "https://priv-health.herokuapp.com/v1/ed-assessment";
 
-const TestForm = ({ tScore }: any) => {
+const TestForm = ({ tScore, start }: any) => {
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
@@ -222,11 +223,11 @@ const TestForm = ({ tScore }: any) => {
                 </div>
               </SustainButton>
             )}
-            <Link href="/ed-assessment">
-              <p className="mt-7 text-[#5355AC] text-center text-sm">
-                Click here to start again
-              </p>
-            </Link>
+            <p
+              onClick={ () => {start()}}
+              className="mt-7 text-[#5355AC] text-center text-sm">
+              Click here to start again
+            </p>
           </div>
         </form>
       </div>

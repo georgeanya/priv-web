@@ -99,8 +99,20 @@ const RiskTest = () => {
     }
   };
 
+  const restartTest = () => {
+    setCurrentQuestionIndex(0);
+  };
+
   const startTest = () => {
-    setTestStart(!testStart);
+    setTestStart(!testStart)
+    
+  };
+
+  const formRestartTest = () => {
+    setTestComplete(!testComplete);
+    restartTest()
+    console.log('sfgggdcvhvhfbhrjebfjrbj');
+    
   };
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -220,11 +232,17 @@ const RiskTest = () => {
                   </li>
                 ))}
               </ul>
+              <p
+                onClick={() => restartTest()}
+                className="text-[#5355AC] text-[14px] leading-[17px] text-center font-medium pt-7"
+              >
+                Click here to start again
+              </p>
             </div>
           )}
         </div>
       ) : (
-        <TestForm tScore={totalScore} />
+        <TestForm tScore={totalScore} start={formRestartTest} />
       )}
     </div>
   );
