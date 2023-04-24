@@ -194,7 +194,7 @@ const RiskTest = () => {
                 This self-assessment can help determine whether you might have
                 the symptoms of erectile dysfunction.
               </p>
-              <div className=" px-[57px] md:px-0  max-w-[245px]">
+              <div className="max-w-[245px]">
                 <SustainButton onClick={() => startTest()}>
                   Take the assessment now
                 </SustainButton>
