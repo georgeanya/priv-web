@@ -186,7 +186,7 @@ const RiskTest = () => {
       {testComplete ? (
         <div>
           {testStart ? (
-            <div className=" px-5 mt-[65px] md:mt-[70px] text-center">
+            <div className=" px-5 mt-[65px] md:mt-[70px] text-center flex flex-col items-center">
               <p className="md:text-[44px] text-3xl leading-[38px] md:leading-[55px] font-bold text-[#5355AC] max-w-[490px]">
                 Erectile dysfunction self-assessment
               </p>
