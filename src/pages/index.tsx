@@ -40,8 +40,8 @@ const Home: NextPage = () => {
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
-        <meta content="1024" property="og:image:width" />
-        <meta content="512" property="og:image:height" />
+        <meta content="785" property="og:image:width" />
+        <meta content="394" property="og:image:height" />
         <meta content="An image of the Priv logo" property="og:image:alt" />
         <meta
           content="https://instagram.com/tryprivhealth/"
