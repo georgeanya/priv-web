@@ -107,8 +107,7 @@ const RiskTest = () => {
   const currentQuestion = questions[currentQuestionIndex];
   return (
     <div>
-      {/* <Head>
-        <div>
+      <Head>
           <meta charSet="utf-8" />
           <title>Erectile dysfunction self-assessment - Priv Health</title>
           <meta name="generator" content="SEOmatic" />
@@ -186,8 +185,7 @@ const RiskTest = () => {
             content="Take this free assessment to know if you may have erectile dysfunction."
           />
           <link href="https://privhealth.co/ed-assessment" rel="canonical" />
-        </div>
-      </Head> */}
+      </Head>
       <Navbar />
       {testComplete ? (
         <div>
