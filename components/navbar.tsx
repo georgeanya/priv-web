@@ -32,15 +32,24 @@ const Navbar = () => {
   return (
     <div>
       <div className="bg-[#232B5C] ">
-        <Link href="/ed-assessment"><p className="text-center text-sm md:text-base text-white py-4 px-7">
-          ✨ Take this free assessment to know if you may have erectile dysfunction
-          <ArrowIcon />
-        </p></Link>
+        <Link href="/ed-assessment">
+          <p className="text-center text-sm md:text-base text-white py-4 px-7">
+            ✨ Take this free assessment to know if you may have erectile
+            dysfunction
+            <ArrowIcon />
+          </p>
+        </Link>
       </div>
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <img src={priv.src} className="mr-3  self-center" alt="Priv Logo" />
+            <Link href="/">
+              <img
+                src={priv.src}
+                className="mr-3  self-center"
+                alt="Priv Logo"
+              />
+            </Link>
 
             <button
               data-collapse-toggle="navbar-solid-bg"
