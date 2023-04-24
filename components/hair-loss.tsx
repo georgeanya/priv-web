@@ -57,8 +57,8 @@ const HairLoss = () => {
   };
 
   return (
-    <div className="px-5 md:px-32 md:pt-[70px] md:pb-36 pb-24">
-      <p className="leading-tight md:leading-tight text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-[591px] mb-14">
+    <div className="px-5 md:px-32 md:pt-[70px] pt-11 md:pb-36 pb-24">
+      <p className="leading-tight md:leading-tight text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-[591px] mb-[45px] md:mb-[70px]">
         Get private treatment for male hair loss
       </p>
       <div className="max-w-3xl">
