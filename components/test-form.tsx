@@ -113,7 +113,7 @@ const TestForm = ({ tScore, start }: any) => {
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
           Send my test results
         </p>
-        <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-9">
+        <p className="mt-4 text-base md:text-lg font-normal md:text-start text-[#111111] mb-9">
           Please enter your details to get your assessment results sent to you
         </p>
         <form onSubmit={handleSubmit}>
