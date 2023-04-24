@@ -100,6 +100,7 @@ const RiskTest = () => {
 
   const restartTest = () => {
     setCurrentQuestionIndex(0);
+    startTest()
   };
 
   const startTest = () => {
