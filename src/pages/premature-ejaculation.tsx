@@ -89,7 +89,7 @@ const PrematureEjaculationPage = () => {
           name="twitter:description"
           content="Get treatment for premature ejaculation privately and from the comfort of your home."
         />
-        <link href="https://privhealth.co/ed" rel="canonical" />
+        <link href="https://privhealth.co/premature-ejaculation" rel="canonical" />
       </Head>
       <Navbar />
       <PrematureEjaculation />

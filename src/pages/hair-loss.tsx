@@ -89,7 +89,7 @@ const HairLossPage = () => {
           name="twitter:description"
           content="Get treatment for male hair loss privately and from the comfort of your home."
         />
-        <link href="https://privhealth.co/ed" rel="canonical" />
+        <link href="https://privhealth.co/hair-loss" rel="canonical" />
       </Head>
       <Navbar />
       <HairLoss />
