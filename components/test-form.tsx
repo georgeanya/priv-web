@@ -79,7 +79,6 @@ const TestForm = ({ tScore, start }: any) => {
           return false;
         }
         gtag_report_conversion();
-        alert("heyyy")
       `;
       document.body.appendChild(script);
     }
