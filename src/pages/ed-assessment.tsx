@@ -107,6 +107,8 @@ const RiskTest = () => {
     setTestStart(!testStart);
   };
 
+
+
   const formRestartTest = () => {
     setTestComplete(!testComplete);
     restartTest();

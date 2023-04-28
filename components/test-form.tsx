@@ -59,6 +59,31 @@ const TestForm = ({ tScore, start }: any) => {
     });
   };
 
+  
+
+  useEffect(() => {
+    if (isSuccess) {
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.innerHTML = `
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+            'send_to': 'AW-11147200607/Zeh4CM3ehJsYEN-Qs8Mp',
+            'event_callback': callback
+          });
+          return false;
+        }
+        gtag_report_conversion();
+      `;
+      document.body.appendChild(script);
+    }
+  }, [isSuccess]);
+
   const setIsSuccessFunc = () => {
     setIsSuccess(!isSuccess);
   };
