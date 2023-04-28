@@ -10,7 +10,7 @@ const FAQ = ({ faq, index, toggleFAQ }: any) => {
         onClick={() => toggleFAQ(index)}
         key={index}
       >
-        <div className="self-start min-w-fit">
+        <div className="self-start min-w-fit cursor-pointer h-4 md:h-5">
           {faq.open ? (
             <img
               className="mr-6 flex self-center w-4 md:w-5 md:mr-10 mt-3.5"
