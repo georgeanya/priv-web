@@ -100,11 +100,14 @@ const RiskTest = () => {
 
   const restartTest = () => {
     setCurrentQuestionIndex(0);
+    setTotalScore(0)
     startTest()
   };
 
   const startTest = () => {
+    setCurrentQuestionIndex(0);
     setTestStart(!testStart);
+    setTotalScore(0)
   };
 
 
