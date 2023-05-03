@@ -254,7 +254,7 @@ const TestForm = ({ tScore, start }: any) => {
         </form>
       </div>
       <div className={isSuccess ? "block" : "hidden"}>
-        <StartSuccess />
+        <StartSuccess start={start} />
       </div>
       <div className={isError ? "block" : "hidden"}>
         <StartError toggle={setIsErrorFunc} toggleFav={setIsLoadingFunc} />

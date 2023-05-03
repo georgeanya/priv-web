@@ -18,7 +18,7 @@ const SustainButton = styled(Button)({
   },
 });
 
-const StartTestSuccess = () => {
+const StartTestSuccess = ({ start }: any) => {
   return (
     <div>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
@@ -28,14 +28,13 @@ const StartTestSuccess = () => {
         Your result has been sent to your phone number. Please check your
         WhatsApp
       </p>
-      <Link href="">
-        <SustainButton
-          className="self-center text-sm md:text-base font-medium"
-          type="submit"
-        >
-          Take the test again
-        </SustainButton>
-      </Link>
+      <SustainButton
+        className="self-center text-sm md:text-base font-medium"
+        type="submit"
+        onClick={ () => {start()}}
+      >
+        Take the test again
+      </SustainButton>
     </div>
   );
 };
