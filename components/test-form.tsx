@@ -25,7 +25,7 @@ interface IState {
     last_name: string;
     email: string;
     phone_number: string;
-    score: any;
+    score: number;
     country_code: string;
   };
 }
@@ -39,7 +39,7 @@ const TestForm = ({ tScore, start }: any) => {
       last_name: "",
       email: "",
       phone_number: "",
-      score: { tScore },
+      score: tScore ,
       country_code: "234",
     },
   });
@@ -109,7 +109,7 @@ const TestForm = ({ tScore, start }: any) => {
         last_name: state.user.last_name,
         email: state.user.email,
         phone_number: state.user.phone_number?.slice(1),
-        score: state.user?.score,
+        score: state.user.score,
         country_code: state.user.country_code,
       })
       .then((res) => {
