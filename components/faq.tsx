@@ -6,7 +6,7 @@ import { useState } from "react";
 import FAQ from "./section6";
 
 const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
+  background: "#5355AC !important",
   fontFamily: "Circular Std",
   color: "#f8f8f8",
   padding: "20px 30px",
@@ -23,13 +23,13 @@ const Faq = () => {
     {
       question: "Who is Priv for?",
       answer:
-        "Priv is for adults experiencing health issues or wanting to improve or support their health and prefer to do so from the comfort of their homes.",
+        "Priv is for men experiencing health issues or wanting to improve or support their health and prefer to do so from the comfort of their homes.",
       open: true,
     },
     {
       question: "How does Priv work?",
       answer:
-        "First, book a consultation and with one of our doctors. The doctor will review your information and recommend a personalised treatment. Priv will ship your treatment for free in discreet packaging if prescribed.",
+        "First, book a consultation and with one of our doctors. The doctor will review your information and recommend a personalised treatment. Priv will ship your treatment in discreet packaging if prescribed.",
       open: false,
     },
     {

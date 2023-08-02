@@ -46,7 +46,7 @@ const Footer = () => {
               Learn more
             </h3>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="https://medium.com/@tryprivhealth">Blog</Link>
+              <Link href="/blog">Blog</Link>
             </p>
             <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
               <Link href="/">Careers</Link>

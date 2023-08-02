@@ -47,7 +47,7 @@ const Navbar = () => {
               <img
                 src={priv.src}
                 className="mr-3  self-center"
-                alt="Priv Logo"
+                alt="Priv health logo"
               />
             </Link>
 
@@ -101,15 +101,15 @@ const Navbar = () => {
                 <li className="mt-3 mx-5 ">
                   <Link
                     href="https://privhealth.bumpa.shop"
-                    className="text-sm pt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
+                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Shop
                   </Link>
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
-                    href="https://medium.com/@tryprivhealth"
-                    className="text-sm pt-5 text-[#002A47] rounded hover:text-blue-700 md:p-0 "
+                    href="/blog"
+                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Blog
                   </Link>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 <li className="ml-5">
                   <Link href="/start">
                     <SustainButton className="text-sm">
-                      Get started now
+                      Get started
                     </SustainButton>
                   </Link>
                 </li>
@@ -139,10 +139,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="https://medium.com/@tryprivhealth"
-                  className="block text-sm py-4"
-                >
+                <Link href="/blog" className="block text-sm py-4">
                   Blog
                 </Link>
               </li>

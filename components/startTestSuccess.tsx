@@ -28,13 +28,14 @@ const StartTestSuccess = ({ start }: any) => {
         Your result has been sent to your phone number. Please check your
         WhatsApp
       </p>
-      <SustainButton
-        className="self-center text-sm md:text-base font-medium"
-        type="submit"
-        onClick={ () => {start()}}
-      >
-        Take the test again
-      </SustainButton>
+      <Link href="https://t.me/+gtiqLBOz-WxiOTVk">
+        <SustainButton
+          className="self-center text-sm md:text-base font-medium"
+          type="submit"
+        >
+          Join our Telegram community
+        </SustainButton>
+      </Link>
     </div>
   );
 };

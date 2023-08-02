@@ -19,7 +19,7 @@ const Start = () => {
         />
         <meta
           name="keywords"
-          content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, genital herpes, male infertility"
+          content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, STIs"
         />
         <meta
           name="description"
@@ -39,7 +39,10 @@ const Start = () => {
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />
         <meta content="394" property="og:image:height" />
-        <meta content="An image of the Priv logo" property="og:image:alt" />
+        <meta
+          content="An image of the Priv health logo"
+          property="og:image:alt"
+        />
         <meta
           content="https://instagram.com/tryprivhealth"
           property="og:see_also"
@@ -69,7 +72,10 @@ const Start = () => {
         />
         <meta name="twitter:image:width" content="785" />
         <meta name="twitter:image:height" content="394" />
-        <meta name="twitter:image:alt" content="An image of the Priv logo" />
+        <meta
+          name="twitter:image:alt"
+          content="An image of the Priv health logo"
+        />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
         <link href="https://privhealth.co/start" rel="canonical" />
         <link href="https://privhealth.co/" rel="home" />

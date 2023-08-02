@@ -1,21 +1,38 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import Script from "next/script";
+import Spinner from "../../components/spinner";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = (url: any) => {
+      if (url !== router.asPath) {
+        setIsLoading(true);
+      }
+    };
+
+    const handleComplete = () => {
+      setIsLoading(false);
+    };
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  }, [router]);
+
   return (
     <>
-      {/* Google tag (gtag.js) */}
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-N835SQ1X9J"
-      ></Script>
-      <Script id="ga-script">
-        {`window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-N835SQ1X9J');`}
-      </Script>
+      {isLoading && <Spinner />}
       <Component {...pageProps} />
     </>
   );

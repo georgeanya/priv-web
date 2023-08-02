@@ -216,7 +216,7 @@ const Form = () => {
               Nigerian WhatsApp phone number
             </label>
             <input
-              type="text"
+              type="tel"
               name="phone_number"
               value={state.user.phone_number}
               onChange={handleChange}
@@ -224,6 +224,9 @@ const Form = () => {
               placeholder=""
               required
             />
+            <p className="text-[#73738C] text-[12px] md:text-[13px] leading-4 mt-[10px]">
+              Enter your Nigerian WhatsApp phone number eg. 08012345678
+            </p>
           </div>
           <label
             htmlFor="condition"
@@ -246,7 +249,7 @@ const Form = () => {
             <option value="low testosterone">Low testosterone</option>
             <option value="warts">Warts</option>
             <option value="hair loss">Hair loss</option>
-            <option value="genital herpes">Genital herpes</option>
+            <option value="STIs">STIs</option>
             <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">

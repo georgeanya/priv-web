@@ -23,7 +23,7 @@ const Navbar = () => {
               <img
                 src={priv.src}
                 className="mr-3  self-center"
-                alt="Priv Logo"
+                alt="Priv health logo"
               />
             </Link>
           </div>

@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F7E9EA] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
-              Warts
+            STIs
             </p>
             <Link href="/start">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
@@ -57,9 +57,9 @@ const Hero = () => {
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F8F2E7] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
-              Genital herpes
+              Supplements
             </p>
-            <Link href="/start">
+            <Link href="https://privhealth.bumpa.shop">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>

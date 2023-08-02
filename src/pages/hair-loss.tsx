@@ -28,7 +28,10 @@ const HairLossPage = () => {
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />
         <meta content="394" property="og:image:height" />
-        <meta content="An image of the Priv logo" property="og:image:alt" />
+        <meta
+          content="An image of the Priv health logo"
+          property="og:image:alt"
+        />
         <meta
           content="https://facebook.com/tryprivhealth/"
           property="og:see_also"
@@ -46,7 +49,10 @@ const HairLossPage = () => {
         />
         <meta name="twitter:image:width" content="785" />
         <meta name="twitter:image:height" content="394" />
-        <meta name="twitter:image:alt" content="An image of the Priv logo" />
+        <meta
+          name="twitter:image:alt"
+          content="An image of the Priv health logo"
+        />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
         <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
