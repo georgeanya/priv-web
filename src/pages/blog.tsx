@@ -178,7 +178,7 @@ const BlogHome = ({ blogs }: any) => {
             <img
               src={ImgUrl}
               alt=""
-              className="cursor-pointer w-full md:w-[660px] md:h-[428px] rounded-[20px]"
+              className="cursor-pointer w-full md:w-[660px] md:h-[380px] rounded-[20px]"
             />
           </Link>
           <div className=" md:ml-17 mt-7 md:mt-0 self-center max-w-[470px]">
