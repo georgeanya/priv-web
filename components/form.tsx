@@ -124,16 +124,16 @@ const Form = () => {
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
       <div className={isSuccess || isError ? "hidden" : "block"}>
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
-          Book your consultation
+          Join Priv Health
         </p>
         <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
-          Meet a doctor that can help you get started on your journey to better
-          health
+          Become a member and get unlimited men’s doctor consultations, pharmacy
+          discounts, and more for a year
         </p>
         <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-9">
           <div className="flex justify-between">
             <p className="text-white text-sm md:text-base md:leading-5">
-              Consultation fee
+              Annual membership fee
             </p>
             <p className="text-white text-sm md:text-base md:leading-5 font-medium">
               NGN 5,000
@@ -276,7 +276,7 @@ const Form = () => {
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
               >
-                <p>Book consultation</p>
+                <p>Join now</p>
               </SustainButton>
             ) : (
               <SustainButton

@@ -4,13 +4,12 @@ import Form from "../../components/form";
 import Navbar from "../../components/navbar1";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Script from "next/script";
 
 const Start = () => {
   return (
     <div>
       <Head>
-        <title>Book a consultation - Priv Health</title>
+        <title>Get started - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -23,7 +22,7 @@ const Start = () => {
         />
         <meta
           name="description"
-          content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
+          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -31,9 +30,9 @@ const Start = () => {
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/start" property="og:url" />
-        <meta content="Book a consultation - Priv Health" property="og:title" />
+        <meta content="Get started - Priv Health" property="og:title" />
         <meta
-          content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
+          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -60,11 +59,11 @@ const Start = () => {
         <meta name="twitter:creator" content="@tryprivhealth" />
         <meta
           name="twitter:title"
-          content="Book a consultation - Priv Health"
+          content="Get started - Priv Health"
         />
         <meta
           name="twitter:description"
-          content="Book your consultation now with a doctor. Get a prescription in 24 hours. Have your treatments delivered to your home within 48 hours."
+          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
         />
         <meta
           name="twitter:image:src"

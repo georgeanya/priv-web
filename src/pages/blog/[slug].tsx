@@ -1,14 +1,12 @@
 import React from "react";
 import axios from "axios";
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { GetServerSideProps } from "next";
 import Footer from "../../../components/footer";
 import Navbar from "../../../components/navbar";
 import favicon from "../../../public/assets/favicon.png";
 import Head from "next/head";
-import Link from "next/link";
 import { ParsedUrlQuery } from "querystring";
 import BlogPost from "../../../components/blogPost";
-
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -40,8 +38,6 @@ interface Blog {
     };
   };
 }
-
-
 
 interface ArticlesResponse {
   data: Blog[];
