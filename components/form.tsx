@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useTheme, Theme } from "@emotion/react";
 
-import Link from "next/link";
 import axios from "axios";
 import StartError from "./startError";
 import StartSuccess from "./startSuccess";
 import lock from "../public/assets/lock.svg";
+import bullet from "../public/assets/bullet.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
@@ -48,6 +47,8 @@ const Form = () => {
     },
   });
 
+  const [isReady, setIsReady] = useState(true);
+
   const [isSuccess, setIsSuccess] = useState(false);
 
   const [isError, setIsError] = useState(false);
@@ -70,6 +71,10 @@ const Form = () => {
         [event.target.name]: event.target.value,
       },
     });
+  };
+
+  const setIsReadyFunc = () => {
+    setIsReady(!isReady);
   };
 
   const setIsSuccessFunc = () => {
@@ -122,15 +127,15 @@ const Form = () => {
 
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
-      <div className={isSuccess || isError ? "hidden" : "block"}>
+  <div className={isReady ? "block" : "hidden"}>
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
           Join Priv Health
         </p>
         <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
-          Become a member and get unlimited men’s doctor consultations, pharmacy
-          discounts, and more for a year
+          Become a Priv VIP member and save 80% on your yearly healthcare
+          expenses
         </p>
-        <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-9">
+        <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-5">
           <div className="flex justify-between">
             <p className="text-white text-sm md:text-base md:leading-5">
               Annual membership fee
@@ -148,6 +153,46 @@ const Form = () => {
             </p>
           </div>
         </div>
+        <div className="md:px-5 px-[15px] py-6 md:py-[27px] bg-[#EEEFF6] rounded-[15px] mb-10">
+          <p className="text-[16px] leading-5 font-medium mb-5">
+            Membership benefits
+          </p>
+          <div className="flex mb-5">
+            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Unlimited doctor consultations online</p>
+          </div>
+          <div className="flex mb-5">
+            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">100% Discretion</p>
+          </div>
+          <div className="flex mb-5">
+            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Discounts on medicines and lab tests</p>
+          </div>
+          <div className="flex mb-5">
+            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Access to VIP community</p>
+          </div>
+          <div className="flex">
+            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Access to our VIP health content</p>
+          </div>
+        </div>
+        <SustainButton
+                className="self-center text-sm md:text-base font-medium mb-15"
+          onClick={()=> setIsReadyFunc()}
+              >
+                <p>Join now</p>
+              </SustainButton>
+      </div>
+      <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
+        <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
+          Join Priv Health
+        </p>
+        <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
+        Kindly fill the form with correct information
+        </p>
+
         <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-5">
             <div className="mb-2">
@@ -276,7 +321,7 @@ const Form = () => {
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
               >
-                <p>Join now</p>
+                <p>Continue to payment</p>
               </SustainButton>
             ) : (
               <SustainButton
