@@ -127,7 +127,7 @@ const Form = () => {
 
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-17">
-  <div className={isReady ? "block" : "hidden"}>
+      <div className={isReady ? "block" : "hidden"}>
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
           Join Priv Health
         </p>
@@ -158,39 +158,71 @@ const Form = () => {
             Membership benefits
           </p>
           <div className="flex mb-5">
-            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Unlimited doctor consultations online</p>
+            <img
+              src={bullet.src}
+              alt=""
+              className="mr-[12px] w-[18px] md:w-5"
+            />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
+              Unlimited doctor consultations online
+            </p>
           </div>
           <div className="flex mb-5">
-            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">100% Discretion</p>
+            <img
+              src={bullet.src}
+              alt=""
+              className="mr-[12px] w-[18px] md:w-5"
+            />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
+              100% Discretion
+            </p>
           </div>
           <div className="flex mb-5">
-            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Discounts on medicines and lab tests</p>
+            <img
+              src={bullet.src}
+              alt=""
+              className="mr-[12px] w-[18px] md:w-5"
+            />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
+              Discounts on medicines and lab tests
+            </p>
           </div>
           <div className="flex mb-5">
-            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Access to VIP community</p>
+            <img
+              src={bullet.src}
+              alt=""
+              className="mr-[12px] w-[18px] md:w-5"
+            />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
+              Access to VIP community
+            </p>
           </div>
           <div className="flex">
-            <img src={bullet.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">Access to our VIP health content</p>
+            <img
+              src={bullet.src}
+              alt=""
+              className="mr-[12px] w-[18px] md:w-5"
+            />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
+              Access to our VIP health content
+            </p>
           </div>
         </div>
+        <div className="mb-15 lg:mb-28">
         <SustainButton
-                className="self-center text-sm md:text-base font-medium mb-15"
-          onClick={()=> setIsReadyFunc()}
-              >
-                <p>Join now</p>
-              </SustainButton>
+          className="self-center text-sm md:text-base font-medium"
+          onClick={() => setIsReadyFunc()}
+        >
+          <p>Join now</p>
+          </SustainButton>
+          </div>
       </div>
       <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
         <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
           Join Priv Health
         </p>
         <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
-        Kindly fill the form with correct information
+          Kindly fill the form with correct information
         </p>
 
         <form onSubmit={handleSubmit}>
