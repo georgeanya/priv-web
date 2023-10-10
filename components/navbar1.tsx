@@ -16,10 +16,10 @@ const SustainButton = styled(Button)({
 const Navbar = () => {
   return (
     <div>
-      <div className="px-5 md:px-32 pt-5 md:pt-5">
+      <div className="px-5 md:px-32 py-[23px] md:py-[35px] ">
         <nav>
-          <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/">
+          <div className="container flex flex-wrap  justify-center items-center mx-auto">
+            <Link href="/" className="flex self-center">
               <img
                 src={priv.src}
                 className="mr-3  self-center"

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-
 import axios from "axios";
 import StartError from "./startError";
 import StartSuccess from "./startSuccess";
 import lock from "../public/assets/lock.svg";
-import bullet from "../public/assets/bullet.svg";
+import two from "../public/assets/1.svg";
+import one from "../public/assets/2.svg";
+import three from "../public/assets/3.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
@@ -126,102 +127,65 @@ const Form = () => {
   };
 
   return (
-    <div className="max-w-m mx-5 sm:mx-auto mt-17">
+    <div className="max-w-m mx-5 sm:mx-auto mt-[25px]">
       <div className={isReady ? "block" : "hidden"}>
-        <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
-          Join Priv Health
+        <p className=" leading-tight md:pr-14 md:text-[28px] text-2xl text-center font-bold text-[#5355AC] mb-[30px] md:mb-[35px]">
+          How Priv works
         </p>
-        <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
-          Become a Priv VIP member and save 80% on your yearly healthcare
-          expenses
-        </p>
-        <div className="bg-[#595A90] md:p-5 p-4 rounded-lg mt-8 mb-5">
-          <div className="flex justify-between">
-            <p className="text-white text-sm md:text-base md:leading-5">
-              Annual membership fee
-            </p>
-            <p className="text-white text-sm md:text-base md:leading-5 font-medium">
-              NGN 5,000
-            </p>
-          </div>
-          <div className="flex justify-between md:mt-1.5">
-            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4">
-              50% OFF
-            </p>
-            <p className="text-[#DADDF1] md:text-[13px] text-xs md:leading-4  line-through">
-              NGN 10,000
-            </p>
-          </div>
-        </div>
-        <div className="md:px-5 px-[15px] py-6 md:py-[27px] bg-[#EEEFF6] rounded-[15px] mb-10">
-          <p className="text-[16px] leading-5 font-medium mb-5">
-            Membership benefits
-          </p>
-          <div className="flex mb-5">
-            <img
-              src={bullet.src}
-              alt=""
-              className="mr-[12px] w-[18px] md:w-5"
-            />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
-              Unlimited doctor consultations online
-            </p>
-          </div>
-          <div className="flex mb-5">
-            <img
-              src={bullet.src}
-              alt=""
-              className="mr-[12px] w-[18px] md:w-5"
-            />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
-              100% Discretion
-            </p>
-          </div>
-          <div className="flex mb-5">
-            <img
-              src={bullet.src}
-              alt=""
-              className="mr-[12px] w-[18px] md:w-5"
-            />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
-              Discounts on medicines and lab tests
-            </p>
-          </div>
-          <div className="flex mb-5">
-            <img
-              src={bullet.src}
-              alt=""
-              className="mr-[12px] w-[18px] md:w-5"
-            />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
-              Access to VIP community
-            </p>
-          </div>
+
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
           <div className="flex">
-            <img
-              src={bullet.src}
-              alt=""
-              className="mr-[12px] w-[18px] md:w-5"
-            />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[19px]">
-              Access to our VIP health content
+            <img src={one.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Free online consultation
             </p>
           </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+            Answer a few simple questions about your symptoms. A doctor will
+            review your information and will get back to you within 24 hours
+          </p>
         </div>
-        <div className="mb-15 lg:mb-28">
-        <SustainButton
-          className="self-center text-sm md:text-base font-medium"
-          onClick={() => setIsReadyFunc()}
-        >
-          <p>Join now</p>
-          </SustainButton>
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
+          <div className="flex">
+            <img src={two.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Receive personalized treatment
+            </p>
           </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+            Receive a personalized treatment plan (medicines) directly at home
+            within 24 hours after it is approved
+          </p>
+        </div>
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-10">
+          <div className="flex">
+            <img src={three.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Ongoing support
+            </p>
+          </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+            Our medical team will follow up to see how you{"'"}re doing,
+            and will adjust your treatment as needed. Message them any time with
+            questions
+          </p>
+        </div>
+
+        <div className="mb-15 lg:mb-28">
+          <SustainButton
+            className="self-center text-sm md:text-base font-medium"
+            onClick={() => setIsReadyFunc()}
+          >
+            <p>I understand</p>
+          </SustainButton>
+        </div>
       </div>
+
       <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
-        <p className=" leading-tight md:pr-14 md:text-3xl text-2xl md:text-start font-bold text-[#5355AC] ">
-          Join Priv Health
+        <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
+          Join Priv
         </p>
-        <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111]">
+        <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg md:leading-6 font-normal md:pr-8 text-center text-[#111111]">
           Kindly fill the form with correct information
         </p>
 
@@ -353,7 +317,7 @@ const Form = () => {
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
               >
-                <p>Continue to payment</p>
+                <p>Join now</p>
               </SustainButton>
             ) : (
               <SustainButton
