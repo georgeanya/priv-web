@@ -183,7 +183,7 @@ const Form = () => {
 
       <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
-          Join Priv
+          Get started
         </p>
         <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg md:leading-6 font-normal md:pr-8 text-center text-[#111111]">
           Kindly fill the form with correct information
@@ -226,13 +226,13 @@ const Form = () => {
               />
             </div>
           </div>
-          <div className="flex mb-7">
+          <div className="flex mb-[30px]">
             <img src={lock.src} alt="" />
             <p className="md:text-[13px] leading-4 text-xs text-[#73738C] ml-1">
               Your information will never be shared with anyone
             </p>
           </div>
-          <div className="mb-7">
+          <div className="mb-[30px]">
             <label
               htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-900"
@@ -249,12 +249,12 @@ const Form = () => {
               required
             />
           </div>
-          <div className="mb-7">
+          <div className="mb-[30px]">
             <label
               htmlFor="number"
               className="block mb-2 text-sm font-medium text-gray-900"
             >
-              Nigerian WhatsApp phone number
+              WhatsApp phone number
             </label>
             <input
               type="tel"
@@ -293,7 +293,7 @@ const Form = () => {
             <option value="STIs">STIs</option>
             <option value="others">Others</option>
           </select>
-          <div className="bg-[#EEEFF6] p-4 mt-12 mb-9 rounded-lg">
+          <div className="bg-[#EEEFF6] p-4 mt-12 mb-[25px] rounded-lg">
             <p className="text-[#73738C] text-xs md:text-sm">
               By filling out this form, you agree to Priv’s{" "}
               <a
@@ -317,7 +317,7 @@ const Form = () => {
                 className="self-center text-sm md:text-base font-medium"
                 type="submit"
               >
-                <p>Join now</p>
+                <p>Get started</p>
               </SustainButton>
             ) : (
               <SustainButton
