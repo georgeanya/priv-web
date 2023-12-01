@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
       </div>
       <div className="mt-8 md:mt-14 ">
-        <div className="grid md:grid-cols-3 grid-cols-2 grid-rows-3 md:grid-rows-2 md:gap-7 gap-4">
+        <div className="grid md:grid-cols-4 grid-cols-2 grid-rows-4 md:grid-rows-2 md:gap-7 gap-4">
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#EEEAF5] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Erectile dysfunction
@@ -25,25 +25,17 @@ const Hero = () => {
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#E4F0FC] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
-              Premature ejaculation
+              Low sex drive
             </p>
-            <Link href="/premature-ejaculation">
-              <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
-            </Link>
-          </div>
-          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#ECECF4] flex flex-col justify-between">
-            <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
-              Low testosterone
-            </p>
-            <Link href="/start">
+            <Link href="/hair-loss">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
           <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F7E9EA] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
-            STIs
+              Premature ejaculation
             </p>
-            <Link href="/start">
+            <Link href="/premature-ejaculation">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
@@ -55,7 +47,31 @@ const Hero = () => {
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
-          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F8F2E7] flex flex-col justify-between">
+          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#E4F0FC] flex flex-col justify-between">
+            <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
+              Enlarged prostate
+            </p>
+            <Link href="/start">
+              <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+            </Link>
+          </div>
+          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#EEEAF5] flex flex-col justify-between">
+            <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
+              Poor sleep
+            </p>
+            <Link href="/start">
+              <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+            </Link>
+          </div>
+          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#ECF3F1] flex flex-col justify-between">
+            <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
+              STI treatment
+            </p>
+            <Link href="/start">
+              <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+            </Link>
+          </div>
+          <div className="md:px-6 px-5 py-6 md:py-8 rounded-3xl bg-[#F7E9EA] flex flex-col justify-between">
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Supplements
             </p>

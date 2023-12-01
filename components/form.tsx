@@ -137,7 +137,7 @@ const Form = () => {
           <div className="flex">
             <img src={one.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
             <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Free online consultation
+              Complete your online visit
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
