@@ -129,7 +129,7 @@ const Form = () => {
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-[25px]">
       <div className={isReady ? "block" : "hidden"}>
-        <p className=" leading-tight md:pr-14 md:text-[28px] text-2xl text-center font-bold text-[#5355AC] mb-[30px] md:mb-[35px]">
+        <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] mb-[30px] md:mb-[35px]">
           How Priv works
         </p>
 
@@ -287,10 +287,11 @@ const Form = () => {
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>
             <option value="premature ejaculation">Premature ejaculation</option>
-            <option value="low testosterone">Low testosterone</option>
-            <option value="warts">Warts</option>
+            <option value="low sex drive">Low sex drive</option>
+            <option value="enlarged prostate">Enlarged prostate</option>
             <option value="hair loss">Hair loss</option>
-            <option value="STIs">STIs</option>
+            <option value="poor sleep">poor sleep</option>
+            <option value="STI treatment">STI treatment</option>
             <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-[25px] rounded-lg">
