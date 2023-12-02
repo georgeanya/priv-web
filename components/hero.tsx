@@ -27,7 +27,7 @@ const Hero = () => {
             <p className="font-medium text-lg md:text-2xl text-[#111111] mb-3.5 md:mb-5 leading-6">
               Low sex drive
             </p>
-            <Link href="/hair-loss">
+            <Link href="/start">
               <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
             </Link>
           </div>
