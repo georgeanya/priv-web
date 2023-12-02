@@ -185,7 +185,7 @@ const Form = () => {
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>
-        <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg md:leading-6 font-normal md:pr-8 text-center text-[#111111]">
+        <p className="mt-4 mb-[30px] md:mb-[35px] text-base md:text-lg md:leading-6 font-normal text-center text-[#111111]">
           Kindly fill the form with correct information
         </p>
 
