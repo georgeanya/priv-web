@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-[#232B5C] ">
+      {/* <div className="bg-[#232B5C] ">
         <Link href="/ed-assessment">
           <p className="text-center text-sm md:text-base text-white py-4 px-7">
             ✨ Take this free assessment to know if you may have erectile
@@ -39,7 +39,7 @@ const Navbar = () => {
             <ArrowIcon />
           </p>
         </Link>
-      </div>
+      </div> */}
       <div className="px-5 md:px-32 pt-5 md:pt-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
