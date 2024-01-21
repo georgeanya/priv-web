@@ -29,6 +29,21 @@ export default function Document() {
         </script> */}
         <script
           dangerouslySetInnerHTML={{
+            __html: `!function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '348874631254320');
+            fbq('track', 'PageView');`,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
             __html: `(function(h,o,t,j,a,r){
               h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
               h._hjSettings={hjid:3453562,hjsv:6};
@@ -61,6 +76,13 @@ export default function Document() {
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQJTNRC" height="0" width="0" style="display: none; visibility: hidden;" />`,
+          }}
+        />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=348874631254320&ev=PageView&noscript=1"
+            />`,
           }}
         />
         <Main />

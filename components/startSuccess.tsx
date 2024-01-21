@@ -3,6 +3,7 @@ import Navbar from "./navbar1";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";
+import Head from "next/head";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -21,6 +22,13 @@ const SustainButton = styled(Button)({
 const StartSuccess = () => {
   return (
     <div>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `fbq('track', 'Lead');`,
+          }}
+        />
+      </Head>
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
         Payment link sent
       </p>
