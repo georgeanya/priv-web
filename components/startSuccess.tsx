@@ -27,8 +27,9 @@ const StartSuccess = () => {
           dangerouslySetInnerHTML={{
             __html: `fbq('track', 'Lead');`,
           }}
-        />
+        /> 
       </Head>
+      <div className="max-w-m mx-5 sm:mx-auto mt-[25px]">
       <p className=" leading-tight md:pr-14 md:text-3xl text-1xl md:text-start font-bold text-[#5355AC] ">
         Payment link sent
       </p>
@@ -44,7 +45,8 @@ const StartSuccess = () => {
           Join our Telegram community
         </SustainButton>
       </Link>
-    </div>
+      </div>
+      </div>
   );
 };
 

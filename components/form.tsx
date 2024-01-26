@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import axios from "axios";
 import StartError from "./startError";
 import StartSuccess from "./startSuccess";
@@ -37,6 +38,9 @@ interface IState {
 const url = "https://priv-health.herokuapp.com/v1/consult";
 
 const Form = () => {
+
+  const router = useRouter();
+
   const [state, setState] = useState<IState>({
     user: {
       first_name: "",
@@ -112,6 +116,7 @@ const Form = () => {
           "user subscribed successfully"
         ) {
           setIsSuccessFunc();
+          router.push("/confirmation");
         } else {
           setIsErrorFunc();
         }
@@ -165,8 +170,8 @@ const Form = () => {
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Our medical team will follow up to see how you{"'"}re doing,
-            and will adjust your treatment as needed. Message them any time with
+            Our medical team will follow up to see how you{"'"}re doing, and
+            will adjust your treatment as needed. Message them any time with
             questions
           </p>
         </div>
@@ -181,7 +186,7 @@ const Form = () => {
         </div>
       </div>
 
-        <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
+      <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>
@@ -346,9 +351,9 @@ const Form = () => {
           </div>
         </form>
       </div>
-      <div className={isSuccess ? "block" : "hidden"}>
+      {/* <div className={isSuccess ? "block" : "hidden"}>
         <StartSuccess />
-      </div>
+      </div> */}
       <div className={isError ? "block" : "hidden"}>
         <StartError toggle={setIsErrorFunc} toggleFav={setIsLoadingFunc} />
       </div>
