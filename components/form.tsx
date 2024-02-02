@@ -38,7 +38,6 @@ interface IState {
 const url = "https://priv-health.herokuapp.com/v1/consult";
 
 const Form = () => {
-
   const router = useRouter();
 
   const [state, setState] = useState<IState>({
@@ -142,24 +141,24 @@ const Form = () => {
           <div className="flex">
             <img src={one.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
             <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Complete your online visit
+              Online assessment
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Answer a few simple questions about your symptoms. A doctor will
-            review your information and will get back to you within 24 hours
+            Answer a few questions about your symptoms. For ₦5,000, a doctor
+            will assess you and get back to you within 24 hours
           </p>
         </div>
         <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
           <div className="flex">
             <img src={two.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
             <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Receive personalized treatment
+              Personalized treatment
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Receive a personalized treatment plan (medicines) directly at home
-            within 24 hours after it is approved
+            Receive your personalized treatment plan and medicines directly at
+            home within 24 hours after it is approved
           </p>
         </div>
         <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-10">
@@ -170,9 +169,8 @@ const Form = () => {
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Our medical team will follow up to see how you{"'"}re doing, and
-            will adjust your treatment as needed. Message them any time with
-            questions
+            We will follow up to see how you're doing, and adjust your treatment
+            as needed. Message us any time with questions
           </p>
         </div>
 
