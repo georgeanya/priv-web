@@ -179,7 +179,7 @@ const BlogPost = ({ blog }: any) => {
               </div>
             </div>
           </div>
-          <div className="flex md:flex-col md:ml-12 md:min-w-[40px] mb-20">
+          <div className="flex md:flex-col md:ml-12 md:min-w-[40px]">
             <FacebookShareButton url={url}>
               {" "}
               <img src={facebook.src} alt="" />
