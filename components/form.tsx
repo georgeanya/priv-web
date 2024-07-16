@@ -169,7 +169,7 @@ const Form = () => {
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            We will follow up to see how you're doing, and adjust your treatment
+            We will follow up to see how you&apos;re doing, and adjust your treatment
             as needed. Message us any time with questions
           </p>
         </div>
