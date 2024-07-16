@@ -90,12 +90,24 @@ const Blog = ({ initialBlogs }: any) => {
   };
 
   const blogsToDisplay = useMemo(() => {
+    if (toggleState === "All") {
+      return blogs?.data.slice(1, 7);
+    }
+    return blogs.data
+      ?.slice(1)
+      .filter((blog: any) => {
+        return blog.attributes.category.data.attributes.name === toggleState;
+      })
+      .slice(0, 6);
+  }, [blogs, toggleState]);
+
+  const blogsToDisplay2 = useMemo(() => {
     console.log(blogs);
 
     if (toggleState === "All") {
-      return blogs?.data.slice(1);
+      return blogs?.data.slice(7);
     }
-    return blogs.data?.slice(1).filter((blog: any) => {
+    return blogs.data?.slice(7).filter((blog: any) => {
       return blog.attributes.category.data.attributes.name === toggleState;
     });
   }, [blogs, toggleState]);
@@ -345,7 +357,7 @@ const Blog = ({ initialBlogs }: any) => {
             </form>
           </div>
           <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
-            {blogsToDisplay?.map((blogpost: any) => {
+            {blogsToDisplay2?.map((blogpost: any) => {
               const blog = blogpost;
               const { id, attributes } = blog;
               console.log(attributes.category);
