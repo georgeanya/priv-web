@@ -22,6 +22,20 @@ const SustainOutlineButton = styled(Button)({
   },
 });
 
+const PrivButton = styled(Button)({
+  background: "#5355AC !important",
+  fontFamily: "Circular Std",
+  color: "#f8f8f8",
+  cursor: "pointer",
+  padding: "20px 38px",
+  margin: "0px 0px",
+  borderRadius: "32px",
+  textTransform: "none",
+  ["@media (max-width:780px)"]: {
+    padding: "16px 32px",
+  },
+});
+
 interface Blog {
   id: number;
   attributes: {
@@ -128,8 +142,8 @@ const Blog = ({ initialBlogs }: any) => {
 
   return (
     <div>
-      <div className="px-5 md:px-32 md:mb-24 mb-15">
-        <p className=" text-sm md:text-[18px] leading-[24px] font-normal mt-[60px] md:mt-[70px] text-[#111111]">
+      <div className="px-5 md:px-32 md:mb-20 mb-15">
+        <p className=" text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
           <span className=" font-bold">Blog</span> | The latest stories and
           updates from the team
         </p>
@@ -141,22 +155,22 @@ const Blog = ({ initialBlogs }: any) => {
               className="cursor-pointer w-full md:w-[660px] md:h-[380px] rounded-[20px]"
             />
           </Link>
-          <div className=" md:ml-17 mt-7 md:mt-0 self-center max-w-[470px]">
+          <div className=" md:ml-17 mt-6 md:mt-0 self-center max-w-[460px]">
             <p className=" text-sm text-[#5355AC] leading-[17px]">
               {blog.attributes?.category.data.attributes.name}
             </p>
             <Link href={`/blog/${blog.attributes?.slug}`}>
-              <p className="cursor-pointer text-[#111111] font-bold text-[26px] leading-[32px] md:text-[38px] md:leading-[43px] mt-2.5 md:mt-3">
+              <p className="cursor-pointer text-[#111111] font-bold text-[22px] leading-[28px] md:text-[34px] md:leading-[43px] mt-3">
                 {blog.attributes?.title}
               </p>
             </Link>
             <p className="text-[#61616B] mt-4 md:mt-5 text-base md:text-lg">
               {blog.attributes?.description}
             </p>
-            <div className="flex mt-7 md:mt-10">
+            <div className="flex mt-5 md:mt-6 mb-[60px] md:mb-0">
               <img src={image.src} alt="" className="w-12 rounded-[25px]" />
               <div className="ml-4 self-center">
-                <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                <p className="text-[#111111] text-sm md:text-base leading-[17px] font-medium">
                   {blog.attributes?.author.data.attributes.name}
                 </p>
                 <p className="text-[#61616B] text-xs">
@@ -168,15 +182,15 @@ const Blog = ({ initialBlogs }: any) => {
         </div>
       </div>
       <div>
-        <div className="px-5 md:px-32 mb-24">
+        <div className="px-5 md:px-[125px] md:mb-[130px] mb-[90px]">
           <div className="hidden md:block">
-            <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
+            <ul className="flex flex-wrap text-sm font-medium leading-[17px] text-center text-gray-500">
               <li className="mr-2 cursor-pointer">
                 <p
                   className={
                     toggleState === "All"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("All")}
                 >
@@ -187,8 +201,8 @@ const Blog = ({ initialBlogs }: any) => {
                 <p
                   className={
                     toggleState === "Sexual health"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("Sexual health")}
                 >
@@ -199,8 +213,8 @@ const Blog = ({ initialBlogs }: any) => {
                 <p
                   className={
                     toggleState === "Hair"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("Hair")}
                 >
@@ -211,8 +225,8 @@ const Blog = ({ initialBlogs }: any) => {
                 <p
                   className={
                     toggleState === "General health"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("General health")}
                 >
@@ -223,8 +237,8 @@ const Blog = ({ initialBlogs }: any) => {
                 <p
                   className={
                     toggleState === "Engineering"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("Engineering")}
                 >
@@ -235,8 +249,8 @@ const Blog = ({ initialBlogs }: any) => {
                 <p
                   className={
                     toggleState === "Company"
-                      ? "inline-block px-5 py-3 text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-3 text-[#61616B]"
+                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                      : "inline-block px-6 py-[14px] text-[#61616B]"
                   }
                   onClick={() => toggleTab("Company")}
                 >
@@ -262,7 +276,7 @@ const Blog = ({ initialBlogs }: any) => {
               <option value="Company">Company</option>
             </select>
           </div>
-          <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 md:gap-y-26 gap-15 md:mb-18 mb-15">
+          <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
             {blogsToDisplay?.map((blogpost: any) => {
               const blog = blogpost;
               const { id, attributes } = blog;
@@ -270,7 +284,7 @@ const Blog = ({ initialBlogs }: any) => {
 
               return (
                 <Link href={`/blog/${attributes.slug}`} key={id}>
-                  <div className="max-w-[357px] md:h-[540px] flex flex-col justify-between">
+                  <div className="max-w-[357px] flex flex-col justify-between">
                     <div>
                       <img
                         src={attributes.image.data.attributes.url}
@@ -278,17 +292,85 @@ const Blog = ({ initialBlogs }: any) => {
                         className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                       />
 
-                      <p className=" text-sm text-[#5355AC] mt-7">
+                      <p className=" text-sm leading-[17px] text-[#5355AC] mt-7 mt-[24px]">
                         {attributes.category.data.attributes.name}
                       </p>
-                      <p className="text-[#111111] font-bold text-[26px] leading-[32px] md:text-1xl md:leading-8 mt-2.5 md:mt-3 cursor-pointer">
+                      <p className="text-[#111111] font-bold text-[22px] leading-[27px] mt-3 cursor-pointer">
                         {attributes.title}
                       </p>
-                      <p className="text-[#61616B] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
+                      {/* <p className="text-[#61616B] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
                         {attributes.description}
-                      </p>
+                      </p> */}
                     </div>
-                    <div className="flex mt-7 md:mt-10">
+                    <div className="flex mt-3 md:mt-4">
+                      <img
+                        src={image.src}
+                        alt=""
+                        className="w-12 rounded-[25px]"
+                      />
+                      <div className="ml-4 self-center">
+                        <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                          {blog.attributes.author.data.attributes.name}
+                        </p>
+                        <p className="text-[#61616B] text-xs">
+                          {blog.attributes.author.data.attributes.team}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+          <div
+            className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#F8F5FF] rounded-[20px]"
+            id="newsletter"
+          >
+            <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#5355AC] font-bold max-w-[476px]">
+              Stay updated by joining our newsletter
+            </p>
+            <p className=" text-base leading-[22px] md:text-xl text-[#333D47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
+              Subscribe to recieve updates about our blog posts and
+              announcements directly in your mailbox
+            </p>
+            <form action="" method="post" className="flex flex-wrap">
+              <input
+                type="text"
+                placeholder="Enter your email"
+                className="border mb-4 md:mb-0 h-12 md:h-[60px] md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
+              />
+              <PrivButton className="md:text-base leading-5">
+                Subscribe
+              </PrivButton>
+            </form>
+          </div>
+          <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
+            {blogsToDisplay?.map((blogpost: any) => {
+              const blog = blogpost;
+              const { id, attributes } = blog;
+              console.log(attributes.category);
+
+              return (
+                <Link href={`/blog/${attributes.slug}`} key={id}>
+                  <div className="max-w-[357px]  flex flex-col justify-between">
+                    <div>
+                      <img
+                        src={attributes.image.data.attributes.url}
+                        alt=""
+                        className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
+                      />
+
+                      <p className=" text-sm leading-[17px] text-[#5355AC] mt-7 mt-[24px]">
+                        {attributes.category.data.attributes.name}
+                      </p>
+                      <p className="text-[#111111] font-bold text-[22px] leading-[27px] mt-3 cursor-pointer">
+                        {attributes.title}
+                      </p>
+                      {/* <p className="text-[#61616B] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
+                        {attributes.description}
+                      </p> */}
+                    </div>
+                    <div className="flex mt-3 md:mt-4">
                       <img
                         src={image.src}
                         alt=""

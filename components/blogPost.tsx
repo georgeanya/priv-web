@@ -123,7 +123,7 @@ const BlogPost = ({ blog }: any) => {
 
   return (
     <div>
-      <div className="md:px-[245px] md:pt-[70px] pt-[65px] px-5">
+      <div className="md:px-[245px] md:pt-[50px] pt-[60px] px-5 md:pb-[130px] pb-[90px]">
         <div className="flex text-[#5355AC] md:text-[14px] md:leading-[19px] text-[14px] leading-[16.5px]">
           <p>{fetchedBlog?.attributes?.category.data.attributes?.name}</p>
           <p className="px-1">•</p>
@@ -134,10 +134,10 @@ const BlogPost = ({ blog }: any) => {
             />
           </p>
         </div>
-        <h1 className="mt-4 md:text-[48px] md:leading-[61px] leading-[40px] text-[30px] text-[#111111] font-bold">
+        <h1 className="mt-3 md:mt-4 md:text-[48px] md:leading-[61px] leading-[40px] text-[30px] text-[#111111] font-bold">
           {fetchedBlog?.attributes?.title}
         </h1>
-        <div className="flex mt-7 md:mt-[30px]">
+        <div className="flex mt-6">
           <img src={image.src} alt="" className="w-12 rounded-[25px]" />
           <div className="ml-4 self-center">
             <p className="text-[#111111] text-sm md:text-base font-medium">
@@ -153,7 +153,7 @@ const BlogPost = ({ blog }: any) => {
           alt=""
           className="cursor-pointer w-full rounded-[20px] md:mt-[50px] mt-[35px]"
         /> */}
-        <div className="md:mt-[55px] mt-[45px] md:flex flex-row justify-between">
+        <div className="md:mt-[40px] mt-[32px] md:flex flex-row justify-between">
           <div>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
@@ -162,7 +162,7 @@ const BlogPost = ({ blog }: any) => {
               {fetchedBlog?.attributes.content || ""}
             </ReactMarkdown>
 
-            <div className="bg-[#EEEEF7] px-5 py-10 md:p-12 md:flex justify-between md:mt-14 md:mb-36 mb-9 mt-9 rounded-[20px]">
+            <div className="bg-[#EEEEF7] px-5 py-10 md:p-12 md:flex justify-between md:mt-14 mb-9 mt-9 rounded-[20px]">
               <div className="max-w-[385px]">
                 <p className="text-[#111111] md:text-[28px] text-[22px] leading-[28px] md:leading-[35px] mb-4 font-bold">
                   Hey! we’ve made it easy to get stronger erection

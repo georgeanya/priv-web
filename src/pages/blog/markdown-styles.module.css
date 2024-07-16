@@ -6,21 +6,29 @@
   font-size: 18px;
   margin-bottom: 30px;
   line-height: 31px;
+  padding-left: 2rem;
 }
 
+.reactMarkDown ul {
+  list-style-type: disc;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 31px;
+  padding-left: 2rem;
+}
 .reactMarkDown li {
   margin-top: 6px;
   display: list-item;
   text-align: -webkit-match-parent;
 }
 .reactMarkDown h2 {
-  font-size: 34px;
+  font-size: 28px;
   margin-bottom: 10px;
   font-weight: 600;
   color: #111111;
 }
 .reactMarkDown h3 {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 10px;
   font-weight: 600;
   color: #111111;
@@ -31,7 +39,7 @@
   line-height: 31px;
 }
 .reactMarkDown a {
-  text-decoration: underline;
+  font-weight: 600;
   color: #5355ac;
 }
 .reactMarkDown img {
@@ -47,21 +55,22 @@
 
 @media (max-width: 767px) {
   .reactMarkDown h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
     line-height: 28px;
   }
   .reactMarkDown h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
   .reactMarkDown p {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 30px;
-    line-height: 27px;
+    line-height: 1.6rem;
   }
   .reactMarkDown a {
-    text-decoration: underline;
+    font-weight: 600;
+  color: #5355ac;
   }
   .reactMarkDown img {
     margin-top: 5px;
@@ -75,9 +84,17 @@
   }
   .reactMarkDown ol {
     list-style-type: decimal;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 30px;
-    line-height: 27px;
-    padding-left: 20px;
+    line-height: 1.6rem;
+    padding-left: 2rem;
   }
+
+  .reactMarkDown ul {
+    list-style-type: disc;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.6rem;
+    padding-left: 2rem;
+}
 }
