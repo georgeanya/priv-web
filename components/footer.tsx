@@ -46,18 +46,18 @@ const Footer = () => {
               TREATMENTS
             </h3>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="/acne">Erectile dysfunction</Link>
+              <Link href="/ed">Erectile dysfunction</Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="/eczema">Premature ejaculation</Link>
+              <Link href="/premature-ejaculation">Premature ejaculation</Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="/hyperpigmentation">
+              <Link href="/stis">
               STI/ STD treatment
               </Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="skin-aging">
+              <Link href="hair-loss">
               Male hair loss
               </Link>
             </p>
