@@ -1,13 +1,17 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section4";
+import Section4 from "../../components/section2";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
 import Ed from "../../components/ed";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
+import Hero from "../../components/ed-hero";
+import EdShop from "../../components/ed-section-1";
+import Section6 from "../../components/section6";
+import Section3 from "../../components/section3";
 
 const EdPage = () => {
   return (
@@ -98,9 +102,13 @@ const EdPage = () => {
         <link href="https://privhealth.co/ed" rel="canonical" />
       </Head>
       <Navbar />
+      <Hero />
       <Ed />
+      <EdShop/>
       <Section4 />
+      <Section3/>
       <Section5 />
+      <Section6 />
       <Faq />
       <Footer />
     </div>

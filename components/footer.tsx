@@ -25,7 +25,7 @@ const Footer = () => {
     <div className="bg-[#232B5C] md:px-32 px-5 md:pt-36 pt-24  text-white">
       <div className="text-center">
         <p className="text-3xl md:text-5xl font-bold mb-6">
-          Book your consultation now
+        Start your online visit now
         </p>
         <p className="text-md md:text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
           Get seamless and discreet care for conditions that affect your
@@ -33,65 +33,118 @@ const Footer = () => {
         </p>
         <Link href="/start">
           <SustainButton className="self-center text-sm md:text-base font-medium">
-            Get started today
+          Get treatment now
           </SustainButton>
         </Link>
       </div>
-      <hr className="md:mt-36 mt-28 md:mb-24 mb-20" />
+      <hr className="h-[0.5px] border-t-[0.5px] md:mt-[110px] mt-[90px] md:mb-[90px] mb-[70px] text-[#C7CBD1]" />
       <div className="md:flex md:justify-between text-start">
-        <img src={sustain.src} className="self-start" alt="sustain logo" />
+        <img src={sustain.src} className="self-start " alt="skeen logo" />
         <div className="flex flex-wrap">
-          <div className="w-40 md:w-72">
-            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
-              Learn more
+          <div className="w-40 md:w-[245px]">
+            <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base font-medium">
+              TREATMENTS
             </h3>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="/blog">Blog</Link>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/acne">Erectile dysfunction</Link>
             </p>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="/">Careers</Link>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/eczema">Premature ejaculation</Link>
             </p>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="https://priv-health.notion.site/Terms-of-use-254e525466a3493687d94fd671d93ad8">
-                Terms of use
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/hyperpigmentation">
+              STI/ STD treatment
               </Link>
             </p>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
-              <Link href="https://priv-health.notion.site/Privacy-policy-2f70cbb81ab843ca920e87d2b32caa37">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="skin-aging">
+              Male hair loss
+              </Link>
+            </p>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/all-conditions">
+                See all
+              </Link>
+            </p>
+          </div>
+          <div className="w-40 md:w-[245px]">
+            <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
+              RESOURCES
+            </h3>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/404">Help center</Link>
+            </p>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35">
                 Privacy policy
               </Link>
             </p>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
+                Terms of use
+              </Link>
+            </p>
+            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/cookie">Cookie policy</Link>
+            </p> */}
           </div>
-          <div className="w-40 md:w-72">
-            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
-              Contact us
+          <div className="w-40 md:w-[245px]">
+            <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
+              COMPANY
             </h3>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="https://lifebox.ng/">About</Link>
+            </p>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/blog">Blog</Link>
+            </p>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="https://lifebox-labs.notion.site/Join-Lifebox-Labs-caed82beacb448cf9be9b380907caa19">
+                Careers
+              </Link>
+            </p>
+            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C4CED4]">
+              <Link href="/404">Press</Link>
+            </p> */}
+          </div>
+          <div className="w-40 md:w-[205px]">
+            <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
+              CONTACT
+            </h3>
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
               <Link href="tel:+2347064467417">+2347064467417</Link>
             </p>
-            <p className="md:mb-6 md:text-base text-sm mb-5 text-white">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
               <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
             </p>
-          </div>
-          <div className="w-40 md:w-72">
-            <h3 className="md:mb-8 mb-6 mt-14 md:mt-0 text-sm md:text-base font-medium text-[#C8CCEA]">
-              Stay in touch
-            </h3>
             <div className="flex">
-              <a href="http://facebook.com/tryprivhealth">
-                <img src={fbook.src} className="mr-5 " alt="facebook logo" />
-              </a>
-              <a href="http://instagram.com/tryprivhealth">
-                <img src={insta.src} className="mr-5 " alt="instagram logo" />
-              </a>
-              <a href="http://twitter.com/tryprivhealth">
-                <img src={twitter.src} className="mr-5 " alt="twitter logo" />
-              </a>
+              <Link href="https://facebook.com/tryprivhealth">
+                <img
+                  src={fbook.src}
+                  className="mr-5 cursor-pointer"
+                  alt="facebook logo"
+                />
+              </Link>
+              <Link href="https://instagram.com/tryprivhealth">
+                <img
+                  src={insta.src}
+                  className="mr-5 cursor-pointer"
+                  alt="instagram logo"
+                />
+              </Link>
+              <Link href="https://twitter.com/tryprivhealth">
+                <img
+                  src={twitter.src}
+                  className="mr-5 cursor-pointer"
+                  alt="twitter logo"
+                />
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <p className="md:mt-32 mt-16 text-sm pb-10 md:pb-16 text-center md:text-start">
+      <hr className="h-[0.5px] border-t-[0.5px] md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
+      <p className="md:mt-[45px] mt-16 text-sm pb-10 md:pb-16 text-center md:text-start">
         Priv Health © 2023 All Rights Reserved
       </p>
     </div>

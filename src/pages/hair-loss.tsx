@@ -1,13 +1,17 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section4";
+import Section4 from "../../components/section2";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
-import HairLoss from "../../components/hair-loss";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
+import Section6 from "../../components/section6";
+import Section3 from "../../components/section3";
+import EdShop from "../../components/hl-section-1";
+import Hero from "../../components/hl-hero";
+import Ed from "../../components/hl";
 
 const HairLossPage = () => {
   return (
@@ -98,9 +102,13 @@ const HairLossPage = () => {
         <link href="https://privhealth.co/hair-loss" rel="canonical" />
       </Head>
       <Navbar />
-      <HairLoss />
+      <Hero />
+      <Ed />
+      <EdShop/>
       <Section4 />
+      <Section3/>
       <Section5 />
+      <Section6 />
       <Faq />
       <Footer />
     </div>

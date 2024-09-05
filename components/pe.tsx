@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 
 import { useState } from "react";
-import FAQ from "./section6";
+import FAQ from "./faq2";
 import Link from "next/link";
 
 const SustainButton = styled(Button)({
@@ -19,7 +19,7 @@ const SustainButton = styled(Button)({
   },
 });
 
-const PrematureEjaculation = () => {
+const Ed = () => {
   const [faqs, setFaqs] = useState([
     {
       question: "What is premature ejaculation?",
@@ -57,25 +57,30 @@ const PrematureEjaculation = () => {
   };
 
   return (
-    <div className="px-5 md:px-32 md:pt-[70px] pt-11 md:pb-36 pb-24">
-      <p className="leading-tight md:leading-tight text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-[591px] mb-[45px] md:mb-[70px]">
-        Get private treatment for premature ejaculation
-      </p>
-      <div className="max-w-3xl">
-        {faqs.map((faq, index) => (
-          <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
-        ))}
-        {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
-      </div>
-      <div className="mt-10 md:mt-15">
-        <div>
+    <div className="px-5 md:px-32 md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between">
+      <div>
+        <p className="leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
+        Facts about premature ejaculation 
+        </p>
+        <div className="mt-8 md:mt-9 hidden md:block">
           <Link href="/start">
             <SustainButton>Get treatment now</SustainButton>
           </Link>
         </div>
       </div>
+      <div className="max-w-[730px] mt-[60px] md:mt-0">
+        {faqs.map((faq, index) => (
+          <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
+        ))}
+        {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
+      </div>
+      <div className="mt-8 md:mt-9 md:hidden">
+          <Link href="/start">
+            <SustainButton>Get treatment now</SustainButton>
+          </Link>
+        </div>
     </div>
   );
 };
 
-export default PrematureEjaculation;
+export default Ed;

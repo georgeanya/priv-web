@@ -49,3 +49,13 @@
   appearance: none;
   background: transparent;
 }
+
+/* styles.css or global.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}

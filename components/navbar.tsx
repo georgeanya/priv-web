@@ -103,7 +103,23 @@ const Navbar = () => {
                     href="https://privhealth.bumpa.shop"
                     className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
+                    What we treat
+                  </Link>
+                </li>
+                <li className="mt-3 mx-5 ">
+                  <Link
+                    href="https://privhealth.bumpa.shop"
+                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                  >
                     Shop
+                  </Link>
+                </li>
+                <li className="mt-3 mx-5 ">
+                  <Link
+                    href="https://privhealth.bumpa.shop"
+                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                  >
+                    Community
                   </Link>
                 </li>
                 <li className="mt-3 mx-5 ">
@@ -135,7 +151,23 @@ const Navbar = () => {
                   href="https://privhealth.bumpa.shop"
                   className="block text-sm py-4"
                 >
+                  What we treat
+                </Link>
+                </li>
+                <li>
+                <Link
+                  href="https://privhealth.bumpa.shop"
+                  className="block text-sm py-4"
+                >
                   Shop
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://privhealth.bumpa.shop"
+                  className="block text-sm py-4"
+                >
+                  Community
                 </Link>
               </li>
               <li>

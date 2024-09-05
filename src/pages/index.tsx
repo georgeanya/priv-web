@@ -2,13 +2,16 @@ import type { NextPage } from "next";
 import Hero from "../../components/hero";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section4";
+import Section4 from "../../components/section2";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Script from "next/script";
+import Section6 from "../../components/section6";
+import Section3 from "../../components/section3";
+import Section2 from "../../components/section2";
 
 const Home: NextPage = () => {
   return (
@@ -107,8 +110,11 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <Hero />
-      <Section4 />
+      <Section2 />
+      <Section3 />
+     
       <Section5 />
+      <Section6 />
       <Faq />
       <Footer />
     </div>

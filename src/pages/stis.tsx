@@ -4,21 +4,21 @@ import Navbar from "../../components/navbar";
 import Section4 from "../../components/section2";
 import Section5 from "../../components/section5";
 import Faq from "../../components/faq";
+import Ed from "../../components/std";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Hero from "../../components/pe-hero";
-import Ed from "../../components/pe";
-import EdShop from "../../components/pe-section-1";
-import Section3 from "../../components/section3";
+import Hero from "../../components/std-hero";
+import EdShop from "../../components/std-section-1";
 import Section6 from "../../components/section6";
+import Section3 from "../../components/section3";
 
-const PrematureEjaculationPage = () => {
+const EdPage = () => {
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Premature ejaculation treatment - Priv Health</title>
+        <title>STIs/STDs treatment - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -75,16 +75,16 @@ const PrematureEjaculationPage = () => {
         />
         <meta
           name="description"
-          content="Get treatment for premature ejaculation privately and from the comfort of your home."
+          content="Get treatment for STIs/STDs privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/ed" property="og:url" />
+        <meta content="https://privhealth.co/stis" property="og:url" />
         <meta
-          content="Premature ejaculation treatment - Priv Health"
+          content="STIs/STDs treatment - Priv Health"
           property="og:title"
         />
         <meta
-          content="Get treatment for premature ejaculation privately and from the comfort of your home."
+          content="Get treatment for STIs/STDs privately and from the comfort of your home."
           property="og:description"
         />
         <meta
@@ -93,16 +93,13 @@ const PrematureEjaculationPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Premature ejaculation treatment - Priv Health"
+          content="STIs/STDs treatment - Priv Health"
         />
         <meta
           name="twitter:description"
-          content="Get treatment for premature ejaculation privately and from the comfort of your home."
+          content="Get treatment for STIs/STDs privately and from the comfort of your home."
         />
-        <link
-          href="https://privhealth.co/premature-ejaculation"
-          rel="canonical"
-        />
+        <link href="https://privhealth.co/stis" rel="canonical" />
       </Head>
       <Navbar />
       <Hero />
@@ -118,4 +115,4 @@ const PrematureEjaculationPage = () => {
   );
 };
 
-export default PrematureEjaculationPage;
+export default EdPage;

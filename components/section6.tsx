@@ -1,46 +1,59 @@
 import React from "react";
-import minus from "../public/assets/minus.png";
-import plus from "../public/assets/plus.png";
+import Image from "next/image";
+import stars from "../public/assets/stars.svg";
 
-const FAQ = ({ faq, index, toggleFAQ }: any) => {
+const Section1 = () => {
   return (
-    <div>
-      <div
-        className=" inline-flex"
-        onClick={() => toggleFAQ(index)}
-        key={index}
-      >
-        <div className="self-start min-w-fit cursor-pointer h-4 md:h-5">
-          {faq.open ? (
-            <img
-              className="mr-6 flex self-center w-4 md:w-5 md:mr-10 mt-3.5"
-              src={minus.src}
-              alt=""
-            />
-          ) : (
-            <img
-              className="mr-6 self-center w-4 md:w-5 md:mr-10 mt-1"
-              src={plus.src}
-              alt=""
-            />
-          )}
-        </div>
-        <div className="self-center">
-          <p className="text-lg md:text-2xl text-[#111111] font-medium">
-            {faq.question}
+    <div className="px-5 md:px-[125px] md:pt-28 pt-20 md:pb-28 pb-[90px] bg-[#F6F1EE]  ">
+      <p className="text-[28px] leading-9 md:text-start md:text-4xl md:max-w-xl font-bold mr-3 md:mr-0 text-[#5355AC] ">
+      Trusted by 2,000+ men
+      </p>
+      <p className="mt-5 md:mt-6 text-[16px] leading-[24px] font-normal md:pr-8 md:text-start md:text-[20px] md:leading-6 text-[#11111]">
+        See what some of our patients say about us
+      </p>
+      <div className="grid md:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-5 md:gap-6 mt-10 md:mt-12">
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+          <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
+            As a man, I never thought I would open up about my health struggles,
+            but my Priv doctor made me feel comfortable and supported. No
+            judgment, just help.
           </p>
-          {faq.open ? (
-            <p className="text-base md:text-xl text-[#61616B] mt-2 md:my-6">
-              {faq.answer}
+          <div className="flex justify-between items-center mt-6">
+            <p className="md:text-[18px] md:leading-[30px] text-[16px] leading-[20px] text-[#6C7884] ">
+              Adefemi
             </p>
-          ) : (
-            ""
-          )}
+            <Image src={stars} alt="" />
+          </div>
+        </div>
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+          <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
+            I encouraged my partner to seek help for his bedroom issues, and
+            Priv provided a safe and supportive space for him to do so. I am
+            grateful for their services!
+          </p>
+          <div className="flex justify-between items-center mt-6">
+            <p className="md:text-[18px] md:leading-[30px] text-[16px] leading-[20px] text-[#6C7884] ">
+              Betty
+            </p>
+            <Image src={stars} alt="" />
+          </div>
+        </div>
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+          <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
+            The process was a whole lot easier and faster than I imagined. And
+            the doctor was absolutely helpful and answered relatively fast. I
+            highly recommend Priv.
+          </p>
+          <div className="flex justify-between items-center mt-6">
+            <p className="md:text-[18px] md:leading-[30px] text-[16px] leading-[20px] text-[#6C7884] ">
+              Johnson
+            </p>
+            <Image src={stars} alt="" />
+          </div>
         </div>
       </div>
-      <hr className="my-6 md:my-8 mb-6 md:mb-8" />
     </div>
   );
 };
 
-export default FAQ;
+export default Section1;

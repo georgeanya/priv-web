@@ -60,7 +60,7 @@ const Ed = () => {
     <div className="px-5 md:px-32 md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between">
       <div>
         <p className="leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
-        Facts about erectile dysfunction 
+        Facts about STIs/STDs 
         </p>
         <div className="mt-8 md:mt-9 hidden md:block">
           <Link href="/start">
