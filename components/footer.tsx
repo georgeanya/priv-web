@@ -47,70 +47,70 @@ const Footer = () => {
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base font-medium">
               TREATMENTS
             </h3>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/ed">Erectile dysfunction</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/premature-ejaculation">Premature ejaculation</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/stis">STI/ STD treatment</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="hair-loss">Male hair loss</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/all-conditions">See all</Link>
             </p>
           </div>
-          <div className="w-40 md:w-[245px]">
+          <div className="ml-5 md:ml-0 w-40 md:w-[245px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               RESOURCES
             </h3>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/404">Help center</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="https://lifebox-labs.notion.site/Privacy-policy-9c564d4280694f34805e974ee3084c35">
                 Privacy policy
               </Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="https://lifebox-labs.notion.site/lifebox-labs/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1">
                 Terms of use
               </Link>
             </p>
-            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/cookie">Cookie policy</Link>
             </p> */}
           </div>
-          <div className="w-40 md:w-[245px]">
+          <div className="w-[150px] md:w-[245px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               COMPANY
             </h3>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="https://lifebox.ng/">About</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/blog">Blog</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="https://lifebox-labs.notion.site/Join-Lifebox-Labs-caed82beacb448cf9be9b380907caa19">
                 Careers
               </Link>
             </p>
-            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            {/* <p className="md:mb-6 md:text-sm text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="/404">Press</Link>
             </p> */}
           </div>
-          <div className="w-40 md:w-[205px]">
+          <div className="ml-5 md:ml-0 w-40 md:w-[205px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               CONTACT
             </h3>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="tel:+2347064467417">+2347064467417</Link>
             </p>
-            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
+            <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C8CCEA]">
               <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
             </p>
             <div className="flex">

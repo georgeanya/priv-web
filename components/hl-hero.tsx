@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../public/assets/ed-hero.png";
+import hero from "../public/assets/hl-hero.png";
 import { useState, useCallback, useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
@@ -43,7 +43,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className=" mt-[60px] md:mt-0 flex md:pr-[75px] md:pt-[80px] justify-center">
+        <div className=" mt-[60px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">
           <img src={hero.src} alt="hero" className="md:w-[460px]" />
         </div>
       </div>

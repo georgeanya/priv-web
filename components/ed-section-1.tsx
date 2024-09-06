@@ -24,11 +24,11 @@ const SustainButton = styled(Button)({
 const EdShop = () => {
   return (
     <div className="pl-5 md:px-32 md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between bg-[#EDEFF7]">
-      <div className="md:w-[360px] ">
+      <div className="md:w-[460px] ">
         <p className=" leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
           Get evidence-based solutions for ED that work
         </p>
-        <p className="mt-5 md:mt-[24px] text-sm leading-[18px] text-[#61616B] hidden md:block">
+        <p className="mt-5 md:mt-[24px] text-sm leading-[18px] text-[#61616B] hidden md:block  md:max-w-[360px]">
           *A consultation with a licensed doctor is required for prescriptions
         </p>
       </div>
@@ -40,7 +40,7 @@ const EdShop = () => {
                 Prescription only
               </p>
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                ₦22,000
+                ₦30,000
               </p>
             </div>
             <img src={product.src} alt="" className="my-5" />
@@ -61,7 +61,7 @@ const EdShop = () => {
                 Prescription only
               </p>
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                ₦15,000
+                ₦25,000
               </p>
             </div>
             <img src={product.src} alt="" className="my-5" />

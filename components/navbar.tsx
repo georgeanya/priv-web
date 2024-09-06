@@ -40,7 +40,7 @@ const Navbar = () => {
           </p>
         </Link>
       </div> */}
-      <div className="px-5 md:px-32 pt-5 md:pt-5">
+      <div className="px-5 md:px-32 pt-5 md:py-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link href="/">

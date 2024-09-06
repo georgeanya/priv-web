@@ -24,11 +24,11 @@ const SustainButton = styled(Button)({
 const EdShop = () => {
   return (
     <div className="pl-5 md:px-32 md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between bg-[#EDEFF7]">
-      <div className="md:w-[360px] pr-5">
-        <p className=" leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[591px]">
+      <div className="md:w-[460px] pr-5">
+        <p className=" leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
         Get evidence-based solutions for male hair loss that work
         </p>
-        <p className="mt-5 md:mt-[24px] text-sm leading-[18px] text-[#61616B] hidden md:block">
+        <p className="mt-5 md:mt-[24px] text-sm leading-[18px] text-[#61616B] hidden md:block md:max-w-[360px]">
           *A consultation with a licensed doctor is required for prescriptions
         </p>
       </div>
@@ -40,7 +40,7 @@ const EdShop = () => {
                 Prescription only
               </p>
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                ₦22,000
+                ₦20,000
               </p>
             </div>
             <img src={product.src} alt="" className="my-5" />
@@ -49,19 +49,17 @@ const EdShop = () => {
             </p>
             <img src={stars.src} alt="" className="my-3" />
             <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-              Take one gummy daily and you’ll be ready at all times
+            Spray daily to boost your hair’s growth and strength from the roots
             </p>
             <Link href="/start">
             <SustainButton>Get started</SustainButton>
           </Link>
           </div>
           <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
-            <div className="flex justify-between">
-              <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
-                Prescription only
-              </p>
+            <div className="flex justify-end">
+              
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                ₦15,000
+                ₦25,000
               </p>
             </div>
             <img src={product.src} alt="" className="my-5" />
@@ -70,7 +68,7 @@ const EdShop = () => {
             </p>
             <img src={stars.src} alt="" className="my-3" />
             <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-            Take one gummy 30 mins before the big game for 4-6 hours of fun
+            Nourish your hair, skin, and nails with a daily dose of beauty
             </p>
             <Link href="/start">
             <SustainButton>Get started</SustainButton>
