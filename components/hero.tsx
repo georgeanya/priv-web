@@ -32,7 +32,7 @@ const Hero = () => {
     <>
       <div className="pl-5 md:pl-32 pt-15 md:pt-[70px]  flex flex-col">
         <div className="md:max-w-md lg:max-w-1xl md:pb-0">
-          <p className=" leading-tight md:leading-tight md:pr-14  text-3xl md:text-start md:text-5xl font-bold text-[#5355AC] ">
+          <p className=" leading-[43px] md:leading-[63px] md:pr-14  text-[34px] md:text-start md:text-[50px] font-bold text-[#5355AC] ">
             Simple and private healthcare for men
           </p>
           <p className="mt-5 md:mt-6 text-base font-normal md:pr-8 md:text-start md:text-xl text-[#111111]">

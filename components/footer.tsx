@@ -21,11 +21,13 @@ const SustainButton = styled(Button)({
 });
 
 const Footer = () => {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
   return (
     <div className="bg-[#232B5C] md:px-32 px-5 md:pt-36 pt-24  text-white">
       <div className="text-center">
         <p className="text-3xl md:text-5xl font-bold mb-6">
-        Start your online visit now
+          Start your online visit now
         </p>
         <p className="text-md md:text-1xl font-normal mb-11 max-w-2xl flex justify-center m-auto">
           Get seamless and discreet care for conditions that affect your
@@ -33,7 +35,7 @@ const Footer = () => {
         </p>
         <Link href="/start">
           <SustainButton className="self-center text-sm md:text-base font-medium">
-          Get treatment now
+            Get treatment now
           </SustainButton>
         </Link>
       </div>
@@ -52,19 +54,13 @@ const Footer = () => {
               <Link href="/premature-ejaculation">Premature ejaculation</Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="/stis">
-              STI/ STD treatment
-              </Link>
+              <Link href="/stis">STI/ STD treatment</Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="hair-loss">
-              Male hair loss
-              </Link>
+              <Link href="hair-loss">Male hair loss</Link>
             </p>
             <p className="md:mb-[26px] md:text-[15px] text-sm leading-4 mb-[22px] text-[#C4CED4]">
-              <Link href="/all-conditions">
-                See all
-              </Link>
+              <Link href="/all-conditions">See all</Link>
             </p>
           </div>
           <div className="w-40 md:w-[245px]">
@@ -145,7 +141,7 @@ const Footer = () => {
       </div>
       <hr className="h-[0.5px] border-t-[0.5px] md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
       <p className="md:mt-[45px] mt-16 text-sm pb-10 md:pb-16 text-center md:text-start">
-        Priv Health © 2023 All Rights Reserved
+        ©{currentYear} Priv Health, a Lifebox Labs company
       </p>
     </div>
   );

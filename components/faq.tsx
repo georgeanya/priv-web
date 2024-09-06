@@ -2,7 +2,8 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
-import FAQ from "./faq1";
+import FAQ from "./faq2";
+import Link from "next/link";
 
 const SustainButton = styled(Button)({
   background: "#5355AC !important",
@@ -66,14 +67,23 @@ const Faq = () => {
 
   return (
     <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-36 pb-24">
-      <p className=" text-3xl md:text-start md:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14 pr-8">
+      <h2 className=" text-3xl md:text-start md:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14 md:mb-20 pr-8">
         Frequently asked questions
-      </p>
-      <div className="max-w-3xl">
+      </h2>
+      <div className="">
         {faqs.map((faq, index) => (
           <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
         ))}
-        {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
+        
+      </div>
+      <div className="mt-10 md:mt-15">
+        <div>
+          <Link href="/faq">
+            
+              <SustainButton>See all FAQs</SustainButton>
+           
+          </Link>
+        </div>
       </div>
     </div>
   );

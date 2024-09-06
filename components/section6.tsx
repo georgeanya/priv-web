@@ -12,7 +12,7 @@ const Section1 = () => {
         See what some of our patients say about us
       </p>
       <div className="grid md:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-5 md:gap-6 mt-10 md:mt-12">
-        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white rounded-2xl">
           <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
             As a man, I never thought I would open up about my health struggles,
             but my Priv doctor made me feel comfortable and supported. No
@@ -25,7 +25,7 @@ const Section1 = () => {
             <Image src={stars} alt="" />
           </div>
         </div>
-        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white rounded-2xl">
           <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
             I encouraged my partner to seek help for his bedroom issues, and
             Priv provided a safe and supportive space for him to do so. I am
@@ -38,7 +38,7 @@ const Section1 = () => {
             <Image src={stars} alt="" />
           </div>
         </div>
-        <div className="md:px-10 md:py-12 px-5 py-8 bg-white">
+        <div className="md:px-10 md:py-12 px-5 py-8 bg-white rounded-2xl">
           <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
             The process was a whole lot easier and faster than I imagined. And
             the doctor was absolutely helpful and answered relatively fast. I
