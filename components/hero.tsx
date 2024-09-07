@@ -35,7 +35,7 @@ const Hero = () => {
             What can we help you with
           </p>
         </div>
-        <div className="mt-8 md:mt-14 overflow-x-auto hide-scrollbar">
+        <div className="mt-8 md:mt-14 overflow-x-auto hide-scrollbar mb-[60px] md:mb-20">
           <div className="flex flex-nowrap md:gap-x-[30px] gap-x-4">
             <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
               <img
