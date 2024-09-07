@@ -12,6 +12,7 @@ import Ed from "../../components/pe";
 import EdShop from "../../components/pe-section-1";
 import Section3 from "../../components/section3";
 import Section6 from "../../components/section6";
+import AutoScrollComponent from "../../components/auto-scroll";
 
 const PrematureEjaculationPage = () => {
   return (
@@ -106,6 +107,7 @@ const PrematureEjaculationPage = () => {
       </Head>
       <Navbar />
       <Hero />
+      <AutoScrollComponent/>
       <Ed />
       <EdShop/>
       <Section4 />

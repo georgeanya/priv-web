@@ -12,6 +12,7 @@ import Script from "next/script";
 import Section6 from "../../components/section6";
 import Section3 from "../../components/section3";
 import Section2 from "../../components/section2";
+import AutoScrollComponent from "../../components/auto-scroll";
 
 const Home: NextPage = () => {
   return (
@@ -110,6 +111,7 @@ const Home: NextPage = () => {
       </Head>
       <Navbar />
       <Hero />
+      <AutoScrollComponent/>
       <Section2 />
       <Section3 />
      

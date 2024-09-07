@@ -12,6 +12,7 @@ import Section3 from "../../components/section3";
 import EdShop from "../../components/hl-section-1";
 import Hero from "../../components/hl-hero";
 import Ed from "../../components/hl";
+import AutoScrollComponent from "../../components/auto-scroll";
 
 const HairLossPage = () => {
   return (
@@ -103,6 +104,7 @@ const HairLossPage = () => {
       </Head>
       <Navbar />
       <Hero />
+      <AutoScrollComponent/>
       <Ed />
       <EdShop/>
       <Section4 />
