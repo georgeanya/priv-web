@@ -19,22 +19,63 @@ interface Blog {
     description: string;
     content: string;
     slug: string;
-    category: {
-      data: {
-        attributes: {
+    publishedAt?: string; // Optional, based on usage
+    updatedAt?: string; // Optional, based on usage
+    category?: {
+      data?: {
+        attributes?: {
           name: string;
         };
       };
     };
-    author: {
-      data: {
-        attributes: {
+    author?: {
+      data?: {
+        attributes?: {
           name: string;
+          team?: string; // Optional, based on usage
         };
       };
     };
-    seo: {
-      metaTitle: string;
+    seo?: {
+      metaTitle?: string;
+      metaDescription?: string; // Optional, based on usage
+      keywords?: string; // Optional, added to match usage
+      shareImage?: {
+        data?: {
+          attributes?: {
+            formats?: {
+              small?: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
+      metaTwitterImage?: {
+        data?: {
+          attributes?: {
+            formats?: {
+              medium?: {
+                url: string;
+              };
+            };
+          };
+        };
+      };
+    };
+    image?: {
+      data?: {
+        attributes?: {
+          formats?: {
+            medium?: {
+              url: string;
+            };
+            small?: {
+              url: string;
+            };
+          };
+        };
+      };
     };
   };
 }
@@ -44,39 +85,50 @@ interface ArticlesResponse {
 }
 
 const BlogPage = ({ blog }: any) => {
-  const ImgUrl = blog.attributes.image.data.attributes.url;
+  if (!blog) {
+    return (
+      <div>
+        <p>Blog post not found.</p>
+      </div>
+    );
+  }
+
   const url = `https://privhealth.co/blog/${blog.attributes.slug}`;
+  const seoMetaTitle = blog.attributes.seo?.metaTitle || blog.attributes.title; // Fallback to title if metaTitle is not present
+  const seoMetaDescription =
+    blog.attributes.seo?.metaDescription || blog.attributes.description; // Fallback to description if metaDescription is not present
+  const seoKeywords = blog.attributes.seo?.keywords || ""; // Using optional chaining to access keywords
+  const shareImageUrl =
+    blog.attributes.seo?.shareImage?.data?.attributes?.formats?.small?.url ||
+    "";
+  const twitterImageUrl =
+    blog.attributes.seo?.metaTwitterImage?.data?.attributes?.formats?.medium
+      ?.url || "";
   return (
     <div>
       <Head>
         <meta charSet="UTF-8" />
-        <title>{`${blog.attributes.seo.metaTitle} - Priv Health`}</title>
+        <title>{`${seoMetaTitle} - Priv Health`}</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
         />
-        <meta name="keywords" content={blog.attributes.seo.keywords} />
-        <meta
-          name="description"
-          content={blog.attributes.seo.metaDescription}
-        />
+        <meta name="keywords" content={seoKeywords} />
+        <meta name="description" content={seoMetaDescription} />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="article" property="og:type" />
         <meta content={url} property="og:url" />
+        <meta content={`${seoMetaTitle} - Priv Health`} property="og:title" />
+        <meta content={seoMetaDescription} property="og:description" />
         <meta
-          content={`${blog.attributes.seo.metaTitle} - Priv Health`}
-          property="og:title"
+          content={shareImageUrl}
+          property="og:image"
         />
-        <meta
-          content={blog.attributes.seo.metaDescription}
-          property="og:description"
-        />
-        <meta content={blog.attributes.seo.shareImage.data.attributes.formats.small.url} property="og:image" />
         <meta content="1024" property="og:image:width" />
         <meta content="512" property="og:image:height" />
         <meta
@@ -98,18 +150,9 @@ const BlogPage = ({ blog }: any) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta
-          name="twitter:title"
-          content={`${blog.attributes.seo.metaTitle} - Priv Health`}
-        />
-        <meta
-          name="twitter:description"
-          content={blog.attributes.seo.metaDescription}
-        />
-        <meta
-          name="twitter:image"
-          content={blog.attributes.seo.metaTwitterImage.data.attributes.formats.small.url}
-        />
+        <meta name="twitter:title" content={`${seoMetaTitle} - Priv Health`} />
+        <meta name="twitter:description" content={seoMetaDescription} />
+        <meta name="twitter:image" content={twitterImageUrl} />
         <meta name="twitter:image:width" content="1024" />
         <meta name="twitter:image:height" content="512" />
         <meta
@@ -136,20 +179,36 @@ const BlogPage = ({ blog }: any) => {
   );
 };
 
+export default BlogPage;
+
 export const getServerSideProps: GetServerSideProps<
-  { blog: Blog },
+  { blog: Blog | null },
   Params
 > = async ({ params }) => {
   const { slug } = params as Params;
-  const { data } = await axios.get<ArticlesResponse>(
-    `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&populate[3]=seo.metaTwitterImage&populate[4]=seo.shareImage&${slug}`
-  );
-  const blog = data.data.find((blog) => blog.attributes.slug === slug);
-  return {
-    props: {
-      blog: blog || ({} as Blog),
-    },
-  };
-};
+  try {
+    // Use the correct API URL to query by the blog slug
+    const { data } = await axios.get<ArticlesResponse>(
+      `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&populate[3]=seo.metaTwitterImage&populate[4]=seo.shareImage&filters[slug][$eq]=${slug}`
+    );
+    
+    const blog = data.data.length > 0 ? data.data[0] : null; // Assuming the API returns an array
 
-export default BlogPage;
+    if (!blog) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        blog,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching blog data:", error);
+    return {
+      notFound: true,
+    };
+  }
+};

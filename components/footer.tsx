@@ -63,7 +63,7 @@ const Footer = () => {
               <Link href="/all-conditions">See all</Link>
             </p>
           </div>
-          <div className="ml-5 md:ml-0 w-40 md:w-[245px]">
+          <div className="w-40 md:w-[245px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               RESOURCES
             </h3>
@@ -84,7 +84,7 @@ const Footer = () => {
               <Link href="/cookie">Cookie policy</Link>
             </p> */}
           </div>
-          <div className="w-[150px] md:w-[245px]">
+          <div className="w-40 md:w-[245px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               COMPANY
             </h3>
@@ -103,7 +103,7 @@ const Footer = () => {
               <Link href="/404">Press</Link>
             </p> */}
           </div>
-          <div className="ml-5 md:ml-0 w-40 md:w-[205px]">
+          <div className="w-40 md:w-[205px]">
             <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base md:leading-5 font-medium">
               CONTACT
             </h3>
@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="h-[0.5px] border-t-[0.5px] md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
-      <p className="md:mt-[45px] mt-16 text-sm pb-10 md:pb-16 text-center md:text-start">
+      <p className="md:mt-[45px] mt-[35px] text-sm md:text-[15px] leading-[18px] pb-[50px] md:pb-16 text-center md:text-start">
         ©{currentYear} Priv Health, a Lifebox Labs company
       </p>
     </div>

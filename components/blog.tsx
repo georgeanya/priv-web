@@ -36,28 +36,44 @@ const PrivButton = styled(Button)({
   },
 });
 
-interface Blog {
-  id: number;
-  attributes: {
-    title: string;
-    description: string;
-    content: string;
-    slug: string;
-    category: {
-      data: {
-        attributes: {
-          name: string;
-        };
-      };
-    };
-    author: {
-      data: {
-        attributes: {
-          name: string;
-        };
+// Interfaces
+interface BlogAttributes {
+  title: string;
+  description: string;
+  content: string;
+  slug: string;
+  category: {
+    data: {
+      attributes: {
+        name: string;
       };
     };
   };
+  author: {
+    data: {
+      attributes: {
+        team: string;
+        name: string;
+      };
+    };
+  };
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        name: string;
+      };
+    };
+  };
+}
+
+interface Blog {
+  id: number;
+  attributes: BlogAttributes;
+}
+
+interface BlogResponse {
+  data: Blog[];
 }
 
 type BlogCategory =
@@ -68,53 +84,72 @@ type BlogCategory =
   | "General health"
   | "Hair";
 
-const Blog = ({ initialBlogs }: any) => {
-  const [blogs, setBlogs] = useState(initialBlogs || null); 
+const Blog: React.FC = () => {
+  const [blogs, setBlogs] = useState<BlogResponse | null>(null);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
+  const [page, setPage] = useState(1);
 
-  useEffect(() => {
-    if (!initialBlogs) {
-      fetchData();
-    }
-  }, [initialBlogs]);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        "https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc"
-      );
-      setBlogs(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+  const loadMorePosts = () => {
+    setPage((page) => page + 1);
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const timestamp = new Date().getTime();
+        const response = await axios.get<BlogResponse>(
+          `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=15`
+        );
+
+        setBlogs((prevBlogs) => {
+          if (!prevBlogs) {
+            return response.data;
+          } else {
+            return {
+              ...prevBlogs,
+              data: [...prevBlogs.data, ...response.data.data],
+            };
+          }
+        });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [page]);
+
   const blogsToDisplay = useMemo(() => {
-    if (toggleState === "All") {
-      return blogs?.data.slice(1, 7);
-    }
-    return blogs.data
-      ?.slice(1)
-      .filter((blog: any) => {
-        return blog.attributes.category.data.attributes.name === toggleState;
-      })
-      .slice(0, 6);
+    if (!blogs || !blogs.data) return [];
+
+    const filteredBlogs =
+      toggleState === "All"
+        ? blogs.data
+        : blogs.data.filter(
+            (blog) =>
+              blog.attributes.category.data.attributes.name === toggleState
+          );
+
+    return filteredBlogs.slice(1, 7);
   }, [blogs, toggleState]);
 
   const blogsToDisplay2 = useMemo(() => {
-    console.log(blogs);
+    if (!blogs || !blogs.data) return [];
 
-    if (toggleState === "All") {
-      return blogs?.data.slice(7);
-    }
-    return blogs.data?.slice(7).filter((blog: any) => {
-      return blog.attributes.category.data.attributes.name === toggleState;
-    });
+    const filteredBlogs =
+      toggleState === "All"
+        ? blogs.data
+        : blogs.data.filter(
+            (blog) =>
+              blog.attributes.category.data.attributes.name === toggleState
+          );
+
+    return filteredBlogs.slice(7);
   }, [blogs, toggleState]);
 
   if (!blogs) {
     return (
-      <div  className="flex justify-center py-[180px] md:py-[220px]">
+      <div className="flex justify-center py-[180px] md:py-[220px]">
         <div role="status">
           <svg
             aria-hidden="true"
@@ -137,7 +172,6 @@ const Blog = ({ initialBlogs }: any) => {
       </div>
     );
   }
-  
 
   const toggleTab = (index: BlogCategory) => {
     setToggleState(index);
@@ -146,9 +180,7 @@ const Blog = ({ initialBlogs }: any) => {
     setToggleState(event.target.value as BlogCategory);
   };
 
-  const blog = blogs?.data?.slice(0, 1)[0] || [];
-
-  
+  const blog = blogs.data[0] || ({} as Blog);
 
   const ImgUrl = blog.attributes?.image.data.attributes.url;
 
@@ -271,28 +303,10 @@ const Blog = ({ initialBlogs }: any) => {
               </li>
             </ul>
           </div>
-          <div className="block md:hidden">
-            <select
-              name="category"
-              onChange={handleSelect}
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 bg-white h-11 md:h-12"
-            >
-              <option hidden defaultValue={"Browse by category"}>
-                Browse by category
-              </option>
-              <option value="All">All</option>
-              <option value="Sexual health">Sexual health</option>
-              <option value="General health">General health</option>
-              <option value="Hair">Hair</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Company">Company</option>
-            </select>
-          </div>
           <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
-            {blogsToDisplay?.map((blogpost: any) => {
+            {blogsToDisplay.map((blogpost: any) => {
               const blog = blogpost;
               const { id, attributes } = blog;
-              console.log(attributes.category);
 
               return (
                 <Link href={`/blog/${attributes.slug}`} key={id}>
@@ -402,51 +416,16 @@ const Blog = ({ initialBlogs }: any) => {
               );
             })}
           </div>
-          <SustainOutlineButton>Show more posts</SustainOutlineButton>
+          <SustainOutlineButton onClick={loadMorePosts}>
+            Show more posts
+          </SustainOutlineButton>
         </div>
       </div>
-      {/* <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-28 pb-20 bg-[#EFF2FA]">
-        <p className="md:text-4xl text-2xl text-[#111111] font-bold max-w-[476px]">
-          Stay updated by joining our newsletter
-        </p>
-        <p className=" text-bases md:text-xl text-[#111111] max-w-[574px] mt-5 md:mt-6 mb-10 md:mb-12">
-          Subscribe to recieve updates about our blog posts and announcements
-          directly in your mailbox
-        </p>
-        <form action="" method="post" className="flex flex-wrap">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="border mb-4 md:mb-0 h-12 md:h-15 md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-          />
-          <SustainButton>Subscribe</SustainButton>
-        </form>
-      </div> */}
+     
     </div>
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const { data } = await axios.get(
-      "https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc"
-    );
 
-    console.log(data); // Check the structure of the fetched data
-
-    return {
-      props: {
-        initialBlogs: data,
-      },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      props: {
-        initialBlogs: null,
-      },
-    };
-  }
-};
 
 export default Blog;

@@ -3,7 +3,7 @@ import React from "react";
 import arrow from "../public/assets/arrow.svg";
 import support from "../public/assets/pe.png";
 import clock from "../public/assets/clock.png";
-import hair from "../public/assets/hair.png";
+import hair from "../public/assets/hl.png";
 import std from "../public/assets/std.png";
 import men from "../public/assets/men.png";
 import { styled } from "@mui/material/styles";

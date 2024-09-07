@@ -1,6 +1,6 @@
 import React from "react";
-import minus from "../public/assets/minus.png";
-import plus from "../public/assets/plus.png";
+import minus from "../public/assets/minus.svg";
+import plus from "../public/assets/plus.svg";
 
 const FAQ = ({ faq, index, toggleFAQ }: any) => {
   return (

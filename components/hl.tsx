@@ -74,7 +74,7 @@ const Ed = () => {
           </Link>
         </div>
       </div>
-      <div className="max-w-[730px] mt-[60px] md:mt-0">
+      <div className="md:w-[730px] mt-[60px] md:mt-0">
         {faqs.map((faq, index) => (
           <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
         ))}
