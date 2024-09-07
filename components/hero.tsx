@@ -1,10 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import arrow from "../public/assets/arrow.svg";
-import firstaid from "../public/assets/first-aid.svg";
-import heart from "../public/assets/heart.svg";
-import world from "../public/assets/world.svg";
-import seth from "../public/assets/seth.svg";
 import support from "../public/assets/pe.png";
 import clock from "../public/assets/clock.png";
 import hair from "../public/assets/hair.png";
@@ -88,21 +84,9 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
+            
             <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
-              <img src={men.src} alt="" className=" md:w-full rounded-t-lg " />
-              <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                <Link href="/ed">
-                  <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                    Men’s health tests
-                  </p>
-                </Link>
-                <Link href="/ed">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
-              <img src={hair.src} alt="" className=" md:w-full rounded-t-lg " />
+              <img src={hair.src} alt="" className=" md:w-full rounded-lg " />
               <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                 <Link href="/hair-loss">
                   <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
@@ -110,6 +94,19 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/hair-loss">
+                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
+              <img src={men.src} alt="" className=" md:w-full rounded-t-lg " />
+              <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
+                <Link href="/https://privhealth.bumpa.shop/browse/Lab%20tests">
+                  <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
+                    Men’s health tests
+                  </p>
+                </Link>
+                <Link href="/ed">
                   <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
                 </Link>
               </div>
@@ -178,35 +175,7 @@ const Hero = () => {
           <SustainButton>Find my treatment</SustainButton>
         </Link>
       </div>
-      <div className="overflow-x-auto hide-scrollbar bg-[#232B5C] mt-[60px] md:mt-20">
-        <div className="md:py-[34px] py-[30px] md:px-32 w-full flex md:justify-between flex-nowrap">
-          <div className="flex items-center mx-5">
-            <img src={firstaid.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Licensed healthcare experts
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={heart.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Trusted by 2,000+ men
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={seth.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Personalized treatment
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={world.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              100% online
-            </p>
-          </div>
-          <div className="flex-shrink-0 w-5 md:w-0"></div>
-        </div>
-      </div>
+      
     </>
   );
 };

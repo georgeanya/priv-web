@@ -24,19 +24,25 @@ const Ed = () => {
     {
       question: "What is premature ejaculation?",
       answer:
-        "Premature ejaculation is a condition where a man ejaculates during sex sooner than he or his partner would like, usually within 1 minute. It is a common sexual problem, and estimates suggest that around 1 in 3 men experience it at some point in their lives.",
+        "Premature ejaculation (PE) is when ejaculation occurs sooner than desired during sexual activity, often within a minute of penetration.",
       open: true,
     },
     {
       question: "What causes premature ejaculation?",
       answer:
-        "Premature ejaculation is a complex condition that can be caused by various factors. Psychological factors such as anxiety, stress, depression, guilt, and relationship issues can all affect a man's ability to control his ejaculation during sexual activity. Biological factors such as hormonal imbalances, abnormal levels of neurotransmitters in the brain, and inflammation or infection in the prostate or urethra can also contribute to premature ejaculation. Behavioral factors such as masturbating quickly or infrequently, rushing through sexual encounters, or not paying attention to one's body can lead to premature ejaculation as well. Genetics may also play a role in the development of premature ejaculation.",
+        "PE can be caused by psychological factors such as anxiety or stress, as well as biological factors like hormonal imbalances or abnormal levels of neurotransmitters.",
       open: false,
     },
     {
-      question: "What treatments are available for premature ejaculation?",
+      question: "How do I know I have premature ejaculation?",
       answer:
-        "There are several treatments available for premature ejaculation, including behavioral techniques, medications, and counseling. Behavioral techniques involve learning how to control and delay ejaculation through exercises such as the stop-start method or the squeeze technique. Medications such as selective serotonin reuptake inhibitors (SSRIs), topical anesthetics, and phosphodiesterase-5 inhibitors (PDE5 inhibitors) may also be prescribed. Counseling can help address psychological factors that may contribute to premature ejaculation, such as anxiety or relationship issues. A combination of these treatments may also be recommended. It is important to consult with a doctor to determine the most appropriate treatment plan based on an individual's specific situation.",
+        "If you frequently ejaculate within a short time after starting sexual activity and feel unable to control it, you may have premature ejaculation.",
+      open: false,
+    },
+    {
+      question: "Is premature ejaculation treatable?",
+      answer:
+        "Yes, PE is treatable through behavioral techniques, topical anesthetics, medications, or counseling depending on the severity and cause.",
       open: false,
     },
   ]);

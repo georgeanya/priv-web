@@ -24,19 +24,25 @@ const Ed = () => {
     {
       question: "What is erectile dysfunction?",
       answer:
-        "Erectile dysfunction, also known as impotence, is a condition where a man has difficulty getting or keeping an erection during sexual activity. It's a common problem that can affect men of all ages.",
+        "Erectile dysfunction (ED) is the inability to achieve or maintain an erection firm enough for sexual intercourse.",
       open: true,
     },
     {
       question: "What causes erectile dysfunction?",
       answer:
-        "Erectile dysfunction (ED) can be caused by a variety of physical and psychological factors. Physical causes of ED may include cardiovascular diseases, such as high blood pressure, atherosclerosis, or heart disease, which can restrict blood flow to the penis and make it difficult to achieve an erection. Diabetes is another physical cause of ED, as it can damage blood vessels and nerves that control erections. Hormonal imbalances, such as low testosterone levels, can also contribute to ED. Certain medications, such as antidepressants, antihistamines, and blood pressure medications, can also cause ED. Psychological factors can also play a role in the development of ED. Anxiety, stress, or depression can lead to ED, as can relationship issues or a lack of emotional connection with a partner. Performance anxiety or a fear of failure can also contribute to ED, as can low self-esteem. In many cases, ED may have both physical and psychological causes.",
+        "ED can be caused by physical factors like heart disease, diabetes, high blood pressure, or hormonal imbalances, as well as psychological factors such as stress, anxiety, or depression.",
       open: false,
     },
     {
-      question: "What treatments are available for erectile dysfunction?",
+      question: "How do I know I have erectile dysfunction?",
       answer:
-        "There are different ways to treat erectile dysfunction (ED). One way is to change your lifestyle, such as quitting smoking, reducing alcohol consumption, and exercising more regularly. This may help to improve blood flow and make it easier to get and keep an erection. Another way is to take medications, such as Viagra or Cialis, which work by increasing blood flow to the penis to help achieve and maintain an erection. There are also other treatment options, such as injecting medication into the penis or using a vacuum device to pull blood into the penis. In rare cases, surgery may be an option to implant a device to help achieve an erection. It's important to talk to a healthcare provider to find out which treatment option may be best for you based on your individual situation.",
+        "If you consistently struggle to achieve or maintain an erection, especially during sexual activity, it may be a sign of erectile dysfunction.",
+      open: false,
+    },
+    {
+      question: "Is erectile dysfunction treatable?",
+      answer:
+        "Yes, ED is treatable. Options include medications, lifestyle changes, therapy, or devices like pumps, depending on the underlying cause.",
       open: false,
     },
   ]);

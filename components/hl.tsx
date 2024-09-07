@@ -24,19 +24,25 @@ const Ed = () => {
     {
       question: "What causes hair loss?",
       answer:
-        "Hair loss in men can be caused by a variety of factors, including genetics, hormones, age, and medical conditions. Male pattern baldness, also known as androgenetic alopecia, is the most common cause of hair loss in men and is inherited from one's parents. This condition is caused by a combination of genetics and hormones, specifically dihydrotestosterone (DHT), which can cause hair follicles to shrink over time and lead to hair loss.",
+        "Male hair loss, or male pattern baldness, is the thinning or loss of hair on the scalp, often beginning at the hairline or crown.",
       open: true,
     },
     {
       question: "Can hair loss be treated?",
       answer:
-        "Yes, hair loss in men can be treated, but the success of treatment depends on the cause of hair loss. For male pattern baldness, medications such as finasteride and minoxidil can be effective in slowing down or even reversing hair loss in some cases. These medications work by blocking the hormone DHT or promoting hair growth.",
+        "Male hair loss is typically caused by genetics, hormonal changes (such as sensitivity to DHT), or aging. Stress and poor nutrition can also contribute.",
       open: false,
     },
     {
-      question: "How long does it take for hair loss treatment to work?",
+      question: "How do I know I have male hair loss?",
       answer:
-        "It usually takes about 3 to 4 months of using finasteride and minoxidil every day to start seeing changes in hair growth. It can take up to a year to see the best results. It's important to keep using these medications for at least one full year to see if they work for you. Everyone's body is different, so these medications may work better for some people than others. To keep seeing the benefits, you need to keep using hair loss medication. If you stop using it, your hair loss may come back.",
+        "If you notice thinning or receding hair, particularly at the temples or crown, it may be a sign of male pattern baldness.",
+      open: false,
+    },
+    {
+      question: "Is male hair loss treatable?",
+      answer:
+        "Yes, male hair loss can be managed with treatments like minoxidil, finasteride, or hair transplant procedures to slow or reverse hair thinning.",
       open: false,
     },
   ]);

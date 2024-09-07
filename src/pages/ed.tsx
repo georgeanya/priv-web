@@ -12,6 +12,7 @@ import Hero from "../../components/ed-hero";
 import EdShop from "../../components/ed-section-1";
 import Section6 from "../../components/section6";
 import Section3 from "../../components/section3";
+import AutoScrollComponent from "../../components/auto-scroll";
 
 const EdPage = () => {
   return (
@@ -103,6 +104,7 @@ const EdPage = () => {
       </Head>
       <Navbar />
       <Hero />
+      <AutoScrollComponent/>
       <Ed />
       <EdShop/>
       <Section4 />

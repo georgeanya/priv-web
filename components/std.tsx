@@ -22,21 +22,27 @@ const SustainButton = styled(Button)({
 const Ed = () => {
   const [faqs, setFaqs] = useState([
     {
-      question: "What is erectile dysfunction?",
+      question: "What are STIs?",
       answer:
-        "Erectile dysfunction, also known as impotence, is a condition where a man has difficulty getting or keeping an erection during sexual activity. It's a common problem that can affect men of all ages.",
+        "Sexually transmitted infections (STIs) are infections passed from one person to another through sexual contact. Common STIs include chlamydia, gonorrhea, syphilis, herpes, and HIV.",
       open: true,
     },
     {
-      question: "What causes erectile dysfunction?",
+      question: "How do I know if I have an STI?",
       answer:
-        "Erectile dysfunction (ED) can be caused by a variety of physical and psychological factors. Physical causes of ED may include cardiovascular diseases, such as high blood pressure, atherosclerosis, or heart disease, which can restrict blood flow to the penis and make it difficult to achieve an erection. Diabetes is another physical cause of ED, as it can damage blood vessels and nerves that control erections. Hormonal imbalances, such as low testosterone levels, can also contribute to ED. Certain medications, such as antidepressants, antihistamines, and blood pressure medications, can also cause ED. Psychological factors can also play a role in the development of ED. Anxiety, stress, or depression can lead to ED, as can relationship issues or a lack of emotional connection with a partner. Performance anxiety or a fear of failure can also contribute to ED, as can low self-esteem. In many cases, ED may have both physical and psychological causes.",
+        "Symptoms of STIs vary but can include unusual discharge, pain during urination, sores, itching, or no symptoms at all. Regular testing is essential, especially if you’re sexually active.",
       open: false,
     },
     {
-      question: "What treatments are available for erectile dysfunction?",
+      question: "Are STIs treatable?",
       answer:
-        "There are different ways to treat erectile dysfunction (ED). One way is to change your lifestyle, such as quitting smoking, reducing alcohol consumption, and exercising more regularly. This may help to improve blood flow and make it easier to get and keep an erection. Another way is to take medications, such as Viagra or Cialis, which work by increasing blood flow to the penis to help achieve and maintain an erection. There are also other treatment options, such as injecting medication into the penis or using a vacuum device to pull blood into the penis. In rare cases, surgery may be an option to implant a device to help achieve an erection. It's important to talk to a healthcare provider to find out which treatment option may be best for you based on your individual situation.",
+        "Many STIs are treatable with antibiotics (for bacterial infections) or antiviral medications (for viral infections). Early detection and treatment are key to preventing complications.",
+      open: false,
+    },
+    {
+      question: "How can I prevent STIs?",
+      answer:
+        "You can reduce the risk of STIs by using condoms during sexual activity, limiting the number of sexual partners, getting vaccinated for preventable STIs (like HPV), and undergoing regular testing. Open communication with partners about sexual health is also crucia.",
       open: false,
     },
   ]);
@@ -60,7 +66,7 @@ const Ed = () => {
     <div className="px-5 md:px-32 md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between">
       <div>
         <p className="leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
-        Facts about STIs/STDs 
+          Facts about STIs/STDs
         </p>
         <div className="mt-8 md:mt-9 hidden md:block">
           <Link href="/start">
@@ -75,10 +81,10 @@ const Ed = () => {
         {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
       </div>
       <div className="mt-8 md:mt-9 md:hidden">
-          <Link href="/start">
-            <SustainButton>Get treatment now</SustainButton>
-          </Link>
-        </div>
+        <Link href="/start">
+          <SustainButton>Get treatment now</SustainButton>
+        </Link>
+      </div>
     </div>
   );
 };

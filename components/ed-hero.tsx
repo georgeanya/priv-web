@@ -47,35 +47,7 @@ const Hero = () => {
           <img src={hero.src} alt="hero" className="md:w-[460px]" />
         </div>
       </div>
-      <div className="overflow-x-auto hide-scrollbar bg-[#232B5C]">
-        <div className="md:py-[34px] py-[30px] md:px-32 w-full flex md:justify-between flex-nowrap">
-          <div className="flex items-center mx-5">
-            <img src={firstaid.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Licensed healthcare experts
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={heart.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Trusted by 2,000+ men
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={seth.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Personalized treatment
-            </p>
-          </div>
-          <div className="flex items-center mx-5">
-            <img src={world.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              100% online
-            </p>
-          </div>
-          <div className="flex-shrink-0 w-5 md:w-0"></div>
-        </div>
-      </div>
+      
     </>
   );
 };
