@@ -25,7 +25,7 @@ const SustainButton = styled(Button)({
 
 const Hero = () => {
   return (
-    <>
+    <div className="mb-[60px] md:pb-20">
       <div className="pl-5 md:pl-32 pt-15 md:pt-[70px]  flex flex-col">
         <div className="md:max-w-md lg:max-w-1xl md:pb-0">
           <p className=" leading-[43px] md:leading-[63px] md:pr-14  text-[34px] md:text-start md:text-[50px] font-bold text-[#5355AC] ">
@@ -35,7 +35,7 @@ const Hero = () => {
             What can we help you with
           </p>
         </div>
-        <div className="mt-8 md:mt-14 overflow-x-auto hide-scrollbar mb-[60px] md:mb-20">
+        <div className="mt-8 md:mt-14 overflow-x-auto hide-scrollbar ">
           <div className="flex flex-nowrap md:gap-x-[30px] gap-x-4">
             <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
               <img
@@ -50,7 +50,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/ed">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/premature-ejaculation">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -80,7 +80,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/stis">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/hair-loss">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/ed">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -124,7 +124,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/ed">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -141,7 +141,7 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/ed">
-                  <img src={arrow.src} alt="arrow" className="w-8 md:w-10" />
+                  <img src={arrow.src} alt="arrow" className="min-w-[30px] md:min-w-[40px]" />
                 </Link>
               </div>
             </div>
@@ -176,7 +176,7 @@ const Hero = () => {
         </Link>
       </div>
       
-    </>
+    </div>
   );
 };
 
