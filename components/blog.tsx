@@ -88,7 +88,8 @@ const Blog: React.FC = () => {
   const [blogs, setBlogs] = useState<BlogResponse | null>(null);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
   const [page, setPage] = useState(1);
-
+  const pageSize = 15;
+  
   const loadMorePosts = () => {
     setPage((page) => page + 1);
   };
@@ -98,13 +99,15 @@ const Blog: React.FC = () => {
       try {
         const timestamp = new Date().getTime();
         const response = await axios.get<BlogResponse>(
-          `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=15`
+          `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
         );
-
+  
         setBlogs((prevBlogs) => {
           if (!prevBlogs) {
+            // If there were no previous blogs, initialize the state with the response
             return response.data;
           } else {
+            // Append new blogs to the existing state
             return {
               ...prevBlogs,
               data: [...prevBlogs.data, ...response.data.data],
@@ -115,9 +118,10 @@ const Blog: React.FC = () => {
         console.error("Error fetching data:", error);
       }
     };
-
+  
     fetchData();
   }, [page]);
+
 
   const blogsToDisplay = useMemo(() => {
     if (!blogs || !blogs.data) return [];
@@ -226,10 +230,10 @@ const Blog: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className="px-5 md:px-[125px] md:mb-[130px] mb-[90px]">
-          <div className="hidden md:block">
-            <ul className="flex flex-wrap text-sm font-medium leading-[17px] text-center text-gray-500">
-              <li className="mr-2 cursor-pointer">
+      <div className="px-5 md:px-32 md:mb-[130px] mb-[90px]">
+          <div className="overflow-x-auto hide-scrollbar">
+            <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
+              <li className="md:mr-2 cursor-pointer">
                 <p
                   className={
                     toggleState === "All"
@@ -241,66 +245,41 @@ const Blog: React.FC = () => {
                   All
                 </p>
               </li>
-              <li className="mr-2 cursor-pointer">
-                <p
-                  className={
-                    toggleState === "Sexual health"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("Sexual health")}
-                >
+              <Link href="/blog/category/sexual-health">
+                <li className="md:mr-2 cursor-pointer">
+                  <p className="block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
                   Sexual health
-                </p>
-              </li>
-              <li className="mr-2 cursor-pointer">
-                <p
-                  className={
-                    toggleState === "Hair"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("Hair")}
-                >
-                  Hair
-                </p>
-              </li>
-              <li className="cursor-pointer">
-                <p
-                  className={
-                    toggleState === "General health"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("General health")}
-                >
-                  General health
-                </p>
-              </li>
-              <li className="mr-2 cursor-pointer">
-                <p
-                  className={
-                    toggleState === "Engineering"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("Engineering")}
-                >
+                  </p>
+                </li>
+              </Link>
+              <Link href="/blog/category/engineering">
+                <li className="md:mr-2 cursor-pointer">
+                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
                   Engineering
-                </p>
-              </li>
-              <li className="mr-2 cursor-pointer">
-                <p
-                  className={
-                    toggleState === "Company"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("Company")}
-                >
-                  Company
-                </p>
-              </li>
+                  </p>
+                </li>
+              </Link>
+              <Link href="/blog/category/company">
+                <li className="md:mr-2 cursor-pointer">
+                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
+                    Company
+                  </p>
+                </li>
+              </Link>
+              <Link href="/blog/category/general-health">
+                <li className="md:mr-2 cursor-pointer">
+                  <p className="inline-block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
+                  General health
+                  </p>
+                </li>
+              </Link>
+              <Link href="/blog/category/hair">
+                <li className="cursor-pointer">
+                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
+                    Hair
+                  </p>
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
@@ -309,45 +288,47 @@ const Blog: React.FC = () => {
               const { id, attributes } = blog;
 
               return (
-                <Link href={`/blog/${attributes.slug}`} key={id}>
-                  <div className="max-w-[357px] flex flex-col justify-between">
-                    <div>
+                <div
+                  className="max-w-[357px] flex flex-col justify-between"
+                  key={id}
+                >
+                  <div>
+                    <Link href={`/blog/${attributes.slug}`}>
                       <img
                         src={attributes.image.data.attributes.url}
-                        alt=""
+                        alt={attributes.image.data.attributes.name}
                         className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                       />
-
-                      <p className=" text-sm leading-[17px] text-[#5355AC] mt-7 mt-[24px]">
-                        {attributes.category.data.attributes.name}
-                      </p>
-                      <p className="text-[#111111] font-bold text-[22px] leading-[27px] mt-3 cursor-pointer">
+                    </Link>
+                    <p className=" text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
+                      {attributes.category.data.attributes.name}
+                    </p>
+                    <Link href={`/blog/${attributes.slug}`}>
+                      <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px]  cursor-pointer">
                         {attributes.title}
                       </p>
-                      {/* <p className="text-[#61616B] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
-                        {attributes.description}
-                      </p> */}
-                    </div>
-                    <div className="flex mt-3 md:mt-4">
-                      <img
-                        src={image.src}
-                        alt=""
-                        className="w-12 rounded-[25px]"
-                      />
-                      <div className="ml-4 self-center">
-                        <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
-                          {blog.attributes.author.data.attributes.name}
-                        </p>
-                        <p className="text-[#61616B] text-xs">
-                          {blog.attributes.author.data.attributes.team}
-                        </p>
-                      </div>
+                    </Link>
+                  </div>
+                  <div className="flex mt-3 md:mt-4">
+                    <img
+                      src={image.src}
+                      alt="Avatar"
+                      className="w-12 rounded-[25px]"
+                    />
+                    <div className="ml-4 self-center">
+                      <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                        {attributes.author.data.attributes.name}
+                      </p>
+                      <p className="text-[#61616B] text-xs">
+                        {attributes.author.data.attributes.team}
+                      </p>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
+
           <div
             className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#F8F5FF] rounded-[20px]"
             id="newsletter"
@@ -377,42 +358,43 @@ const Blog: React.FC = () => {
               console.log(attributes.category);
 
               return (
-                <Link href={`/blog/${attributes.slug}`} key={id}>
-                  <div className="max-w-[357px]  flex flex-col justify-between">
-                    <div>
+                <div
+                  className="max-w-[357px] flex flex-col justify-between"
+                  key={id}
+                >
+                  <div>
+                    <Link href={`/blog/${attributes.slug}`}>
                       <img
                         src={attributes.image.data.attributes.url}
-                        alt=""
+                        alt={attributes.image.data.attributes.name}
                         className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                       />
-
-                      <p className=" text-sm leading-[17px] text-[#5355AC] mt-7 mt-[24px]">
-                        {attributes.category.data.attributes.name}
-                      </p>
-                      <p className="text-[#111111] font-bold text-[22px] leading-[27px] mt-3 cursor-pointer">
+                    </Link>
+                    <p className=" text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
+                      {attributes.category.data.attributes.name}
+                    </p>
+                    <Link href={`/blog/${attributes.slug}`}>
+                      <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px]  cursor-pointer">
                         {attributes.title}
                       </p>
-                      {/* <p className="text-[#61616B] mt-4 md:mt-5 text-base leading-6 md:leading-7 md:text-lg">
-                        {attributes.description}
-                      </p> */}
-                    </div>
-                    <div className="flex mt-3 md:mt-4">
-                      <img
-                        src={image.src}
-                        alt=""
-                        className="w-12 rounded-[25px]"
-                      />
-                      <div className="ml-4 self-center">
-                        <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
-                          {blog.attributes.author.data.attributes.name}
-                        </p>
-                        <p className="text-[#61616B] text-xs">
-                          {blog.attributes.author.data.attributes.team}
-                        </p>
-                      </div>
+                    </Link>
+                  </div>
+                  <div className="flex mt-3 md:mt-4">
+                    <img
+                      src={image.src}
+                      alt="Avatar"
+                      className="w-12 rounded-[25px]"
+                    />
+                    <div className="ml-4 self-center">
+                      <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                        {attributes.author.data.attributes.name}
+                      </p>
+                      <p className="text-[#61616B] text-xs">
+                        {attributes.author.data.attributes.team}
+                      </p>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -421,11 +403,8 @@ const Blog: React.FC = () => {
           </SustainOutlineButton>
         </div>
       </div>
-     
     </div>
   );
 };
-
-
 
 export default Blog;
