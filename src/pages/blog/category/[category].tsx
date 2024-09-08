@@ -223,7 +223,7 @@ const PatientStories = () => {
             </p>
           </div>
         </Link>
-        <h1 className="text-4lg md:text-[42px] leading-[53px] font-bold text-[#111111] mt-4 md:mt-5">
+        <h1 className="text-[34px] leading-[43px] md:text-[42px] md:leading-[53px] font-bold text-[#111111] mt-4 md:mt-5">
           {categoryName}
         </h1>
       </div>
