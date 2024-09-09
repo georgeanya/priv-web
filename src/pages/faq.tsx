@@ -42,11 +42,6 @@ const Faq = () => {
       open: false,
     },
     {
-      question: "How much does it cost to consult a doctor on Priv?",
-      answer: "It cost 5,000 naira to consult a doctor on Priv",
-      open: false,
-    },
-    {
       question: "Where is Priv available",
       answer: "Priv is currently available in Nigeria. We aims to provide services in as many regions as possible in the future while adhering to regional healthcare laws.",
       open: false,
@@ -57,6 +52,23 @@ const Faq = () => {
         "Yes, all doctors working with Priv are fully licensed. They are qualified to provide professional medical advice, prescribe treatments, and guide you through your health concerns.",
       open: false,
     },
+    {
+      question: "Can I be accurately assessed remotely?",
+      answer: "Yes, Priv uses a thorough online assessment and remote consultation process to ensure you receive the right care. By answering detailed questions about your health and symptoms, a licensed doctor can assess your condition and recommend appropriate treatment. In some cases, additional information or follow-up may be required for an accurate diagnosis.",
+      open: false,
+    },{
+      question: "Is my information private and secure?",
+      answer:
+        "Yes, Priv takes your privacy and security seriously. All personal information is encrypted and stored in compliance with local regulations, ensuring that your medical and personal data is kept confidential and secure.",
+      open: false,
+    },
+    {
+      question: "Is your packaging discreet?",
+      answer:
+        "Absolutely. All Priv shipments arrive in a nondescript blister package so you can have your treatment shipped wherever makes sense for you as long as there is someone there to sign for it.",
+      open: false,
+    },
+  
   ]);
 
   const toggleFAQ = (index: number) => {

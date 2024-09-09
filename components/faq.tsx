@@ -23,22 +23,17 @@ const Faq = () => {
     {
       question: "What is Priv?",
       answer: "Priv is a telehealth provider that offers men accessible and affordable solutions for common health concerns like erectile dysfunction, premature ejaculation, hair loss, and more. Through a combination of licensed doctors, prescription medications, and over-the-counter treatments, Priv provides a modern approach to men's healthcare.",
-      open: false,
+      open: true,
     },{
       question: "Who is Priv for?",
       answer:
         "Priv is designed for men who want convenient, discreet access to healthcare services. Whether you're dealing with sexual health, hair loss concerns or just looking to be healthy, Priv is for those looking for reliable and easy-to-access treatments without the hassle of traditional in-person visits.",
-      open: true,
+      open: false,
     },
     {
       question: "How does Priv work?",
       answer:
         "Priv operates online, allowing you to consult with a licensed doctor from the comfort of your home. After answering a few questions about your health, a doctor reviews your information and recommends treatment if appropriate. You can then have your prescription filled and delivered to your door, with ongoing access to care and support.",
-      open: false,
-    },
-    {
-      question: "How much does it cost to consult a doctor on Priv?",
-      answer: "It cost 5,000 naira to consult a doctor on Priv",
       open: false,
     },
     {

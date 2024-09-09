@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Spinner from "../../components/spinner";
+import WhatsAppButton from "../../components/whatsappbutton";
 
 function MyApp({ Component, pageProps }: AppProps) {
   // const router = useRouter();
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
+      <WhatsAppButton/>
     </>
   );
 }
