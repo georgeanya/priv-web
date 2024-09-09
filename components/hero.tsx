@@ -56,7 +56,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -77,7 +77,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -94,7 +94,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -112,7 +112,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -133,7 +133,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -150,7 +150,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -171,7 +171,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-[30px] md:min-w-[40px]"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
@@ -192,7 +192,7 @@ const Hero = () => {
                   <img
                     src={arrow.src}
                     alt="arrow"
-                    className="min-w-8 md:min-w-10"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
                   />
                 </Link>
               </div>
