@@ -218,7 +218,7 @@ const PatientStories = () => {
         <Link href="/blog">
           <div className="flex items-center cursor-pointer">
             <img src={left.src} alt="Back" className="w-5 md:w-[22px]" />
-            <p className="ml-1.5 text-[16px] leading-5 md:text-[18px] md:leading-[22.7px] font-medium text-[#5355AC]">
+            <p className="ml-1.5 text-[16px] leading-5 md:text-[18px] md:leading-[22.7px] font-medium text-[#61616B]">
               Priv Blog
             </p>
           </div>

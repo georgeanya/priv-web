@@ -9,7 +9,7 @@ const Section3 = () => {
           it should be
         </p>
       </div>
-      <div className="  text-[#333D47]">
+      <div className="  text-[#111111]">
         <div className="flex justify-between items-center">
           <p className="text-[16px] leading-[22px] md:text-[22px] md:leading-8">
             Your treatment comes to you. Skip the trip to your doctor&apos;s
@@ -17,14 +17,14 @@ const Section3 = () => {
             at your convenience
           </p>
         </div>
-        <hr className="h-[0.5px] border-t-[0.5px] my-6 md:my-[34px] text-[#C0C9D8]" />
+        <hr className="h-[0.5px] border-t-[0.5px] my-6 md:my-[34px] text-[#C0C0D8]" />
         <div className="flex justify-between items-center">
           <p className="text-[16px] leading-[22px] md:text-[22px] md:leading-8">
             Access clinically proven treatments, supported by science and
             prescribed by our experienced men&apos;s health doctors
           </p>
         </div>
-        <hr className="h-[0.5px] border-t-[0.5px] my-6 md:my-[34px] text-[#C0C9D8]" />
+        <hr className="h-[0.5px] border-t-[0.5px] my-6 md:my-[34px] text-[#C0C0D8]" />
         <div className="flex justify-between items-center">
           <p className="text-[16px] leading-[22px] md:text-[22px] md:leading-8">
             Get truly private and compassionate care. No judgment, no stigma.

@@ -116,7 +116,7 @@ const Navbar = () => {
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
-                    href="https://privhealth.bumpa.shop"
+                    href="https://t.me/+gtiqLBOz-WxiOTVk"
                     className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Community
@@ -164,7 +164,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="https://privhealth.bumpa.shop"
+                  href="https://t.me/+gtiqLBOz-WxiOTVk"
                   className="block text-sm py-4"
                 >
                   Community
