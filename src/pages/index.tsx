@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Priv Health</title>
+        <title>Priv Health - Simple and private healthcare for men</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta

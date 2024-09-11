@@ -100,7 +100,7 @@ const Navbar = () => {
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3 mx-5 ">
                   <Link
-                    href="https://privhealth.bumpa.shop"
+                    href="/what-we-treat"
                     className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     What we treat
@@ -131,7 +131,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <Link href="/start">
+                  <Link href="/what-we-treat">
                     <SustainButton className="text-sm">
                       Get started
                     </SustainButton>
@@ -148,7 +148,7 @@ const Navbar = () => {
             <ul className="pt-5">
               <li>
                 <Link
-                  href="https://privhealth.bumpa.shop"
+                  href="/what-we-treat"
                   className="block text-sm py-4"
                 >
                   What we treat
@@ -176,7 +176,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="mt-3">
-                <Link href="/start">
+                <Link href="/what-we-treat">
                   <SustainButton className="text-sm ">
                     Get started
                   </SustainButton>
