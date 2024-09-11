@@ -16,13 +16,13 @@ const SustainButton = styled(Button)({
 const Navbar = () => {
   return (
     <div>
-      <div className="px-5 md:px-32 py-[23px] md:py-[35px] shadow-md">
+      <div className="px-5 md:px-32 py-[21px] md:py-[24px] shadow-md">
         <nav>
           <div className="container flex flex-wrap  justify-center items-center mx-auto">
             <Link href="/" className="flex self-center">
               <img
                 src={priv.src}
-                className="mr-3  self-center"
+                className="self-center"
                 alt="Priv health logo"
               />
             </Link>

@@ -33,7 +33,7 @@ const Footer = () => {
           Get seamless and discreet care for conditions that affect your
           everyday life
         </p>
-        <Link href="/start">
+        <Link href="/what-we-treat">
           <SustainButton className="self-center text-sm md:text-base font-medium">
             Get treatment now
           </SustainButton>
