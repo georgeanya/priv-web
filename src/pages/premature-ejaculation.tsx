@@ -79,7 +79,7 @@ const PrematureEjaculationPage = () => {
           content="Get treatment for premature ejaculation privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/ed" property="og:url" />
+        <meta content="https://privhealth.co/premature-ejaculation" property="og:url" />
         <meta
           content="Premature ejaculation treatment - Priv Health"
           property="og:title"

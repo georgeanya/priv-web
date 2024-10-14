@@ -7,24 +7,24 @@ import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Section6 from "../../components/section6";
+import Hero from "../../components/lt-hero";
+import Ed from "../../components/lt";
+import EdShop from "../../components/lt-section-1";
 import Section3 from "../../components/section3";
-import EdShop from "../../components/hl-section-1";
-import Hero from "../../components/hl-hero";
-import Ed from "../../components/hl";
+import Section6 from "../../components/section6";
 import AutoScrollComponent from "../../components/auto-scroll";
 
-const HairLossPage = () => {
+const PrematureEjaculationPage = () => {
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Hair loss (Alopecia) treatment - Priv Health</title>
+        <title>Low testosterone (Low T) treatment - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="keywords"
-          content="erectile dysfunction, premature ejaculation, hair loss, alopecia, male pattern baldness"
+          content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, STIs"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -76,16 +76,16 @@ const HairLossPage = () => {
         />
         <meta
           name="description"
-          content="Get treatment for male hair loss privately and from the comfort of your home."
+          content="Get treatment for low testosterone privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/hair-loss" property="og:url" />
+        <meta content="https://privhealth.co/low-testosterone" property="og:url" />
         <meta
-          content="Hair loss (Alopecia) treatment - Priv Health"
+          content="Low testosterone (Low T) treatment - Priv Health"
           property="og:title"
         />
         <meta
-          content="Get treatment for male hair loss privately and from the comfort of your home."
+          content="Get treatment for low testosterone privately and from the comfort of your home."
           property="og:description"
         />
         <meta
@@ -94,13 +94,16 @@ const HairLossPage = () => {
         />
         <meta
           name="twitter:title"
-          content="Hair loss (Alopecia) treatment - Priv Health"
+          content="Low testosterone (Low T) treatment - Priv Health"
         />
         <meta
           name="twitter:description"
-          content="Get treatment for male hair loss privately and from the comfort of your home."
+          content="Get treatment for low testosterone privately and from the comfort of your home."
         />
-        <link href="https://privhealth.co/hair-loss" rel="canonical" />
+        <link
+          href="https://privhealth.co/low-testosterone"
+          rel="canonical"
+        />
       </Head>
       <Navbar />
       <Hero />
@@ -117,4 +120,4 @@ const HairLossPage = () => {
   );
 };
 
-export default HairLossPage;
+export default PrematureEjaculationPage;
