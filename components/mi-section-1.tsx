@@ -59,7 +59,7 @@ const EdShop = () => {
             <div className="flex justify-end">
               
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                ₦85,000
+                ₦100,000
               </p>
             </div>
             <img src={product.src} alt="" className="my-5" />
