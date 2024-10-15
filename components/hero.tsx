@@ -3,6 +3,7 @@ import React from "react";
 import arrow from "../public/assets/arrow.svg";
 import support from "../public/assets/pe.png";
 import lt from "../public/assets/lt.png";
+import mi from "../public/assets/mi.png";
 import clock from "../public/assets/clock.png";
 import hair from "../public/assets/hl.png";
 import std from "../public/assets/std.png";
@@ -109,6 +110,23 @@ const Hero = () => {
                   </p>
                 </Link>
                 <Link href="/low-testosterone">
+                  <img
+                    src={arrow.src}
+                    alt="arrow"
+                    className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
+                  />
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
+              <img src={mi.src} alt="" className=" md:w-full rounded-t-lg " />
+              <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
+                <Link href="/male-infertility">
+                  <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px] pr-3">
+                  Male infertility
+                  </p>
+                </Link>
+                <Link href="/male-infertility">
                   <img
                     src={arrow.src}
                     alt="arrow"

@@ -293,6 +293,8 @@ const Form = () => {
             <option value="low sex drive">Low sex drive</option>
             <option value="enlarged prostate">Enlarged prostate</option>
             <option value="hair loss">Hair loss</option>
+            <option value="male infertility">Male infertility</option>
+            <option value="low testosterone">Low testosterone</option>
             <option value="poor sleep">Poor sleep</option>
             <option value="STI treatment">STI treatment</option>
             <option value="others">Others</option>

@@ -60,6 +60,22 @@ const StartSuccess = () => {
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
+      <Link href="/low-testosterone">
+        <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
+          <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
+          Low testosterone
+          </p>
+          <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
+        </div>
+      </Link>
+      <Link href="/male-infertility">
+        <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
+          <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
+          Male infertility
+          </p>
+          <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
+        </div>
+      </Link>
       <Link href="/hair-loss">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
