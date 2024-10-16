@@ -35,7 +35,10 @@ const EdShop = () => {
       <div className="overflow-x-auto hide-scrollbar mt-10 md:mt-0">
         <div className="max-w-[730px] flex gap-5 md:gap-[30px] flex-nowrap">
           <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
-            <div className="flex justify-end">
+            <div className="flex justify-between">
+              <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
+                Prescription only
+              </p>
               <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
                 ₦6,000
               </p>
