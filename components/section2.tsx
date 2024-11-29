@@ -14,11 +14,12 @@ import Image from "next/image";
 
 const Section4 = () => {
   return (
-    <div className="px-5 md:px-[125px] md:pt-[120px] md:pb-[130px] py-[80px]">
+    <div className="px-5 md:px-[125px]">
+      <div className="container mx-auto md:pt-[120px] md:pb-[130px] py-[80px]">
       <p className=" text-3xl md:text-start md:text-[38px] leading-[48px] md:max-w-xl font-bold text-[#5355AC]">
         How Priv works
       </p>
-      <div className="max-w-xl min-w-full mt-10 md:mt-[60px] md:grid grid-flow-col grid-cols-3 gap-20">
+      <div className=" min-w-full mt-10 md:mt-[60px] md:grid grid-flow-col grid-cols-3 gap-20">
         <div>
           <div className="">
             <div className="relative mb-6 md:mb-7">
@@ -73,6 +74,7 @@ const Section4 = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

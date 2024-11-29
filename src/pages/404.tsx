@@ -6,20 +6,9 @@ import Footer from "../../components/footer";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Head from "next/head";
+import CustomButton from "../../components/mainButton";
 
-const SustainButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+
 
 const ErrorPage = () => {
   return (
@@ -105,9 +94,7 @@ const ErrorPage = () => {
           suggest you go back to our homepage
         </p>
         <div className="mt-8 md:mt-14 ">
-          <SustainButton className="text-xs md:text-base font-medium" href="/">
-            Go back home
-          </SustainButton>
+          <CustomButton title="Go back home" href="/"/>
         </div>
       </div>
       <Footer />

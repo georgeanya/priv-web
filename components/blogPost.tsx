@@ -13,21 +13,7 @@ import Moment from "react-moment";
 import style from "../src/pages/blog/markdown-styles.module.css";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import Link from "next/link";
-
-const SustainButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  lineHeight: "20px",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
+import CustomButton from "./mainButton";
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -122,8 +108,8 @@ const BlogPost = ({ blog }: any) => {
   }
 
   return (
-    <div>
-      <div className="md:px-[245px] md:pt-[50px] pt-[60px] px-5 md:pb-[130px] pb-[90px]">
+    <div className="px-5 md:px-[245px]">
+      <div className=" md:pt-[50px] pt-[60px] container mx-auto md:mb-[130px] mb-[90px]">
         <div className="flex text-[#5355AC] md:text-[14px] md:leading-[19px] text-[14px] leading-[16.5px]">
           <p>{fetchedBlog?.attributes?.category.data.attributes?.name}</p>
           <p className="px-1">•</p>
@@ -173,9 +159,8 @@ const BlogPost = ({ blog }: any) => {
                 </p>
               </div>
               <div className="self-center">
-                <Link href="/">
-                  <SustainButton>Get started now</SustainButton>
-                </Link>
+              
+                <CustomButton title="Get started now" href="/"/>
               </div>
             </div>
           </div>
@@ -191,23 +176,6 @@ const BlogPost = ({ blog }: any) => {
           </div>
         </div>
       </div>
-      {/* <div className="px-5 md:px-32 md:pt-28 pt-20 md:pb-28 pb-20 bg-[#EFF2FA]">
-        <p className="md:text-4xl text-2xl text-[#111111] font-bold max-w-[476px]">
-          Stay updated by joining our newsletter
-        </p>
-        <p className=" text-bases md:text-xl text-[#111111] max-w-[574px] mt-5 md:mt-6 mb-10 md:mb-12">
-          Subscribe to recieve updates about our blog posts and announcements
-          directly in your mailbox
-        </p>
-        <form action="" method="post" className="flex flex-wrap">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="border mb-4 md:mb-0 h-12 md:h-15 md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-          />
-          <SustainButton>Subscribe</SustainButton>
-        </form>
-      </div> */}
     </div>
   );
 };

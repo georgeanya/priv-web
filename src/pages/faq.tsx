@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import FAQ from "../../components/faq1";
 import Footer from "../../components/footer";
@@ -9,19 +7,6 @@ import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Head from "next/head";
 
-const SustainButton = styled(Button)({
-  background: "#4F9EEA !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 30px",
-  },
-});
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([

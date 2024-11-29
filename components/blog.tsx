@@ -5,8 +5,10 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
+import Newsletter from "./newsletter";
+import CustomButton from "./mainButton";
 
-const SustainOutlineButton = styled(Button)({
+const PrivOutlineButton = styled(Button)({
   background: "white !important",
   fontFamily: "Circular Std",
   color: "#5355AC",
@@ -22,19 +24,7 @@ const SustainOutlineButton = styled(Button)({
   },
 });
 
-const PrivButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 38px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 32px",
-  },
-});
+
 
 // Interfaces
 interface BlogAttributes {
@@ -89,6 +79,17 @@ const Blog: React.FC = () => {
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
   const [page, setPage] = useState(1);
   const pageSize = 15;
+
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
+
+  const openNewsletter = () => {
+    setIsNewsletterOpen(true);
+  };
+
+  const closeNewsletter = () => {
+    setIsNewsletterOpen(false);
+  };
+
   
   const loadMorePosts = () => {
     setPage((page) => page + 1);
@@ -189,8 +190,8 @@ const Blog: React.FC = () => {
   const ImgUrl = blog.attributes?.image.data.attributes.url;
 
   return (
-    <div>
-      <div className="px-5 md:px-32 md:mb-20 mb-15">
+    <div className="px-5 md:px-32">
+      <div className="container mx-auto md:mb-20 mb-15">
         <p className=" text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
           <span className=" font-bold">Blog</span> | The latest stories and
           updates from the team
@@ -328,29 +329,21 @@ const Blog: React.FC = () => {
               );
             })}
           </div>
+        <div
+          className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#EFF2FA] rounded-[20px]"
+          id="newsletter"
+        >
+          <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#4F9EEA] font-bold max-w-[476px]">
+            Stay updated by joining our newsletter
+          </p>
+          <p className="text-base leading-[22px] md:text-xl text-[#002A47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
+            Subscribe to recieve updates about our blog posts and announcements
+            directly in your mailbox
+          </p>
 
-          <div
-            className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#F8F5FF] rounded-[20px]"
-            id="newsletter"
-          >
-            <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#5355AC] font-bold max-w-[476px]">
-              Stay updated by joining our newsletter
-            </p>
-            <p className=" text-base leading-[22px] md:text-xl text-[#333D47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
-              Subscribe to recieve updates about our blog posts and
-              announcements directly in your mailbox
-            </p>
-            <form action="" method="post" className="flex flex-wrap">
-              <input
-                type="text"
-                placeholder="Enter your email"
-                className="border mb-4 md:mb-0 h-12 md:h-[60px] md:max-w-[462px] border-gray-300 text-gray-900 text-sm rounded-2xl  block w-full p-2.5 md:mr-5"
-              />
-              <PrivButton className="md:text-base leading-5">
-                Subscribe
-              </PrivButton>
-            </form>
-          </div>
+          <CustomButton title="Subscribe" onClick={openNewsletter} />
+        </div>
+        <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} />
           <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
             {blogsToDisplay2?.map((blogpost: any) => {
               const blog = blogpost;
@@ -398,9 +391,9 @@ const Blog: React.FC = () => {
               );
             })}
           </div>
-          <SustainOutlineButton onClick={loadMorePosts}>
+          <PrivOutlineButton onClick={loadMorePosts}>
             Show more posts
-          </SustainOutlineButton>
+          </PrivOutlineButton>
         </div>
       </div>
     </div>

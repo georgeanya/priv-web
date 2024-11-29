@@ -4,42 +4,15 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import NavbarButton from "./navButton";
 
-const SustainButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  padding: "14px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-});
-
-const ArrowIcon = styled(ArrowForwardIcon)({
-  color: "#f8f8f8",
-  padding: "1.5px",
-  marginTop: "-2px",
-  width: "21px",
-  ["@media (max-width:780px)"]: {
-    width: "16px",
-    marginTop: "0px",
-  },
-});
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(true);
 
   return (
     <div>
-      {/* <div className="bg-[#232B5C] ">
-        <Link href="/ed-assessment">
-          <p className="text-center text-sm md:text-base text-white py-4 px-7">
-            ✨ Take this free assessment to know if you may have erectile
-            dysfunction
-            <ArrowIcon />
-          </p>
-        </Link>
-      </div> */}
+   
       <div className="px-5 md:px-32 pt-5 md:py-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -131,11 +104,9 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="ml-5">
-                  <Link href="/what-we-treat">
-                    <SustainButton className="text-sm">
-                      Get started
-                    </SustainButton>
-                  </Link>
+                  
+
+                  <NavbarButton title="Get started" href="/what-we-treat"/>
                 </li>
               </ul>
             </div>
@@ -176,11 +147,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="mt-3">
-                <Link href="/what-we-treat">
-                  <SustainButton className="text-sm ">
-                    Get started
-                  </SustainButton>
-                </Link>
+              <NavbarButton title="Get started" href="/what-we-treat"/>
               </li>
             </ul>
           )}

@@ -1,17 +1,7 @@
 import priv from "../public/assets/priv.svg";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Link from "next/link";
 
-const SustainButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  padding: "14px 30px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-});
+
 
 const Navbar = () => {
   return (

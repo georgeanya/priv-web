@@ -4,7 +4,8 @@ import stars from "../public/assets/stars.svg";
 
 const Section1 = () => {
   return (
-    <div className="px-5 md:px-[125px] md:pt-28 pt-20 md:pb-28 pb-[90px] bg-[#F6F1EE]  ">
+    <div className="px-5 md:px-[125px] bg-[#F6F1EE]">
+      <div className="container mx-auto md:pt-28 pt-20 md:pb-28 pb-[90px]   ">
       <p className="text-[28px] leading-9 md:text-start md:text-4xl md:max-w-xl font-bold mr-3 md:mr-0 text-[#5355AC] ">
       Trusted by 2,000+ men
       </p>
@@ -52,6 +53,7 @@ const Section1 = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

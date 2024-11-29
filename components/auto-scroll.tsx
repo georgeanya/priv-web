@@ -34,62 +34,64 @@ const AutoScrollComponent = () => {
   }, []);
 
   return (
-    <div
-      className="overflow-x-auto hide-scrollbar bg-[#232B5C]"
-      ref={scrollContainerRef}
-    >
-      {/* The container for both mobile and desktop */}
-      <div className="flex md:justify-between py-[30px] md:py-[34px] px-5 md:px-32 w-full flex-nowrap">
-        {/* Original content */}
-        <div className="flex items-center mx-10 md:mx-0">
-          <img src={firstaid.src} alt="" className="w-[18px] md:w-5" />
-          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-            Licensed healthcare experts
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0">
-          <img src={heart.src} alt="" className="w-[18px] md:w-5" />
-          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-            Trusted by 2,000+ men
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0">
-          <img src={seth.src} alt="" className="w-[18px] md:w-5" />
-          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-            Personalized treatment
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0">
-          <img src={world.src} alt="" className="w-[18px] md:w-5" />
-          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-            100% online
-          </p>
-        </div>
+    <div className="bg-[#232B5C]">
+      <div
+        className="overflow-x-auto hide-scrollbar  container mx-auto"
+        ref={scrollContainerRef}
+      >
+        {/* The container for both mobile and desktop */}
+        <div className="flex md:justify-between py-[30px] md:py-[34px] px-5 md:px-32 w-full flex-nowrap">
+          {/* Original content */}
+          <div className="flex items-center mx-10 md:mx-0">
+            <img src={firstaid.src} alt="" className="w-[18px] md:w-5" />
+            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
+              Licensed healthcare experts
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0">
+            <img src={heart.src} alt="" className="w-[18px] md:w-5" />
+            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
+              Trusted by 2,000+ men
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0">
+            <img src={seth.src} alt="" className="w-[18px] md:w-5" />
+            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
+              Personalized treatment
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0">
+            <img src={world.src} alt="" className="w-[18px] md:w-5" />
+            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
+              100% online
+            </p>
+          </div>
 
-        {/* Duplicate elements only shown on mobile */}
-        <div className="flex items-center mx-10 md:mx-0 md:hidden">
-          <img src={firstaid.src} alt="" className="w-[18px]" />
-          <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-            Licensed healthcare experts
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0 md:hidden">
-          <img src={heart.src} alt="" className="w-[18px]" />
-          <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-            Trusted by 2,000+ men
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0 md:hidden">
-          <img src={seth.src} alt="" className="w-[18px]" />
-          <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-            Personalized treatment
-          </p>
-        </div>
-        <div className="flex items-center mx-10 md:mx-0 md:hidden">
-          <img src={world.src} alt="" className="w-[18px]" />
-          <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-            100% online
-          </p>
+          {/* Duplicate elements only shown on mobile */}
+          <div className="flex items-center mx-10 md:mx-0 md:hidden">
+            <img src={firstaid.src} alt="" className="w-[18px]" />
+            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
+              Licensed healthcare experts
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0 md:hidden">
+            <img src={heart.src} alt="" className="w-[18px]" />
+            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
+              Trusted by 2,000+ men
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0 md:hidden">
+            <img src={seth.src} alt="" className="w-[18px]" />
+            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
+              Personalized treatment
+            </p>
+          </div>
+          <div className="flex items-center mx-10 md:mx-0 md:hidden">
+            <img src={world.src} alt="" className="w-[18px]" />
+            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
+              100% online
+            </p>
+          </div>
         </div>
       </div>
     </div>

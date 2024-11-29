@@ -7,6 +7,7 @@ import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/ed-metacard.png";
 import TestForm from "../../components/test-form";
+import CenterButton from "../../components/centerButton";
 
 type Question = {
   text: string;
@@ -69,19 +70,7 @@ const questions: Question[] = [
   },
 ];
 
-const SustainButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  padding: "20px 30px",
-  margin: "0px 0px",
-  width: "100%",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "15px 30px",
-  },
-});
+
 
 const RiskTest = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -216,9 +205,7 @@ const RiskTest = () => {
                 the symptoms of erectile dysfunction.
               </p>
               <div className="max-w-[245px]">
-                <SustainButton onClick={() => startTest()}>
-                  Take the assessment now
-                </SustainButton>
+                <CenterButton title="Take the assessment now" onClick={() => startTest()} />
               </div>
               <p className="text-sm mt-7 md:mt-9 text-[#73738C] px-5">
                 *This is an assessment tool. Do not use for diagnostic purposes.

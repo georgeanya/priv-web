@@ -12,7 +12,7 @@ import Head from "next/head";
 import favicon from "../../../../public/assets/favicon.png";
 import metaCard from "../../../../public/assets/priv-metacard.png";
 
-const SustainOutlineButton = styled(Button)({
+const PrivOutlineButton = styled(Button)({
   background: "white !important",
   fontFamily: "Circular Std",
   color: "#5355AC",
@@ -273,9 +273,9 @@ const PatientStories = () => {
         })}
       </div>
       <div className="px-5 md:px-32 mb-17 md:mb-36">
-        <SustainOutlineButton onClick={loadMorePosts}>
+        <PrivOutlineButton onClick={loadMorePosts}>
         Show more posts
-        </SustainOutlineButton>
+        </PrivOutlineButton>
       </div>
       <Footer />
     </>
