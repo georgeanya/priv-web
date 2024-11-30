@@ -1,11 +1,7 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-
-import { useState } from "react";
-import product from "../public/assets/product.png";
+import privDoc from "../public/assets/priv-consultation.png";
+import privTest from "../public/assets/priv-test.png";
 import stars from "../public/assets/stars.svg";
-import Link from "next/link";
 import CenterButton from "./centerButton";
 
 const EdShop = () => {
@@ -31,7 +27,7 @@ const EdShop = () => {
                   ₦6,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privDoc.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
                 Doctor consultation
               </p>
@@ -48,13 +44,13 @@ const EdShop = () => {
                   ₦100,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privTest.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
                 Male infertility test
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-                Check your testosterone levels from the comfort of your home
+              Check your sperm health and hormone levels from the comfort of your home
               </p>
               <CenterButton title="Get started" href="/" />
             </div>

@@ -1,12 +1,6 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-
-import { useState } from "react";
-import product from "../public/assets/product.png";
+import product from "../public/assets/priv-pack.png";
 import stars from "../public/assets/stars.svg";
-import Link from "next/link";
-import CustomButton from "./mainButton";
 import CenterButton from "./centerButton";
 
 const EdShop = () => {

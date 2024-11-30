@@ -1,9 +1,6 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-
-import { useState } from "react";
-import product from "../public/assets/product.png";
+import privMed from "../public/assets/priv-medication.png";
+import privPack from "../public/assets/priv-pack.png";
 import stars from "../public/assets/stars.svg";
 import Link from "next/link";
 import CenterButton from "./centerButton";
@@ -28,13 +25,13 @@ const EdShop = () => {
                   ₦15,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privPack.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
-                Prolong spray
+                Prolong cream
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-                Apply 10 minutes before for enhanced endurance and sensation
+                Apply 20 minutes before for enhanced endurance and sensation
                 control
               </p>
               <CenterButton title="Get started" href="/" />
@@ -48,13 +45,13 @@ const EdShop = () => {
                   ₦25,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privMed.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
-                Prolong+
+              Prolong+ pill
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-                Take one gummy daily for longer-lasting moments of intimacy
+              Take one pill daily for longer-lasting moments of intimacy
               </p>
               <CenterButton title="Get started" href="/" />
             </div>

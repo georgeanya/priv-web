@@ -1,12 +1,7 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-
-import { useState } from "react";
-import product from "../public/assets/product.png";
+import privMed from "../public/assets/priv-medication.png";
+import privTest from "../public/assets/priv-test.png";
 import stars from "../public/assets/stars.svg";
-import Link from "next/link";
-import CustomButton from "./mainButton";
 import CenterButton from "./centerButton";
 
 const EdShop = () => {
@@ -32,32 +27,32 @@ const EdShop = () => {
                   ₦30,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privMed.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
-                Always ready gummies
+              Performa+ pill
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-                Take one gummy daily and you’ll be ready at all times
+              Take one pill 30 mins before game time and you’ll be ready
               </p>
               <CenterButton title="Get started" href="/" />
             </div>
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
-              <div className="flex justify-between">
-                <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
+              <div className="flex justify-end">
+                {/* <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
                   Prescription only
-                </p>
+                </p> */}
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦25,000
+                  ₦85,000
                 </p>
               </div>
-              <img src={product.src} alt="" className="my-5" />
+              <img src={privTest.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
-                Game time gummies
+              Comprehensive ED test
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-                Take one gummy 30 mins before the big game for 4-6 hours of fun
+              Identify the root cause of ED with an easy-to-use at-home blood test
               </p>
               <CenterButton title="Get started" href="/" />
             </div>
