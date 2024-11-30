@@ -7,7 +7,6 @@ import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Head from "next/head";
 
-
 const Faq = () => {
   const [faqs, setFaqs] = useState([
     {
@@ -169,114 +168,66 @@ const Faq = () => {
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "What is Custodia?",
+                  name: "What is Priv?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Custodia is a digital health program designed to help people reverse chronic metabolic diseases, such as type 2 diabetes, through sustainable lifestyle changes. It offers virtual care, personalized coaching, and medical supervision to address the root causes of these conditions.",
+                    text: "Priv is a telehealth provider that offers men accessible and affordable solutions for common health concerns like erectile dysfunction, premature ejaculation, hair loss, and more. Through a combination of licensed doctors, prescription medications, and over-the-counter treatments, Priv provides a modern approach to men's healthcare.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How does Custodia work?",
+                  name: "Who is Priv for?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Custodia works by providing personalized health plans that include dietary changes, continuous monitoring, and support from health coaches and doctors. The program focuses on reducing reliance on medications and promoting sustainable lifestyle changes to reverse chronic conditions.",
+                    text: "Priv is designed for men who want convenient, discreet access to healthcare services. Whether you're dealing with sexual health, hair loss concerns or just looking to be healthy, Priv is for those looking for reliable and easy-to-access treatments without the hassle of traditional in-person visits.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How much does Custodia cost?",
+                  name: "How does Priv work?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Custodia offers two membership plans: a Comprehensive plan at ₦180,000 biannually and a Basic plan at ₦40,000 per quarter. Both plans include health coaching, doctor supervision, meal plans, and other resources, but the Comprehensive plan also covers routine lab tests and unlimited health supplies.",
+                    text: "Priv operates online, allowing you to consult with a licensed doctor from the comfort of your home. After answering a few questions about your health, a doctor reviews your information and recommends treatment if appropriate. You can then have your prescription filled and delivered to your door, with ongoing access to care and support.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What do I get when I join Custodia?",
+                  name: "Where is Priv available?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Upon joining Custodia, you receive access to a personal health coach, medical supervision, unlimited consultations, meal plans, resources, and, depending on your plan, routine lab tests and health supplies.",
+                    text: "Priv is currently available in Nigeria. We aim to provide services in as many regions as possible in the future while adhering to regional healthcare laws.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Can type 2 diabetes be reversed?",
+                  name: "Are your doctors licensed?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, a lot of scientific studies have confirmed that through diet changes and weight loss, the process underlying type 2 diabetes can be put into remission without the help of medication.",
+                    text: "Yes, all doctors working with Priv are fully licensed. They are qualified to provide professional medical advice, prescribe treatments, and guide you through your health concerns.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Are medications included in the program?",
+                  name: "Can I be accurately assessed remotely?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No, there are no medications included in the treatment. The goal of the program is to reduce or eliminate your reliance on medication.",
+                    text: "Yes, Priv uses a thorough online assessment and remote consultation process to ensure you receive the right care. By answering detailed questions about your health and symptoms, a licensed doctor can assess your condition and recommend appropriate treatment. In some cases, additional information or follow-up may be required for an accurate diagnosis.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How is diabetes reversal measured?",
+                  name: "Is my information private and secure?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Type 2 diabetes reversal is officially in remission when HbA1c levels drop to below 6.5% (48mmol/mol) and stay there for 3 months without the help of medication.",
+                    text: "Yes, Priv takes your privacy and security seriously. All personal information is encrypted and stored in compliance with local regulations, ensuring that your medical and personal data is kept confidential and secure.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "How long does the Custodia program last?",
+                  name: "Is your packaging discreet?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "The duration of the Custodia program can vary based on individual needs and goals, but it is generally designed for ongoing, long-term support until the desired health outcomes are achieved.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How do I join Custodia?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "To join Custodia, you need to fill out an enrollment form, share your medical history, and make the payment. The program is managed through the Custodia Health app, where you will interact with your care team and track your progress.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "I don’t have a smartphone. Can I still join Custodia?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "The program primarily operates through a mobile app, so a smartphone is essential for participating in the Custodia program effectively.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Do I have to visit a physical facility for the program?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "No, Custodia is a fully virtual program. All consultations, coaching, and monitoring are done remotely through the app.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can I join Custodia from outside Nigeria?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, you can. As long as you have a smartphone with internet access you can be a part of the program. If you are having difficulties joining the program, please send us an email at hi@custodiahealth.com",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Are there any additional costs for lab tests or medical devices?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "For those on the Comprehensive plan, routine lab tests and health supplies are included. However, the Basic plan does not cover these, so there may be additional costs depending on your needs",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What happens if I need to cancel my enrollment?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "We really think you'll like our program, however if you would like to cancel your enrollment for any reason, simply send us an email at hi@custodiahealth.com",
+                    text: "Absolutely. All Priv shipments arrive in a nondescript blister package so you can have your treatment shipped wherever makes sense for you as long as there is someone there to sign for it.",
                   },
                 },
               ],
