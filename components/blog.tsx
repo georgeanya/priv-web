@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
-import Newsletter from "./newsletter";
+// import Newsletter from "./newsletter";
 import CustomButton from "./mainButton";
 
 const PrivOutlineButton = styled(Button)({
@@ -343,7 +343,7 @@ const Blog: React.FC = () => {
 
           <CustomButton title="Subscribe" onClick={openNewsletter} />
         </div>
-        <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} />
+        {/* <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} /> */}
           <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
             {blogsToDisplay2?.map((blogpost: any) => {
               const blog = blogpost;
