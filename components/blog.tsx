@@ -231,7 +231,7 @@ const Blog: React.FC = () => {
         </div>
       </div>
       <div>
-      <div className="px-5 md:px-32 md:mb-[130px] mb-[90px]">
+      <div className="md:mb-[130px] mb-[90px]">
           <div className="overflow-x-auto hide-scrollbar">
             <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
               <li className="md:mr-2 cursor-pointer">
@@ -330,13 +330,13 @@ const Blog: React.FC = () => {
             })}
           </div>
         <div
-          className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#EFF2FA] rounded-[20px]"
+          className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#F8F5FF] rounded-[20px]"
           id="newsletter"
         >
-          <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#4F9EEA] font-bold max-w-[476px]">
+          <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#5355AC] font-bold max-w-[476px]">
             Stay updated by joining our newsletter
           </p>
-          <p className="text-base leading-[22px] md:text-xl text-[#002A47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
+          <p className="text-base leading-[22px] md:text-xl text-[#333D47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
             Subscribe to recieve updates about our blog posts and announcements
             directly in your mailbox
           </p>
