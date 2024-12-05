@@ -22,7 +22,7 @@ const Start = () => {
         />
         <meta
           name="description"
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -32,7 +32,7 @@ const Start = () => {
         <meta content="https://privhealth.co/start" property="og:url" />
         <meta content="Get started - Priv Health" property="og:title" />
         <meta
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -63,7 +63,7 @@ const Start = () => {
         />
         <meta
           name="twitter:description"
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
         />
         <meta
           name="twitter:image:src"

@@ -131,8 +131,7 @@ const Form = () => {
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Answer a few questions about your symptoms. For ₦6,000, a doctor
-            will assess you and get back to you within 24 hours
+          Answer a few questions about your symptoms and medical history. A doctor will assess you for FREE and get back to you within 24 hours
           </p>
         </div>
         <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">

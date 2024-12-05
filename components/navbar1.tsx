@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="px-5 md:px-32 py-[21px] md:py-[24px] shadow-md">
         <nav>
           <div className="container flex flex-wrap  justify-center items-center mx-auto">
-            <Link href="/" className="flex self-center">
+            <Link title="Priv homepage" href="/" className="flex self-center">
               <img
                 src={priv.src}
                 className="self-center"

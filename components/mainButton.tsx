@@ -37,7 +37,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   return (
     <div>
       {href ? (
-        <Link href={href} passHref>
+        <Link title={title} href={href} passHref>
           <StyledButton onClick={onClick}>{title}</StyledButton>
         </Link>
       ) : (
