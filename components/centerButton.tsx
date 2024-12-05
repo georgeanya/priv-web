@@ -39,7 +39,7 @@ const CenterButton: React.FC<CenterButtonProps> = ({
   type = "button",
 }) => {
   const button = href ? (
-    <Link href={href} passHref>
+    <Link title={title} href={href} passHref>
       <StyledButton onClick={onClick} type={type}>{title}</StyledButton>
     </Link>
   ) : (

@@ -37,7 +37,7 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({
   return (
     <div>
       {href ? (
-        <Link href={href} passHref>
+        <Link title={title} href={href} passHref>
           <StyledButton>{title}</StyledButton>
         </Link>
       ) : (

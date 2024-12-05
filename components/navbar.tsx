@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="px-5 md:px-32 pt-5 md:py-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
-            <Link href="/">
+            <Link title="Priv homepage" href="/">
               <img
                 src={priv.src}
                 className="mr-3  self-center"
@@ -73,6 +73,7 @@ const Navbar = () => {
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:text-base md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3 mx-5 ">
                   <Link
+                  title="What we treat"
                     href="/what-we-treat"
                     className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -81,6 +82,7 @@ const Navbar = () => {
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
+                  title="Priv's Bumpa store"
                     href="https://privhealth.bumpa.shop"
                     className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -89,6 +91,7 @@ const Navbar = () => {
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
+                  title="Priv telegram commnunity"
                     href="https://t.me/+gtiqLBOz-WxiOTVk"
                     className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
@@ -97,6 +100,7 @@ const Navbar = () => {
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
+                  title="Priv blog"
                     href="/blog"
                     className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
