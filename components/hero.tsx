@@ -11,8 +11,6 @@ import men from "../public/assets/men.png";
 import mental from "../public/assets/mental.png";
 import consultation from "../public/assets/consultation.png";
 import supplements from "../public/assets/supplements.png";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import CustomButton from "./mainButton";
 
 
