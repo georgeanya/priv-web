@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           property="og:title"
         />
         <meta
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more"
+          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
         />
         <meta
           name="twitter:image:src"
