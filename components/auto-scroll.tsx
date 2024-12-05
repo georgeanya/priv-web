@@ -10,9 +10,7 @@ const AutoScrollComponent = () => {
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
-    // Detect if it's mobile
-    const isMobile = window.innerWidth < 768;
-    if (!scrollContainer || !isMobile) return;
+    if (!scrollContainer) return;
 
     const scrollSpeed = 1; // Scroll speed
     const contentWidth = scrollContainer.scrollWidth; // Total width of scrollable content
@@ -32,13 +30,9 @@ const AutoScrollComponent = () => {
 
     return () => clearInterval(scrollInterval); // Cleanup interval on unmount
   }, []);
-
   return (
-    <div className="bg-[#232B5C]">
-      <div
-        className="overflow-x-auto hide-scrollbar  container mx-auto"
-        ref={scrollContainerRef}
-      >
+    <div className="bg-[#232B5C]" ref={scrollContainerRef}>
+      <div className="overflow-x-auto hide-scrollbar">
         {/* The container for both mobile and desktop */}
         <div className="flex md:justify-between py-[30px] md:py-[34px] px-5 md:px-32 w-full flex-nowrap">
           {/* Original content */}
