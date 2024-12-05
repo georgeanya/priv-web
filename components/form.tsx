@@ -119,7 +119,7 @@ const Form = () => {
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-[25px]"> 
 
-      <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
+      <div className= "block">
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>
