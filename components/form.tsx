@@ -119,52 +119,7 @@ const Form = () => {
   return (
     <div className="max-w-m mx-5 sm:mx-auto mt-[25px]"> 
 
-<<<<<<< HEAD
-      <div className="block">
-=======
-        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
-          <div className="flex">
-            <img src={one.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Online assessment
-            </p>
-          </div>
-          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-          Answer a few questions about your symptoms and medical history. A doctor will assess you for FREE and get back to you within 24 hours
-          </p>
-        </div>
-        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
-          <div className="flex">
-            <img src={two.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Personalized treatment
-            </p>
-          </div>
-          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            Receive your personalized treatment plan and medicines directly at
-            home within 24 hours after it is approved
-          </p>
-        </div>
-        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-10">
-          <div className="flex">
-            <img src={three.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
-            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
-              Ongoing support
-            </p>
-          </div>
-          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-            We will follow up to see how you&apos;re doing, and adjust your
-            treatment as needed. Message us any time with questions
-          </p>
-        </div>
-
-        <div className="mb-15 lg:mb-28">
-          <CenterButton title="I understand" onClick={() => setIsReadyFunc()} />
-        </div>
-      </div>
-
       <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
->>>>>>> 8eb6ce53c87fcabe0ec8eba7251d95a68486955f
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>
