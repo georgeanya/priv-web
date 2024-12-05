@@ -12,25 +12,24 @@ const AutoScrollComponent = () => {
 
     if (!scrollContainer) return;
 
-    const scrollSpeed = 1; // Pixels to scroll per tick
-    let animationFrameId: number;
+    const scrollSpeed = 1; // Scroll speed
+    const contentWidth = scrollContainer.scrollWidth; // Total width of scrollable content
+    let scrollAmount = 0;
 
-    // Function to perform smooth scrolling
-    const smoothScroll = () => {
-      scrollContainer.scrollLeft += scrollSpeed;
-      if (
-        scrollContainer.scrollLeft >=
-        scrollContainer.scrollWidth - scrollContainer.clientWidth
-      ) {
-        scrollContainer.scrollLeft = 0; // Reset to start for seamless loop
+    // Function to continuously scroll
+    const autoScroll = () => {
+      scrollAmount += scrollSpeed;
+      if (scrollAmount >= contentWidth) {
+        scrollAmount = 0; // Reset scroll position to start
       }
-      animationFrameId = requestAnimationFrame(smoothScroll);
+      scrollContainer.scrollLeft = scrollAmount;
     };
 
-    // Start scrolling
-    smoothScroll();
+    // Set interval for auto-scroll
+    const scrollInterval = setInterval(autoScroll, 20);
 
-    return () => cancelAnimationFrame(animationFrameId); // Cleanup on unmount
+    // Cleanup interval on component unmount
+    return () => clearInterval(scrollInterval);
   }, []);
 
   return (

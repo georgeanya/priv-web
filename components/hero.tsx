@@ -232,7 +232,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="self-center text-sm md:text-base font-medium mt-[32px] md:hidden px-5">
+        <div className="self-center text-sm md:text-base font-medium mt-[32px] md:hidden ">
           <CustomButton title="Find my treatment" href="/start"/>
         </div>
       </div>
