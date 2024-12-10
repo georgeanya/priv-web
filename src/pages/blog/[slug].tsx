@@ -177,6 +177,7 @@ const BlogPage = ({ blog }: any) => {
       <BlogPost blog={blog} />
       <Footer />
       <Script
+        id="Blog schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: `{
