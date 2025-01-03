@@ -70,12 +70,12 @@ const Navbar = () => {
               className="hidden w-full md:block md:w-auto"
               id="navbar-solid-bg"
             >
-              <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+              <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:text-base md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3 mx-5 ">
                   <Link
                   title="What we treat"
                     href="/what-we-treat"
-                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                    className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     What we treat
                   </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
                   <Link
                   title="Priv's Bumpa store"
                     href="https://privhealth.bumpa.shop"
-                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                    className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Shop
                   </Link>
@@ -93,7 +93,7 @@ const Navbar = () => {
                   <Link
                   title="Priv telegram commnunity"
                     href="https://t.me/+gtiqLBOz-WxiOTVk"
-                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                    className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Community
                   </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
                   <Link
                   title="Priv blog"
                     href="/blog"
-                    className="text-sm pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
+                    className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Blog
                   </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/what-we-treat"
-                  className="block text-sm py-4"
+                  className="block text-sm md:text-base py-4"
                 >
                   What we treat
                 </Link>
@@ -132,7 +132,7 @@ const Navbar = () => {
                 <li>
                 <Link
                   href="https://privhealth.bumpa.shop"
-                  className="block text-sm py-4"
+                  className="block text-sm md:text-base py-4"
                 >
                   Shop
                 </Link>
@@ -140,13 +140,13 @@ const Navbar = () => {
               <li>
                 <Link
                   href="https://t.me/+gtiqLBOz-WxiOTVk"
-                  className="block text-sm py-4"
+                  className="block text-sm md:text-base py-4"
                 >
                   Community
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="block text-sm py-4">
+                <Link href="/blog" className="block text-sm md:text-base py-4">
                   Blog
                 </Link>
               </li>

@@ -11,8 +11,6 @@ import men from "../public/assets/men.png";
 import mental from "../public/assets/mental.png";
 import consultation from "../public/assets/consultation.png";
 import supplements from "../public/assets/supplements.png";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import CustomButton from "./mainButton";
 
 
@@ -217,7 +215,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="self-center text-sm md:text-base font-medium mt-[32px] md:hidden px-5">
+        <div className=" text-sm md:text-base font-medium mt-[32px] md:hidden ">
           <CustomButton title="Find my treatment" href="/start"/>
         </div>
       </div>
