@@ -131,7 +131,7 @@ const Form = () => {
             </p>
           </div>
           <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
-          Answer a few questions about your symptoms and medical history. A doctor will assess you for FREE and get back to you within 24 hours
+          Answer a few questions about your symptoms and medical history. A doctor will assess you and get back to you within 24 hours
           </p>
         </div>
         <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
@@ -270,13 +270,11 @@ const Form = () => {
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>
             <option value="premature ejaculation">Premature ejaculation</option>
-            <option value="low sex drive">Low sex drive</option>
-            <option value="enlarged prostate">Enlarged prostate</option>
-            <option value="hair loss">Hair loss</option>
-            <option value="male infertility">Male infertility</option>
             <option value="low testosterone">Low testosterone</option>
-            <option value="poor sleep">Poor sleep</option>
+            <option value="hair loss">Hair loss</option>
             <option value="STI treatment">STI treatment</option>
+            <option value="mental health">Mental health</option>
+            <option value="doctor consultation">Doctor consultation</option>
             <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-[25px] rounded-lg">
