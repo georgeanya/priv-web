@@ -163,8 +163,8 @@ const Form = () => {
           <CenterButton title="I understand" onClick={() => setIsReadyFunc()} />
         </div>
       </div>
-
-      <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
+      
+        <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>

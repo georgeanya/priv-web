@@ -10,9 +10,7 @@ const AutoScrollComponent = () => {
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
 
-    // Detect if it's mobile
-    const isMobile = window.innerWidth < 768;
-    if (!scrollContainer || !isMobile) return;
+    if (!scrollContainer) return;
 
     const scrollSpeed = 1; // Scroll speed
     const contentWidth = scrollContainer.scrollWidth; // Total width of scrollable content
@@ -21,8 +19,8 @@ const AutoScrollComponent = () => {
     // Function to continuously scroll
     const autoScroll = () => {
       scrollAmount += scrollSpeed;
-      if (scrollAmount >= contentWidth / 2) {
-        scrollAmount = 0; // Reset scroll position to start when halfway
+      if (scrollAmount >= contentWidth) {
+        scrollAmount = 0; // Reset scroll position to start
       }
       scrollContainer.scrollLeft = scrollAmount;
     };
@@ -30,68 +28,66 @@ const AutoScrollComponent = () => {
     // Set interval for auto-scroll
     const scrollInterval = setInterval(autoScroll, 20);
 
-    return () => clearInterval(scrollInterval); // Cleanup interval on unmount
+    // Cleanup interval on component unmount
+    return () => clearInterval(scrollInterval);
   }, []);
 
   return (
-    <div className="bg-[#232B5C]">
+    <div className="bg-[#232B5C] overflow-hidden">
       <div
-        className="overflow-x-auto hide-scrollbar  container mx-auto"
         ref={scrollContainerRef}
+        className="flex overflow-x-scroll hide-scrollbar py-[30px] md:py-[34px] px-5 md:px-32 w-full whitespace-nowrap"
       >
-        {/* The container for both mobile and desktop */}
-        <div className="flex md:justify-between py-[30px] md:py-[34px] px-5 md:px-32 w-full flex-nowrap">
-          {/* Original content */}
-          <div className="flex items-center mx-10 md:mx-0">
-            <img src={firstaid.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Licensed healthcare experts
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0">
-            <img src={heart.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Trusted by 2,000+ men
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0">
-            <img src={seth.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              Personalized treatment
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0">
-            <img src={world.src} alt="" className="w-[18px] md:w-5" />
-            <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white whitespace-nowrap">
-              100% online
-            </p>
-          </div>
+        {/* Content */}
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={firstaid.src} alt="First Aid" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Licensed healthcare experts
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={heart.src} alt="Heart" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Trusted by 2,000+ men
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={seth.src} alt="Seth" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Personalized treatment
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={world.src} alt="World" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            100% online
+          </p>
+        </div>
 
-          {/* Duplicate elements only shown on mobile */}
-          <div className="flex items-center mx-10 md:mx-0 md:hidden">
-            <img src={firstaid.src} alt="" className="w-[18px]" />
-            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-              Licensed healthcare experts
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0 md:hidden">
-            <img src={heart.src} alt="" className="w-[18px]" />
-            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-              Trusted by 2,000+ men
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0 md:hidden">
-            <img src={seth.src} alt="" className="w-[18px]" />
-            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-              Personalized treatment
-            </p>
-          </div>
-          <div className="flex items-center mx-10 md:mx-0 md:hidden">
-            <img src={world.src} alt="" className="w-[18px]" />
-            <p className="pl-3 text-[15px] leading-[18px] text-white whitespace-nowrap">
-              100% online
-            </p>
-          </div>
+        {/* Duplicate content for seamless looping */}
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={firstaid.src} alt="First Aid" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Licensed healthcare experts
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={heart.src} alt="Heart" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Trusted by 2,000+ men
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={seth.src} alt="Seth" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            Personalized treatment
+          </p>
+        </div>
+        <div className="flex items-center mx-10 md:mx-[54px]">
+          <img src={world.src} alt="World" className="w-[18px] md:w-5" />
+          <p className="pl-3 text-[15px] leading-[18px] md:text-lg md:leading-[21px] text-white">
+            100% online
+          </p>
         </div>
       </div>
     </div>
