@@ -24,8 +24,6 @@ const PrivOutlineButton = styled(Button)({
   },
 });
 
-
-
 // Interfaces
 interface BlogAttributes {
   title: string;
@@ -78,6 +76,7 @@ const Blog: React.FC = () => {
   const [blogs, setBlogs] = useState<BlogResponse | null>(null);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
   const [page, setPage] = useState(1);
+  const [error, setError] = useState<string | null>(null);
   const pageSize = 15;
 
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
@@ -90,7 +89,6 @@ const Blog: React.FC = () => {
     setIsNewsletterOpen(false);
   };
 
-  
   const loadMorePosts = () => {
     setPage((page) => page + 1);
   };
@@ -102,27 +100,26 @@ const Blog: React.FC = () => {
         const response = await axios.get<BlogResponse>(
           `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
         );
-  
+
         setBlogs((prevBlogs) => {
           if (!prevBlogs) {
-            // If there were no previous blogs, initialize the state with the response
             return response.data;
           } else {
-            // Append new blogs to the existing state
             return {
               ...prevBlogs,
               data: [...prevBlogs.data, ...response.data.data],
             };
           }
         });
+        setError(null); // Clear any previous errors
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError("Failed to load blogs. Please try again later.");
       }
     };
-  
+
     fetchData();
   }, [page]);
-
 
   const blogsToDisplay = useMemo(() => {
     if (!blogs || !blogs.data) return [];
@@ -135,7 +132,7 @@ const Blog: React.FC = () => {
               blog.attributes.category.data.attributes.name === toggleState
           );
 
-    return filteredBlogs.slice(1, 7);
+    return filteredBlogs.slice(1, 7); // Show first 6 blogs
   }, [blogs, toggleState]);
 
   const blogsToDisplay2 = useMemo(() => {
@@ -149,8 +146,20 @@ const Blog: React.FC = () => {
               blog.attributes.category.data.attributes.name === toggleState
           );
 
-    return filteredBlogs.slice(7);
+    return filteredBlogs.slice(7); // Show blogs starting from index 6
   }, [blogs, toggleState]);
+
+  const toggleTab = (index: BlogCategory) => {
+    setToggleState(index);
+  };
+
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setToggleState(event.target.value as BlogCategory);
+  };
+
+  if (error) {
+    return <div className="text-red-500 text-center mt-10">{error}</div>;
+  }
 
   if (!blogs) {
     return (
@@ -178,23 +187,14 @@ const Blog: React.FC = () => {
     );
   }
 
-  const toggleTab = (index: BlogCategory) => {
-    setToggleState(index);
-  };
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>): any => {
-    setToggleState(event.target.value as BlogCategory);
-  };
-
   const blog = blogs.data[0] || ({} as Blog);
-
-  const ImgUrl = blog.attributes?.image.data.attributes.url;
+  const ImgUrl = blog.attributes?.image?.data?.attributes?.url || "default-image-url";
 
   return (
     <div className="px-5 md:px-32">
       <div className="container mx-auto md:mb-20 mb-15">
-        <p className=" text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
-          <span className=" font-bold">Blog</span> | The latest stories and
-          updates from the team
+        <p className="text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
+          <span className="font-bold">Blog</span> | The latest stories and updates from the team
         </p>
         <div className="md:flex justify-between mt-9 md:mt-10">
           <Link href={`/blog/${blog.attributes?.slug}`}>
@@ -204,9 +204,9 @@ const Blog: React.FC = () => {
               className="cursor-pointer w-full md:w-[660px] md:h-[380px] rounded-[20px]"
             />
           </Link>
-          <div className=" md:ml-17 mt-6 md:mt-0 self-center max-w-[460px]">
-            <p className=" text-sm text-[#5355AC] leading-[17px]">
-              {blog.attributes?.category.data.attributes.name}
+          <div className="md:ml-17 mt-6 md:mt-0 self-center max-w-[460px]">
+            <p className="text-sm text-[#5355AC] leading-[17px]">
+              {blog.attributes?.category?.data?.attributes?.name}
             </p>
             <Link href={`/blog/${blog.attributes?.slug}`}>
               <p className="cursor-pointer text-[#111111] font-bold text-[22px] leading-[28px] md:text-[34px] md:leading-[43px] mt-3">
@@ -220,181 +220,155 @@ const Blog: React.FC = () => {
               <img src={image.src} alt="" className="w-12 rounded-[25px]" />
               <div className="ml-4 self-center">
                 <p className="text-[#111111] text-sm md:text-base leading-[17px] font-medium">
-                  {blog.attributes?.author.data.attributes.name}
+                  {blog.attributes?.author?.data?.attributes?.name}
                 </p>
                 <p className="text-[#61616B] text-xs">
-                  {blog.attributes?.author.data.attributes.team}
+                  {blog.attributes?.author?.data?.attributes?.team}
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
       <div className="md:mb-[130px] mb-[90px]">
-          <div className="overflow-x-auto hide-scrollbar">
-            <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
-              <li className="md:mr-2 cursor-pointer">
-                <p
-                  className={
-                    toggleState === "All"
-                      ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
-                      : "inline-block px-6 py-[14px] text-[#61616B]"
-                  }
-                  onClick={() => toggleTab("All")}
-                >
-                  All
-                </p>
-              </li>
+        <div className="overflow-x-auto hide-scrollbar">
+          <ul className="flex flex-nowrap text-sm leading-[17px] font-medium text-center text-gray-500 dark:text-gray-400">
+            <li className="md:mr-2 cursor-pointer">
+              <p
+                className={
+                  toggleState === "All"
+                    ? "inline-block px-5 py-[14px] text-white bg-[#5355AC] rounded-3xl active"
+                    : "inline-block px-6 py-[14px] text-[#61616B]"
+                }
+                onClick={() => toggleTab("All")}
+              >
+                All
+              </p>
+            </li>
+            <li className="md:mr-2 cursor-pointer">
               <Link href="/blog/category/sexual-health">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
+                <p className="block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
                   Sexual health
-                  </p>
-                </li>
+                </p>
               </Link>
+            </li>
+            <li className="md:mr-2 cursor-pointer">
               <Link href="/blog/category/engineering">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
+                <p className="inline-block px-6 py-[14px] text-[#61616B]">
                   Engineering
-                  </p>
-                </li>
+                </p>
               </Link>
+            </li>
+            <li className="md:mr-2 cursor-pointer">
               <Link href="/blog/category/company">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
-                    Company
-                  </p>
-                </li>
+                <p className="inline-block px-6 py-[14px] text-[#61616B]">
+                  Company
+                </p>
               </Link>
+            </li>
+            <li className="md:mr-2 cursor-pointer">
               <Link href="/blog/category/general-health">
-                <li className="md:mr-2 cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
+                <p className="inline-block px-6 py-[14px] whitespace-nowrap text-[#61616B]">
                   General health
-                  </p>
-                </li>
+                </p>
               </Link>
+            </li>
+            <li className="cursor-pointer">
               <Link href="/blog/category/hair">
-                <li className="cursor-pointer">
-                  <p className="inline-block px-6 py-[14px] text-[#61616B]">
-                    Hair
-                  </p>
-                </li>
+                <p className="inline-block px-6 py-[14px] text-[#61616B]">
+                  Hair
+                </p>
               </Link>
-            </ul>
-          </div>
-          <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
-            {blogsToDisplay.map((blogpost: any) => {
-              const blog = blogpost;
-              const { id, attributes } = blog;
-
-              return (
-                <div
-                  className="max-w-[357px] flex flex-col justify-between"
-                  key={id}
-                >
-                  <div>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <img
-                        src={attributes.image.data.attributes.url}
-                        alt={attributes.image.data.attributes.name}
-                        className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
-                      />
-                    </Link>
-                    <p className=" text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
-                      {attributes.category.data.attributes.name}
-                    </p>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px]  cursor-pointer">
-                        {attributes.title}
-                      </p>
-                    </Link>
-                  </div>
-                  <div className="flex mt-3 md:mt-4">
+            </li>
+          </ul>
+        </div>
+        <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
+          {blogsToDisplay.map((blogpost) => {
+            const { id, attributes } = blogpost;
+            return (
+              <div className="max-w-[357px] flex flex-col justify-between" key={id}>
+                <div>
+                  <Link href={`/blog/${attributes.slug}`}>
                     <img
-                      src={image.src}
-                      alt="Avatar"
-                      className="w-12 rounded-[25px]"
+                      src={attributes.image.data.attributes.url}
+                      alt={attributes.image.data.attributes.name}
+                      className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                     />
-                    <div className="ml-4 self-center">
-                      <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
-                        {attributes.author.data.attributes.name}
-                      </p>
-                      <p className="text-[#61616B] text-xs">
-                        {attributes.author.data.attributes.team}
-                      </p>
-                    </div>
+                  </Link>
+                  <p className="text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
+                    {attributes.category.data.attributes.name}
+                  </p>
+                  <Link href={`/blog/${attributes.slug}`}>
+                    <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px] cursor-pointer">
+                      {attributes.title}
+                    </p>
+                  </Link>
+                </div>
+                <div className="flex mt-3 md:mt-4">
+                  <img src={image.src} alt="Avatar" className="w-12 rounded-[25px]" />
+                  <div className="ml-4 self-center">
+                    <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                      {attributes.author.data.attributes.name}
+                    </p>
+                    <p className="text-[#61616B] text-xs">
+                      {attributes.author.data.attributes.team}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        <div
-          className=" md:py-[70px] px-5 md:px-20 py-10  bg-[#F8F5FF] rounded-[20px]"
-          id="newsletter"
-        >
+              </div>
+            );
+          })}
+        </div>
+        <div className="md:py-[70px] px-5 md:px-20 py-10 bg-[#F8F5FF] rounded-[20px]" id="newsletter">
           <p className="md:text-[38px] md:leading-[48px] text-[24px] leading-[30px] text-[#5355AC] font-bold max-w-[476px]">
             Stay updated by joining our newsletter
           </p>
           <p className="text-base leading-[22px] md:text-xl text-[#333D47] max-w-[574px] mt-4 md:mt-[22px] mb-6 md:mb-8">
-            Subscribe to recieve updates about our blog posts and announcements
-            directly in your mailbox
+            Subscribe to receive updates about our blog posts and announcements directly in your mailbox
           </p>
-
           <CustomButton title="Subscribe" onClick={openNewsletter} />
         </div>
         {/* <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} /> */}
-          <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
-            {blogsToDisplay2?.map((blogpost: any) => {
-              const blog = blogpost;
-              const { id, attributes } = blog;
-              console.log(attributes.category);
-
-              return (
-                <div
-                  className="max-w-[357px] flex flex-col justify-between"
-                  key={id}
-                >
-                  <div>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <img
-                        src={attributes.image.data.attributes.url}
-                        alt={attributes.image.data.attributes.name}
-                        className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
-                      />
-                    </Link>
-                    <p className=" text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
-                      {attributes.category.data.attributes.name}
-                    </p>
-                    <Link href={`/blog/${attributes.slug}`}>
-                      <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px]  cursor-pointer">
-                        {attributes.title}
-                      </p>
-                    </Link>
-                  </div>
-                  <div className="flex mt-3 md:mt-4">
+        <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
+          {blogsToDisplay2.map((blogpost) => {
+            const { id, attributes } = blogpost;
+            return (
+              <div className="max-w-[357px] flex flex-col justify-between" key={id}>
+                <div>
+                  <Link href={`/blog/${attributes.slug}`}>
                     <img
-                      src={image.src}
-                      alt="Avatar"
-                      className="w-12 rounded-[25px]"
+                      src={attributes.image.data.attributes.url}
+                      alt={attributes.image.data.attributes.name}
+                      className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                     />
-                    <div className="ml-4 self-center">
-                      <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
-                        {attributes.author.data.attributes.name}
-                      </p>
-                      <p className="text-[#61616B] text-xs">
-                        {attributes.author.data.attributes.team}
-                      </p>
-                    </div>
+                  </Link>
+                  <p className="text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
+                    {attributes.category.data.attributes.name}
+                  </p>
+                  <Link href={`/blog/${attributes.slug}`}>
+                    <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px] cursor-pointer">
+                      {attributes.title}
+                    </p>
+                  </Link>
+                </div>
+                <div className="flex mt-3 md:mt-4">
+                  <img src={image.src} alt="Avatar" className="w-12 rounded-[25px]" />
+                  <div className="ml-4 self-center">
+                    <p className="text-[#111111] text-sm md:text-base leading-5 font-medium">
+                      {attributes.author.data.attributes.name}
+                    </p>
+                    <p className="text-[#61616B] text-xs">
+                      {attributes.author.data.attributes.team}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          <PrivOutlineButton onClick={loadMorePosts}>
-            Show more posts
-          </PrivOutlineButton>
+              </div>
+            );
+          })}
         </div>
+        <PrivOutlineButton onClick={loadMorePosts}>
+          Show more posts
+        </PrivOutlineButton>
       </div>
     </div>
   );

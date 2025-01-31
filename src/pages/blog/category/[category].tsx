@@ -67,6 +67,7 @@ const PatientStories = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState<boolean>(true); // Track if there are more posts to load
 
   const router = useRouter();
   const { category } = router.query;
@@ -87,11 +88,22 @@ const PatientStories = () => {
         const blogsData = response.data.data;
 
         if (blogsData.length > 0) {
-          setBlogs((prevBlogs) => [...prevBlogs, ...blogsData]);
-          setCategoryName(
-            blogsData[0].attributes.category.data.attributes.name
-          );
-        } 
+          setBlogs((prevBlogs) => {
+            // Avoid duplicates by checking if the blog already exists
+            const newBlogs = blogsData.filter(
+              (newBlog: Blog) =>
+                !prevBlogs.some((prevBlog) => prevBlog.id === newBlog.id)
+            );
+            return [...prevBlogs, ...newBlogs];
+          });
+
+          // Set category name from the first blog
+          if (page === 1) {
+            setCategoryName(blogsData[0].attributes.category.data.attributes.name);
+          }
+        } else {
+          setHasMore(false); // No more posts to load
+        }
       } catch (error) {
         console.error("Error fetching blog data:", error);
         setError("Failed to load blog data.");
@@ -104,7 +116,8 @@ const PatientStories = () => {
   }, [category, page]);
 
   if (loading && blogs.length === 0) {
-    <div className="flex justify-center py-[180px] md:py-[220px]">
+    return (
+      <div className="flex justify-center py-[180px] md:py-[220px]">
         <div role="status">
           <svg
             aria-hidden="true"
@@ -125,17 +138,18 @@ const PatientStories = () => {
           <span className="text-gray-200 sr-only">Loading...</span>
         </div>
       </div>
+    );
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <div className="text-red-500 text-center mt-10">{error}</div>;
   }
 
   return (
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <title> {categoryName} - Priv Health Blog</title>
+        <title>{categoryName} - Priv Health Blog</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -205,8 +219,7 @@ const PatientStories = () => {
         />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1,
-      shrink-to-fit=no, maximum-scale=1"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
         />
         <meta
           name="facebook-domain-verification"
@@ -244,11 +257,11 @@ const PatientStories = () => {
                     className="cursor-pointer w-full md:w-[357px] md:h-[205.55px] rounded-[20px]"
                   />
                 </Link>
-                <p className=" text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
+                <p className="text-sm leading-[17px] text-[#5355AC] mt-[24px] mb-3">
                   {attributes.category.data.attributes.name}
                 </p>
                 <Link href={`/blog/${attributes.slug}`}>
-                  <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px]  cursor-pointer">
+                  <p className="text-[#111111] font-bold text-[22px] leading-[28px] md:leading-[29px] cursor-pointer">
                     {attributes.title}
                   </p>
                 </Link>
@@ -272,11 +285,13 @@ const PatientStories = () => {
           );
         })}
       </div>
-      <div className="px-5 md:px-32 mb-17 md:mb-36">
-        <PrivOutlineButton onClick={loadMorePosts}>
-        Show more posts
-        </PrivOutlineButton>
-      </div>
+      {hasMore && (
+        <div className="px-5 md:px-32 mb-17 md:mb-36">
+          <PrivOutlineButton onClick={loadMorePosts}>
+            Show more posts
+          </PrivOutlineButton>
+        </div>
+      )}
       <Footer />
     </>
   );
