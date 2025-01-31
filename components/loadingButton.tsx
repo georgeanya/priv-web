@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 
 
 const StyledButton = styled(Button)({
-  background: "#4F9EEA !important",
+  background: "#5355AC !important",
   fontFamily: "Circular Std",
   fontSize: "15px",
   height: "56px",
