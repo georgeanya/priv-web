@@ -44,6 +44,14 @@ const StartSuccess = () => {
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
+      <Link title="Low testosterone" href="/low-testosterone">
+        <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
+          <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
+          Low testosterone
+          </p>
+          <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
+        </div>
+      </Link>
       <Link title="Men's health tests" href="https://privhealth.bumpa.shop/browse/Lab%20tests">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
@@ -56,22 +64,6 @@ const StartSuccess = () => {
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
           STI treatment
-          </p>
-          <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
-        </div>
-      </Link>
-      <Link title="Low testosterone" href="/low-testosterone">
-        <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
-          <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Low testosterone
-          </p>
-          <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
-        </div>
-      </Link>
-      <Link title="Male infertility" href="/male-infertility">
-        <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
-          <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Male infertility
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>

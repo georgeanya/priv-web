@@ -7,6 +7,7 @@ import favicon from "../../../public/assets/favicon.png";
 import Head from "next/head";
 import { ParsedUrlQuery } from "querystring";
 import BlogPost from "../../../components/blogPost";
+import Script from 'next/script';
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -175,6 +176,43 @@ const BlogPage = ({ blog }: any) => {
       <Navbar />
       <BlogPost blog={blog} />
       <Footer />
+      <Script
+        id="Blog schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "${url}"
+            },
+            "headline": "${blog.attributes.title}",
+            "description": "${blog.attributes.description}",
+            "image": "${
+              blog.attributes.image?.data?.attributes?.formats?.medium?.url ||
+              ""
+            }",
+            "author": {
+                "@type": "Person",
+                "name": "${
+                  blog.attributes.author?.data?.attributes?.name || "Anonymous"
+                }",
+                "url": "https://privhealth.co"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Priv Health",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://privhealth.co/priv-logo.png"
+                }
+            },
+            "datePublished": "${blog.attributes.publishedAt}",
+            "dateModified": "${blog.attributes.updatedAt}"
+          }`,
+        }}
+        />
     </div>
   );
 };

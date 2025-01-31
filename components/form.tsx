@@ -117,9 +117,54 @@ const Form = () => {
   };
 
   return (
-    <div className="max-w-m mx-5 sm:mx-auto mt-[25px]"> 
+    <div className="max-w-m mx-5 sm:mx-auto mt-[25px]">
+      <div className={isReady ? "block" : "hidden"}>
+        <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] mb-[30px] md:mb-[35px]">
+          How Priv works
+        </p>
 
-      <div className= "block">
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
+          <div className="flex">
+            <img src={one.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Online assessment
+            </p>
+          </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+          Answer a few questions about your symptoms and medical history. A doctor will assess you and get back to you within 24 hours
+          </p>
+        </div>
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-[15px] md:mb-5">
+          <div className="flex">
+            <img src={two.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Personalized treatment
+            </p>
+          </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+            Receive your personalized treatment plan and medicines directly at
+            home within 24 hours after it is approved
+          </p>
+        </div>
+        <div className="md:px-5 px-[15px] py-5 md:py-[25px] bg-[#EEEFF6] rounded-[15px] mb-10">
+          <div className="flex">
+            <img src={three.src} alt="" className="mr-[12px] w-[18px] md:w-5" />
+            <p className="text-[14px] md:text-[16px] leading-[17px] md:leading-[20.24px] font-medium">
+              Ongoing support
+            </p>
+          </div>
+          <p className="text-[14px] md:text-[16px] leading-[19px] md:leading-[21px] mt-2 font-">
+            We will follow up to see how you&apos;re doing, and adjust your
+            treatment as needed. Message us any time with questions
+          </p>
+        </div>
+
+        <div className="mb-15 lg:mb-28">
+          <CenterButton title="I understand" onClick={() => setIsReadyFunc()} />
+        </div>
+      </div>
+      
+        <div className={isSuccess || isError || isReady ? "hidden" : "block"}>
         <p className=" leading-tight md:text-[28px] text-2xl text-center font-bold text-[#5355AC] ">
           Get started
         </p>
@@ -225,13 +270,11 @@ const Form = () => {
             </option>
             <option value="erectile dysfunction">Erectile dysfunction</option>
             <option value="premature ejaculation">Premature ejaculation</option>
-            <option value="low sex drive">Low sex drive</option>
-            <option value="enlarged prostate">Enlarged prostate</option>
-            <option value="hair loss">Hair loss</option>
-            <option value="male infertility">Male infertility</option>
             <option value="low testosterone">Low testosterone</option>
-            <option value="poor sleep">Poor sleep</option>
+            <option value="hair loss">Hair loss</option>
             <option value="STI treatment">STI treatment</option>
+            <option value="mental health">Mental health</option>
+            <option value="doctor consultation">Doctor consultation</option>
             <option value="others">Others</option>
           </select>
           <div className="bg-[#EEEFF6] p-4 mt-12 mb-[25px] rounded-lg">
