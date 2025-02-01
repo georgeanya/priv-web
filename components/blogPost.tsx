@@ -115,7 +115,7 @@ const BlogPost = ({ blog }: any) => {
           <p className="px-1">•</p>
           <p>
             <Moment
-              format="MMM DD YYYY"
+              format="MMM DD, YYYY"
               date={fetchedBlog?.attributes?.publishedAt}
             />
           </p>
