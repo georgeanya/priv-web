@@ -82,7 +82,7 @@ const BlogPost = ({ blog }: { blog: Blog }) => {
           <p className="px-1">•</p>
           <p>
             <Moment
-              format="MMM DD YYYY"
+              format="MMM DD, YYYY"
               date={fetchedBlog?.attributes?.publishedAt}
             />
           </p>
