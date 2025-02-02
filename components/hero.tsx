@@ -216,7 +216,7 @@ const Hero = () => {
           </div>
         </div>
         <div className=" text-sm md:text-base font-medium mt-[32px] md:hidden ">
-          <CustomButton title="Find my treatment" href="/start"/>
+          <CustomButton title="Find my treatment" href="/what-we-treat"/>
         </div>
       </div>
     </div>
