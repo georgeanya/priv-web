@@ -34,8 +34,8 @@ const StartSuccess = () => {
         Payment link sent
       </p>
       <p className="mt-4 text-base md:text-lg font-normal md:pr-8 md:text-start text-[#111111] mb-7">
-        A payment link has been sent to your phone number. Check your WhatsApp
-        to complete your membership!
+        Instuctions on how to complete your online visit has been sent to your phone number. Check your WhatsApp
+        to complete your online visit!
       </p>
       <Link href="https://t.me/+gtiqLBOz-WxiOTVk">
         <SustainButton
