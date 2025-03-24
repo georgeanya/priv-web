@@ -21,7 +21,7 @@ const EdShop = () => {
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
               <div className="flex justify-end">
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦6,000
+                  ₦8,000
                 </p>
               </div>
               <img src={privDoc.src} alt="" className="my-5" />
@@ -38,7 +38,7 @@ const EdShop = () => {
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
               <div className="flex justify-end">
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦85,000
+                  ₦70,000
                 </p>
               </div>
               <img src={privTest.src} alt="" className="my-5" />

@@ -82,8 +82,8 @@ const Navbar = () => {
                 </li>
                 <li className="mt-3 mx-5 ">
                   <Link
-                  title="Priv's Bumpa store"
-                    href="https://privhealth.bumpa.shop"
+                  title="Priv's store"
+                    href="https://paystack.shop/priv-health"
                     className="text-sm md:text-base pt-5 text-[#111111] rounded hover:text-blue-700 md:p-0 "
                   >
                     Shop
