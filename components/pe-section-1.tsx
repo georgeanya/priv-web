@@ -22,12 +22,12 @@ const EdShop = () => {
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
               <div className="flex justify-end">
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦15,000
+                  ₦18,000
                 </p>
               </div>
               <img src={privPack.src} alt="" className="my-5" />
               <p className="text-[20px] leading-[25px] md:text-[24px] md:leading-[30px] font-medium">
-                Prolong cream
+                Prolong spray
               </p>
               <img src={stars.src} alt="" className="my-3" />
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
@@ -42,7 +42,7 @@ const EdShop = () => {
                   Prescription only
                 </p>
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦25,000
+                  ₦32,000
                 </p>
               </div>
               <img src={privMed.src} alt="" className="my-5" />
