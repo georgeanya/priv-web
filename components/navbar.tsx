@@ -131,7 +131,7 @@ const Navbar = () => {
                 </li>
                 <li>
                 <Link
-                  href="https://privhealth.bumpa.shop"
+                  href="https://paystack.shop/priv-health"
                   className="block text-sm md:text-base py-4"
                 >
                   Shop
