@@ -1,41 +1,50 @@
-import React from "react";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
-import Faq from "../../components/faq";
 import Head from "next/head";
+import React from "react";
+import Form from "../../components/newForm";
+import Navbar3 from "../../components/navbar1";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Hero from "../../components/mi-hero";
-import Ed from "../../components/mi";
-import EdShop from "../../components/mi-section-1";
-import Section3 from "../../components/section3";
-import Section6 from "../../components/section6";
-import AutoScrollComponent from "../../components/auto-scroll";
 
-const PrematureEjaculationPage = () => {
+const Start = () => {
   return (
     <div>
       <Head>
-        <meta charSet="utf-8" />
-        <title>Male infertility treatment - Priv Health</title>
+        <title>Get started - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
+        />
         <meta
           name="keywords"
           content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, STIs"
         />
+        <meta
+          name="description"
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
+        />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
+        <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
+        <meta content="https://privhealth.co/start" property="og:url" />
+        <meta content="Get started - Priv Health" property="og:title" />
+        <meta
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
+          property="og:description"
+        />
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />
         <meta content="394" property="og:image:height" />
         <meta
           content="An image of the Priv health logo"
           property="og:image:alt"
+        />
+        <meta
+          content="https://instagram.com/tryprivhealth"
+          property="og:see_also"
         />
         <meta
           content="https://facebook.com/tryprivhealth/"
@@ -49,6 +58,14 @@ const PrematureEjaculationPage = () => {
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
         <meta
+          name="twitter:title"
+          content="Get started - Priv Health"
+        />
+        <meta
+          name="twitter:description"
+          content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
+        />
+        <meta
           name="twitter:image:src"
           content="https://privhealth.co/_next/static/media/priv-metacard.bfa5bd2e.png"
         />
@@ -59,6 +76,7 @@ const PrematureEjaculationPage = () => {
           content="An image of the Priv health logo"
         />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
+        <link href="https://privhealth.co/start" rel="canonical" />
         <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link
@@ -67,57 +85,14 @@ const PrematureEjaculationPage = () => {
           rel="alternate"
         />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
-        />
-        <meta
           name="facebook-domain-verification"
           content="ydhokuda2jbyn329ymapza2hdhbumm"
         />
-        <meta
-          name="description"
-          content="Get treatment for male infertility privately and from the comfort of your home."
-        />
-        <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/male-infertility" property="og:url" />
-        <meta
-          content="Male infertility treatment - Priv Health"
-          property="og:title"
-        />
-        <meta
-          content="Get treatment for male infertility privately and from the comfort of your home."
-          property="og:description"
-        />
-        <meta
-          content="https://instagram.com/tryprivhealth"
-          property="og:see_also"
-        />
-        <meta
-          name="twitter:title"
-          content="Male infertility treatment - Priv Health"
-        />
-        <meta
-          name="twitter:description"
-          content="Get treatment for male infertility privately and from the comfort of your home."
-        />
-        <link
-          href="https://privhealth.co/male-infertility"
-          rel="canonical"
-        />
       </Head>
-      <Navbar />
-      <Hero />
-      <AutoScrollComponent/>
-      <Ed />
-      <EdShop/>
-      <Section4 />
-      <Section3/>
-      <Section5 />
-      <Section6 />
-      <Faq />
-      <Footer />
+      <Navbar3 />
+      <Form />
     </div>
   );
 };
 
-export default PrematureEjaculationPage;
+export default Start;

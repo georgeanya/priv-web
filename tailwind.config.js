@@ -1,12 +1,12 @@
+const {heroui} = require('@heroui/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "// Or if using `src` directory:\\r\\n    \\\"./src/**/*.{js,ts,jsx,tsx}\\\"",
+    "./node_modules/@heroui/theme/dist/components/(date-picker|input|button|ripple|spinner|calendar|date-input|form|popover).js"
   ],
   presets: [],
   darkMode: "media", // or 'class'
@@ -980,5 +980,5 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [],
+  plugins: [heroui()],
 };

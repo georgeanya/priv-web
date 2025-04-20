@@ -21,11 +21,27 @@ const StyledButton = styled(Button)({
   borderRadius: "32px",
   textTransform: "none",
   fontWeight: 500,
+  position: "relative",
+  overflow: "hidden",
+  zIndex: 1,
+  "&:focus": {
+    outline: "none",
+  },
   ["@media (max-width:780px)"]: {
     padding: "16px 30px",
     fontSize: "14px",
     lineHeight: "17.71",
     height: "50px",
+  },
+  pointerEvents: "auto",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: -1, // behind the button itself
   },
 });
 

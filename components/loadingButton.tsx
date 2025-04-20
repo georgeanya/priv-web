@@ -16,10 +16,26 @@ const StyledButton = styled(Button)({
   textTransform: "none",
   width: "100%",
   fontWeight: 500,
+  position: "relative",
+  overflow: "hidden",
+  zIndex: 1,
+  "&:focus": {
+    outline: "none",
+  },
   ["@media (max-width:780px)"]: {
     padding: "16px 30px",
     fontSize: "14px",
     lineHeight: "17.71",
+  },
+  pointerEvents: "auto",
+  "&::after": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: -1, // behind the button itself
   },
 });
 
