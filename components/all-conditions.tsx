@@ -76,7 +76,7 @@ const StartSuccess = () => {
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Mental health" href="/start">
+      <Link title="Mental health" href="/start?condition=mental-health">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
           Mental health
@@ -84,7 +84,7 @@ const StartSuccess = () => {
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Doctor consultation" href="/start">
+      <Link title="Doctor consultation" href="/start?condition=doctor-consultation">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
           Doctor consultation

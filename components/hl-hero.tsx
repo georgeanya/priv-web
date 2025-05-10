@@ -36,7 +36,7 @@ const Hero = () => {
             licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <Link href="/start">
+            <Link href="/start?condition=hair-loss">
               <SkeenButton className="text-sm md:text-base md:leading-5 font-medium">
                 Get started now
               </SkeenButton>

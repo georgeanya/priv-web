@@ -36,7 +36,7 @@ const Hero = () => {
             online by licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <Link title="Get started now" href="/start">
+            <Link title="Get started now" href="/start?condition=erectile-dysfunction">
               <SkeenButton className="text-sm md:text-base md:leading-5 font-medium">
                 Get started now
               </SkeenButton>
