@@ -342,7 +342,7 @@ const Form = () => {
 
             <div className="bg-[#EEF3F6] p-4 mt-8 md:mt-10 mb-6 rounded-lg">
               <p className="text-[#111111] text-[13px] leading-[19px] md:text-sm">
-                By filling out this form, you agree to Priv Health’s{" "}
+                By filling out this form, you agree to Priv Health&lsquo;s
                 <a
                   className="text-[#5355AC] underline font-medium"
                   href="https://lifebox-labs.notion.site/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1"
@@ -531,7 +531,7 @@ const Form = () => {
               Let's start your assessment
             </p>
             <p className="md:text-[18px] md:leading-[24px] text-[#111111] text-[16px] leading-[22px] mb-7">
-              We'll be asking a few questions so our men’s health doctor
+              We'll be asking a few questions so our men&lsquo;s health doctor
               provider can find the best treatment for you
             </p>
           </div>
