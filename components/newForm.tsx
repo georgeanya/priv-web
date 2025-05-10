@@ -528,10 +528,10 @@ const Form = () => {
           </div>
           <div className="text-center">
             <p className="mt-[32px] md:mt-[40px] leading-8  md:text-[28px] md:leading-[30px] mb-4 text-[22px] font-bold text-[#5355AC]">
-              Let's start your assessment
+              Let&lsquo;s start your assessment
             </p>
             <p className="md:text-[18px] md:leading-[24px] text-[#111111] text-[16px] leading-[22px] mb-7">
-              We'll be asking a few questions so our men&lsquo;s health doctor
+              We&lsquo;ll be asking a few questions so our men&lsquo;s health doctor
               provider can find the best treatment for you
             </p>
           </div>
@@ -773,7 +773,7 @@ const Form = () => {
               After checkout you will have a consultation with our doctor for
               final approval. No need to sweat it. Most men are approved for
               treatment, but rest assured that vou will be refunded it vou
-              aren't.
+              aren&lsquo;t.
             </p>
           </div>
           <form onSubmit={initializePayment}>
