@@ -8,7 +8,7 @@ interface FormData {
     phone_number: string;
     patient_id: string;
     session_id: string;
-    product_ids: string;
+    product_ids: string[];
     order_id: string;
     source: string;
     condition: string;
@@ -17,14 +17,23 @@ interface FormData {
     discount_code: string;
     state: string;
     city: string;
-    price: number;
     address: string;
+  };
+  product: {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    delivery_fee: number;
+    image_url: string;
+    type: string;
   };
 }
 
 interface FormDataContextProps {
   formData: FormData;
   updateFormData: (newUserData: Partial<FormData["user"]>) => void;
+  updateProductData: (newProductData: Partial<FormData["product"]>) => void;
 }
 
 const FormDataContext = createContext<FormDataContextProps | null>(null);
@@ -38,7 +47,7 @@ export const FormDataProvider = ({ children }: { children: ReactNode }) => {
       phone_number: "",
       patient_id: "",
       session_id: "",
-      product_ids: "",
+      product_ids: [],
       order_id: "",
       dob: "",
       gender: "male",
@@ -46,14 +55,23 @@ export const FormDataProvider = ({ children }: { children: ReactNode }) => {
       condition: "",
       discount_code: "",
       state: "",
-      price: 0,
       city: "",
       address: "",
+    },
+    product: {
+      id: "",
+      name: "",
+      description: "",
+      price: 0,
+      delivery_fee: 0,
+      image_url: "",
+      type: "",
     },
   });
 
   const updateFormData = (newUserData: Partial<FormData["user"]>) => {
     setFormData((prevData) => ({
+      ...prevData,
       user: {
         ...prevData.user,
         ...newUserData,
@@ -61,8 +79,18 @@ export const FormDataProvider = ({ children }: { children: ReactNode }) => {
     }));
   };
 
+  const updateProductData = (newProductData: Partial<FormData["product"]>) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      product: {
+        ...prevData.product,
+        ...newProductData,
+      },
+    }));
+  };
+
   return (
-    <FormDataContext.Provider value={{ formData, updateFormData }}>
+    <FormDataContext.Provider value={{ formData, updateFormData, updateProductData }}>
       {children}
     </FormDataContext.Provider>
   );

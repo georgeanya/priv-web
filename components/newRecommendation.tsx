@@ -6,7 +6,7 @@ import assessment from "../public/assets/assessment.png";
 import icon from "../public/assets/icon.svg";
 import { Input } from "@heroui/input";
 import { DatePicker } from "@heroui/date-picker";
-import product from "../public/assets/products.png";
+import productt from "../public/assets/products.png";
 import products from "../public/assets/productt.png";
 import circle from "../public/assets/circle.png";
 import stars from "../public/assets/stars.svg";
@@ -36,31 +36,72 @@ const PrivWhiteButton = styled(Button)({
   },
 });
 
-
 const Form = () => {
-  const { formData, updateFormData } = useFormData();
+  const { formData, updateFormData, updateProductData } = useFormData();
   const user = formData.user;
+  const product = formData.product;
 
   const [discountPrice, setDiscountPrice] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const session_id = localStorage.getItem("session_id");
-    const email = localStorage.getItem("email");
-    const patient_id = localStorage.getItem("patient_id");
-  
-    const updates: any = {};
-  
-    if (session_id) updates.session_id = session_id;
-    if (email) updates.email = email;
-    if (patient_id) updates.patient_id = patient_id;
-  
-    if (Object.keys(updates).length > 0) {
-      updateFormData(updates);
-    }
-    console.log(user)
+    const syncFromLocalStorage = () => {
+      const email = localStorage.getItem("email");
+      const patient_id = localStorage.getItem("patient_id");
+      const session_id = localStorage.getItem("session_id");
+
+      if (email || patient_id || session_id) {
+        updateFormData({
+          ...(email && { email }),
+          ...(patient_id && { patient_id }),
+          ...(session_id && { session_id }),
+        });
+      }
+    };
+
+    // Sync on initial load
+    syncFromLocalStorage();
+
+    // Optional: Add event listener for changes from other tabs
+    window.addEventListener("storage", syncFromLocalStorage);
+    return () => window.removeEventListener("storage", syncFromLocalStorage);
   }, []);
+
+  useEffect(() => {
+    console.log("LocalStorage contents:", {
+      email: localStorage.getItem("email"),
+      patient_id: localStorage.getItem("patient_id"),
+      session_id: localStorage.getItem("session_id"),
+    });
+
+    // Rest of your initialization code...
+  }, []);
+
+  useEffect(() => {
+    if (pageNumber === 4) {
+      console.log(product.price, "", product.delivery_fee, discountPrice);
+    }
+  }, [pageNumber]);
+
+  useEffect(() => {
+    const currentSessionId =
+      user.session_id || localStorage.getItem("session_id");
+    if (pageNumber === 1 && currentSessionId) {
+      getRecommendation();
+    }
+  }, [pageNumber, user.session_id]);
+
+  useEffect(() => {
+    if (pageNumber === 1) {
+      const timer = setTimeout(() => {
+        nextPage();
+        console.log(product);
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [pageNumber]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     updateFormData({ [event.target.name]: event.target.value });
@@ -75,26 +116,87 @@ const Form = () => {
     setPageNumber(1);
   };
 
-  
+  const getRecommendation = () => {
+    const currentSessionId =
+      user.session_id || localStorage.getItem("session_id");
 
-  const purchaseProduct = (event: React.FormEvent<HTMLFormElement>): any => {
-    event.preventDefault();
-    // setIsLoading(true);
     axios
       .post(
-        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase",
+        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/intake/recommendaion", // Note the changed endpoint
         {
-          product_ids: user.product_ids,
-          patient_id: user.patient_id,
+          session_id: currentSessionId,
         }
       )
       .then((res) => {
-        if (res.data.message === "order created successfully") {
-          updateFormData({ order_id: res.data.data.order_id });
-        } else {
+        if (res.data.message === "recommendation fetched successfully") {
+          updateProductData({
+            id: res.data.data.product._id,
+            name: res.data.data.product.name,
+            description: res.data.data.product.description,
+            price: res.data.data.product.price,
+            type: res.data.data.product.type,
+            image_url: res.data.data.product.image_url,
+          });
         }
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.error("API Error:", {
+          message: error.message,
+          response: error.response?.data,
+          config: error.config,
+        });
+      });
+  };
+
+  const purchaseProduct = async () => {
+    setIsLoading(true);
+    try {
+      const currentPatientId =
+        user.patient_id || localStorage.getItem("patient_id");
+      const productIds = Array.isArray(user.product_ids)
+        ? user.product_ids
+        : [product.id];
+
+      const response = await axios.post(
+        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase",
+        {
+          product_ids: productIds,
+          patient_id: currentPatientId,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.data.message === "order created successfully") {
+        updateFormData({
+          order_id: response.data.data.order_id,
+          product_ids: productIds,
+        });
+        console.log("Order created:", response.data.data.order_id);
+        nextPage();
+      } else {
+        throw new Error(response.data.message || "Unexpected response");
+      }
+    } catch (error: unknown) {
+      // Type guard to check if it's an Error object
+      if (error instanceof Error) {
+        console.error("Purchase error:", error.message);
+        if (axios.isAxiosError(error)) {
+          console.error("Axios error details:", {
+            response: error.response?.data,
+            status: error.response?.status,
+          });
+        }
+      } else {
+        console.error("Unknown error occurred:", error);
+      }
+      setPageNumber(11);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const addAddress = (event: React.FormEvent<HTMLFormElement>): any => {
@@ -113,11 +215,15 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "address added successfully") {
-          updateFormData({ order_id: res.data.data.order_id });
+          updateProductData({ delivery_fee: res.data.data.delivery_fee });
+          console.log("Delivery:", res.data.data.delivery_fee);
+          nextPage();
         } else {
         }
       })
-      .catch((error) => {});
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   // const fetchPlanData = async () => {
@@ -193,17 +299,11 @@ const Form = () => {
       .finally(() => setIsLoading(false));
   };
 
-
-
-  const getISODateString = (date: DateValue | null): string => {
-    if (!date) return "";
-    return date.toDate(getLocalTimeZone()).toISOString();
-  };
   const progress = (pageNumber / 6) * 100;
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
-            {pageNumber === 1 && (
+      {pageNumber === 1 && (
         <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
           <p className="mt-[32px] md:mt-[208px] leading-8 text-center md:text-[28px] md:leading-[30px] mb-4 md:mb-9 text-[22px] font-bold text-[#5355AC]">
             We are creating your treatment option
@@ -219,118 +319,110 @@ const Form = () => {
             Your treatment option
           </p>
           <div className=" min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
-            <img src={product.src} alt="" className="" />
+            <img src={productt.src} alt="" className="" />
             <p className="text-[20px] leading-[25px] mt-5 md:mt-6 md:text-[24px] md:leading-[30px] font-medium">
-              Testo+ pill
+              {product.name}
             </p>
             <div className="flex mt-3 mb-4">
               <img src={stars.src} alt="" className="" />
-              <div className="pl-5">
-                <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
-                  Prescription only
-                </p>
-              </div>
+              {product.type === "Prescription" && (
+                <div className="pl-5" id="prescription">
+                  <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
+                    Prescription only
+                  </p>
+                </div>
+              )}
             </div>
             <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-              ₦50,000
+              ₦{product.price.toLocaleString()}
             </p>
             <p className="mb-[px] mt-3 text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
-              Promotes the natural production of testosterone in the body
+              {product.description}
             </p>
           </div>
           <p className=" px-10 mt-6 mb-10 text-center leading-[17px] text-[13px] md:leading-[20px]">
             Got a discount code? You can use it in the payment page
           </p>
-          <CenterButton title="Continue" href="/start" />
+          <CenterButton title="Continue" onClick={purchaseProduct} />
         </div>
       )}
       {pageNumber === 3 && (
         <div>
-          <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-3 mb-8 text-[24px] font-bold text-[#5355AC]">
-            Where do you want it delivered?
+          <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-3 md:mb-8 text-[24px] font-bold text-[#5355AC]">
+          {product.type === "Test" 
+        ? "Where do you want your test sample picked up?" 
+        : "Where do you want it delivered?"}
           </p>
-          <div className="mb-[15px]">
-            <Input
-              type="text"
-              name="first_name"
-              label="Country"
-              variant="bordered"
-              value={user.first_name}
-              onChange={handleChange}
-              size="md"
-              classNames={{
-                label: "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                input: "text-[#5355AC]",
-                inputWrapper:
-                  "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-              }}
-              placeholder=""
-              required
-            />
-          </div>
 
-          <div className="mb-[15px]">
-            <Input
-              type="text"
-              name="first_name"
-              label="Street Address"
-              variant="bordered"
-              value={user.first_name}
-              onChange={handleChange}
-              size="md"
-              classNames={{
-                label: "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                input: "text-[#5355AC]",
-                inputWrapper:
-                  "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-              }}
-              placeholder=""
-              required
-            />
-          </div>
+          <form onSubmit={addAddress}>
+            <div className="mb-[15px]">
+              <Input
+                type="text"
+                name="city"
+                label="City"
+                variant="bordered"
+                value={user.city}
+                onChange={handleChange}
+                size="md"
+                classNames={{
+                  label:
+                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
+                  input: "text-[#5355AC]",
+                  inputWrapper:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+                placeholder=""
+                required
+              />
+            </div>
 
-          <div className="mb-[15px]">
-            <Input
-              type="text"
-              name="first_name"
-              label="City"
-              variant="bordered"
-              value={user.first_name}
-              onChange={handleChange}
-              size="md"
-              classNames={{
-                label: "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                input: "text-[#5355AC]",
-                inputWrapper:
-                  "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-              }}
-              placeholder=""
-              required
-            />
-          </div>
+            <div className="mb-[15px]">
+              <Input
+                type="text"
+                name="state"
+                label="State"
+                variant="bordered"
+                value={user.state}
+                onChange={handleChange}
+                size="md"
+                classNames={{
+                  label:
+                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
+                  input: "text-[#5355AC]",
+                  inputWrapper:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+                placeholder=""
+                required
+              />
+            </div>
 
-          <div className="mb-[40px]">
-            <Input
-              type="text"
-              name="last_name"
-              label="State"
-              variant="bordered"
-              value={user.last_name}
-              onChange={handleChange}
-              classNames={{
-                label: "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                input: "text-[#5355AC]",
-                inputWrapper:
-                  "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-              }}
-              placeholder=""
-              required
-            />
-          </div>
-          <CenterButton title="Continue" href="/start" />
+            <div className="mb-[15px]">
+              <Input
+                type="text"
+                name="address"
+                label="Street"
+                variant="bordered"
+                value={user.address}
+                onChange={handleChange}
+                size="md"
+                classNames={{
+                  label:
+                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
+                  input: "text-[#5355AC]",
+                  inputWrapper:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+                placeholder=""
+                required
+              />
+            </div>
+
+            <CenterButton title="Continue" type="submit" />
+          </form>
         </div>
       )}
-      {pageNumber === 9 && (
+      {pageNumber === 4 && (
         <div>
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[28px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#5355AC]">
             Payment time!
@@ -342,16 +434,25 @@ const Form = () => {
                   <img src={products.src} alt="" className="md:w-[60px] mr-4" />
                   <div className="mt-2">
                     <p className="text-[16px] font-medium  leading-5 text-[#111111]">
-                      Testo+ pill
+                      {product.name}
                     </p>
-                    <p className="text-[16px]  leading-5 text-[#111111]">
-                      1 pack
+                    <p
+                      className="text-[16px] leading-5 text-[#111111]"
+                      id="unit"
+                    >
+                      {product.type === "Prescription"
+                        ? "1 pack"
+                        : product.type === "Consultation"
+                        ? "1 visit"
+                        : product.type === "Test"
+                        ? "1 unit"
+                        : "1 item"}
                     </p>
                   </div>
                 </div>
 
                 <p className="text-[16px]  leading-5 mt-[33px] text-[#111111]">
-                  ₦{user.price.toLocaleString()}
+                  ₦{product.price.toLocaleString()}
                 </p>
               </div>
               <hr className="mt-[22px] mb-[22px] " />
@@ -392,15 +493,20 @@ const Form = () => {
                   Subtotal
                 </p>
                 <p className="text-[16px]  leading-5 text-[#111111]">
-                  ₦{user.price.toLocaleString()}
+                  ₦{product.price.toLocaleString()}
                 </p>
               </div>
-              <div className="flex justify-between mt-[16px]">
-                <p className="text-[16px]  leading-5 text-[#111111]">
-                  Doctor consultation
-                </p>
-                <p className="text-[16px]  leading-5 text-[#5355AC]">FREE</p>
-              </div>
+              {product.type !== "Consultation" && (
+                <div
+                  className="flex justify-between mt-[16px]"
+                  id="consultation"
+                >
+                  <p className="text-[16px]  leading-5 text-[#111111]">
+                    Doctor consultation
+                  </p>
+                  <p className="text-[16px]  leading-5 text-[#5355AC]">FREE</p>
+                </div>
+              )}
               <div className="flex justify-between mt-[16px]">
                 <p className="text-[16px]  leading-5 text-[#111111]">
                   Promo discount
@@ -409,22 +515,32 @@ const Form = () => {
                   -₦{discountPrice.toLocaleString()}
                 </p>
               </div>
-              <div className="flex justify-between mt-[16px]">
-                <p className="text-[16px]  leading-5 text-[#111111]">
-                  Delivery fee
-                </p>
-                <p className="text-[16px]  leading-5 text-[#111111]">
-                  ₦{discountPrice.toLocaleString()}
-                </p>
-              </div>
+              {product.type !== "Consultation" && (
+                <div className="flex justify-between mt-[16px]" id="delivery">
+                  <p className="text-[16px]  leading-5 text-[#111111]">
+                    Delivery fee
+                  </p>
+                  <p className="text-[16px]  leading-5 text-[#111111]">
+                    ₦{product.delivery_fee.toLocaleString()}
+                  </p>
+                </div>
+              )}
+
               <hr className="mt-[22px] mb-[22px] " />
               <div className="flex justify-between mt-1.5">
                 <p className="text-[18px] font-medium leading-5 text-[#111111]">
                   Total
                 </p>
                 <p className="text-[18px] font-medium leading-5 text-[#111111]">
-                  ₦{(user.price - discountPrice).toLocaleString()}
-                </p>
+                  ₦
+                  {product.type === "Consultation"
+                    ? (product.price - discountPrice).toLocaleString()
+                    : (
+                        product.price -
+                        discountPrice +
+                        product.delivery_fee
+                      ).toLocaleString()}
+                </p>    
               </div>
             </div>
           </div>
@@ -439,18 +555,14 @@ const Form = () => {
           <form onSubmit={initializePayment}>
             <div className="mb-16">
               {isLoading ? (
-                <CenterButton title="Checkout" type="submit" />
-              ) : (
                 <LoadingButton />
+              ) : (
+                <CenterButton title="Checkout" type="submit" />
               )}
             </div>
           </form>
         </div>
       )}
-      {pageNumber === 9 && <div></div>}
-      {pageNumber === 9 && <div></div>}
-      {pageNumber === 9 && <div></div>}
-      {pageNumber === 9 && <div></div>}
       {pageNumber === 11 && (
         <div id="page8">
           <div className="flex justify-center mt-24">

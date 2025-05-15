@@ -79,6 +79,22 @@ const Form = () => {
     setPageNumber(1);
   };
 
+  const getFormUrl = (condition: string) => {
+    switch(condition) {
+      case 'erectile-dysfunction':
+        return 'https://forms.careforms.io/forms/uwy6gqyj4p23mre';
+      case 'premature-ejaculation':
+        return 'https://forms.careforms.io/forms/r1lqdk8gvebzmtc';
+      case 'low-testosterone':
+        return 'https://forms.careforms.io/forms/wcbxbutsw554l3j';
+      case 'sti':
+        return 'https://forms.careforms.io/forms/1qi9c16bctoxpz4';
+      default:
+        return 'https://forms.careforms.io/forms/qmxssi136hd7hdm';
+      
+      }
+    };
+
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     setIsLoading(false);
@@ -120,11 +136,13 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "session created successfully") {
-          updateFormData({ session_id: res.data.data.session_id });
+          const sessionId = res.data.data.session_id;
 
-          localStorage.setItem("session_id", user.session_id);
+          localStorage.setItem("session_id", sessionId);
           localStorage.setItem("email", user.email);
           localStorage.setItem("patient_id", user.patient_id);
+
+          updateFormData({ session_id: res.data.data.session_id });
         } else {
         }
       })
@@ -418,11 +436,11 @@ const Form = () => {
       {pageNumber === 6 && (
         <div className="relative h-[calc(100vh-150px)] md:h-[calc(100vh-130px)] w-full overflow-hidden">
           <iframe
-            src={`https://forms.careforms.io/forms/1qi9c16bctoxpz4?session_id=${
-              user.session_id
-            }&user_email=${formatEmail(user.email)}`}
-            className="absolute top-[-100px] left-0 w-full h-[calc(100%+50px)] md:h-[calc(100%+100px)] border-none"
-          ></iframe>
+      src={`${getFormUrl(user.condition)}?session_id=${
+        user.session_id
+      }&user_email=${formatEmail(user.email)}`}
+      className="absolute top-[-100px] left-0 w-full h-[calc(100%+50px)] md:h-[calc(100%+100px)] border-none"
+    ></iframe>
         </div>
       )}
 
