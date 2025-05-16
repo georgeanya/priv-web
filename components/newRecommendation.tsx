@@ -137,6 +137,7 @@ const Form = () => {
             type: res.data.data.product.type,
             image_url: res.data.data.product.image_url,
           });
+          localStorage.setItem("type", res.data.data.product.type);
         }
       })
       .catch((error) => {

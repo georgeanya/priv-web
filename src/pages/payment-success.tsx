@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import circle from "../../public/assets/circlee.png";
 import favicon from "../../public/assets/favicon.png";
@@ -6,6 +6,13 @@ import Navbar3 from "../../components/navbar1";
 import CenterButton from "../../components/centerButton";
 
 const PaymentSuccesful = () => {
+  const [type, setType] = useState<string | null>(null);
+
+  useEffect(() => {
+    const storedType = localStorage.getItem("type");
+    setType(storedType);
+  }, []);
+
   return (
     <>
       <Head>
@@ -23,7 +30,9 @@ const PaymentSuccesful = () => {
           Payment successful
         </p>
         <p className="text-[#111111] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
-        Our doctor will review your intake information and call you within 24 working hours for your consultation
+          {type === "Test" 
+            ? "A member of our patient success team will reach out shortly to confirm the best time for your sample collection."
+            : "Our doctor will review your intake information and call you within 24 working hours for your consultation"}
         </p>
         <CenterButton
           title="Join our Telegram community"
