@@ -41,7 +41,7 @@ const Form = () => {
   const user = formData.user;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(4);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -78,6 +78,13 @@ const Form = () => {
     setIsLoading(true);
     setPageNumber(1);
   };
+
+  const referralSources = [
+    { key: "friend", label: "Friend" },
+    { key: "advert", label: "Advert" },
+    { key: "social_media", label: "Social Media" },
+    { key: "doctor", label: "Doctor" },
+  ];
 
   const getFormUrl = (condition: string) => {
     switch(condition) {
@@ -386,23 +393,22 @@ const Form = () => {
           </p>
 
           <form onSubmit={completeProfile}>
-            <div className="mb-[40px]">
-              <Select
-                label="Select an option"
-                classNames={{
-                  label:
-                    "text-[#111111] group-data-[filled=true]:text-[#111111]",
-                  trigger:
-                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-                }}
-              >
-                <SelectItem key="friend">Friend</SelectItem>
-                <SelectItem key="advert">Advert</SelectItem>
-                <SelectItem key="social_media">Social Media</SelectItem>
-                <SelectItem key="doctor">Doctor</SelectItem>
-              </Select>
-            </div>
-
+          <div className="mb-[40px]">
+        <Select
+          className="w-full"
+          label="Select an option"
+          selectedKeys={user.source ? [user.source] : []}
+          onChange={(e: any) => updateFormData({ source: e.target.value })}
+          classNames={{
+            label: "text-[#111111] group-data-[filled=true]:hidden",
+            trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+          }}
+        >
+          {referralSources.map((source) => (
+            <SelectItem key={source.key}>{source.label}</SelectItem>
+          ))}
+        </Select>
+      </div>
             <div className="mb-16">
               {isLoading ? (
                 <CenterButton title="Continue" type="submit" />
