@@ -226,27 +226,6 @@ const Form = () => {
       });
   };
 
-  // const fetchPlanData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/payment/plans"
-  //     );
-
-  //     const plan = response.data.data.plans[0];
-
-  //     setState({
-  //       ...state,
-  //       plan: {
-  //         ...user,
-  //         price: plan.price,
-  //         _id: plan._id,
-  //       },
-  //     });
-  //   } catch (error) {
-  //     setPageNumber(9);
-  //   }
-  // };
-
   const discountCode = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     // setIsLoading(true);
@@ -280,14 +259,8 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "payment initialized successfully") {
-          // Note the nested data.data structure
-          // const link = document.createElement("a");
-          // link.href = res.data.data.data.authorization_url;
-          // link.target = "_blank";
-          // link.rel = "noopener nosource";
-          // document.body.appendChild(link);
-          // link.click();
-          // document.body.removeChild(link);
+          
+          
           window.location.href = res.data.data.data.authorization_url;
         } else {
           throw new Error(res.data.message || "Payment initialization failed");
