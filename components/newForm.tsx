@@ -41,7 +41,7 @@ const Form = () => {
   const user = formData.user;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(4);
+  const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
