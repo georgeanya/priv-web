@@ -122,7 +122,7 @@ const Form = () => {
 
     axios
       .post(
-        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/intake/recommendaion", // Note the changed endpoint
+        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/intake/recommendaion",
         {
           session_id: currentSessionId,
         }
@@ -151,49 +151,37 @@ const Form = () => {
 
   const purchaseProduct = async () => {
     setIsLoading(true);
+  
+    // 1. Guard clause: Validate critical data
+    if (!product?.id) {
+      console.error("Missing product ID. Current product:", product);
+      setIsLoading(false);
+      return;
+    }
+  
+    const currentPatientId = user.patient_id || localStorage.getItem("patient_id");
+    const productIds = [product.id]; // Now safe
+  
     try {
-      const currentPatientId =
-        user.patient_id || localStorage.getItem("patient_id");
-      const productIds = Array.isArray(user.product_ids)
-        ? user.product_ids
-        : [product.id];
-
+      // 2. Log validated payload
+      console.log("Validated payload:", { product_ids: productIds, patient_id: currentPatientId });
+  
+      // 3. API call
       const response = await axios.post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase",
-        {
-          product_ids: productIds,
-          patient_id: currentPatientId,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        { product_ids: productIds, patient_id: currentPatientId },
+        { headers: { "Content-Type": "application/json" } }
       );
-
+  
+      // 4. Handle response
       if (response.data.message === "order created successfully") {
-        updateFormData({
-          order_id: response.data.data.order_id,
-          product_ids: productIds,
-        });
-        console.log("Order created:", response.data.data.order_id);
+        const orderId = response.data.data.order_id;
+        localStorage.setItem("order_id", orderId);
+        updateFormData({ order_id: orderId });
         nextPage();
-      } else {
-        throw new Error(response.data.message || "Unexpected response");
       }
-    } catch (error: unknown) {
-      // Type guard to check if it's an Error object
-      if (error instanceof Error) {
-        console.error("Purchase error:", error.message);
-        if (axios.isAxiosError(error)) {
-          console.error("Axios error details:", {
-            response: error.response?.data,
-            status: error.response?.status,
-          });
-        }
-      } else {
-        console.error("Unknown error occurred:", error);
-      }
+    } catch (error) {
+      console.error("Purchase failed:", error);
       setPageNumber(11);
     } finally {
       setIsLoading(false);
@@ -246,39 +234,46 @@ const Form = () => {
       .catch((error) => {});
   };
 
-  const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
+  const initializePayment = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsLoading(false);
-    axios
-      .post(
-        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/payment/initialize",
-        {
-          discount_code: user.discount_code,
-          email: user.email,
-          order_id: user.order_id,
-        }
-      )
-      .then((res) => {
-        if (res.data.message === "payment initialized successfully") {
-          
-          
-          window.location.href = res.data.data.data.authorization_url;
-        } else {
-          throw new Error(res.data.message || "Payment initialization failed");
-        }
-      })
-      .catch((error) => {
-        setPageNumber(9);
-      })
-      .finally(() => setIsLoading(false));
-  };
+    setIsLoading(true);
 
-  const progress = (pageNumber / 6) * 100;
+    // Get order_id from localStorage if not in state
+    const orderId = user.order_id || localStorage.getItem("order_id");
+    console.log(orderId);
+    if (!orderId) {
+      console.error("No order_id found in localStorage or state!");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        "https://priv-health-api-ceb2339d4398.herokuapp.com/v1/patient/payment/initialize",
+        {
+          order_id: orderId, // Use the order_id from localStorage
+          email: user.email,
+          discount_code: user.discount_code,
+        }
+      );
+
+      if (response.data?.data?.authorization_url) {
+        window.location.href = response.data.data.authorization_url;
+      } else {
+        throw new Error("Missing payment URL");
+      }
+    } catch (error) {
+      console.error("Payment error:", error);
+      setPageNumber(9); // Show error page
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
       {pageNumber === 1 && (
-        <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
+        <div className="max-w-m mx-5 md:mx-auto mt-[172px] md:mt-[40px]">
           <p className="mt-[32px] md:mt-[208px] leading-8 text-center md:text-[28px] md:leading-[30px] mb-4 md:mb-9 text-[22px] font-bold text-[#5355AC]">
             We are creating your treatment option
           </p>
@@ -290,7 +285,7 @@ const Form = () => {
       {pageNumber === 2 && (
         <div className="pb-24">
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center md:text-[28px] md:leading-[30px] mb-3 text-[24px] font-bold text-[#5355AC]">
-          Here&lsquo;s what we recommend
+            Here&lsquo;s what we recommend
           </p>
           <div className=" min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
             <img src={productt.src} alt="" className="" />
@@ -323,9 +318,9 @@ const Form = () => {
       {pageNumber === 3 && (
         <div>
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-3 md:mb-8 text-[24px] font-bold text-[#5355AC]">
-          {product.type === "Test" 
-        ? "Where do you want your test sample picked up?" 
-        : "Where do you want it delivered?"}
+            {product.type === "Test"
+              ? "Where do you want your test sample picked up?"
+              : "Where do you want it delivered?"}
           </p>
 
           <form onSubmit={addAddress}>
@@ -514,7 +509,7 @@ const Form = () => {
                         discountPrice +
                         product.delivery_fee
                       ).toLocaleString()}
-                </p>    
+                </p>
               </div>
             </div>
           </div>
