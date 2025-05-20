@@ -24,7 +24,8 @@ const SkeenButton = styled(Button)({
 });
 
 const Hero = () => {
-  return (<div className="px-5 md:px-[125px]">
+  return (
+    <div className="px-5 md:px-[125px]">
       <div className="container mx-auto pb-[90px] md:pb-20 flex flex-col md:flex-row md:justify-between">
         <div className=" md:max-w-[511px] pt-[42px] md:pb-0 md:pt-[117px]">
           <p className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px]">
@@ -35,7 +36,7 @@ const Hero = () => {
             online by licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <Link href="/start?condition=premature-ejaculation">
+            <Link href="/sign-up?condition=premature-ejaculation">
               <SkeenButton className="text-sm md:text-base md:leading-5 font-medium">
                 Get started now
               </SkeenButton>
@@ -46,7 +47,7 @@ const Hero = () => {
           <img src={hero.src} alt="hero" className="md:w-[460px]" />
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

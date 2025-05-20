@@ -35,7 +35,7 @@ const EdShop = () => {
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
               Take one pill 30 mins before game time and you’ll be ready
               </p>
-              <CenterButton title="Get started" href="/start" />
+              <CenterButton title="Get started" href="/sign-up?condition=erectile-dysfunction" />
             </div>
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
               <div className="flex justify-end">
@@ -54,7 +54,7 @@ const EdShop = () => {
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
               Identify the root cause of ED with an easy-to-use at-home blood test
               </p>
-              <CenterButton title="Get started" href="/start" />
+              <CenterButton title="Get started" href="/sign-up?condition=erectile-dysfunction" />
             </div>
             <div className="flex-shrink-0 w-[0.1px] md:mr-[-30px]"></div>
           </div>

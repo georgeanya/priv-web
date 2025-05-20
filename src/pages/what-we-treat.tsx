@@ -29,7 +29,7 @@ const Start = () => {
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://privhealth.co/start" property="og:url" />
+        <meta content="https://privhealth.co/sign-up" property="og:url" />
         <meta content="Get started - Priv Health" property="og:title" />
         <meta
           content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
@@ -73,7 +73,7 @@ const Start = () => {
           content="An image of the Priv health logo"
         />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
-        <link href="https://privhealth.co/start" rel="canonical" />
+        <link href="https://privhealth.co/sign-up" rel="canonical" />
         <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link

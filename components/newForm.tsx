@@ -94,7 +94,7 @@ const Form = () => {
         return 'https://forms.careforms.io/forms/r1lqdk8gvebzmtc';
       case 'low-testosterone':
         return 'https://forms.careforms.io/forms/wcbxbutsw554l3j';
-      case 'sti':
+      case 'sti-treatment':
         return 'https://forms.careforms.io/forms/1qi9c16bctoxpz4';
       default:
         return 'https://forms.careforms.io/forms/qmxssi136hd7hdm';

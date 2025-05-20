@@ -34,7 +34,7 @@ const EdShop = () => {
                 Apply 20 minutes before for enhanced endurance and sensation
                 control
               </p>
-              <CenterButton title="Get started" href="/start" />
+              <CenterButton title="Get started" href="/sign-up?condition=premature-ejaculation" />
             </div>
             <div className="md:w-[350px] min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px]  md:pt-[30px] rounded-2xl">
               <div className="flex justify-between">
@@ -53,7 +53,7 @@ const EdShop = () => {
               <p className="mb-[24px] text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
               Take one pill daily for longer-lasting moments of intimacy
               </p>
-              <CenterButton title="Get started" href="/start" />
+              <CenterButton title="Get started" href="/sign-up?condition=premature-ejaculation" />
             </div>
             <div className="flex-shrink-0 w-[0.1px] md:mr-[-30px]"></div>
           </div>

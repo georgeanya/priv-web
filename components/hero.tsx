@@ -13,11 +13,9 @@ import consultation from "../public/assets/consultation.png";
 import supplements from "../public/assets/supplements.png";
 import CustomButton from "./mainButton";
 
-
-
 const Hero = () => {
   return (
-    <div className="pl-5 md:pl-32" >
+    <div className="pl-5 md:pl-32">
       <div className="mb-[60px] md:mb-0 md:pb-20">
         <div className=" pt-15 md:pt-[70px]  flex flex-col">
           <div className="md:max-w-md lg:max-w-1xl md:pb-0">
@@ -134,12 +132,12 @@ const Hero = () => {
                   className=" md:w-full rounded-t-lg "
                 />
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/start">
+                  <Link href="/sign-up?condition=doctor-consultation">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
                       Mental health
                     </p>
                   </Link>
-                  <Link href="/start">
+                  <Link href="/sign-up?condition=doctor-consultation">
                     <img
                       src={arrow.src}
                       alt="arrow"
@@ -176,12 +174,12 @@ const Hero = () => {
                   className=" md:w-full rounded-t-lg "
                 />
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/start">
+                  <Link href="/sign-up?condition=doctor-consultation">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
                       Doctor consultation
                     </p>
                   </Link>
-                  <Link href="/start">
+                  <Link href="/sign-up?condition=doctor-consultation">
                     <img
                       src={arrow.src}
                       alt="arrow"
@@ -216,7 +214,7 @@ const Hero = () => {
           </div>
         </div>
         <div className=" text-sm md:text-base font-medium mt-[32px] md:hidden ">
-          <CustomButton title="Find my treatment" href="/what-we-treat"/>
+          <CustomButton title="Find my treatment" href="/what-we-treat" />
         </div>
       </div>
     </div>

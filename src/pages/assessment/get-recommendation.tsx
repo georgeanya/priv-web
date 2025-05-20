@@ -29,7 +29,7 @@ const Start = () => {
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="en_US" property="og:locale" />
         <meta content="website" property="og:type" />
-        <meta content="https://privhealth.co/start" property="og:url" />
+        <meta content="https://privhealth.co/sign-up" property="og:url" />
         <meta content="Get started - Priv Health" property="og:title" />
         <meta
           content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
@@ -57,10 +57,7 @@ const Start = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta
-          name="twitter:title"
-          content="Get started - Priv Health"
-        />
+        <meta name="twitter:title" content="Get started - Priv Health" />
         <meta
           name="twitter:description"
           content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
@@ -76,7 +73,7 @@ const Start = () => {
           content="An image of the Priv health logo"
         />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
-        <link href="https://privhealth.co/start" rel="canonical" />
+        <link href="https://privhealth.co/sign-up" rel="canonical" />
         <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link

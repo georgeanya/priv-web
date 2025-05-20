@@ -36,7 +36,7 @@ const Hero = () => {
             online by licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <Link href="/start?condition=low-testosterone">
+            <Link href="/sign-up?condition=low-testosterone">
               <SkeenButton className="text-sm md:text-base md:leading-5 font-medium">
                 Get started now
               </SkeenButton>
@@ -47,7 +47,7 @@ const Hero = () => {
           <img src={hero.src} alt="hero" className="md:w-[460px]" />
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

@@ -58,7 +58,7 @@ const Ed = () => {
             Facts about premature ejaculation
           </p>
           <div className="mt-8 md:mt-9 hidden md:block">
-            <CustomButton title="Get treatment now" href="/start" />
+            <CustomButton title="Get treatment now" href="/sign-up?condition=premature-ejaculation" />
           </div>
         </div>
         <div className="md:w-[730px] mt-[60px] md:mt-0">
@@ -68,7 +68,7 @@ const Ed = () => {
           {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
         </div>
         <div className="mt-8 md:mt-9 md:hidden">
-        <CustomButton title="Get treatment now" href="/start" />
+        <CustomButton title="Get treatment now" href="/sign-up?condition=premature-ejaculation" />
         </div>
       </div>
     </div>

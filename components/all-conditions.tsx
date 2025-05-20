@@ -23,15 +23,15 @@ const StartSuccess = () => {
   return (
     <div className="max-w-[400px] mx-5 sm:mx-auto mt-[25px] md:mt-10">
       <p className="leading-tight md:text-[28px] text-2xl font-bold text-[#5355AC] text-center">
-      What can we help you with?
+        What can we help you with?
       </p>
       <p className="leading-[22px] text-[16px] md:text-[18px] text-2xl md:mt-3  text-[#111111] text-center">
-      Select a condition to get started
+        Select a condition to get started
       </p>
       <Link title="Erectile dysfunction" href="/ed">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[35px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Erectile dysfunction
+            Erectile dysfunction
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
@@ -39,7 +39,7 @@ const StartSuccess = () => {
       <Link title="Premature ejaculation" href="/premature-ejaculation">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Premature ejaculation
+            Premature ejaculation
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
@@ -47,15 +47,18 @@ const StartSuccess = () => {
       <Link title="Low testosterone" href="/low-testosterone">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Low testosterone
+            Low testosterone
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Men's health tests" href="https://privhealth.bumpa.shop/browse/Lab%20tests">
+      <Link
+        title="Men's health tests"
+        href="https://privhealth.bumpa.shop/browse/Lab%20tests"
+      >
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Men’s health tests
+            Men’s health tests
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
@@ -63,7 +66,7 @@ const StartSuccess = () => {
       <Link title="STI treatment" href="/stis">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          STI treatment
+            STI treatment
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
@@ -71,31 +74,37 @@ const StartSuccess = () => {
       <Link title="Hair loss" href="/hair-loss">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Hair loss
+            Hair loss
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Mental health" href="/start?condition=mental-health">
+      <Link title="Mental health" href="/sign-up?condition=mental-health">
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Mental health
+            Mental health
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Doctor consultation" href="/start?condition=doctor-consultation">
+      <Link
+        title="Doctor consultation"
+        href="/sign-up?condition=doctor-consultation"
+      >
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Doctor consultation
+            Doctor consultation
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
       </Link>
-      <Link title="Supplements" href="https://privhealth.bumpa.shop/browse/Supplements">
+      <Link
+        title="Supplements"
+        href="https://privhealth.bumpa.shop/browse/Supplements"
+      >
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[52px] md:mb-[96px] flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">
-          Supplements
+            Supplements
           </p>
           <Image src={whitearrow} alt="" className="w-[30px] md:w-[38px]" />
         </div>
