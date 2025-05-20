@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import circle from "../../public/assets/circlee.png";
+import circle from "../../public/assets/circlee.svg";
 import favicon from "../../public/assets/favicon.png";
 import Navbar3 from "../../components/navbar1";
 import CenterButton from "../../components/centerButton";
