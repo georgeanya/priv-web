@@ -151,28 +151,32 @@ const Form = () => {
 
   const purchaseProduct = async () => {
     setIsLoading(true);
-  
+
     // 1. Guard clause: Validate critical data
     if (!product?.id) {
       console.error("Missing product ID. Current product:", product);
       setIsLoading(false);
       return;
     }
-  
-    const currentPatientId = user.patient_id || localStorage.getItem("patient_id");
+
+    const currentPatientId =
+      user.patient_id || localStorage.getItem("patient_id");
     const productIds = [product.id]; // Now safe
-  
+
     try {
       // 2. Log validated payload
-      console.log("Validated payload:", { product_ids: productIds, patient_id: currentPatientId });
-  
+      console.log("Validated payload:", {
+        product_ids: productIds,
+        patient_id: currentPatientId,
+      });
+
       // 3. API call
       const response = await axios.post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase",
         { product_ids: productIds, patient_id: currentPatientId },
         { headers: { "Content-Type": "application/json" } }
       );
-  
+
       // 4. Handle response
       if (response.data.message === "order created successfully") {
         const orderId = response.data.data.order_id;
@@ -234,41 +238,66 @@ const Form = () => {
       .catch((error) => {});
   };
 
-  const initializePayment = async (event: React.FormEvent<HTMLFormElement>) => {
+  const initializePayment = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
     setIsLoading(true);
 
-    // Get order_id from localStorage if not in state
     const orderId = user.order_id || localStorage.getItem("order_id");
-    console.log(orderId);
-    if (!orderId) {
-      console.error("No order_id found in localStorage or state!");
-      setIsLoading(false);
-      return;
-    }
-
-    try {
-      const response = await axios.post(
-        "https://priv-health-api-ceb2339d4398.herokuapp.com/v1/patient/payment/initialize",
+    console.log("clicked");
+    axios
+      .post(
+        "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/payment/initialize",
         {
-          order_id: orderId, // Use the order_id from localStorage
+          order_id: orderId,
           email: user.email,
           discount_code: user.discount_code,
         }
-      );
-
-      if (response.data?.data?.authorization_url) {
-        window.location.href = response.data.data.authorization_url;
-      } else {
-        throw new Error("Missing payment URL");
-      }
-    } catch (error) {
-      console.error("Payment error:", error);
-      setPageNumber(9); // Show error page
-    } finally {
-      setIsLoading(false);
-    }
+      )
+      .then((res) => {
+        if (res.data.message === "payment initialized successfully") {
+          window.location.href = res.data.data.data.authorization_url;
+        } else {
+          throw new Error(res.data.message || "Payment initialization failed");
+        }
+        
+      })
+      .catch((error) => {
+        setPageNumber(11);
+      })
+      .finally(() => setIsLoading(false));
   };
+
+  // const initializePaymen = async (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   setIsLoading(true);
+
+  //   const orderId = user.order_id || localStorage.getItem("order_id");
+  //   console.log('clicked')
+
+  //   try {
+  //     const response = await axios.post(
+
+  //       "https://priv-health-api-ceb2339d4398.herokuapp.com/v1/patient/payment/initialize",
+  //       {
+  //         order_id: orderId,
+  //         email: user.email,
+  //         discount_code: user.discount_code,
+  //       }
+  //     );
+  //     console.log(response.data.data.authorization_url)
+  //     if (response.data?.data?.authorization_url) {
+  //       console.log(response.data.data.authorization_url)
+  //       window.location.href = response.data.data.authorization_url;
+  //     } else {
+  //       throw new Error("Missing payment URL");
+  //     }
+  //   } catch (error) {
+  //     console.error("Payment error:", error);
+  //     setPageNumber(11); // Show error page
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
