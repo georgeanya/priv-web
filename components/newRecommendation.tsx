@@ -8,7 +8,7 @@ import { Input } from "@heroui/input";
 import { DatePicker } from "@heroui/date-picker";
 import productt from "../public/assets/products.png";
 import products from "../public/assets/productt.png";
-import circle from "../public/assets/circle.png";
+import circle from "../public/assets/circle.svg";
 import stars from "../public/assets/stars.svg";
 import {
   DateValue,
