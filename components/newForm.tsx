@@ -229,7 +229,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#111111] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
@@ -239,7 +239,7 @@ const Form = () => {
               />
             </div>
 
-            <div className="bg-[#EEF3F6] p-4 mt-8 md:mt-10 mb-6 rounded-lg">
+            <div className="bg-[##F5F5F5] p-4 mt-8 md:mt-10 mb-6 rounded-lg">
               <p className="text-[#111111] text-[13px] leading-[19px] md:text-sm">
                 By filling out this form, you agree to Priv Health&lsquo;s
                 <a
@@ -298,7 +298,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#111111] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
@@ -318,7 +318,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#111111] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
@@ -361,7 +361,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#111111] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}

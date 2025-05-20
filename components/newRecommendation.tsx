@@ -365,7 +365,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
@@ -386,7 +386,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
@@ -407,7 +407,7 @@ const Form = () => {
                 classNames={{
                   label:
                     "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#5355AC]",
+                  input: "text-[#111111]",
                   inputWrapper:
                     "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
                 }}
