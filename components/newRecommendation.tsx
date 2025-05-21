@@ -44,6 +44,7 @@ const Form = () => {
   const [discountPrice, setDiscountPrice] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const syncFromLocalStorage = () => {
@@ -94,12 +95,29 @@ const Form = () => {
 
   useEffect(() => {
     if (pageNumber === 1) {
+      // Reset progress when on page 1
+      setProgress(0);
+
+      // Animate progress bar
+      const interval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 100) {
+            clearInterval(interval);
+            return 100;
+          }
+          return prev + 10;
+        });
+      }, 300);
+
       const timer = setTimeout(() => {
         nextPage();
         console.log(product);
       }, 4000);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearInterval(interval);
+        clearTimeout(timer);
+      };
     }
   }, [pageNumber]);
 
@@ -152,7 +170,6 @@ const Form = () => {
   const purchaseProduct = async () => {
     setIsLoading(true);
 
-    // 1. Guard clause: Validate critical data
     if (!product?.id) {
       console.error("Missing product ID. Current product:", product);
       setIsLoading(false);
@@ -161,28 +178,31 @@ const Form = () => {
 
     const currentPatientId =
       user.patient_id || localStorage.getItem("patient_id");
-    const productIds = [product.id]; // Now safe
+    const productIds = [product.id];
 
     try {
-      // 2. Log validated payload
       console.log("Validated payload:", {
         product_ids: productIds,
         patient_id: currentPatientId,
       });
 
-      // 3. API call
       const response = await axios.post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase",
         { product_ids: productIds, patient_id: currentPatientId },
         { headers: { "Content-Type": "application/json" } }
       );
 
-      // 4. Handle response
       if (response.data.message === "order created successfully") {
         const orderId = response.data.data.order_id;
         localStorage.setItem("order_id", orderId);
         updateFormData({ order_id: orderId });
-        nextPage();
+
+        // Skip address page for Consultation products
+        if (product.type === "consultation") {
+          setPageNumber(4); // Go directly to payment
+        } else {
+          nextPage(); // Go to address page (page 3)
+        }
       }
     } catch (error) {
       console.error("Purchase failed:", error);
@@ -194,7 +214,6 @@ const Form = () => {
 
   const addAddress = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
-    // setIsLoading(true);
     axios
       .post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/purchase/add-address",
@@ -211,7 +230,6 @@ const Form = () => {
           updateProductData({ delivery_fee: res.data.data.delivery_fee });
           console.log("Delivery:", res.data.data.delivery_fee);
           nextPage();
-        } else {
         }
       })
       .catch((error) => {
@@ -221,7 +239,6 @@ const Form = () => {
 
   const discountCode = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
-    // setIsLoading(true);
     axios
       .post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/payment/discount",
@@ -232,7 +249,6 @@ const Form = () => {
       .then((res) => {
         if (res.data.message === "discount code validated successfully") {
           setDiscountPrice(res.data.data.amount);
-        } else {
         }
       })
       .catch((error) => {});
@@ -259,45 +275,12 @@ const Form = () => {
         } else {
           throw new Error(res.data.message || "Payment initialization failed");
         }
-        
       })
       .catch((error) => {
         setPageNumber(11);
       })
       .finally(() => setIsLoading(false));
   };
-
-  // const initializePaymen = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   setIsLoading(true);
-
-  //   const orderId = user.order_id || localStorage.getItem("order_id");
-  //   console.log('clicked')
-
-  //   try {
-  //     const response = await axios.post(
-
-  //       "https://priv-health-api-ceb2339d4398.herokuapp.com/v1/patient/payment/initialize",
-  //       {
-  //         order_id: orderId,
-  //         email: user.email,
-  //         discount_code: user.discount_code,
-  //       }
-  //     );
-  //     console.log(response.data.data.authorization_url)
-  //     if (response.data?.data?.authorization_url) {
-  //       console.log(response.data.data.authorization_url)
-  //       window.location.href = response.data.data.authorization_url;
-  //     } else {
-  //       throw new Error("Missing payment URL");
-  //     }
-  //   } catch (error) {
-  //     console.error("Payment error:", error);
-  //     setPageNumber(11); // Show error page
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
 
   return (
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
@@ -307,17 +290,28 @@ const Form = () => {
             We are creating your treatment option
           </p>
           <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
-            <div className="bg-[#5355AC] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out" />
+            <div
+              className="bg-[#5355AC] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
         </div>
       )}
       {pageNumber === 2 && (
         <div className="pb-24">
-          <p className="mt-[32px] md:mt-[40px] leading-7 text-center md:text-[28px] md:leading-[30px] mb-3 text-[24px] font-bold text-[#5355AC]">
+          <p className="mt-[32px] md:mt-[40px] leading-7 text-center md:text-[28px] md:leading-[30px] mb-3 text-[24px] md:mb-[32px] font-bold text-[#5355AC]">
             Here&lsquo;s what we recommend
           </p>
-          <div className=" min-w-[310px]  bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
-            <img src={productt.src} alt="" className="" />
+          <div className="min-w-[310px] bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
+            {product.image_url ? (
+              <img
+                src={product.image_url}
+                alt={product.name}
+                className="w-full h-auto max-h-[200px] object-contain"
+              />
+            ) : (
+              <img src={productt.src} alt="" className="" />
+            )}
             <p className="text-[20px] leading-[25px] mt-5 md:mt-6 md:text-[24px] md:leading-[30px] font-medium">
               {product.name}
             </p>
@@ -332,24 +326,26 @@ const Form = () => {
               )}
             </div>
             <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-              ₦{product.price.toLocaleString()}
+              ₦{product.price?.toLocaleString() ?? "0"}
             </p>
             <p className="mb-[px] mt-3 text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
               {product.description}
             </p>
           </div>
-          <p className=" px-10 mt-6 mb-10 text-center leading-[17px] text-[13px] md:leading-[20px]">
+          <p className="px-10 mt-6 mb-10 text-center leading-[17px] text-[13px] md:leading-[20px]">
             Got a discount code? You can use it in the payment page
           </p>
-          <CenterButton title="Continue" onClick={purchaseProduct} />
+          {isLoading ? (
+            <CenterButton title="Continue" onClick={purchaseProduct} />
+          ) : (
+            <LoadingButton />
+          )}
         </div>
       )}
-      {pageNumber === 3 && (
+      {pageNumber === 3 && product.type !== "consultation" && (
         <div>
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-3 md:mb-8 text-[24px] font-bold text-[#5355AC]">
-            {product.type === "Test"
-              ? "Where do you want your test sample picked up?"
-              : "Where do you want it delivered?"}
+            Where do you want it delivered?
           </p>
 
           <form onSubmit={addAddress}>
@@ -429,7 +425,19 @@ const Form = () => {
             <div className="px-5 md:px-[30px] ">
               <div className="flex justify-between">
                 <div className="flex">
-                  <img src={products.src} alt="" className="md:w-[60px] mr-4" />
+                  {product.image_url ? (
+                    <img
+                      src={product.image_url}
+                      alt={product.name}
+                      className="md:w-[60px] w-[50px] h-[50px] md:h-[60px] object-contain mr-4"
+                    />
+                  ) : (
+                    <img
+                      src={products.src}
+                      alt=""
+                      className="md:w-[60px] mr-4"
+                    />
+                  )}
                   <div className="mt-2">
                     <p className="text-[16px] font-medium  leading-5 text-[#111111]">
                       {product.name}
@@ -440,7 +448,7 @@ const Form = () => {
                     >
                       {product.type === "Prescription"
                         ? "1 pack"
-                        : product.type === "Consultation"
+                        : product.type === "consultation"
                         ? "1 visit"
                         : product.type === "Test"
                         ? "1 unit"
@@ -450,19 +458,11 @@ const Form = () => {
                 </div>
 
                 <p className="text-[16px]  leading-5 mt-[33px] text-[#111111]">
-                  ₦{product.price.toLocaleString()}
+                  ₦{product.price?.toLocaleString() ?? "0"}
                 </p>
               </div>
               <hr className="mt-[22px] mb-[22px] " />
               <form className="flex " onSubmit={discountCode}>
-                {/* <input
-                  type="text"
-                  name="discount_code"
-                  value={user.discount_code}
-                  onChange={handleChange}
-                  className="border h-[44px] md:h-[50px] border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5"
-                  placeholder="Promo code"
-                /> */}
                 <Input
                   label="Promo code"
                   type="text"
@@ -491,13 +491,13 @@ const Form = () => {
                   Subtotal
                 </p>
                 <p className="text-[16px]  leading-5 text-[#111111]">
-                  ₦{product.price.toLocaleString()}
+                  ₦{product.price?.toLocaleString() ?? "0"}
                 </p>
               </div>
-              {product.type !== "Consultation" && (
+              {product.type !== "consultation" && (
                 <div
                   className="flex justify-between mt-[16px]"
-                  id="consultation"
+                  id="consultatio"
                 >
                   <p className="text-[16px]  leading-5 text-[#111111]">
                     Doctor consultation
@@ -513,13 +513,13 @@ const Form = () => {
                   -₦{discountPrice.toLocaleString()}
                 </p>
               </div>
-              {product.type !== "Consultation" && (
+              {product.type !== "consultation" && (
                 <div className="flex justify-between mt-[16px]" id="delivery">
                   <p className="text-[16px]  leading-5 text-[#111111]">
                     Delivery fee
                   </p>
                   <p className="text-[16px]  leading-5 text-[#111111]">
-                    ₦{product.delivery_fee.toLocaleString()}
+                    ₦{product.delivery_fee?.toLocaleString() ?? "0"}
                   </p>
                 </div>
               )}
@@ -531,12 +531,12 @@ const Form = () => {
                 </p>
                 <p className="text-[18px] font-medium leading-5 text-[#111111]">
                   ₦
-                  {product.type === "Consultation"
+                  {product.type === "consultation"
                     ? (product.price - discountPrice).toLocaleString()
                     : (
                         product.price -
                         discountPrice +
-                        product.delivery_fee
+                        (product.delivery_fee || 0)
                       ).toLocaleString()}
                 </p>
               </div>
