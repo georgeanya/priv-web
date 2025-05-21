@@ -337,7 +337,7 @@ const Form = () => {
     <div className="max-w-m mx-5 md:mx-auto mt-[32px] md:mt-[40px]">
       {pageNumber === 1 && (
         <div className="max-w-m mx-5 md:mx-auto mt-[172px] md:mt-[40px]">
-          <p className="mt-[32px] md:mt-[208px] leading-8 text-center md:text-[28px] md:leading-[30px] mb-4 md:mb-9 text-[22px] font-bold text-[#5355AC]">
+          <p className="mt-[32px] md:mt-[208px] leading-6 text-center md:text-[28px] md:leading-[30px] mb-[32px] md:mb-9 text-[22px] font-bold text-[#5355AC]">
             We are creating your treatment option
           </p>
           <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
@@ -367,7 +367,7 @@ const Form = () => {
               {product.name}
             </p>
             <div className="flex mt-3 mb-4">
-              <img src={stars.src} alt="" className="" />
+              <img src={stars.src} alt="" className="w-[106px] md:w-[124px]" />
               {product.type === "Prescription" && (
                 <div className="pl-5" id="prescription">
                   <p className="text-[#5355AC] bg-[#EDEFF7] rounded-[15px] px-3 py-1 text-xs md:text-sm leading-[17px]">
@@ -499,11 +499,11 @@ const Form = () => {
                     />
                   )}
                   <div className="mt-2">
-                    <p className="text-[16px] font-medium  leading-5 text-[#111111]">
+                    <p className="text-[14px] md:text-[16px] font-medium  leading-5 text-[#111111]">
                       {product.name}
                     </p>
                     <p
-                      className="text-[16px] leading-5 text-[#111111] mt-[5px]"
+                      className="text-[14px] md:text-[16px] leading-5 text-[#111111] mt-[5px]"
                       id="unit"
                     >
                       {product.type === "Prescription"
@@ -517,7 +517,7 @@ const Form = () => {
                   </div>
                 </div>
 
-                <p className="text-[16px]  leading-5 mt-[33px] text-[#111111]">
+                <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 mt-[33px] text-[#111111]">
                   ₦{product.price?.toLocaleString() ?? "0"}
                 </p>
               </div>
@@ -547,10 +547,10 @@ const Form = () => {
               </form>
               <hr className="mt-[24px] mb-[24px]" />
               <div className="flex justify-between">
-                <p className="text-[16px]  leading-5 text-[#111111]">
+                <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#111111]">
                   Subtotal
                 </p>
-                <p className="text-[16px]  leading-5 text-[#111111]">
+                <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#111111]">
                   ₦{product.price?.toLocaleString() ?? "0"}
                 </p>
               </div>
@@ -559,26 +559,26 @@ const Form = () => {
                   className="flex justify-between mt-[16px]"
                   id="consultatio"
                 >
-                  <p className="text-[16px]  leading-5 text-[#111111]">
+                  <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#111111]">
                     Doctor consultation
                   </p>
-                  <p className="text-[16px]  leading-5 text-[#5355AC]">FREE</p>
+                  <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#5355AC]">FREE</p>
                 </div>
               )}
               <div className="flex justify-between mt-[16px]">
-                <p className="text-[16px]  leading-5 text-[#111111]">
+                <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#111111]">
                   Promo discount
                 </p>
-                <p className="text-[16px]  leading-5 text-[#111111]">
+                <p className="text-[14px] md:text-[16px]  leading-4 md:leading-5 text-[#111111]">
                   -₦{discountPrice.toLocaleString()}
                 </p>
               </div>
               {product.type !== "consultation" && (
             <div className="flex justify-between mt-[16px]" id="delivery">
-              <p className="text-[16px] leading-5 text-[#111111]">
+              <p className="text-[14px] md:text-[16px] leading-4 md:leading-5 text-[#111111]">
                 {product.type === "lab test" ? "Sample Pickup" : "Delivery fee"}
               </p>
-              <p className="text-[16px] leading-5 text-[#111111]">
+              <p className="text-[14px] md:text-[16px] leading-4 md:leading-5 text-[#111111]">
                 ₦{product.delivery_fee?.toLocaleString() ?? "0"}
               </p>
             </div>
@@ -586,10 +586,10 @@ const Form = () => {
 
               <hr className="mt-[22px] mb-[22px] " />
               <div className="flex justify-between mt-1.5">
-                <p className="text-[18px] font-medium leading-5 text-[#111111]">
+                <p className="text-[16px] md:text-[18px] font-medium leading-5 text-[#111111]">
                   Total
                 </p>
-                <p className="text-[18px] font-medium leading-5 text-[#111111]">
+                <p className="text-[16px] md:text-[18px] font-medium leading-5 text-[#111111]">
                   ₦
                   {product.type === "consultation"
                     ? (product.price - discountPrice).toLocaleString()
