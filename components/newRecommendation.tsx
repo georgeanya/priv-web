@@ -95,26 +95,31 @@ const Form = () => {
   }, [pageNumber, user.session_id]);
 
   useEffect(() => {
-    if (pageNumber === 1) {
-      // Reset progress when on page 1
-      setProgress(0);
+    const storedProduct = localStorage.getItem("product");
+    if (storedProduct) {
+      updateProductData(JSON.parse(storedProduct));
+    }
+  }, []);
 
-      // Animate progress bar
+  useEffect(() => {
+    if (pageNumber === 1) {
+      setProgress(0);
+  
       const interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
             clearInterval(interval);
             return 100;
           }
-          return prev + 10;
+          return prev + 1; 
         });
-      }, 300);
-
+      }, 100); 
+  
       const timer = setTimeout(() => {
         nextPage();
         console.log(product);
-      }, 7000);
-
+      }, 10000); 
+  
       return () => {
         clearInterval(interval);
         clearTimeout(timer);
@@ -178,7 +183,7 @@ const Form = () => {
   const getRecommendation = () => {
     const currentSessionId =
       user.session_id || localStorage.getItem("session_id");
-
+  
     axios
       .post(
         "https://priv-health-api-ceb2339d4498.herokuapp.com/v1/patient/intake/recommendaion",
@@ -188,15 +193,17 @@ const Form = () => {
       )
       .then((res) => {
         if (res.data.message === "recommendation fetched successfully") {
-          updateProductData({
+          const productData = {
             id: res.data.data.product._id,
             name: res.data.data.product.name,
             description: res.data.data.product.description,
             price: res.data.data.product.price,
-            type: res.data.data.product.type,
+            type: res.data.data.product.type.toLowerCase(), // Ensure consistent case
             image_url: res.data.data.product.image_url,
-          });
-          localStorage.setItem("type", res.data.data.product.type);
+          };
+          updateProductData(productData);
+          localStorage.setItem("type", productData.type);
+          localStorage.setItem("product", JSON.stringify(productData)); // Store full product data
         }
         if (res.data.message === "this patient is not eligible") {
           setPageNumber(10);
@@ -503,7 +510,7 @@ const Form = () => {
                         ? "1 pack"
                         : product.type === "consultation"
                         ? "1 visit"
-                        : product.type === "test"
+                        : product.type === "Test"
                         ? "1 unit"
                         : "1 item"}
                     </p>
@@ -569,7 +576,7 @@ const Form = () => {
               {product.type !== "consultation" && (
             <div className="flex justify-between mt-[16px]" id="delivery">
               <p className="text-[16px] leading-5 text-[#111111]">
-                {product.type === "test" ? "Sample Pickup" : "Delivery fee"}
+                {product.type === "Test" ? "Sample Pickup" : "Delivery fee"}
               </p>
               <p className="text-[16px] leading-5 text-[#111111]">
                 ₦{product.delivery_fee?.toLocaleString() ?? "0"}
