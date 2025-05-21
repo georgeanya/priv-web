@@ -474,7 +474,7 @@ const Form = () => {
           <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[28px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#5355AC]">
             Payment time!
           </h1>
-          <div className="border rounded-2xl py-[24px] ">
+          <div className="shadow-md rounded-2xl py-[24px] ">
             <div className="px-5 md:px-[30px] ">
               <div className="flex justify-between">
                 <div className="flex">
@@ -482,7 +482,7 @@ const Form = () => {
                     <img
                       src={product.image_url}
                       alt={product.name}
-                      className="md:w-[60px] w-[50px] h-[50px] md:h-[60px] object-cover mr-4"
+                      className="md:w-[60px] w-[50px] h-[50px] md:h-[60px] object-cover mr-4 rounded-md"
                     />
                   ) : (
                     <img
@@ -496,7 +496,7 @@ const Form = () => {
                       {product.name}
                     </p>
                     <p
-                      className="text-[16px] leading-5 text-[#111111]"
+                      className="text-[16px] leading-5 text-[#111111] mt-[5px]"
                       id="unit"
                     >
                       {product.type === "Prescription"
@@ -595,7 +595,7 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#EEF3F6] px-5 py-[15px] mt-8 md:mt-10 mb-6 rounded-lg">
+          <div className="bg-[#F5F5F5] px-5 py-[15px] mt-8 md:mt-10 mb-6 rounded-lg">
             <p className="text-[#61616B] text-[13px] leading-[18px]">
               After checkout you will have a consultation with our doctor for
               final approval. No need to sweat it. Most men are approved for
