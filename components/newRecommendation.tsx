@@ -43,7 +43,7 @@ const Form = () => {
   const product = formData.product;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(3);
+  const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -113,7 +113,7 @@ const Form = () => {
       const timer = setTimeout(() => {
         nextPage();
         console.log(product);
-      }, 4000);
+      }, 7000);
 
       return () => {
         clearInterval(interval);
