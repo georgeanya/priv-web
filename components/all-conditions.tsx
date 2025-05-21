@@ -54,7 +54,7 @@ const StartSuccess = () => {
       </Link>
       <Link
         title="Men's health tests"
-        href="https://privhealth.bumpa.shop/browse/Lab%20tests"
+        href="https://paystack.shop/priv-health"
       >
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">

@@ -379,7 +379,7 @@ const Form = () => {
             <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
               ₦{product.price?.toLocaleString() ?? "0"}
             </p>
-            <p className="mb-[px] mt-3 text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[20px]">
+            <p className="mb-[px] mt-3 text-[#61616B] text-sm leading-[18px] md:text-[16px] md:leading-[21px]">
               {product.description}
             </p>
           </div>
