@@ -525,7 +525,7 @@ const Form = () => {
                   size="sm"
                   classNames={{
                     label:
-                      "text-[#5355AC] group-data-[filled=true]:text-[#5355AC]",
+                      "text-[#111111] group-data-[filled=true]:text-[#111111]",
                     input: "text-[#111111]",
                     inputWrapper:
                       "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#111111]",
