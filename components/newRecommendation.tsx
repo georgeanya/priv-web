@@ -525,7 +525,7 @@ const Form = () => {
                   size="sm"
                   classNames={{
                     label:
-                      "text-[#476D85] group-data-[filled=true]:text-[#476D85]",
+                      "text-[#5355AC] group-data-[filled=true]:text-[#5355AC]",
                     input: "text-[#111111]",
                     inputWrapper:
                       "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#111111]",
@@ -567,15 +567,15 @@ const Form = () => {
                 </p>
               </div>
               {product.type !== "consultation" && (
-                <div className="flex justify-between mt-[16px]" id="delivery">
-                  <p className="text-[16px]  leading-5 text-[#111111]">
-                    Delivery fee
-                  </p>
-                  <p className="text-[16px]  leading-5 text-[#111111]">
-                    ₦{product.delivery_fee?.toLocaleString() ?? "0"}
-                  </p>
-                </div>
-              )}
+            <div className="flex justify-between mt-[16px]" id="delivery">
+              <p className="text-[16px] leading-5 text-[#111111]">
+                {product.type === "Test" ? "Sample Pickup" : "Delivery fee"}
+              </p>
+              <p className="text-[16px] leading-5 text-[#111111]">
+                ₦{product.delivery_fee?.toLocaleString() ?? "0"}
+              </p>
+            </div>
+          )}
 
               <hr className="mt-[22px] mb-[22px] " />
               <div className="flex justify-between mt-1.5">
