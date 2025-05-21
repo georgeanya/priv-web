@@ -87,20 +87,19 @@ const Form = () => {
   ];
 
   const getFormUrl = (condition: string) => {
-    switch(condition) {
-      case 'erectile-dysfunction':
-        return 'https://forms.careforms.io/forms/uwy6gqyj4p23mre';
-      case 'premature-ejaculation':
-        return 'https://forms.careforms.io/forms/r1lqdk8gvebzmtc';
-      case 'low-testosterone':
-        return 'https://forms.careforms.io/forms/wcbxbutsw554l3j';
-      case 'sti-treatment':
-        return 'https://forms.careforms.io/forms/1qi9c16bctoxpz4';
+    switch (condition) {
+      case "erectile-dysfunction":
+        return "https://forms.careforms.io/forms/uwy6gqyj4p23mre";
+      case "premature-ejaculation":
+        return "https://forms.careforms.io/forms/r1lqdk8gvebzmtc";
+      case "low-testosterone":
+        return "https://forms.careforms.io/forms/wcbxbutsw554l3j";
+      case "sti-treatment":
+        return "https://forms.careforms.io/forms/1qi9c16bctoxpz4";
       default:
-        return 'https://forms.careforms.io/forms/qmxssi136hd7hdm';
-      
-      }
-    };
+        return "https://forms.careforms.io/forms/qmxssi136hd7hdm";
+    }
+  };
 
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
     event.preventDefault();
@@ -239,9 +238,9 @@ const Form = () => {
               />
             </div>
 
-            <div className="bg-[##F5F5F5] p-4 mt-8 md:mt-10 mb-6 rounded-lg">
+            <div className="bg-[#F5F5F5] p-4 mt-8 md:mt-10 mb-6 rounded-lg">
               <p className="text-[#111111] text-[13px] leading-[19px] md:text-sm">
-                By filling out this form, you agree to Priv Health&lsquo;s
+                By filling out this form, you agree to Priv Health&lsquo;s{" "}
                 <a
                   className="text-[#5355AC] underline font-medium"
                   href="https://lifebox-labs.notion.site/Terms-of-use-1dc563d01e574d108fdc23f4c51d2ee1"
@@ -393,22 +392,25 @@ const Form = () => {
           </p>
 
           <form onSubmit={completeProfile}>
-          <div className="mb-[40px]">
-        <Select
-          className="w-full"
-          label="Select an option"
-          selectedKeys={user.source ? [user.source] : []}
-          onChange={(e: any) => updateFormData({ source: e.target.value })}
-          classNames={{
-            label: "text-[#111111] group-data-[filled=true]:hidden",
-            trigger: "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-          }}
-        >
-          {referralSources.map((source) => (
-            <SelectItem key={source.key}>{source.label}</SelectItem>
-          ))}
-        </Select>
-      </div>
+            <div className="mb-[40px]">
+              <Select
+                className="w-full"
+                label="Select an option"
+                selectedKeys={user.source ? [user.source] : []}
+                onChange={(e: any) =>
+                  updateFormData({ source: e.target.value })
+                }
+                classNames={{
+                  label: "text-[#111111] group-data-[filled=true]:hidden",
+                  trigger:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+              >
+                {referralSources.map((source) => (
+                  <SelectItem key={source.key}>{source.label}</SelectItem>
+                ))}
+              </Select>
+            </div>
             <div className="mb-16">
               {isLoading ? (
                 <CenterButton title="Continue" type="submit" />
@@ -442,11 +444,11 @@ const Form = () => {
       {pageNumber === 6 && (
         <div className="relative h-[calc(100vh-150px)] md:h-[calc(100vh-130px)] w-full overflow-hidden">
           <iframe
-      src={`${getFormUrl(user.condition)}?session_id=${
-        user.session_id
-      }&user_email=${formatEmail(user.email)}`}
-      className="absolute top-[-100px] left-0 w-full h-[calc(100%+50px)] md:h-[calc(100%+100px)] border-none"
-    ></iframe>
+            src={`${getFormUrl(user.condition)}?session_id=${
+              user.session_id
+            }&user_email=${formatEmail(user.email)}`}
+            className="absolute top-[-100px] left-0 w-full h-[calc(100%+50px)] md:h-[calc(100%+100px)] border-none"
+          ></iframe>
         </div>
       )}
 
