@@ -300,7 +300,7 @@ const Form = () => {
       {pageNumber === 2 && (
         <div className="pb-24">
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center md:text-[28px] md:leading-[30px] mb-3 text-[24px] md:mb-[32px] font-bold text-[#5355AC]">
-            Here&lsquo;s what we recommend
+            Here&apos;s what we recommen'd
           </p>
           <div className="min-w-[310px] bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
             {product.image_url ? (
@@ -547,7 +547,7 @@ const Form = () => {
               After checkout you will have a consultation with our doctor for
               final approval. No need to sweat it. Most men are approved for
               treatment, but rest assured that vou will be refunded it vou
-              aren&lsquo;t.
+              aren&apos;t.
             </p>
           </div>
           <form onSubmit={initializePayment}>
