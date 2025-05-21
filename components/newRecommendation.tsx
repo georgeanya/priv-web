@@ -396,7 +396,7 @@ const Form = () => {
       {pageNumber === 3 && product.type !== "consultation" && (
         <div>
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-8 text-[24px] font-bold text-[#5355AC]">
-            Where do you want it delivered?
+            {product.type === "lab test" ? "Where do you want your test sample picked up?" : "Where do you want it delivered?"}
           </p>
 
           <form onSubmit={addAddress}>
@@ -510,7 +510,7 @@ const Form = () => {
                         ? "1 pack"
                         : product.type === "consultation"
                         ? "1 visit"
-                        : product.type === "Test"
+                        : product.type === "lab test"
                         ? "1 unit"
                         : "1 item"}
                     </p>
@@ -576,7 +576,7 @@ const Form = () => {
               {product.type !== "consultation" && (
             <div className="flex justify-between mt-[16px]" id="delivery">
               <p className="text-[16px] leading-5 text-[#111111]">
-                {product.type === "Test" ? "Sample Pickup" : "Delivery fee"}
+                {product.type === "lab test" ? "Sample Pickup" : "Delivery fee"}
               </p>
               <p className="text-[16px] leading-5 text-[#111111]">
                 ₦{product.delivery_fee?.toLocaleString() ?? "0"}
