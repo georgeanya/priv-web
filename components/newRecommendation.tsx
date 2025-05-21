@@ -433,7 +433,7 @@ const Form = () => {
                 required
               />
             </div>
-            <div className="mb-[15px]">
+            <div className="mb-[40px]">
               <Select
                 label="State"
                 name="state"
