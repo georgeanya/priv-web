@@ -300,7 +300,7 @@ const Form = () => {
       {pageNumber === 2 && (
         <div className="pb-24">
           <p className="mt-[32px] md:mt-[40px] leading-7 text-center md:text-[28px] md:leading-[30px] mb-3 text-[24px] md:mb-[32px] font-bold text-[#5355AC]">
-            Here&apos;s what we recommen'd
+            Here&apos;s what we recommend
           </p>
           <div className="min-w-[310px] bg-white md:px-[24px] px-5 md:pb-8 py-[28px] shadow-lg md:pt-[30px] rounded-2xl">
             {product.image_url ? (
