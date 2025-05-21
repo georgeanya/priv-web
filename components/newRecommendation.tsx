@@ -396,27 +396,6 @@ const Form = () => {
             <div className="mb-[15px]">
               <Input
                 type="text"
-                name="city"
-                label="City"
-                variant="bordered"
-                value={user.city}
-                onChange={handleChange}
-                size="md"
-                classNames={{
-                  label:
-                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#111111]",
-                  inputWrapper:
-                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-                }}
-                placeholder=""
-                required
-              />
-            </div>
-
-            <div className="mb-[15px]">
-              <Input
-                type="text"
                 name="address"
                 label="Street"
                 variant="bordered"
@@ -434,7 +413,26 @@ const Form = () => {
                 required
               />
             </div>
-
+            <div className="mb-[15px]">
+              <Input
+                type="text"
+                name="city"
+                label="City"
+                variant="bordered"
+                value={user.city}
+                onChange={handleChange}
+                size="md"
+                classNames={{
+                  label:
+                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
+                  input: "text-[#111111]",
+                  inputWrapper:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+                placeholder=""
+                required
+              />
+            </div>
             <div className="mb-[15px]">
               <Select
                 label="State"
