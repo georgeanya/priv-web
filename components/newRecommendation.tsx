@@ -19,6 +19,7 @@ import { Select, SelectSection, SelectItem } from "@heroui/select";
 import CenterButton from "./centerButton";
 import LoadingButton from "./loadingButton";
 import { useFormData } from "./FormDataContext";
+import Link from "next/link";
 
 const PrivWhiteButton = styled(Button)({
   background: "white !important",
@@ -42,7 +43,7 @@ const Form = () => {
   const product = formData.product;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(3);
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -134,6 +135,46 @@ const Form = () => {
     setPageNumber(1);
   };
 
+  const nigerianStates = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "FCT - Abuja",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+  ];
+
   const getRecommendation = () => {
     const currentSessionId =
       user.session_id || localStorage.getItem("session_id");
@@ -156,6 +197,9 @@ const Form = () => {
             image_url: res.data.data.product.image_url,
           });
           localStorage.setItem("type", res.data.data.product.type);
+        }
+        if (res.data.message === "this patient is not eligible") {
+          setPageNumber(10);
         }
       })
       .catch((error) => {
@@ -373,27 +417,6 @@ const Form = () => {
             <div className="mb-[15px]">
               <Input
                 type="text"
-                name="state"
-                label="State"
-                variant="bordered"
-                value={user.state}
-                onChange={handleChange}
-                size="md"
-                classNames={{
-                  label:
-                    "text-[#61616B] group-data-[filled=true]:text-[#111111]",
-                  input: "text-[#111111]",
-                  inputWrapper:
-                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
-                }}
-                placeholder=""
-                required
-              />
-            </div>
-
-            <div className="mb-[15px]">
-              <Input
-                type="text"
                 name="address"
                 label="Street"
                 variant="bordered"
@@ -410,6 +433,38 @@ const Form = () => {
                 placeholder=""
                 required
               />
+            </div>
+
+            <div className="mb-[15px]">
+              <Select
+                label="State"
+                name="state"
+                variant="bordered"
+                selectedKeys={user.state ? [user.state] : []}
+                onChange={(e) => updateFormData({ state: e.target.value })}
+                size="md"
+                classNames={{
+                  label:
+                    "text-[#61616B] group-data-[filled=true]:text-[#111111] group-data-[filled=true]:hidden",
+                  trigger:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC] h-[56px]",
+                  value: "text-[#111111]",
+                  popoverContent: "bg-white",
+                }}
+                required
+              >
+                {nigerianStates.map((state) => (
+                  <SelectItem
+                    key={state}
+                    classNames={{
+                      base: "data-[hover=true]:bg-[#EDEFF7]",
+                      title: "text-[#111111]",
+                    }}
+                  >
+                    {state}
+                  </SelectItem>
+                ))}
+              </Select>
             </div>
 
             <CenterButton title="Continue" type="submit" />
@@ -429,7 +484,7 @@ const Form = () => {
                     <img
                       src={product.image_url}
                       alt={product.name}
-                      className="md:w-[60px] w-[50px] h-[50px] md:h-[60px] object-contain mr-4"
+                      className="md:w-[60px] w-[50px] h-[50px] md:h-[60px] object-cover mr-4"
                     />
                   ) : (
                     <img
@@ -559,6 +614,28 @@ const Form = () => {
               )}
             </div>
           </form>
+        </div>
+      )}
+      {pageNumber === 10 && (
+        <div id="page10">
+          <div className="flex justify-center mt-24">
+            <img src={circle.src} alt="" className="w-20" />
+          </div>
+          <p className="text-[22px] leading-[28px] text-[#5355AC] md:text-[28px] md:leading-[35px] font-medium mt-4 mb-3 md:mt-[24px] md:mb-4 text-center">
+            No suitable treatment
+          </p>
+          <p className="text-[#111111] text-[16px] leading-[22px] md:text-[18px] md:leading-[24px] text-center mb-7 md:mb-8">
+            The safety of our patients is our top priority. Unfortunately, our
+            treatments are not suitable for you. We recommend you seek care from
+            a physical hospital.
+            <br />
+            <br />
+            If you'd like to talk to our team about this, please email{" "}
+            <span className="text-[#5355AC]">
+              <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
+            </span>
+          </p>
+          <CenterButton title="Go to homepage" href="/" />
         </div>
       )}
       {pageNumber === 11 && (
