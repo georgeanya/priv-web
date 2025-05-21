@@ -43,7 +43,7 @@ const Form = () => {
   const product = formData.product;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(4);
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -471,7 +471,7 @@ const Form = () => {
       )}
       {pageNumber === 4 && (
         <div>
-          <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[28px] md:leading-[30px] mb-8 text-1lg text-center font-bold text-[#5355AC]">
+          <h1 className="mt-[32px] md:mt-[40px] leading-7  md:text-[28px] md:leading-[30px] mb-8 text-[24px] text-center font-bold text-[#5355AC]">
             Payment time!
           </h1>
           <div className="shadow-md rounded-2xl py-[24px] ">
@@ -503,7 +503,7 @@ const Form = () => {
                         ? "1 pack"
                         : product.type === "consultation"
                         ? "1 visit"
-                        : product.type === "Test"
+                        : product.type === "test"
                         ? "1 unit"
                         : "1 item"}
                     </p>
@@ -569,7 +569,7 @@ const Form = () => {
               {product.type !== "consultation" && (
             <div className="flex justify-between mt-[16px]" id="delivery">
               <p className="text-[16px] leading-5 text-[#111111]">
-                {product.type === "Test" ? "Sample Pickup" : "Delivery fee"}
+                {product.type === "test" ? "Sample Pickup" : "Delivery fee"}
               </p>
               <p className="text-[16px] leading-5 text-[#111111]">
                 ₦{product.delivery_fee?.toLocaleString() ?? "0"}
