@@ -388,7 +388,7 @@ const Form = () => {
       )}
       {pageNumber === 3 && product.type !== "consultation" && (
         <div>
-          <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-3 md:mb-8 text-[24px] font-bold text-[#5355AC]">
+          <p className="mt-[32px] md:mt-[40px] leading-7 text-center px-5 md:text-[28px] md:leading-[30px] mb-8 text-[24px] font-bold text-[#5355AC]">
             Where do you want it delivered?
           </p>
 
