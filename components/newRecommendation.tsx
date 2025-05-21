@@ -630,7 +630,7 @@ const Form = () => {
             a physical hospital.
             <br />
             <br />
-            If you'd like to talk to our team about this, please email{" "}
+            If you&apos;d like to talk to our team about this, please email{" "}
             <span className="text-[#5355AC]">
               <Link href="mailto:hi@privhealth.co">hi@privhealth.co</Link>
             </span>
