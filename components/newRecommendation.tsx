@@ -43,7 +43,7 @@ const Form = () => {
   const product = formData.product;
 
   const [discountPrice, setDiscountPrice] = useState(0);
-  const [pageNumber, setPageNumber] = useState(4);
+  const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
