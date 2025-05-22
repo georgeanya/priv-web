@@ -49,8 +49,7 @@ const Form = () => {
 
   useEffect(() => {
     // Clear old session data when component mounts
-    localStorage.removeItem("session_id");
-    updateFormData({ session_id: "" });
+    
 
     const syncFromLocalStorage = () => {
       const email = localStorage.getItem("email");
@@ -84,9 +83,7 @@ const Form = () => {
 
   useEffect(() => {
     if (pageNumber === 1) {
-      // Clear session ID when returning to page 1
-      localStorage.removeItem("session_id");
-      updateFormData({ session_id: "" });
+      
       
       setProgress(0);
       const interval = setInterval(() => {

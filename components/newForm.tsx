@@ -53,6 +53,14 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
+    // Clear old session data when component mounts
+    localStorage.removeItem("session_id");
+    updateFormData({ session_id: "" });
+
+    
+  }, []);
+
+  useEffect(() => {
     if (pageNumber === 5 && user?.session_id) {
       console.log("Session ID from user state:", user.session_id);
       console.log("Patient ID from user state:", user.patient_id);
