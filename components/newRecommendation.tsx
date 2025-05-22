@@ -48,6 +48,10 @@ const Form = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Clear old session data when component mounts
+    localStorage.removeItem("session_id");
+    updateFormData({ session_id: "" });
+
     const syncFromLocalStorage = () => {
       const email = localStorage.getItem("email");
       const patient_id = localStorage.getItem("patient_id");
@@ -76,35 +80,15 @@ const Form = () => {
       patient_id: localStorage.getItem("patient_id"),
       session_id: localStorage.getItem("session_id"),
     });
-
-    // Rest of your initialization code...
-  }, []);
-
-  useEffect(() => {
-    if (pageNumber === 4) {
-      console.log(product.price, "", product.delivery_fee, discountPrice);
-    }
-  }, [pageNumber]);
-
-  useEffect(() => {
-    const currentSessionId =
-      user.session_id || localStorage.getItem("session_id");
-    if (pageNumber === 1 && currentSessionId) {
-      getRecommendation();
-    }
-  }, [pageNumber, user.session_id]);
-
-  useEffect(() => {
-    const storedProduct = localStorage.getItem("product");
-    if (storedProduct) {
-      updateProductData(JSON.parse(storedProduct));
-    }
   }, []);
 
   useEffect(() => {
     if (pageNumber === 1) {
+      // Clear session ID when returning to page 1
+      localStorage.removeItem("session_id");
+      updateFormData({ session_id: "" });
+      
       setProgress(0);
-  
       const interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
@@ -117,7 +101,6 @@ const Form = () => {
   
       const timer = setTimeout(() => {
         nextPage();
-        console.log(product);
       }, 10000); 
   
       return () => {
