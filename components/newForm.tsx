@@ -6,8 +6,7 @@ import assessment from "../public/assets/assessment.png";
 import icon from "../public/assets/icon.svg";
 import { Input } from "@heroui/input";
 import { DatePicker } from "@heroui/date-picker";
-import product from "../public/assets/products.png";
-import products from "../public/assets/productt.png";
+import { DateInput } from "@heroui/date-input";
 import circle from "../public/assets/circle.svg";
 import stars from "../public/assets/stars.svg";
 import {
@@ -70,6 +69,13 @@ const Form = () => {
     updateFormData({ [event.target.name]: event.target.value });
   };
 
+  const handleDateChange = (date: DateValue | null) => {
+    if (date) {
+      const formattedDate = `${date.toString()}T23:00:00.000+00:00`;
+      updateFormData({ dob: formattedDate });
+    }
+  };
+
   const nextPage = () => setPageNumber((prevPage) => prevPage + 1);
   const prevPage = () =>
     setPageNumber((prevPage) => (prevPage > 1 ? prevPage - 1 : 1));
@@ -120,7 +126,7 @@ const Form = () => {
           updateFormData({ patient_id: res.data.data.patient_id });
           console.log(user);
 
-          setPageNumber(5);
+          setPageNumber(6);
           console.log(user);
         } else {
         }
@@ -167,15 +173,15 @@ const Form = () => {
           last_name: user.last_name,
           email: user.email,
           phone_number: `234${user.phone_number?.slice(1)}`,
-          dob: "1998-05-09T23:00:00.000+00:00",
+          dob: user.dob,
           gender: "male",
-          source: "facebook",
+          source: user.source,
         }
       )
       .then((res) => {
         if (res.data.data.status === "profile completed") {
           console.log(user);
-          setPageNumber(5);
+          setPageNumber(6);
         } else {
         }
       })
@@ -388,6 +394,41 @@ const Form = () => {
             />
           </div>
           <p className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-[22px] font-bold text-[#5355AC]">
+            What is your date of birth?
+          </p>
+
+          <form>
+            <div className="mb-[40px]">
+              <DatePicker
+                label="Date of Birth"
+                value={user.dob ? parseDate(user.dob.split("T")[0]) : null}
+                onChange={handleDateChange}
+                classNames={{
+                  label:
+                    "text-[#111111] group-data-[filled=true]:text-[#111111]",
+                  input: "text-[#111111]",
+                  inputWrapper:
+                    "border-1 border-[#C4CED4] group-data-[focus=true]:border-[#5355AC]",
+                }}
+              />
+            </div>
+
+            <div className="mb-16">
+              <CenterButton title="Continue" onClick={nextPage} type="submit" />
+            </div>
+          </form>
+        </div>
+      )}
+
+      {pageNumber === 5 && (
+        <div id="page5">
+          <div className="w-full bg-[#E6E6E6] h-[6px] rounded-[5px]">
+            <div
+              className="bg-[#5355AC] h-[6px] rounded-[5px] transition-all duration-300 ease-in-out"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <p className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-8 text-[22px] font-bold text-[#5355AC]">
             How did you hear about us?
           </p>
 
@@ -421,7 +462,7 @@ const Form = () => {
           </form>
         </div>
       )}
-      {pageNumber === 5 && (
+      {pageNumber === 6 && (
         <div>
           <div className="md:mt-[120px] mt-[144px] flex justify-center">
             <img src={assessment.src} alt="" />
@@ -441,7 +482,7 @@ const Form = () => {
         </div>
       )}
 
-      {pageNumber === 6 && (
+      {pageNumber === 7 && (
         <div className="relative h-[calc(100vh-150px)] md:h-[calc(100vh-130px)] w-full overflow-hidden">
           <iframe
             src={`${getFormUrl(user.condition)}?session_id=${
