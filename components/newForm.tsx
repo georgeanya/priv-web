@@ -53,11 +53,11 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
-    // Clear old session data when component mounts
-    localStorage.removeItem("session_id");
-    updateFormData({ session_id: "" });
-
-    
+    const hasExistingSession = localStorage.getItem("session_id");
+    if (!hasExistingSession) {
+      localStorage.removeItem("session_id");
+      updateFormData({ session_id: "" });
+    }
   }, []);
 
   useEffect(() => {
