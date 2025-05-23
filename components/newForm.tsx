@@ -108,9 +108,18 @@ const Form = () => {
   };
 
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
-    localStorage.removeItem("session_id");
-    localStorage.removeItem("email");
-    localStorage.removeItem("patient_id");
+    const itemsToClear = [
+      'email',
+      'patient_id',
+      'session_id',
+      'product',
+      'type',
+      'order_id'
+    ];
+    
+    itemsToClear.forEach(item => {
+      localStorage.removeItem(item);
+    });
     event.preventDefault();
     setIsLoading(false);
     axios
