@@ -53,14 +53,14 @@ const Form = () => {
   }, []);
 
   useEffect(() => {
-    if (pageNumber === 5 && user?.session_id) {
+    if (pageNumber === 6 && user?.session_id) {
       console.log("Session ID from user state:", user.session_id);
       console.log("Patient ID from user state:", user.patient_id);
     }
   }, [pageNumber, user]);
 
   useEffect(() => {
-    if (pageNumber === 5) {
+    if (pageNumber === 6) {
       createSession();
     }
   }, [pageNumber]);
@@ -108,18 +108,7 @@ const Form = () => {
   };
 
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
-    const itemsToClear = [
-      'email',
-      'patient_id',
-      'session_id',
-      'product',
-      'type',
-      'order_id'
-    ];
-    
-    itemsToClear.forEach(item => {
-      localStorage.removeItem(item);
-    });
+
     event.preventDefault();
     setIsLoading(false);
     axios

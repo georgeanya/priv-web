@@ -37,7 +37,7 @@ const PrivWhiteButton = styled(Button)({
   },
 });
 
-const Form = () => {
+const Recommendation = () => {
   const { formData, updateFormData, updateProductData } = useFormData();
   const user = formData.user;
   const product = formData.product;
@@ -661,4 +661,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Recommendation;
