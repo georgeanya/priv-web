@@ -44,8 +44,6 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    localStorage.removeItem("session_id");
-    localStorage.removeItem("product");
     const queryParams = new URLSearchParams(window.location.search);
     const conditionFromUrl = queryParams.get("condition");
 
