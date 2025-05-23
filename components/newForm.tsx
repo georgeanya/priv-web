@@ -108,6 +108,9 @@ const Form = () => {
   };
 
   const signUp = (event: React.FormEvent<HTMLFormElement>): any => {
+    localStorage.removeItem("session_id");
+    localStorage.removeItem("email");
+    localStorage.removeItem("patient_id");
     event.preventDefault();
     setIsLoading(false);
     axios
