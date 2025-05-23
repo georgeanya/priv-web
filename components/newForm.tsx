@@ -44,19 +44,13 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    localStorage.removeItem("session_id");
+    localStorage.removeItem("product");
     const queryParams = new URLSearchParams(window.location.search);
     const conditionFromUrl = queryParams.get("condition");
 
     if (conditionFromUrl) {
       updateFormData({ condition: conditionFromUrl });
-    }
-  }, []);
-
-  useEffect(() => {
-    const hasExistingSession = localStorage.getItem("session_id");
-    if (!hasExistingSession) {
-      localStorage.removeItem("session_id");
-      updateFormData({ session_id: "" });
     }
   }, []);
 

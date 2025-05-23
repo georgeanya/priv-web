@@ -126,6 +126,7 @@ const Form = () => {
       };
     }
   }, [pageNumber]);
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     updateFormData({ [event.target.name]: event.target.value });
   };
