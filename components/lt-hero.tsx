@@ -43,7 +43,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className=" mt-[60px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">
+        <div className=" mt-[50px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">
           <img src={hero.src} alt="hero" className="md:w-[460px]" />
         </div>
       </div>
