@@ -1,27 +1,12 @@
 import React from "react";
 import hero from "../public/assets/hl-hero.png";
 import { useState, useCallback, useEffect } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+import CustomButton from "./mainButton";
 import Link from "next/link";
 import firstaid from "../public/assets/first-aid.svg";
 import heart from "../public/assets/heart.svg";
 import world from "../public/assets/world.svg";
 import seth from "../public/assets/seth.svg";
-
-const SkeenButton = styled(Button)({
-  background: "#5355AC !important",
-  fontFamily: "Circular Std",
-  color: "#f8f8f8",
-  cursor: "pointer",
-  padding: "20px 38px",
-  margin: "0px 0px",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "16px 32px",
-  },
-});
 
 const Hero = () => {
   return (
@@ -36,11 +21,7 @@ const Hero = () => {
             licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <Link href="/sign-up?condition=hair-loss">
-              <SkeenButton className="text-sm md:text-base md:leading-5 font-medium">
-                Get started now
-              </SkeenButton>
-            </Link>
+          <CustomButton title="Get started now" href="/sign-up?condition=hair-loss" />
           </div>
         </div>
         <div className=" mt-[50px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">
