@@ -37,7 +37,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] mb z-10">
                   <Link href="/ed">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Erectile dysfunction
+                      Get harder erections
                     </p>
                   </Link>
                   <Link href="/ed">
@@ -58,7 +58,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/premature-ejaculation">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Premature ejaculation
+                      Have longer sex
                     </p>
                   </Link>
                   <Link href="/premature-ejaculation">
@@ -79,7 +79,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/stis">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      STIs/STDs
+                    Test and treat STIs
                     </p>
                   </Link>
                   <Link href="/stis">
@@ -96,10 +96,31 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/low-testosterone">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px] pr-2">
-                      Low testosterone
+                      Boost testosterone
                     </p>
                   </Link>
                   <Link href="/low-testosterone">
+                    <img
+                      src={arrow.src}
+                      alt="arrow"
+                      className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
+                <img
+                  src={consultation.src}
+                  alt=""
+                  className=" md:w-full rounded-t-lg "
+                />
+                <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
+                  <Link href="/sign-up?condition=doctor-consultation">
+                    <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
+                      Talk to a doctor
+                    </p>
+                  </Link>
+                  <Link href="/sign-up?condition=doctor-consultation">
                     <img
                       src={arrow.src}
                       alt="arrow"
@@ -113,7 +134,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/hair-loss">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Hair loss
+                      Regrow your hair
                     </p>
                   </Link>
                   <Link href="/hair-loss">
@@ -134,7 +155,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/sign-up?condition=doctor-consultation">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Mental health
+                      Get therapy
                     </p>
                   </Link>
                   <Link href="/sign-up?condition=doctor-consultation">
@@ -159,27 +180,6 @@ const Hero = () => {
                     </p>
                   </Link>
                   <Link href="https://paystack.shop/priv-health">
-                    <img
-                      src={arrow.src}
-                      alt="arrow"
-                      className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
-                <img
-                  src={consultation.src}
-                  alt=""
-                  className=" md:w-full rounded-t-lg "
-                />
-                <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/sign-up?condition=doctor-consultation">
-                    <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Doctor consultation
-                    </p>
-                  </Link>
-                  <Link href="/sign-up?condition=doctor-consultation">
                     <img
                       src={arrow.src}
                       alt="arrow"

@@ -14,14 +14,13 @@ const Hero = () => {
       <div className="container mx-auto pb-[90px] md:pb-20 flex flex-col md:flex-row md:justify-between">
         <div className=" md:max-w-[511px] pt-[42px] md:pb-0 md:pt-[117px]">
           <p className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px]">
-            Get treatment for erectile dysfunction
+            Get harder erections with ED treatment
           </p>
           <p className="mt-5 md:mt-5 text-base font-normal md:text-start md:text-[24px] leading-[22px] md:leading-[34px] text-[#333D47]">
-            Get effective erectile dysfunction treatments that work. Prescribed
-            online by licensed men’s health doctors.
+            Get hard and stay hard with doctor-trusted treatments. Prescribed online by licensed men’s health doctors.
           </p>
           <div className="mt-8 ">
-            <CustomButton title="Get started now" href="/sign-up?condition=erectile-dysfunction" />
+            <CustomButton title="Get treatment now" href="/sign-up?condition=erectile-dysfunction" />
           </div>
         </div>
         <div className=" mt-[50px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">

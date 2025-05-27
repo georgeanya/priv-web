@@ -178,7 +178,6 @@ const Home: NextPage = () => {
       <AutoScrollComponent/>
       <Section2 />
       <Section3 />
-     
       <Section5 />
       <Section6 />
       <Faq />
