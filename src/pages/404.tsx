@@ -1,6 +1,4 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import favicon from "../../public/assets/favicon.png";
@@ -85,16 +83,18 @@ const ErrorPage = () => {
         />
       </Head>
       <Navbar />
-      <div className="px-5 md:px-32 md:max-w-3xl pt-12 md:pt-32 pb-24 md:pb-36">
-        <p className="text-[34px] leading-[43px] md:text-start md:text-5xl font-bold text-[#5355AC]">
-          Whoops... This page is not available
-        </p>
-        <p className="mt-5 md:mt-6 text-base md:text-start md:text-[20px] md:leading-[30px] text-[#111111]">
-          Unfortunaltely, we couldn&apos;t find the page you are looking for. We
-          suggest you go back to our homepage
-        </p>
-        <div className="mt-8 md:mt-14 ">
-          <CustomButton title="Go back home" href="/"/>
+      <div className="px-5 md:px-32">
+        <div className="container mx-auto  pt-12 md:pt-32 pb-24 md:pb-36">
+          <h1 className="text-[34px] leading-[43px] md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-3xl">
+            Whoops... This page is not available
+          </h1>
+          <p className="mt-5 md:mt-6 text-base md:text-start md:text-[20px] md:leading-[30px] text-[#111111] md:max-w-3xl">
+            Unfortunaltely, we couldn&apos;t find the page you are looking for.
+            We suggest you go back to our homepage
+          </p>
+          <div className="mt-8 md:mt-14 ">
+            <CustomButton href="/" title="Go back home" />
+          </div>
         </div>
       </div>
       <Footer />

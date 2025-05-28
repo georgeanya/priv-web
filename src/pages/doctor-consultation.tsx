@@ -74,7 +74,7 @@ const HairLossPage = () => {
         />
         <meta
           name="description"
-          content="Book a private online consultation with licensed men’s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
         />
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="https://privhealth.co/doctor-consultation" property="og:url" />
@@ -83,7 +83,7 @@ const HairLossPage = () => {
           property="og:title"
         />
         <meta
-          content="Book a private online consultation with licensed men’s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
           property="og:description"
         />
         <meta
@@ -96,7 +96,7 @@ const HairLossPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Book a private online consultation with licensed men’s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
         />
         <link href="https://privhealth.co/doctor-consultation" rel="canonical" />
       </Head>
