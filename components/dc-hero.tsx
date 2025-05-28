@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../public/assets/ed-hero.png";
+import hero from "../public/assets/dc-hero.png";
 import { useState, useCallback, useEffect } from "react";
 import CustomButton from "./mainButton";
 import Link from "next/link";

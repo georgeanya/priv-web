@@ -115,12 +115,12 @@ const Hero = () => {
                   className=" md:w-full rounded-t-lg "
                 />
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/sign-up?condition=doctor-consultation">
+                  <Link href="/doctor-consultation">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
                       Talk to a doctor
                     </p>
                   </Link>
-                  <Link href="/sign-up?condition=doctor-consultation">
+                  <Link href="/doctor-consultation">
                     <img
                       src={arrow.src}
                       alt="arrow"

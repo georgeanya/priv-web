@@ -89,7 +89,7 @@ const StartSuccess = () => {
       </Link>
       <Link
         title="Doctor consultation"
-        href="/sign-up?condition=doctor-consultation"
+        href="/doctor-consultation"
       >
         <div className="md:px-5 px-[16px] py-[11px] md:py-[18px] bg-[#EEEAF5] rounded-[16px] mb-[12px] md:mb-5 flex justify-between mt-[12px] items-center">
           <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px] font-medium text-[#333D47]">

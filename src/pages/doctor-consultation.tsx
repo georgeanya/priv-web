@@ -9,7 +9,7 @@ import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Section6 from "../../components/section6";
 import Section3 from "../../components/section3";
-import Hero from "../../components/hl-hero";
+import Hero from "../../components/dc-hero";
 import AutoScrollComponent from "../../components/auto-scroll";
 
 const HairLossPage = () => {
