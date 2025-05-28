@@ -17,7 +17,7 @@ const Hero = () => {
             Get testing and treatment for STIs
           </p>
           <p className="mt-5 md:mt-5 text-base font-normal md:text-start md:text-[24px] leading-[22px] md:leading-[34px] text-[#333D47]">
-            Get effective STI testing and treatment that work. Prescribed online by licensed men’s health doctors.
+            Get effective STI testing and treatment that work. Prescribed online by licensed men&apos;s health doctors.
           </p>
           <div className="mt-8 ">
           <CustomButton title="Get started now" href="/sign-up?condition=sti-treatment" />

@@ -17,7 +17,7 @@ const Hero = () => {
             Last longer in bed with  PE treatment
           </p>
           <p className="mt-5 md:mt-5 text-base font-normal md:text-start md:text-[24px] leading-[22px] md:leading-[34px] text-[#333D47]">
-            Enjoy longer satisfying sex with doctor-trusted treatments. Prescribed online by licensed men’s health doctors.
+            Enjoy longer satisfying sex with doctor-trusted treatments. Prescribed online by licensed men&apos;s health doctors.
           </p>
           <div className="mt-8 ">
           <CustomButton title="Get treatment now" href="/sign-up?condition=premature-ejaculation" />

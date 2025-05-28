@@ -12,7 +12,7 @@ import Section3 from "../../components/section3";
 import Hero from "../../components/dc-hero";
 import AutoScrollComponent from "../../components/auto-scroll";
 
-const HairLossPage = () => {
+const DoctorConsultationPage = () => {
   return (
     <div>
       <Head>
@@ -112,4 +112,4 @@ const HairLossPage = () => {
   );
 };
 
-export default HairLossPage;
+export default DoctorConsultationPage;
