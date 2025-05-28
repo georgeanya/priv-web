@@ -17,7 +17,7 @@ const DoctorConsultationPage = () => {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Talk to a men's health doctor online - Priv Health</title>
+        <title>Talk to a men&apos;s health doctor online - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
