@@ -1,12 +1,12 @@
 import React from "react";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
-import Ed from "../../components/ed";
+import Footer from "../../../components/footer";
+import Navbar from "../../../components/navbar";
+import Ed from "../../../components/ed";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Hero from "../../components/ed-assessment-hero";
-import EdShop from "../../components/ed-section-1";
+import Hero from "../../../components/ed-assessment-hero";
+import EdShop from "../../../components/ed-section-1";
 
 const EdPage = () => {
   return (
