@@ -10,10 +10,10 @@ const Hero = () => {
           <p className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px]">
           Do I have erectile dysfunction?
           </p>
-          <p className="mt-5 md:mt-5 text-base font-normal md:text-start md:text-[24px] leading-[22px] md:leading-[34px] text-[#111111]">
+          <p className="mt-5 md:mt-5 text-[18px] font-normal md:text-start md:text-[24px] leading-[24px] md:leading-[34px] text-[#111111]">
           This quiz can help determine whether you have the symptoms of erectile dysfunction and get recommendations based on your results.
           </p>
-          <p className="mt-[30px] text-[14px] text-[#73738C]">*This is an assessment tool. Do not use for diagnostic purposes.</p>
+          <p className="mt-[30px] md:text-[14px] text-[13px] text-[#73738C]">*This is an assessment tool. Do not use for diagnostic purposes.</p>
           <div className="mt-[30px] ">
             <CustomButton title="Take the quiz" href="#" />
           </div>
