@@ -70,7 +70,7 @@ const Navbar = () => {
               className="hidden w-full md:block md:w-auto"
               id="navbar-solid-bg"
             >
-              <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 md:text-sm md:text-base md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+              <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 text-sm md:text-base md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
                 <li className="mt-3 mx-5 ">
                   <Link
                   title="What we treat"
