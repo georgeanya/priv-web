@@ -328,7 +328,7 @@ const RiskTest = () => {
                     onClick={() => handleOptionClick(index)}
                   >
                     <span
-                      className={`w-4 h-4 md:w-4 md:h-4 rounded-full border-2 transition-colors duration-200 bullet ${
+                      className={`w-4 h-4 md:w-4 md:h-4 rounded-full border-1.5 transition-colors duration-200 bullet ${
                         selectedOption === index
                           ? "border-[#5355AC]"
                           : "border-[#D7D7DB]"
