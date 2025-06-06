@@ -36,8 +36,8 @@ const ScoreText = styled("p")({
   ["@media (min-width:768px)"]: {
     fontSize: "58px",
     "& .score-suffix": {
-    fontSize: "24px",
-  },
+      fontSize: "24px",
+    },
   },
 });
 
@@ -359,7 +359,9 @@ const RiskTest = () => {
           </h1>
 
           <div className="p-4 pb-0 border border-[#D7D7DB] rounded-2xl">
-            <p className="text-[16px] md:text-[18px] leading-[20px]">Your risk score</p>
+            <p className="text-[16px] md:text-[18px] leading-[20px]">
+              Your risk score
+            </p>
             <ScoreText>
               {totalScore}
               <span className="score-suffix">/20</span>
@@ -370,13 +372,9 @@ const RiskTest = () => {
             {riskInfo.description}
             <br />
             <br />
-            {riskLevel !== "low" && (
-              <>
-                Want to speak to a doctor? Start an online visit with an expert
-                doctor who will work with you to create a personalized treatment
-                plan for you.
-              </>
-            )}
+            Want to speak to a doctor? Start an online visit with an expert
+            doctor who will work with you to create a personalized treatment
+            plan for you.
           </p>
 
           {riskLevel !== "low" ? (
