@@ -334,7 +334,7 @@ const RiskTest = () => {
                           : "border-[#D7D7DB]"
                       }`}
                     />
-                    <span className="md:text-[16px] text-[14px] leading-4 md:leading-5">
+                    <span className="md:text-[16px] text-start text-[14px] leading-4 md:leading-5">
                       {option.text}
                     </span>
                   </button>
