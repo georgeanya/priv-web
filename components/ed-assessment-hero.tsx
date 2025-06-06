@@ -15,7 +15,7 @@ const Hero = () => {
           </p>
           <p className="mt-[30px] md:text-[14px] text-[13px] text-[#73738C]">*This is an assessment tool. Do not use for diagnostic purposes.</p>
           <div className="mt-[30px] ">
-            <CustomButton title="Take the quiz" href="#" />
+            <CustomButton title="Take the quiz" href="/tools/ed-assessment" />
           </div>
         </div>
         <div className=" mt-[50px] md:mt-0 flex md:pr-[75px] md:pt-[60px] justify-center">

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import axios from "axios";
 import assessment from "../public/assets/assessment.png";
 import icon from "../public/assets/icon.svg";
@@ -19,21 +17,6 @@ import CenterButton from "./centerButton";
 import LoadingButton from "./loadingButton";
 import { useFormData } from "./FormDataContext";
 
-const PrivWhiteButton = styled(Button)({
-  background: "white !important",
-  fontFamily: "Circular Std",
-  color: "#5355AC",
-  cursor: "pointer",
-  padding: "12px 37px",
-  margin: "0px 0px",
-  width: "100%",
-  border: "1px solid #C4CED4",
-  borderRadius: "32px",
-  textTransform: "none",
-  ["@media (max-width:780px)"]: {
-    padding: "9px 20px",
-  },
-});
 
 const Form = () => {
   const { formData, updateFormData } = useFormData();
@@ -285,7 +268,7 @@ const Form = () => {
             />
           </div>
           <p className="mt-[32px] md:mt-[40px] leading-7  md:text-[24px] md:leading-[30px] mb-3 text-[22px] font-bold text-[#5355AC]">
-            Whats is your name?
+            What is your name?
           </p>
           <p className="md:text-[18px] md:leading-[24px] text-[#111111] text-[16px] leading-[22px] mb-8">
             Your information will never be shared with anyone
