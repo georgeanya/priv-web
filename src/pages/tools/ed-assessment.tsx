@@ -295,6 +295,7 @@ const RiskTest = () => {
           name="twitter:title"
           content="Do I Have Erectile Dysfunction? Take Free ED Assessment Quiz"
         />
+        <meta name="robots" content="noindex" />
         <meta
           name="twitter:description"
           content="Take our erectile dysfunction quiz to assess your symptoms. Our free ED self-assessment tool helps determine if you may have erectile dysfunction and helps you know the next steps to take"
