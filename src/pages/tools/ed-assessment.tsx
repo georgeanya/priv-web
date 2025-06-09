@@ -278,7 +278,7 @@ const RiskTest = () => {
           content="Take our erectile dysfunction quiz to assess your symptoms. Our free ED self-assessment tool helps determine if you may have erectile dysfunction and helps you know the next steps to take"
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/ed" property="og:url" />
+        <meta content="https://privhealth.co/tools/ed-assessment" property="og:url" />
         <meta
           content="Do I Have Erectile Dysfunction? Take Free ED Assessment Quiz"
           property="og:title"
@@ -300,7 +300,7 @@ const RiskTest = () => {
           name="twitter:description"
           content="Take our erectile dysfunction quiz to assess your symptoms. Our free ED self-assessment tool helps determine if you may have erectile dysfunction and helps you know the next steps to take"
         />
-        <link href="https://privhealth.co/ed" rel="canonical" />
+        <link href="https://privhealth.co/tools/ed-assessment" rel="canonical" />
       </Head>
       <Navbar />
 
@@ -381,13 +381,13 @@ const RiskTest = () => {
           {riskLevel !== "low" ? (
             <CenterButton
               title="Start my online visit"
-              href="/ed"
+              href="/doctor-consultation"
               type="button"
             />
           ) : (
             <CenterButton
               title="Start my online visit"
-              href="/ed"
+              href="/doctor-consultation"
               type="button"
             />
           )}
