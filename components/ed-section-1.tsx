@@ -24,7 +24,7 @@ const EdShop = () => {
                   Prescription only
                 </p>
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦22,000
+                  ₦25,000
                 </p>
               </div>
               <img src={privMed.src} alt="" className="my-5" />
@@ -43,7 +43,7 @@ const EdShop = () => {
                   Prescription only
                 </p> */}
                 <p className="text-[16px] leading-[20px] md:text-[18px] md:leading-[22.7px] font-medium">
-                  ₦80,000
+                  ₦100,000
                 </p>
               </div>
               <img src={privTest.src} alt="" className="my-5" />
