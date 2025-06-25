@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Spinner from "../../components/spinner";
-import WhatsAppButton from "../../components/whatsAppButton";
+import WhatsAppButton from "../../components/whatsappbutton";
 import { FormDataProvider } from "../../components/FormDataContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
