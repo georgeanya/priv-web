@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import assessment from "../public/assets/assessment.png";
-import icon from "../public/assets/icon.svg";
 import { Input } from "@heroui/input";
 import { DatePicker } from "@heroui/date-picker";
-import { DateInput } from "@heroui/date-input";
 import circle from "../public/assets/circle.svg";
-import stars from "../public/assets/stars.svg";
 import {
   DateValue,
   parseDate,
-  getLocalTimeZone,
 } from "@internationalized/date";
-import { Select, SelectSection, SelectItem } from "@heroui/select";
+import { Select, SelectItem } from "@heroui/select";
 import CenterButton from "./centerButton";
 import LoadingButton from "./loadingButton";
 import { useFormData } from "./FormDataContext";
 
 
-const Form = () => {
+const SignUpForm = () => {
   const { formData, updateFormData } = useFormData();
   const user = formData.user;
-
-  const [discountPrice, setDiscountPrice] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -495,4 +489,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default SignUpForm;

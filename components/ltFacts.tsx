@@ -1,13 +1,9 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-
 import { useState } from "react";
 import FAQ from "./faq2";
-import Link from "next/link";
 import CustomButton from "./mainButton";
 
-const Ed = () => {
+const LtFacts = () => {
   const [faqs, setFaqs] = useState([
     {
       question: "What is low testosterone?",
@@ -65,7 +61,7 @@ const Ed = () => {
           {faqs.map((faq, index) => (
             <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
           ))}
-          {/* <hr className="my-6 md:my-8 mb-6 md:mb-12 " /> */}
+        
         </div>
         <div className="mt-8 md:mt-9 md:hidden">
         <CustomButton title="Get treatment now" href="/sign-up?condition=low-testosterone" />
@@ -75,4 +71,4 @@ const Ed = () => {
   );
 };
 
-export default Ed;
+export default LtFacts;

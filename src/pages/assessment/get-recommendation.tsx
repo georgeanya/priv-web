@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import Form from "../../../components/newRecommendation";
+import Form from "../../../components/getRecommendation";
 import Navbar3 from "../../../components/navbar1";
 import favicon from "../../../public/assets/favicon.png";
 import metaCard from "../../../public/assets/priv-metacard.png";

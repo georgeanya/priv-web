@@ -1,18 +1,18 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
+import Section4 from "../../components/howPrivWorks";
+import Section5 from "../../components/expertSection";
 import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Section6 from "../../components/section6";
-import Section3 from "../../components/section3";
-import EdShop from "../../components/hl-section-1";
-import Hero from "../../components/hl-hero";
-import Ed from "../../components/hl";
-import AutoScrollComponent from "../../components/auto-scroll";
+import Section6 from "../../components/testiomonials";
+import Section3 from "../../components/valueProposition";
+import EdShop from "../../components/hlShop";
+import Hero from "../../components/hlHero";
+import Ed from "../../components/hlFacts";
+import AutoScrollComponent from "../../components/autoScroll";
 
 const HairLossPage = () => {
   return (
@@ -104,11 +104,11 @@ const HairLossPage = () => {
       </Head>
       <Navbar />
       <Hero />
-      <AutoScrollComponent/>
+      <AutoScrollComponent />
       <Ed />
-      <EdShop/>
+      <EdShop />
       <Section4 />
-      <Section3/>
+      <Section3 />
       <Section5 />
       <Section6 />
       <Faq />

@@ -1,18 +1,18 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
+import Section4 from "../../components/howPrivWorks";
+import Section5 from "../../components/expertSection";
 import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Hero from "../../components/pe-hero";
-import Ed from "../../components/pe";
-import EdShop from "../../components/pe-section-1";
-import Section3 from "../../components/section3";
-import Section6 from "../../components/section6";
-import AutoScrollComponent from "../../components/auto-scroll";
+import Hero from "../../components/peHero";
+import Ed from "../../components/peFacts";
+import EdShop from "../../components/peShop";
+import Section3 from "../../components/valueProposition";
+import Section6 from "../../components/testiomonials";
+import AutoScrollComponent from "../../components/autoScroll";
 
 const PrematureEjaculationPage = () => {
   return (
@@ -79,7 +79,10 @@ const PrematureEjaculationPage = () => {
           content="Get treatment for premature ejaculation privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/premature-ejaculation" property="og:url" />
+        <meta
+          content="https://privhealth.co/premature-ejaculation"
+          property="og:url"
+        />
         <meta
           content="Premature ejaculation treatment - Priv Health"
           property="og:title"
@@ -107,11 +110,11 @@ const PrematureEjaculationPage = () => {
       </Head>
       <Navbar />
       <Hero />
-      <AutoScrollComponent/>
+      <AutoScrollComponent />
       <Ed />
-      <EdShop/>
+      <EdShop />
       <Section4 />
-      <Section3/>
+      <Section3 />
       <Section5 />
       <Section6 />
       <Faq />

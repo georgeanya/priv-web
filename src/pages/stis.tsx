@@ -1,18 +1,18 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
+import Section4 from "../../components/howPrivWorks";
+import Section5 from "../../components/expertSection";
 import Faq from "../../components/faq";
-import Ed from "../../components/std";
+import Ed from "../../components/stdFacts";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Hero from "../../components/std-hero";
-import EdShop from "../../components/std-section-1";
-import Section6 from "../../components/section6";
-import Section3 from "../../components/section3";
-import AutoScrollComponent from "../../components/auto-scroll";
+import Hero from "../../components/stdHero";
+import EdShop from "../../components/stdShop";
+import Section6 from "../../components/testiomonials";
+import Section3 from "../../components/valueProposition";
+import AutoScrollComponent from "../../components/autoScroll";
 
 const EdPage = () => {
   return (
@@ -80,10 +80,7 @@ const EdPage = () => {
         />
         <meta content="598084287257839" property="fb:profile_id" />
         <meta content="https://privhealth.co/stis" property="og:url" />
-        <meta
-          content="STIs/STDs treatment - Priv Health"
-          property="og:title"
-        />
+        <meta content="STIs/STDs treatment - Priv Health" property="og:title" />
         <meta
           content="Get treatment for STIs/STDs privately and from the comfort of your home."
           property="og:description"
@@ -104,11 +101,11 @@ const EdPage = () => {
       </Head>
       <Navbar />
       <Hero />
-      <AutoScrollComponent/>
+      <AutoScrollComponent />
       <Ed />
-      <EdShop/>
+      <EdShop />
       <Section4 />
-      <Section3/>
+      <Section3 />
       <Section5 />
       <Section6 />
       <Faq />

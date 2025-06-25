@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import stars from "../public/assets/stars.svg";
 
-const Section1 = () => {
+const Testiomonials = () => {
   return (
     <div className="px-5 md:px-[125px] bg-[#F6F1EE]">
       <div className="container mx-auto md:pt-28 pt-20 md:pb-28 pb-[90px]   ">
@@ -58,4 +58,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Testiomonials;

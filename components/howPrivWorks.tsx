@@ -1,18 +1,16 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import no1 from "../public/assets/no1.svg";
 import no2 from "../public/assets/no2.svg";
 import no3 from "../public/assets/no3.svg";
 import rectangle1 from "../public/assets/Rectangle1.png";
 import rectangle2 from "../public/assets/Rectangle2.png";
 import rectangle3 from "../public/assets/Rectangle3.png";
-import Link from "next/link";
 import Image from "next/image";
 
 
 
-const Section4 = () => {
+const HowPrivWorks
+ = () => {
   return (
     <div className="px-5 md:px-[125px]">
       <div className="container mx-auto md:pt-[120px] md:pb-[130px] py-[80px]">
@@ -79,4 +77,5 @@ const Section4 = () => {
   );
 };
 
-export default Section4;
+export default HowPrivWorks
+;

@@ -1,8 +1,8 @@
 import React from "react";
 import hero from "../public/assets/expert.png";
-import Image from "next/image";
 
-const Section5 = () => {
+
+const ExpertSection = () => {
   return (
     <div className="px-5 md:px-[125px]">
       <div className="container mx-auto pb-[90px] md:pb-[130px] md:flex justify-between">
@@ -31,4 +31,4 @@ const Section5 = () => {
   );
 };
 
-export default Section5;
+export default ExpertSection;

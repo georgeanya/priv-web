@@ -7,7 +7,7 @@ import FAQ from "./faq2";
 import Link from "next/link";
 import CustomButton from "./mainButton";
 
-const Ed = () => {
+const StdFacts = () => {
   const [faqs, setFaqs] = useState([
     {
       question: "What are STIs?",
@@ -75,4 +75,4 @@ const Ed = () => {
   );
 };
 
-export default Ed;
+export default StdFacts;

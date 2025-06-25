@@ -1,9 +1,6 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import FAQ from "./faq2";
-import Link from "next/link";
 import CustomButton from "./mainButton";
 
 const Faq = () => {

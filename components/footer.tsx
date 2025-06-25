@@ -1,6 +1,4 @@
 import React from "react";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import twitter from "../public/assets/tw.svg";
 import sustain from "../public/assets/privw.svg";
 import fbook from "../public/assets/fbook.svg";

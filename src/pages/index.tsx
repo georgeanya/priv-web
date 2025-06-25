@@ -2,78 +2,78 @@ import type { NextPage } from "next";
 import Hero from "../../components/hero";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
+import Section4 from "../../components/howPrivWorks";
+import Section5 from "../../components/expertSection";
 import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
 import Script from "next/script";
-import Section6 from "../../components/section6";
-import Section3 from "../../components/section3";
-import Section2 from "../../components/section2";
-import AutoScrollComponent from "../../components/auto-scroll";
+import Section6 from "../../components/testiomonials";
+import Section3 from "../../components/valueProposition";
+import Section2 from "../../components/howPrivWorks";
+import AutoScrollComponent from "../../components/autoScroll";
 
 const Home: NextPage = () => {
   const homeStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": "https://privhealth.co/#organization",
-    "name": "Priv Health",
-    "image": "https://privhealth.co/priv-logo.png",
-    "logo": "https://privhealth.co/priv-logo.png",
-    "url": "https://privhealth.co",
-    "sameAs": [
-        "https://facebook.com/tryprivhealth",
-        "https://x.com/tryprivhealth",
-        "https://instagram.com/tryprivhealth",
-        "https://youtube.com/@privhealth",
-        "https://linkedin.com/company/priv-health",
-        "https://tiktok.com/@tryprivhealth",
-        "https://privhealth.co"
+    name: "Priv Health",
+    image: "https://privhealth.co/priv-logo.png",
+    logo: "https://privhealth.co/priv-logo.png",
+    url: "https://privhealth.co",
+    sameAs: [
+      "https://facebook.com/tryprivhealth",
+      "https://x.com/tryprivhealth",
+      "https://instagram.com/tryprivhealth",
+      "https://youtube.com/@privhealth",
+      "https://linkedin.com/company/priv-health",
+      "https://tiktok.com/@tryprivhealth",
+      "https://privhealth.co",
     ],
-    "description": "Priv Health is a telehealth platform that provides men with easy access to licensed healthcare providers, personalized treatment plans, and genuine medications—all from the privacy of their homes",
-    "email": "hi@privhealth.co",
-    "telephone": "+234-701-083-0201",
-    "contactPoint": [
-        {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "telephone": "+234-701-083-0201",
-            "areaServed": "NG",
-            "email": "hi@privhealth.co",
-            "availableLanguage": "en-US"
-        }
+    description:
+      "Priv Health is a telehealth platform that provides men with easy access to licensed healthcare providers, personalized treatment plans, and genuine medications—all from the privacy of their homes",
+    email: "hi@privhealth.co",
+    telephone: "+234-701-083-0201",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        telephone: "+234-701-083-0201",
+        areaServed: "NG",
+        email: "hi@privhealth.co",
+        availableLanguage: "en-US",
+      },
     ],
-    "founder": {
-        "@type": "Person",
-        "name": "Joseph Anya",
-        "sameAs": [
-            "https://x.com/josephanyaa",
-            "https://instagram.com/josephanyaa",
-            "https://linkedin.com/in/joseph-anya",
-            "https://f6s.com/josephanya",
-            "https://crunchbase.com/person/joseph-anya"
-        ],
-        "image": "https://pbs.twimg.com/profile_images/1790809642156621824/5GXlTd5F_400x400.jpg",
-        "birthPlace": "Lagos, Nigeria",
-        "birthDate": "1998-05-09T00:00:00+01:00",
-        "gender": "Male",
-        "nationality": "Nigeria",
-        "jobTitle": "Founder and CEO",
-        "alumniOf": "University of Lagos",
-        "brand": [
-            "Lifebox Labs, Custodia Health, Priv Heath"
-        ],
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Lifebox Labs"
-        }
+    founder: {
+      "@type": "Person",
+      name: "Joseph Anya",
+      sameAs: [
+        "https://x.com/josephanyaa",
+        "https://instagram.com/josephanyaa",
+        "https://linkedin.com/in/joseph-anya",
+        "https://f6s.com/josephanya",
+        "https://crunchbase.com/person/joseph-anya",
+      ],
+      image:
+        "https://pbs.twimg.com/profile_images/1790809642156621824/5GXlTd5F_400x400.jpg",
+      birthPlace: "Lagos, Nigeria",
+      birthDate: "1998-05-09T00:00:00+01:00",
+      gender: "Male",
+      nationality: "Nigeria",
+      jobTitle: "Founder and CEO",
+      alumniOf: "University of Lagos",
+      brand: ["Lifebox Labs, Custodia Health, Priv Heath"],
+      worksFor: {
+        "@type": "Organization",
+        name: "Lifebox Labs",
+      },
     },
-    "foundingDate": "2023-03-01T00:00:00+01:00",
-    "foundingLocation": "Lagos, Nigeria",
-    "parentOrganization": "Lifebox Labs"
-  }
+    foundingDate: "2023-03-01T00:00:00+01:00",
+    foundingLocation: "Lagos, Nigeria",
+    parentOrganization: "Lifebox Labs",
+  };
 
   return (
     <div>
@@ -170,12 +170,14 @@ const Home: NextPage = () => {
         </script>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(homeStructuredData),
+          }}
         />
       </Head>
       <Navbar />
       <Hero />
-      <AutoScrollComponent/>
+      <AutoScrollComponent />
       <Section2 />
       <Section3 />
       <Section5 />

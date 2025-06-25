@@ -1,9 +1,6 @@
 import { useState } from "react";
 import priv from "../public/assets/priv.svg";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
 import Link from "next/link";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import NavbarButton from "./navButton";
 
 

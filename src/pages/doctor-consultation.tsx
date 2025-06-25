@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
-import Section4 from "../../components/section2";
-import Section5 from "../../components/section5";
+import Section4 from "../../components/howPrivWorks";
+import Section5 from "../../components/expertSection";
 import Faq from "../../components/faq";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Section6 from "../../components/section6";
-import Section3 from "../../components/section3";
-import Hero from "../../components/dc-hero";
-import AutoScrollComponent from "../../components/auto-scroll";
+import Section6 from "../../components/testiomonials";
+import Section3 from "../../components/valueProposition";
+import Hero from "../../components/dcHero";
+import AutoScrollComponent from "../../components/autoScroll";
 
 const DoctorConsultationPage = () => {
   return (
@@ -74,16 +74,19 @@ const DoctorConsultationPage = () => {
         />
         <meta
           name="description"
-          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men's health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/doctor-consultation" property="og:url" />
+        <meta
+          content="https://privhealth.co/doctor-consultation"
+          property="og:url"
+        />
         <meta
           content="Talk to a men's health doctor online - Priv Health"
           property="og:title"
         />
         <meta
-          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men's health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
           property="og:description"
         />
         <meta
@@ -96,14 +99,17 @@ const DoctorConsultationPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Book a private online consultation with licensed men&apos;s health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
+          content="Book a private online consultation with licensed men's health doctors. Get personalized men's health treatment from home. Schedule your Priv telehealth visit today"
         />
-        <link href="https://privhealth.co/doctor-consultation" rel="canonical" />
+        <link
+          href="https://privhealth.co/doctor-consultation"
+          rel="canonical"
+        />
       </Head>
       <Navbar />
       <Hero />
-      <AutoScrollComponent/>
-      <Section3/>
+      <AutoScrollComponent />
+      <Section3 />
       <Section5 />
       <Section6 />
       <Faq />

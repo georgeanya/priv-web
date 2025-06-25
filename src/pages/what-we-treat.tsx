@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "../../components/navbar1";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import StartSuccess from "../../components/all-conditions";
+import StartSuccess from "../../components/allConditions";
 
 const Start = () => {
   return (

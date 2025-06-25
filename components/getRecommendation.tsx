@@ -2,19 +2,11 @@ import React, { useEffect, useState } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import axios from "axios";
-import assessment from "../public/assets/assessment.png";
-import icon from "../public/assets/icon.svg";
 import { Input } from "@heroui/input";
-import { DatePicker } from "@heroui/date-picker";
 import productt from "../public/assets/products.png";
 import products from "../public/assets/productt.png";
 import circle from "../public/assets/circle.svg";
 import stars from "../public/assets/stars.svg";
-import {
-  DateValue,
-  parseDate,
-  getLocalTimeZone,
-} from "@internationalized/date";
 import { Select, SelectSection, SelectItem } from "@heroui/select";
 import CenterButton from "./centerButton";
 import LoadingButton from "./loadingButton";
@@ -62,10 +54,8 @@ const Recommendation = () => {
       }
     };
 
-    // Sync on initial load
     syncFromLocalStorage();
 
-    // Optional: Add event listener for changes from other tabs
     window.addEventListener("storage", syncFromLocalStorage);
     return () => window.removeEventListener("storage", syncFromLocalStorage);
   }, []);
@@ -77,7 +67,7 @@ const Recommendation = () => {
       session_id: localStorage.getItem("session_id"),
     });
 
-    // Rest of your initialization code...
+  
   }, []);
 
   useEffect(() => {

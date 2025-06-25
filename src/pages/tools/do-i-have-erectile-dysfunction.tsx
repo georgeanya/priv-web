@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../../../components/footer";
 import Navbar from "../../../components/navbar";
-import Ed from "../../../components/ed";
+import Ed from "../../../components/edFacts";
 import Head from "next/head";
 import favicon from "../../../public/assets/favicon.png";
 import metaCard from "../../../public/assets/priv-metacard.png";
-import Hero from "../../../components/ed-assessment-hero";
-import EdShop from "../../../components/ed-section-1";
+import Hero from "../../../components/edAssessmentHero";
+import EdShop from "../../../components/edShop";
 
 const EdPage = () => {
   return (
@@ -75,7 +75,10 @@ const EdPage = () => {
           content="Take our erectile dysfunction quiz to assess your symptoms. Our free ED self-assessment tool helps determine if you may have erectile dysfunction and helps you know the next steps to take"
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/tools/do-i-have-erectile-dysfunction" property="og:url" />
+        <meta
+          content="https://privhealth.co/tools/do-i-have-erectile-dysfunction"
+          property="og:url"
+        />
         <meta
           content="Do I Have Erectile Dysfunction? Take Free ED Assessment Quiz"
           property="og:title"
@@ -96,7 +99,10 @@ const EdPage = () => {
           name="twitter:description"
           content="Take our erectile dysfunction quiz to assess your symptoms. Our free ED self-assessment tool helps determine if you may have erectile dysfunction and helps you know the next steps to take"
         />
-        <link href="https://privhealth.co/tools/do-i-have-erectile-dysfunction" rel="canonical" />
+        <link
+          href="https://privhealth.co/tools/do-i-have-erectile-dysfunction"
+          rel="canonical"
+        />
       </Head>
       <Navbar />
       <Hero />
