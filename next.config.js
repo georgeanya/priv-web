@@ -13,6 +13,16 @@ const nextConfig = {
         destination: '/sign-up',
         permanent: true,
       },
+      {
+        source: '/ed',
+        destination: '/erectile-dysfunction',
+        permanent: true,
+      },
+      {
+        source: '/stis',
+        destination: '/sti-treatment',
+        permanent: true,
+      },
     ]
   },
 }
