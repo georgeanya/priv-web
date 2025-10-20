@@ -14,12 +14,12 @@ const textStyle = "text-[16px] md:text-[20px] leading-[20px] md:leading-[25.24px
 
 const CONDITIONS = [
   { 
-    title: "Erectile dysfunction", 
+    title: "Trouble with erection", 
     href: "/ed",
     customClass: "mt-[35px]" 
   },
   { 
-    title: "Premature ejaculation", 
+    title: "Early ejaculation", 
     href: "/premature-ejaculation" 
   },
   { 
@@ -27,26 +27,26 @@ const CONDITIONS = [
     href: "/low-testosterone" 
   },
   { 
-    title: "Men's health tests", 
-    href: "https://paystack.shop/priv-health",
-    external: true 
+    title: "Doctor consultation", 
+    href: "/doctor-consultation" 
   },
   { 
-    title: "STI treatment", 
+    title: "Test and treat STIs", 
     href: "/stis" 
-  },
-  { 
-    title: "Hair loss", 
-    href: "/hair-loss" 
   },
   { 
     title: "Mental health", 
     href: "/sign-up?condition=mental-health" 
   },
   { 
-    title: "Doctor consultation", 
-    href: "/doctor-consultation" 
+    title: "Hair loss", 
+    href: "/hair-loss" 
   },
+  { 
+    title: "Lab tests", 
+    href: "https://paystack.shop/priv-health",
+    external: true 
+  },  
   { 
     title: "Supplements", 
     href: "https://privhealth.bumpa.shop/browse/Supplements",
@@ -61,9 +61,6 @@ const ConditionSelectionMenu = () => {
       <h1 className="leading-tight md:text-[28px] text-2xl font-bold text-[#5355AC] text-center">
         What can we help you with?
       </h1>
-      <p className="leading-[22px] text-[16px] md:text-[18px] text-2xl md:mt-3 text-[#111111] text-center">
-        Select a condition to get started
-      </p>
 
       {CONDITIONS.map(({ title, href, customClass = "", external = false }) => (
         <Link 
