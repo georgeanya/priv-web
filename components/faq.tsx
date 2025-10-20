@@ -12,15 +12,15 @@ const Faq = () => {
       open: true,
     },
     {
-      question: "Who is Priv for?",
-      answer:
-        "Priv is for men who want simple, affordable, and discreet access to healthcare—without the hassle of in-person doctor or pharmacy visits.",
-      open: false,
-    },
-    {
       question: "How does Priv work?",
       answer:
           "Priv operates online, allowing you to consult with a licensed doctor from the comfort of your home. After answering a few questions about your health, a doctor reviews your information and recommends treatment if appropriate. You can then have your prescription filled and delivered to your door, with ongoing access to care and support.",
+      open: false,
+    },
+    {
+      question: "Who is Priv for?",
+      answer:
+        "Priv is for men who want simple, affordable, and discreet access to healthcare—without the hassle of in-person doctor or pharmacy visits.",
       open: false,
     },
     {
