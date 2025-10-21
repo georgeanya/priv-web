@@ -70,27 +70,6 @@ const Hero = () => {
                 </div>
               </div>
               <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
-                <img
-                  src={std.src}
-                  alt=""
-                  className=" md:w-full rounded-t-lg "
-                />
-                <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/stis">
-                    <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                    Test and treat STIs
-                    </p>
-                  </Link>
-                  <Link href="/stis">
-                    <img
-                      src={arrow.src}
-                      alt="arrow"
-                      className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
                 <img src={lt.src} alt="" className=" md:w-full rounded-t-lg " />
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="/low-testosterone">
@@ -129,14 +108,18 @@ const Hero = () => {
                 </div>
               </div>
               <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
-                <img src={hair.src} alt="" className=" md:w-full rounded-lg " />
+                <img
+                  src={std.src}
+                  alt=""
+                  className=" md:w-full rounded-t-lg "
+                />
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
-                  <Link href="/hair-loss">
+                  <Link href="/stis">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Regrow your hair
+                    Test and treat STIs
                     </p>
                   </Link>
-                  <Link href="/hair-loss">
+                  <Link href="/stis">
                     <img
                       src={arrow.src}
                       alt="arrow"
@@ -167,6 +150,23 @@ const Hero = () => {
                 </div>
               </div>
               <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
+                <img src={hair.src} alt="" className=" md:w-full rounded-lg " />
+                <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
+                  <Link href="/hair-loss">
+                    <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
+                      Regrow your hair
+                    </p>
+                  </Link>
+                  <Link href="/hair-loss">
+                    <img
+                      src={arrow.src}
+                      alt="arrow"
+                      className="min-w-[30px] md:min-w-[40px] max-w-[30px] md:max-w-[40px]"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="md:w-[240px] relative flex-shrink-0 w-[180px]">
                 <img
                   src={men.src}
                   alt=""
@@ -175,7 +175,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="https://paystack.shop/priv-health">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Men’s health tests
+                      Get at-home lab tests
                     </p>
                   </Link>
                   <Link href="https://paystack.shop/priv-health">
@@ -196,7 +196,7 @@ const Hero = () => {
                 <div className="md:px-5 px-4 py-4 md:py-[18px] rounded-b-[16px] bg-[#212436] flex flex-row min-h-[86px] items-center justify-between relative md:mt-[-86px] mt-[-78px] z-10">
                   <Link href="https://privhealth.bumpa.shop/browse/Supplements">
                     <p className="font-medium text-lg md:text-[20px] md:leading-[25px] text-white leading-[22px]">
-                      Men’s supplements
+                      Buy men's supplements
                     </p>
                   </Link>
                   <Link href="https://privhealth.bumpa.shop/browse/Supplements">
