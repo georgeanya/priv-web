@@ -46,7 +46,7 @@ const Faq = () => {
       open: false,
     },
     {
-      question: "Is my information private and secure?",
+      question: "Is my information private?",
       answer:
         "Yes, Priv takes your privacy and security seriously. All personal information is encrypted and stored in compliance with local regulations, ensuring that your medical and personal data is kept confidential and secure.",
       open: false,
