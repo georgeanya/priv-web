@@ -12,14 +12,8 @@ const Faq = () => {
     {
       question: "What is Priv?",
       answer:
-        "Priv is a telehealth provider that offers men accessible and affordable solutions for common health concerns like erectile dysfunction, premature ejaculation, hair loss, and more. Through a combination of licensed doctors, prescription medications, and over-the-counter treatments, Priv provides a modern approach to men's healthcare.",
+        "Priv is a telehealth company that helps men access affordable, personalized care for common health issues like sexual health, hair loss, and mental health—all from the comfort of home.",
       open: true,
-    },
-    {
-      question: "Who is Priv for?",
-      answer:
-        "Priv is designed for men who want convenient, discreet access to healthcare services. Whether you're dealing with sexual health, hair loss concerns or just looking to be healthy, Priv is for those looking for reliable and easy-to-access treatments without the hassle of traditional in-person visits.",
-      open: false,
     },
     {
       question: "How does Priv work?",
@@ -28,7 +22,13 @@ const Faq = () => {
       open: false,
     },
     {
-      question: "Where is Priv available",
+      question: "Who is Priv for?",
+      answer:
+        "Priv is for men who want simple, affordable, and discreet access to healthcare—without the hassle of in-person doctor or pharmacy visits.",
+      open: false,
+    },
+    {
+      question: "Where is Priv available?",
       answer:
         "Priv is currently available in Nigeria. We aims to provide services in as many regions as possible in the future while adhering to regional healthcare laws.",
       open: false,
