@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
         <hr className="h-[0.5px] border-t-[0.5px] md:mt-[90px] mt-[70px] text-[#C7CBD1]" />
         <p className="md:mt-[45px] mt-[35px] text-sm md:text-[15px] leading-[18px] pb-[50px] md:pb-16 text-center md:text-start">
-          ©{currentYear} Priv Health, a <a className="underline" href="https://lifebox.ng">Lifebox Labs</a> company
+          ©{currentYear} Priv Health, a <a className="underline" target="_blank" href="https://lifebox.ng">Lifebox Labs</a> company
         </p>
       </div>
     </div>
