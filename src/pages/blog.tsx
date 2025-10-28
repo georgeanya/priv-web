@@ -3,9 +3,56 @@ import Navbar from "../../components/navbar";
 import Head from "next/head";
 import favicon from "../../public/assets/favicon.png";
 import metaCard from "../../public/assets/priv-metacard.png";
-import Blog from "../../components/blog";
+import BlogComponent from "../../components/blog";
+import { GetServerSideProps } from "next";
+import axios from "axios";
 
-const BlogHome = () => {
+// Interfaces (you can move these to a types file if needed)
+interface BlogAttributes {
+  title: string;
+  description: string;
+  content: string;
+  slug: string;
+  category: {
+    data: {
+      attributes: {
+        name: string;
+      };
+    };
+  };
+  author: {
+    data: {
+      attributes: {
+        team: string;
+        name: string;
+      };
+    };
+  };
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        name: string;
+      };
+    };
+  };
+}
+
+interface Blog {
+  id: number;
+  attributes: BlogAttributes;
+}
+
+interface BlogResponse {
+  data: Blog[];
+}
+
+interface BlogHomeProps {
+  initialBlogs: BlogResponse;
+  initialPage: number;
+}
+
+const BlogHome = ({ initialBlogs, initialPage }: BlogHomeProps) => {
   return (
     <div>
       <Head>
@@ -89,10 +136,39 @@ const BlogHome = () => {
         />
       </Head>
       <Navbar />
-      <Blog/>
+      <BlogComponent initialBlogs={initialBlogs} initialPage={initialPage} />
       <Footer />
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  try {
+    const page = 1;
+    const pageSize = 15;
+    const timestamp = new Date().getTime();
+    
+    const response = await axios.get<BlogResponse>(
+      `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
+    );
+
+    return {
+      props: {
+        initialBlogs: response.data,
+        initialPage: page,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data in getServerSideProps:", error);
+    
+    // Return empty data structure to prevent page from breaking
+    return {
+      props: {
+        initialBlogs: { data: [] },
+        initialPage: 1,
+      },
+    };
+  }
 };
 
 export default BlogHome;
