@@ -1,11 +1,10 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import image from "../public/assets/user.svg";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import axios from "axios";
 import Link from "next/link";
 import { GetServerSideProps } from "next";
-// import Newsletter from "./newsletter";
 import CustomButton from "./mainButton";
 
 const PrivOutlineButton = styled(Button)({
@@ -64,6 +63,11 @@ interface BlogResponse {
   data: Blog[];
 }
 
+interface BlogPageProps {
+  initialBlogs: BlogResponse;
+  initialPage: number;
+}
+
 type BlogCategory =
   | "All"
   | "Sexual health"
@@ -72,10 +76,10 @@ type BlogCategory =
   | "General health"
   | "Hair";
 
-const Blog: React.FC = () => {
-  const [blogs, setBlogs] = useState<BlogResponse | null>(null);
+const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
+  const [blogs, setBlogs] = useState<BlogResponse | null>(initialBlogs);
   const [toggleState, setToggleState] = useState<BlogCategory>("All");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
   const [error, setError] = useState<string | null>(null);
   const pageSize = 15;
 
@@ -89,37 +93,31 @@ const Blog: React.FC = () => {
     setIsNewsletterOpen(false);
   };
 
-  const loadMorePosts = () => {
-    setPage((page) => page + 1);
+  const loadMorePosts = async () => {
+    try {
+      const nextPage = page + 1;
+      const timestamp = new Date().getTime();
+      const response = await axios.get<BlogResponse>(
+        `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${nextPage}&pagination[pageSize]=${pageSize}`
+      );
+
+      setBlogs((prevBlogs) => {
+        if (!prevBlogs) {
+          return response.data;
+        } else {
+          return {
+            ...prevBlogs,
+            data: [...prevBlogs.data, ...response.data.data],
+          };
+        }
+      });
+      setPage(nextPage);
+      setError(null);
+    } catch (error) {
+      console.error("Error fetching more data:", error);
+      setError("Failed to load more blogs. Please try again later.");
+    }
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const timestamp = new Date().getTime();
-        const response = await axios.get<BlogResponse>(
-          `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
-        );
-
-        setBlogs((prevBlogs) => {
-          if (!prevBlogs) {
-            return response.data;
-          } else {
-            return {
-              ...prevBlogs,
-              data: [...prevBlogs.data, ...response.data.data],
-            };
-          }
-        });
-        setError(null); // Clear any previous errors
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setError("Failed to load blogs. Please try again later.");
-      }
-    };
-
-    fetchData();
-  }, [page]);
 
   const blogsToDisplay = useMemo(() => {
     if (!blogs || !blogs.data) return [];
@@ -372,6 +370,34 @@ const Blog: React.FC = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  try {
+    const page = 1;
+    const pageSize = 15;
+    const timestamp = new Date().getTime();
+    
+    const response = await axios.get<BlogResponse>(
+      `https://priv-health-blog.herokuapp.com/api/articles?populate[0]=category&populate[1]=author&populate[2]=image&sort=createdAt:desc&_=${timestamp}&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
+    );
+
+    return {
+      props: {
+        initialBlogs: response.data,
+        initialPage: page,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching data in getServerSideProps:", error);
+    
+    return {
+      props: {
+        initialBlogs: { data: [] },
+        initialPage: 1,
+      },
+    };
+  }
 };
 
 export default Blog;
