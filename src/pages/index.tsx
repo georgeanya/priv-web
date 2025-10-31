@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       "https://privhealth.co",
     ],
     description:
-      "Priv Health is a telehealth platform that provides men with easy access to licensed healthcare providers, personalized treatment plans, and genuine medications—all from the privacy of their homes",
+      "Priv Health is a telehealth platform that provides convenient, discreet treatment for sensitive health issues—connecting men to licensed doctors and delivering lab tests and meds to their door.",
     email: "hi@privhealth.co",
     telephone: "+234-701-083-0201",
     contactPoint: [
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="description"
-          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
+          content="=Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
           property="og:title"
         />
         <meta
-          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
+          content="Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
+          content="Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
         />
         <meta
           name="twitter:image:src"
