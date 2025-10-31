@@ -8,7 +8,7 @@ const Faq = () => {
     {
       question: "What is Priv?",
       answer:
-        "Priv is a telehealth company that helps men access affordable, personalized care for common health issues like sexual health, hair loss, and mental health—all from the comfort of home.",
+        "Priv is a telehealth platform that provides convenient, discreet treatment for common men's health issues like sexual health, low testosterone, hair loss, and mental health—all from the comfort of home.",
       open: true,
     },
     {

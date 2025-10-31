@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       "https://privhealth.co",
     ],
     description:
-      "Priv Health is a telehealth platform that provides convenient, discreet treatment for sensitive health issues—connecting men to licensed doctors and delivering lab tests and meds to their door.",
+      "Priv is a telehealth company that provides convenient, discreet treatment for common men's health issues like sexual health, hair loss, and mental health—all from the comfort of home.",
     email: "hi@privhealth.co",
     telephone: "+234-701-083-0201",
     contactPoint: [
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="description"
-          content="=Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
+          content="=Priv Health is a telehealth platform for men providing treatment for erectile dysfunction, premature ejaculation, low testosterone, and more from licensed doctors."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
           property="og:title"
         />
         <meta
-          content="Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
+          content="Priv Health is a telehealth platform for men providing treatment for erectile dysfunction, premature ejaculation, low testosterone, and more from licensed doctors."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Priv Health offers discreet online telehealth for men. Get personalized treatment plans for ED, premature ejaculation, testosterone, and mental health from licensed doctors."
+          content="Priv Health is a telehealth platform for men providing treatment for erectile dysfunction, premature ejaculation, low testosterone, and more from licensed doctors."
         />
         <meta
           name="twitter:image:src"
