@@ -54,9 +54,9 @@ const StdFacts = () => {
     <div className="px-5 md:px-32">
       <div className="container mx-auto md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between">
         <div>
-          <p className="leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
+          <h2 className="leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
             Facts about STIs/STDs
-          </p>
+          </h2>
           <div className="mt-8 md:mt-9 hidden md:block">
             <CustomButton title="Get treatment now" href="/sign-up?condition=sti-treatment" />
           </div>

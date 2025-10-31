@@ -95,7 +95,7 @@ const Faq = () => {
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="107593817569600" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/faq" property="og:url" />
         <meta content="FAQs - Priv Health" property="og:title" />

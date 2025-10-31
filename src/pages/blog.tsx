@@ -71,7 +71,7 @@ const BlogHome = ({ initialBlogs, initialPage }: BlogHomeProps) => {
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="107593817569600" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/blog" property="og:url" />
         <meta content="Priv Health Blog" property="og:title" />
@@ -117,7 +117,7 @@ const BlogHome = ({ initialBlogs, initialPage }: BlogHomeProps) => {
           content="An image of the Priv Health logo"
         />
         <link rel="me" href="https://twitter.com/tryprivhealth" />
-        <link href="https://privhealth.co/" rel="canonical" />
+        <link href="https://privhealth.co/blog" rel="canonical" />
         <link href="https://privhealth.co/" rel="home" />
         <link href="/humans.txt" rel="author" type="text/plain" />
         <link

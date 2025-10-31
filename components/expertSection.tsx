@@ -7,9 +7,9 @@ const ExpertSection = () => {
     <div className="px-5 md:px-[125px]">
       <div className="container mx-auto pb-[90px] md:pb-[130px] md:flex justify-between">
       <div className="pt-20 pb-[50px] md:pb-0 md:pt-[143px] md:max-w-[562px]">
-        <p className=" text-[28px] leading-[35px] md:text-start md:text-[42px] font-bold text-[#5355AC] md:leading-[53px]">
+        <h2 className=" text-[28px] leading-[35px] md:text-start md:text-[42px] font-bold text-[#5355AC] md:leading-[53px]">
           Designed by men’s health experts, just for you
-        </p>
+        </h2>
         <p className="mt-6 md:mt-[30px] text-xl font-normal pr-3 md:pr-0 md:text-start md:text-[24px] md:leading-9 text-[#333D47]">
           “Our goal is to provide you with a discreet, non-judgmental and
           convenient care that puts you in control and our team of passionate

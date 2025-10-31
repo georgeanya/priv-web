@@ -62,7 +62,7 @@ const Home: NextPage = () => {
       birthDate: "1998-05-09T00:00:00+01:00",
       gender: "Male",
       nationality: "Nigeria",
-      jobTitle: "Founder and CEO",
+      jobTitle: "Founder",
       alumniOf: "University of Lagos",
       brand: ["Lifebox Labs, Custodia Health, Priv Heath"],
       worksFor: {
@@ -83,16 +83,16 @@ const Home: NextPage = () => {
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="keywords"
-          content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, STIs"
+          content="erectile dysfunction, premature ejaculation, hair loss, low testosterone, STI treatment, mental health, men's health"
         />
         <meta
           name="description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
+          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="107593817569600" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/" property="og:url" />
         <meta
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
           property="og:title"
         />
         <meta
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
+          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="twitter:description"
-          content="Priv provides private and personalized treatments for erectile dysfunction, premature ejaculation, hair loss, and more. Your health, your way"
+          content="Priv connects you with licensed doctors for personalized men's health solutions. Treat erectile dysfunction, premature ejaculation, low testosterone, and more from home. Discreet & affordable."
         />
         <meta
           name="twitter:image:src"

@@ -28,7 +28,7 @@ const EdPage = () => {
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />
@@ -79,7 +79,7 @@ const EdPage = () => {
           content="Get treatment for erectile dysfunction privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/ed" property="og:url" />
+        <meta content="https://privhealth.co/er" property="og:url" />
         <meta
           content="Erectile dysfunction (ED) treatment - Priv Health"
           property="og:title"
@@ -100,7 +100,7 @@ const EdPage = () => {
           name="twitter:description"
           content="Get treatment for erectile dysfunction privately and from the comfort of your home."
         />
-        <link href="https://privhealth.co/ed" rel="canonical" />
+        <link href="https://privhealth.co/erectile-dysfunction" rel="canonical" />
       </Head>
       <Navbar />
       <Hero />

@@ -5,10 +5,10 @@ const ValueProposition = () => {
     <div className="px-5 md:px-[125px] bg-[#F8F5FF]">
       <div className="container mx-auto pb-[90px] md:pb-[130px] grid md:grid-cols-2 pt-20 md:pt-[120px] grid-cols-1 md:grid-rows-1 md:gap-[89px] gap-4 ">
         <div className=" pb-[35px] md:pb-0 ">
-          <p className="  text-[32px] leading-[40px] md:text-start md:text-[46px] font-bold text-[#5355AC]  md:leading-[58px]">
+          <h2 className="  text-[32px] leading-[40px] md:text-start md:text-[46px] font-bold text-[#5355AC]  md:leading-[58px]">
             We are making men&apos;s health accessible and convenient, the way
             it should be
-          </p>
+          </h2>
         </div>
         <div className="  text-[#111111]">
           <div className="">

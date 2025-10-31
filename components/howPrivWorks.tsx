@@ -14,9 +14,9 @@ const HowPrivWorks
   return (
     <div className="px-5 md:px-[125px]">
       <div className="container mx-auto md:pt-[120px] md:pb-[130px] py-[80px]">
-      <p className=" text-3xl md:text-start md:text-[38px] leading-[48px] md:max-w-xl font-bold text-[#5355AC]">
+      <h2 className=" text-3xl md:text-start md:text-[38px] leading-[48px] md:max-w-xl font-bold text-[#5355AC]">
         How Priv works
-      </p>
+      </h2>
       <div className=" min-w-full mt-10 md:mt-[60px] md:grid grid-flow-col grid-cols-3 gap-20">
         <div>
           <div className="">
