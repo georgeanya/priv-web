@@ -27,10 +27,10 @@ const Start = () => {
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/sign-up" property="og:url" />
-        <meta content="Get started - Priv Health" property="og:title" />
+        <meta content="Get Recommendation - Priv Health" property="og:title" />
         <meta
           content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"
           property="og:description"
@@ -57,7 +57,7 @@ const Start = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta name="twitter:title" content="Get started - Priv Health" />
+        <meta name="twitter:title" content="Get Recommendation - Priv Health" />
         <meta
           name="twitter:description"
           content="Get support from a men's health doctor. Start your free online visit today! Get treatment quickly & discreetly, and have your medication delivered to your door"

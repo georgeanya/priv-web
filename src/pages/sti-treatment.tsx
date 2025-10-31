@@ -28,7 +28,7 @@ const EdPage = () => {
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />
@@ -79,7 +79,7 @@ const EdPage = () => {
           content="Get treatment for STIs/STDs privately and from the comfort of your home."
         />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="https://privhealth.co/stis" property="og:url" />
+        <meta content="https://privhealth.co/sti-treatment" property="og:url" />
         <meta content="STIs/STDs treatment - Priv Health" property="og:title" />
         <meta
           content="Get treatment for STIs/STDs privately and from the comfort of your home."
@@ -97,7 +97,7 @@ const EdPage = () => {
           name="twitter:description"
           content="Get treatment for STIs/STDs privately and from the comfort of your home."
         />
-        <link href="https://privhealth.co/stis" rel="canonical" />
+        <link href="https://privhealth.co/sti-treatment" rel="canonical" />
       </Head>
       <Navbar />
       <Hero />

@@ -6,9 +6,9 @@ const Testiomonials = () => {
   return (
     <div className="px-5 md:px-[125px] bg-[#F6F1EE]">
       <div className="container mx-auto md:pt-28 pt-20 md:pb-28 pb-[90px]   ">
-      <p className="text-[28px] leading-9 md:text-start md:text-4xl md:max-w-xl font-bold mr-3 md:mr-0 text-[#5355AC] ">
+      <h2 className="text-[28px] leading-9 md:text-start md:text-4xl md:max-w-xl font-bold mr-3 md:mr-0 text-[#5355AC] ">
       Trusted by 2,000+ men
-      </p>
+      </h2>
       <p className="mt-5 md:mt-6 text-[16px] leading-[24px] font-normal md:pr-8 md:text-start md:text-[20px] md:leading-6 text-[#11111]">
         See what some of our patients say about us
       </p>

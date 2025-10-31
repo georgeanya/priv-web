@@ -9,7 +9,7 @@ const Start = () => {
   return (
     <div>
       <Head>
-        <title>Get started - Priv Health</title>
+        <title>What we treat - Priv Health</title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
@@ -22,17 +22,17 @@ const Start = () => {
         />
         <meta
           name="description"
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Priv treats ED, premature ejaculation, low T, mental health, STIs, and more. Get discreet online consultations and treatments delivered to your door."
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/sign-up" property="og:url" />
-        <meta content="Get started - Priv Health" property="og:title" />
+        <meta content="What we treat - Priv Health" property="og:title" />
         <meta
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Priv treats ED, premature ejaculation, low T, mental health, STIs, and more. Get discreet online consultations and treatments delivered to your door."
           property="og:description"
         />
         <meta content={metaCard.src} property="og:image" />
@@ -57,10 +57,10 @@ const Start = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tryprivhealth" />
         <meta name="twitter:creator" content="@tryprivhealth" />
-        <meta name="twitter:title" content="Get started - Priv Health" />
+        <meta name="twitter:title" content="What we treat - Priv Health" />
         <meta
           name="twitter:description"
-          content="Become a member and get unlimited consultations, pharmacy discounts, and more for a year."
+          content="Priv treats ED, premature ejaculation, low T, mental health, STIs, and more. Get discreet online consultations and treatments delivered to your door."
         />
         <meta
           name="twitter:image:src"

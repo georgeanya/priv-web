@@ -191,9 +191,9 @@ const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
   return (
     <div className="px-5 md:px-32">
       <div className="container mx-auto md:mb-20 mb-15">
-        <p className="text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
-          <span className="font-bold">Blog</span> | The latest stories and updates from the team
-        </p>
+        <h1 className="text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
+          <span className="font-bold">Blog</span> | Straight talk about men's health
+        </h1>
         <div className="md:flex justify-between mt-9 md:mt-10">
           <Link href={`/blog/${blog.attributes?.slug}`}>
             <img

@@ -7,9 +7,9 @@ const Hero = () => {
     <div className="px-5 md:px-[125px]">
       <div className="container mx-auto pb-[90px] md:pb-20 flex flex-col md:flex-row md:justify-between">
         <div className=" md:max-w-[511px] pt-[42px] md:pb-0 md:pt-[117px]">
-          <p className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px] max-w-md">
+          <h1 className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px] max-w-md">
             Regrow your hair with  hair loss treatment
-          </p>
+          </h1>
           <p className="mt-5 md:mt-5 text-base font-normal md:text-start md:text-[24px] leading-[22px] md:leading-[34px] text-[#333D47]">
             Get effective hair loss treatments that work. Prescribed online by
             licensed men&apos;s health doctors.

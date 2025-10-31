@@ -28,7 +28,7 @@ const HairLossPage = () => {
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content={metaCard.src} property="og:image" />
         <meta content="785" property="og:image:width" />

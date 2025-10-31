@@ -27,7 +27,7 @@ const Start = () => {
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
         <meta content="598084287257839" property="fb:profile_id" />
-        <meta content="en_US" property="og:locale" />
+        <meta content="en_NG" property="og:locale" />
         <meta content="website" property="og:type" />
         <meta content="https://privhealth.co/sign-up" property="og:url" />
         <meta content="Get started - Priv Health" property="og:title" />
