@@ -14,11 +14,11 @@ import CustomButton from "./mainButton";
 
 const Hero = () => {
   return (
-    <div className="pl-5 md:pl-32">
+    <div className="pl-5 md:pl-20 lg:pl-32">
       <div className="mb-[60px] md:mb-0 md:pb-20">
         <div className=" pt-[40px] md:pt-[60px]  flex flex-col">
           <div className="md:max-w-md lg:max-w-1xl md:pb-0">
-            <h1 className=" leading-[43px] md:leading-[63px] md:pr-14  text-[34px] md:text-start md:text-[50px] font-bold text-[#5355AC] ">
+            <h1 className=" leading-[43px] md:leading-[63px] lg:pr-14  text-[34px] md:text-start md:text-[50px] font-bold text-[#5355AC] ">
               Simple and private healthcare for men
             </h1>
             <p className="mt-5 md:mt-6 text-base font-normal md:pr-8 md:text-start md:text-xl text-[#111111]">

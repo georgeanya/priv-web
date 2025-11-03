@@ -53,7 +53,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="px-5 md:px-32">
+    <div className="px-5 md:px-20 lg:px-32">
       <div className="container mx-auto md:pt-28 pt-20 md:pb-36 pb-24">
         <h2 className=" text-3xl md:text-start md:text-4xl md:max-w-xl font-bold text-[#5355AC] mb-14 md:mb-20 pr-8">
           Frequently asked questions

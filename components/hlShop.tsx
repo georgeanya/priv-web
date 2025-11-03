@@ -5,8 +5,8 @@ import CenterButton from "./centerButton";
 
 const HlShop = () => {
   return (
-    <div className="pl-5 md:px-32 bg-[#EDEFF7]">
-      <div className="container mx-auto md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between">
+    <div className="pl-5 md:px-20 lg:px-32 bg-[#EDEFF7]">
+      <div className="container mx-auto md:pt-[120px] pt-11 md:pb-36 pb-24 md:flex justify-between md:gap-15">
         <div className="md:w-[460px] pr-5">
           <h2 className=" leading-tight text-3xl md:text-start md:text-[46px] md:leading-[58px] font-bold text-[#5355AC] md:max-w-[360px]">
             Get evidence-based solutions for male hair loss that work

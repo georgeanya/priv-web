@@ -36,7 +36,7 @@ const AutoScrollComponent = () => {
     <div className="bg-[#232B5C] overflow-hidden">
       <div
         ref={scrollContainerRef}
-        className="flex overflow-x-scroll hide-scrollbar py-[30px] md:py-[34px] px-5 md:px-32 w-full whitespace-nowrap"
+        className="flex overflow-x-scroll hide-scrollbar py-[30px] md:py-[34px] px-5 md:px-20 lg:px-32 w-full whitespace-nowrap"
       >
         {/* Content */}
         <div className="flex items-center mx-10 md:mx-[54px]">

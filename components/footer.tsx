@@ -10,7 +10,7 @@ const Footer = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   return (
-    <div className="bg-[#232B5C] md:px-32 px-5">
+    <div className="bg-[#232B5C] px-5 md:px-20 lg:px-32">
       <div className=" mx-auto container md:pt-36 pt-24  text-white">
         <div className="text-center">
           <p className="text-3xl md:text-5xl font-bold mb-6">
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <hr className="h-[0.5px] border-t-[0.5px] md:mt-[110px] mt-[90px] md:mb-[90px] mb-[70px] text-[#C7CBD1]" />
         <div className="md:flex md:justify-between text-start">
-          <img src={sustain.src} className="self-start " alt="skeen logo" />
+          <img src={sustain.src} className="self-start sm:mr-20" alt="skeen logo" />
           <div className="flex flex-wrap">
             <div className="w-40 md:w-[245px]">
               <h3 className="md:mb-8 mb-[27px] mt-[52px] md:mt-0 text-[15px] leading-[18px] md:text-base font-medium">

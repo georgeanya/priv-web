@@ -4,7 +4,7 @@ import CustomButton from "./mainButton";
 
 const Hero = () => {
   return (
-    <div className="px-5 md:px-[125px] bg-[#EDEFF7]">
+    <div className="px-5 md:px-20 lg:px-32 bg-[#EDEFF7]">
       <div className="container mx-auto pb-[90px] md:pb-20 flex flex-col md:flex-row md:justify-between">
         <div className=" md:max-w-[511px] pt-[42px] md:pb-0 md:pt-[117px]">
           <p className="text-[34px] md:text-start md:text-5xl md:leading-[60px] font-bold text-[#5355AC] leading-[43px]">

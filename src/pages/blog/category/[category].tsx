@@ -227,7 +227,7 @@ const PatientStories = () => {
         />
       </Head>
       <Navbar />
-      <div className="px-5 md:px-32 mt-[50px]">
+      <div className="px-5 md:px-20 lg:px-32 mt-[50px]">
         <Link href="/blog">
           <div className="flex items-center cursor-pointer">
             <img src={left.src} alt="Back" className="w-5 md:w-[22px]" />
@@ -240,7 +240,7 @@ const PatientStories = () => {
           {categoryName}
         </h1>
       </div>
-      <div className="px-5 md:px-32 mt-[32px] md:mt-[40px] grid md:grid-cols-3 md:grid-rows-1 gap-15 mb-15">
+      <div className="px-5 md:px-20 lg:px-32 mt-[32px] md:mt-[40px] grid md:grid-cols-3 md:grid-rows-1 gap-15 mb-15">
         {blogs.map((blogpost: Blog) => {
           const { id, attributes } = blogpost;
           const imgUrl = attributes.image.data.attributes.url;
@@ -286,7 +286,7 @@ const PatientStories = () => {
         })}
       </div>
       {hasMore && (
-        <div className="px-5 md:px-32 mb-17 md:mb-36">
+        <div className="px-5 md:px-20 lg:px-32 mb-17 md:mb-36">
           <PrivOutlineButton onClick={loadMorePosts}>
             Show more posts
           </PrivOutlineButton>

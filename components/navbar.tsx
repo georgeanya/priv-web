@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div>
    
-      <div className="px-5 md:px-32 py-5">
+      <div className="px-5 md:px-20 lg:px-32 py-5">
         <nav>
           <div className="container flex flex-wrap justify-between items-center mx-auto">
             <Link title="Priv homepage" href="/">
@@ -24,7 +24,7 @@ const Navbar = () => {
             <button
               data-collapse-toggle="navbar-solid-bg"
               type="button"
-              className="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden"
+              className="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg lg:hidden"
               aria-controls="navbar-solid-bg"
               onClick={() => {
                 setIsToggled(!isToggled);
@@ -64,7 +64,7 @@ const Navbar = () => {
             </button>
 
             <div
-              className="hidden w-full md:block md:w-auto"
+              className="hidden w-full lg:block lg:w-auto"
               id="navbar-solid-bg"
             >
               <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:mt-0 text-sm md:text-base md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">

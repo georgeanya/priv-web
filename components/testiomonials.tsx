@@ -4,7 +4,7 @@ import stars from "../public/assets/stars.svg";
 
 const Testiomonials = () => {
   return (
-    <div className="px-5 md:px-[125px] bg-[#F6F1EE]">
+    <div className="px-5 md:px-20 lg:px-32 bg-[#F6F1EE]">
       <div className="container mx-auto md:pt-28 pt-20 md:pb-28 pb-[90px]   ">
       <h2 className="text-[28px] leading-9 md:text-start md:text-4xl md:max-w-xl font-bold mr-3 md:mr-0 text-[#5355AC] ">
       Trusted by 2,000+ men
@@ -12,7 +12,7 @@ const Testiomonials = () => {
       <p className="mt-5 md:mt-6 text-[16px] leading-[24px] font-normal md:pr-8 md:text-start md:text-[20px] md:leading-6 text-[#11111]">
         See what some of our patients say about us
       </p>
-      <div className="grid md:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-5 md:gap-6 mt-10 md:mt-12">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-5 md:gap-6 mt-10 md:mt-12">
         <div className="md:px-10 md:py-12 px-5 py-8 bg-white rounded-2xl">
           <p className="text-[18px] leading-[26px] md:text-[22px] md:leading-[34px] text-[#333D47]">
             As a man, I never thought I would open up about my health struggles,

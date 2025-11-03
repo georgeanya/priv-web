@@ -189,7 +189,7 @@ const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
   const ImgUrl = blog.attributes?.image?.data?.attributes?.url || "default-image-url";
 
   return (
-    <div className="px-5 md:px-32">
+    <div className="px-5 md:px-20 lg:px-32">
       <div className="container mx-auto md:mb-20 mb-15">
         <h1 className="text-sm md:text-[18px] leading-[24px] font-normal mt-[27px] md:mt-[50px] text-[#111111]">
           <span className="font-bold">Blog</span> | Straight talk about men&apos;s health
@@ -280,7 +280,7 @@ const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
             </li>
           </ul>
         </div>
-        <div className="mt-10 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
           {blogsToDisplay.map((blogpost) => {
             const { id, attributes } = blogpost;
             return (
@@ -327,7 +327,7 @@ const Blog: React.FC<BlogPageProps> = ({ initialBlogs, initialPage }) => {
           <CustomButton title="Subscribe" onClick={openNewsletter} />
         </div>
         {/* <Newsletter isOpen={isNewsletterOpen} onClose={closeNewsletter} /> */}
-        <div className="mt-10 md:mt-20 grid md:grid-cols-3 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
+        <div className="mt-10 md:mt-20 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:grid-rows-1 gap-[60px] md:mb-20 mb-[60px]">
           {blogsToDisplay2.map((blogpost) => {
             const { id, attributes } = blogpost;
             return (

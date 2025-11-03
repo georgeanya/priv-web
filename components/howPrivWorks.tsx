@@ -12,12 +12,12 @@ import Image from "next/image";
 const HowPrivWorks
  = () => {
   return (
-    <div className="px-5 md:px-[125px]">
+    <div className="px-5 md:px-20 lg:px-32">
       <div className="container mx-auto md:pt-[120px] md:pb-[130px] py-[80px]">
       <h2 className=" text-3xl md:text-start md:text-[38px] leading-[48px] md:max-w-xl font-bold text-[#5355AC]">
         How Priv works
       </h2>
-      <div className=" min-w-full mt-10 md:mt-[60px] md:grid grid-flow-col grid-cols-3 gap-20">
+      <div className=" min-w-full mt-10 md:mt-[60px] grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 md:grid-rows-1 sm:gap-10 lg:gap-20">
         <div>
           <div className="">
             <div className="relative mb-6 md:mb-7">
@@ -37,7 +37,7 @@ const HowPrivWorks
         </div>
 
         <div>
-          <div className="mt-[50px] md:mt-0">
+          <div className="mt-[50px] sm:mt-0">
             <div className="relative mb-6 md:mb-7">
               <Image src={no2} alt="" className="absolute ml-3 mt-3" />
               <Image src={rectangle2} alt="" />
@@ -55,7 +55,7 @@ const HowPrivWorks
         </div>
 
         <div>
-          <div className="mt-[50px] md:mt-0">
+          <div className="mt-[50px] sm:mt-0">
             <div className="relative mb-6 md:mb-7">
               <Image src={no3} alt="" className="absolute ml-3 mt-3" />
               <Image src={rectangle3} alt="" />

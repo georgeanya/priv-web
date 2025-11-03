@@ -6,7 +6,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div>
-      <div className="px-5 md:px-32 py-[21px] md:py-[24px] shadow-md">
+      <div className="px-5 md:px-20 lg:px-32 py-[21px] md:py-[24px] shadow-md">
         <nav>
           <div className="container flex flex-wrap  justify-center items-center mx-auto">
             <Link title="Priv homepage" href="/" className="flex self-center">

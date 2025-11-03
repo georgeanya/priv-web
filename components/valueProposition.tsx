@@ -2,10 +2,10 @@ import React from "react";
 
 const ValueProposition = () => {
   return (
-    <div className="px-5 md:px-[125px] bg-[#F8F5FF]">
-      <div className="container mx-auto pb-[90px] md:pb-[130px] grid md:grid-cols-2 pt-20 md:pt-[120px] grid-cols-1 md:grid-rows-1 md:gap-[89px] gap-4 ">
-        <div className=" pb-[35px] md:pb-0 ">
-          <h2 className="  text-[32px] leading-[40px] md:text-start md:text-[46px] font-bold text-[#5355AC]  md:leading-[58px]">
+    <div className="px-5 md:px-20 lg:px-32 bg-[#F8F5FF]">
+      <div className="container mx-auto pb-[90px] md:pb-[130px] grid md:grid-cols-2 pt-20 md:pt-[120px] grid-cols-1 md:grid-rows-1 md:gap-[50px] lg:gap-[89px] gap-4 ">
+        <div className=" pb-[35px] md:pb-0">
+          <h2 className="text-[32px] leading-[40px] md:text-start md:text-[46px] font-bold text-[#5355AC]  md:leading-[58px]">
             We are making men&apos;s health accessible and convenient, the way
             it should be
           </h2>
