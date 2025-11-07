@@ -402,10 +402,13 @@ const RiskTest = () => {
           </p>
 
           <CenterButton
-            title="Start my online visit"
-            href="/doctor-consultation"
-            type="button"
-          />
+    title="Start my online visit"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href = "/doctor-consultation";
+    }}
+    type="button"
+  />
 
           <div className="mt-3">
             <PrivWhiteButton onClick={restartTest}>
