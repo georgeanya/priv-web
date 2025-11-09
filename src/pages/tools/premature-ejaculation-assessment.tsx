@@ -402,16 +402,26 @@ const RiskTest = () => {
           </p>
 
            <CenterButton
-    title="Start my online visit"
-    onClick={(e) => {
-      e.preventDefault();
-      window.location.href = "/doctor-consultation";
-    }}
-    type="button"
-  />
+            title="Start my online visit"
+            href="/doctor-consultation"
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.location.href = "/doctor-consultation";
+            }}
+          />
 
-          <div className="mt-3">
-            <PrivWhiteButton onClick={restartTest}>
+          <div className="mt-3" style={{ pointerEvents: 'none' }}>
+            <PrivWhiteButton 
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                restartTest();
+              }}
+              type="button"
+              style={{ pointerEvents: 'auto' }}
+            >
               Restart the quiz
             </PrivWhiteButton>
           </div>
