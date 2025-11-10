@@ -51,93 +51,93 @@ type Question = {
 
 const questions: Question[] = [
   {
-    text: "How often do you ejaculate before you or your partner is satisfied during sex?",
+    text: "How often do you feel fatigued or tired throughout the day?",
     options: [
-      { text: "Never, I last long enough", count: 0 },
-      { text: "Rarely, only in stressful situations", count: 1 },
-      { text: "Sometimes, I ejaculate too early", count: 2 },
-      { text: "Frequently, I ejaculate before I or my partner is satisfied", count: 3 },
+      { text: "Rarely or never", count: 0 },
+      { text: "Occasionally, but I recover quickly", count: 1 },
+      { text: "Frequently, I feel tired most days", count: 2 },
+      { text: "Almost always, I feel exhausted even after rest", count: 3 },
     ],
   },
   {
-    text: "How long does it typically take for you to ejaculate after penetration?",
+    text: "Do you have trouble concentrating or focusing on tasks?",
     options: [
-      { text: "More than 10 minutes", count: 0 },
-      { text: "5-10 minutes", count: 1 },
-      { text: "1-5 minutes", count: 2 },
-      { text: "Less than 1 minute", count: 3 },
+      { text: "No, my concentration is fine", count: 0 },
+      { text: "Sometimes, but it's not major", count: 1 },
+      { text: "Often, I struggle to focus or remember things", count: 2 },
+      { text: "Almost always, I find it difficult to focus or stay on task", count: 3 },
     ],
   },
   {
-    text: "How does premature ejaculation affect your relationship or sex life?",
+    text: "How would you describe your mood in general?",
     options: [
-      { text: "It doesn't affect me or my relationship", count: 0 },
-      { text: "Occasionally, but it's not a big issue", count: 1 },
-      { text: "It causes frustration, but we manage", count: 2 },
-      { text: "It causes significant frustration and stress in my relationship", count: 3 },
+      { text: "I feel happy and emotionally stable", count: 0 },
+      { text: "Occasionally, I feel a bit down or irritable", count: 1 },
+      { text: "I often feel sad, irritable, or anxious", count: 2 },
+      { text: "I frequently feel depressed, anxious, or have mood swings", count: 3 },
     ],
   },
   {
-    text: "How often do you feel embarrassed or frustrated about your sexual performance due to premature ejaculation?",
+    text: "Have you noticed a decrease in your interest or desire in sex?",
     options: [
-      { text: "Never, I'm confident about my performance", count: 0 },
-      { text: "Occasionally, but it doesn't affect my self-esteem", count: 1 },
-      { text: "Frequently, it affects my confidence and mood", count: 2 },
-      { text: "Almost always, it's a major source of stress and embarrassment", count: 3 },
+      { text: "No, my libido is the same as always", count: 0 },
+      { text: "Occasionally, but it's not a major concern", count: 1 },
+      { text: "Yes, my interest in sex has decreased noticeably", count: 2 },
+      { text: "Yes, I have almost no interest in sex anymore", count: 3 },
     ],
   },
   {
-    text: "Do you experience difficulty controlling when you ejaculate?",
+    text: "Have you noticed any changes in your muscle mass or strength?",
     options: [
-      { text: "No, I can control it easily", count: 0 },
-      { text: "Occasionally, it's a little hard to control", count: 1 },
-      { text: "Often, I can't control when I ejaculate", count: 2 },
-      { text: "Almost always, I can't control when I ejaculate", count: 3 },
+      { text: "No change, my muscle mass and strength are the same", count: 0 },
+      { text: "Slight decrease, but not significant", count: 1 },
+      { text: "Noticeable decrease in muscle mass or strength", count: 2 },
+      { text: "Significant loss of muscle mass or strength", count: 3 },
     ],
   },
   {
-    text: "Do you feel physically ready for sex again soon after ejaculating?",
+    text: "How would you describe your ability to maintain an erection or your sexual performance?",
     options: [
-      { text: "Yes, I feel ready after a short break", count: 0 },
-      { text: "Sometimes, but I need a longer break", count: 1 },
-      { text: "I often feel physically drained or uninterested after ejaculating", count: 2 },
-      { text: "I feel completely unsatisfied and exhausted after ejaculating", count: 3 },
+      { text: "No issues, I perform normally", count: 0 },
+      { text: "Occasionally, I have difficulty maintaining an erection", count: 1 },
+      { text: "Frequently, I struggle with erectile dysfunction", count: 2 },
+      { text: "Almost always, I experience erectile dysfunction", count: 3 },
     ],
   },
   {
-    text: "How do you feel mentally during or after ejaculation?",
+    text: "Do you experience hot flashes or night sweats?",
     options: [
-      { text: "Mentally satisfied and relaxed", count: 0 },
-      { text: "Occasionally disappointed, but not too concerned", count: 1 },
-      { text: "Often disappointed and frustrated with my performance", count: 2 },
-      { text: "Almost always feel anxious, dissatisfied, or embarrassed", count: 3 },
+      { text: "No, I never experience hot flashes or night sweats", count: 0 },
+      { text: "Occasionally, I experience mild hot flashes or sweating", count: 1 },
+      { text: "Frequently, I experience moderate hot flashes or sweating", count: 2 },
+      { text: "Yes, I experience frequent and severe hot flashes or night sweats", count: 3 },
     ],
   },
   {
-    text: "Have you noticed that your premature ejaculation happens more often when you're feeling stressed or anxious?",
+    text: "Do you notice a decrease in your overall energy levels or stamina?",
     options: [
-      { text: "No, stress doesn't affect my performance", count: 0 },
-      { text: "Occasionally, but it's not always linked to stress", count: 1 },
-      { text: "Yes, it often happens when I'm stressed or anxious", count: 2 },
-      { text: "Almost always, stress and anxiety cause premature ejaculation", count: 3 },
+      { text: "No, my energy levels are normal", count: 0 },
+      { text: "Occasionally, I feel slightly less energetic", count: 1 },
+      { text: "Often, I feel low energy and lack stamina", count: 2 },
+      { text: "Almost always, I feel completely drained and lack stamina", count: 3 },
     ],
   },
   {
-    text: "Do you experience premature ejaculation even during the beginning of sexual activity, without much stimulation?",
+    text: "How often do you feel irritated or angry for no apparent reason?",
     options: [
-      { text: "No, I can last for a while even at the start", count: 0 },
-      { text: "Occasionally, but only if I'm very excited", count: 1 },
-      { text: "Yes, it often happens early in the activity", count: 2 },
-      { text: "Yes, I ejaculate almost immediately after penetration", count: 3 },
+      { text: "Rarely or never", count: 0 },
+      { text: "Occasionally, but it's manageable", count: 1 },
+      { text: "Frequently, I feel irritated or on edge", count: 2 },
+      { text: "Almost always, I feel easily agitated or angry", count: 3 },
     ],
   },
   {
-    text: "How long have you been experiencing premature ejaculation?",
+    text: "Have you experienced any changes in your body fat distribution (e.g., increased belly fat)?",
     options: [
-      { text: "I've never experienced premature ejaculation", count: 0 },
-      { text: "I've only experienced it recently", count: 1 },
-      { text: "I've been dealing with it for a while", count: 2 },
-      { text: "I've had it for a long time and it's worsening", count: 3 },
+      { text: "No noticeable changes", count: 0 },
+      { text: "Slight increase in belly fat, but not concerning", count: 1 },
+      { text: "Noticeable increase in belly fat or fat retention", count: 2 },
+      { text: "Significant increase in body fat, especially around the abdomen", count: 3 },
     ],
   },
 ];
@@ -191,8 +191,8 @@ const RiskTest = () => {
 
   const getRiskLevel = () => {
     if (totalScore <= 6) return "normal";
-    if (totalScore <= 12) return "mild";
-    if (totalScore <= 18) return "moderate";
+    if (totalScore <= 14) return "mild";
+    if (totalScore <= 22) return "moderate";
     return "severe";
   };
 
@@ -202,23 +202,23 @@ const RiskTest = () => {
     switch (riskLevel) {
       case "normal":
         return {
-          title: "Normal Sexual Function",
-          description: "Based on your answers, it seems you do not have premature ejaculation or experience only occasional issues. If you feel concerned or notice future changes, it's good to consult a healthcare provider, but there's no immediate cause for concern. Continue maintaining a healthy lifestyle, managing stress, and communicating openly with your partner."
+          title: "Normal Testosterone Levels",
+          description: "Based on your answers, it seems your testosterone levels are within a normal range. However, if you continue to notice any changes in your health or mood, it's always a good idea to speak with your doctor. Maintaining a healthy lifestyle with proper nutrition, exercise, and stress management will continue to support your health."
         };
       case "mild":
         return {
-          title: "Mild Premature Ejaculation",
-          description: "You may experience mild symptoms of premature ejaculation, especially in stressful or highly stimulating situations. It might be helpful to practice relaxation techniques, communication with your partner, and focus on improving self-control. If the issue persists, consider seeking advice from a healthcare provider."
+          title: "Mild Symptoms of Low Testosterone",
+          description: "You may be experiencing mild symptoms of low testosterone, such as fatigue, mood changes, or decreased libido. Lifestyle changes, such as regular exercise and stress management, may help. If symptoms persist, consider consulting a doctor to evaluate your testosterone levels."
         };
       case "moderate":
         return {
-          title: "Moderate Premature Ejaculation",
-          description: "You may be experiencing noticeable difficulty with premature ejaculation. Stress, anxiety, or other factors may be contributing to the issue. It's a good idea to speak with a healthcare provider or therapist who can help you explore treatment options like behavioral therapy, medications, or lifestyle changes."
+          title: "Moderate Symptoms of Low Testosterone",
+          description: "You are showing moderate signs of low testosterone. Symptoms such as decreased libido, mood changes, and fatigue can be associated with low T. It's a good idea to speak with a doctor to discuss potential testing and treatment options, including lifestyle changes or hormone replacement therapy."
         };
       case "severe":
         return {
-          title: "Severe Premature Ejaculation",
-          description: "You are showing significant symptoms of premature ejaculation, which may be affecting your emotional well-being and your relationship. Immediate consultation with a healthcare provider is recommended for a full assessment and personalized treatment options, which may include therapy, medication, or exercises designed to help improve control."
+          title: "Severe Symptoms of Low Testosterone",
+          description: "Your results suggest that you may be experiencing significant symptoms of low testosterone. These can affect your physical health, emotional well-being, and sexual performance. It is highly recommended that you consult with a doctor for a full evaluation, which may include blood tests to assess your testosterone levels and a personalized treatment plan."
         };
       default:
         return {
@@ -235,13 +235,13 @@ const RiskTest = () => {
       <Head>
         <meta charSet="utf-8" />
         <title>
-          Do I Have Premature Ejaculation? Take Free Premature Ejaculation Assessment Quiz
+          Do I Have Low Testosterone? Take Free Low Testosterone Assessment Quiz
         </title>
         <meta name="generator" content="SEOmatic" />
         <link href={favicon.src} rel="shortcut icon" type="image/png" />
         <meta
           name="keywords"
-          content="do i have premature ejaculation, premature ejaculation quiz, premature ejaculation test, premature ejaculation assessment, premature ejaculation symptoms, premature ejaculation self assessment, premature ejaculation quiz, premature ejaculation symptoms quiz, premature ejaculation checker, do i have premature ejaculation, premature ejaculation evaluation, premature ejaculation screening test, sexual health quiz, premature ejaculation questionnaire"
+          content="do i have low testosterone, low testosterone quiz, low testosterone test, low testosterone assessment, low testosterone symptoms, low testosterone self assessment, low testosterone quiz, low testosterone symptoms quiz, low testosterone checker, do i have low testosterone, low testosterone evaluation, low testosterone screening test, sexual health quiz, low testosterone questionnaire"
         />
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta name="robots" content="all" />
@@ -293,19 +293,19 @@ const RiskTest = () => {
         />
         <meta
           name="description"
-          content="Take our premature ejaculation quiz to assess your symptoms. Our free premature ejaculation self-assessment tool helps determine if you may have premature ejaculation and helps you know the next steps to take"
+          content="Take our low testosterone quiz to assess your symptoms. Our free low testosterone self-assessment tool helps determine if you may have low testosterone and helps you know the next steps to take"
         />
         <meta content="598084287257839" property="fb:profile_id" />
         <meta
-          content="https://privhealth.co/tools/do-i-have-premature-ejaculation"
+          content="https://privhealth.co/tools/lt-assessment"
           property="og:url"
         />
         <meta
-          content="Do I Have Premature Ejaculation? Take Free Premature Ejaculation Assessment Quiz"
+          content="Do I Have Low Testosterone? Take Free Low Testosterone Assessment Quiz"
           property="og:title"
         />
         <meta
-          content="Take our premature ejaculation quiz to assess your symptoms. Our free premature ejaculation self-assessment tool helps determine if you may have premature ejaculation and helps you know the next steps to take"
+          content="Take our low testosterone quiz to assess your symptoms. Our free low testosterone self-assessment tool helps determine if you may have low testosterone and helps you know the next steps to take"
           property="og:description"
         />
         <meta
@@ -314,15 +314,11 @@ const RiskTest = () => {
         />
         <meta
           name="twitter:title"
-          content="Do I Have Premature Ejaculation? Take Free Premature Ejaculation Assessment Quiz"
+          content="Do I Have Low Testosterone? Take Free Low Testosterone Assessment Quiz"
         />
         <meta
           name="twitter:description"
-          content="Take our premature ejaculation quiz to assess your symptoms. Our free premature ejaculation self-assessment tool helps determine if you may have premature ejaculation and helps you know the next steps to take"
-        />
-        <link
-          href="https://privhealth.co/tools/do-i-have-premature-ejaculation"
-          rel="canonical"
+          content="Take our low testosterone quiz to assess your symptoms. Our free low testosterone self-assessment tool helps determine if you may have low testosterone and helps you know the next steps to take"
         />
       </Head>
       <Navbar />
