@@ -83,8 +83,8 @@ const ErrorPage = () => {
         />
       </Head>
       <Navbar />
-      <div className="px-5 md:px-20 lg:px-32">
-        <div className="container mx-auto  pt-12 md:pt-32 pb-24 md:pb-36">
+      <div className="px-5 md:px-20 lg:px-32 mt-[50px] md:mt-[125px]">
+        <div className="container mx-auto pb-24 md:pb-36">
           <h1 className="text-[34px] leading-[43px] md:text-start md:text-5xl font-bold text-[#5355AC] md:max-w-3xl">
             Whoops... This page is not available
           </h1>

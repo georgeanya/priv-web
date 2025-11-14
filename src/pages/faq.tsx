@@ -236,7 +236,7 @@ const Faq = () => {
         />
       </Head>
       <Navbar />
-      <div className="px-5 md:pl-[290px] md:pr-[380px] md:mt-24 mt-16 md:pb-36 pb-24">
+      <div className="px-5 md:px-20 lg:px-32 mt-[50px] lg:mt-[90px]  md:mt-20 md:pb-36 pb-24">
         <h1 className="text-[34px] leading-[43px]  md:text-5xl font-bold text-[#111111]">
           Frequently Asked Questions
         </h1>
